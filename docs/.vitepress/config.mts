@@ -1,1 +1,15 @@
-m«ëˆ§½©buªàºg§µÚ³ûâµêkzË?r‰ßŠ	­±KæÚ±î¸Ø[é¢Šwâ•ê(º×â•æÛ­æ¤n·š‘éÜ¡×¢ëiºÛ©Š{h–)Ş²‡åzx-†{¦×^r‡^uç(uè§¦ëa…éiv+)•¬­†+&zËè¢›­Šznµø¥y×Ÿjém~ŠìµØ§¢‹­¦ëhºÚnµø¥y×Ÿjém~ŠìµÚ.
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
+  title: 'Clown',
+  description: 'A creative workspace for Solo Titania Chaos 2026',
+  base: '/clown/',
+  cleanUrls: true,
+  themeConfig: {
+    nav: [
+      { text: 'Home', link: '/' },
+      { text: 'About', link: '/about' }
+    ],
+    socialLinks: []
+  }
+})

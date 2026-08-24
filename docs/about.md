@@ -1,1 +1,5 @@
-m«ëˆ§½©buªàºg§µÚ³ö›¢ëfuKæÚ±î¸Ø[é¢Šwâ•ê(º×â•æÛ­æ¤n·š‘éÜ¡×¢ëiºÛ©Š{h–)Ş²‡åzx-†{¦×^r‡^uç(uè§¦ëa…éiv+)•¬­†+&zËè¢›­Šznµø¥y×Ÿjém~ŠìµØ§¢‹­¦ëhºÚnµø¥y×Ÿjém~ŠìµÚ.
+# About Clown
+
+Clown is the documentation home for **Solo Titania Chaos 2026**.
+
+This starter project is ready to grow into a structured knowledge base for research, material generation, dramaturgy, rehearsal planning, and production.
