@@ -4,9 +4,11 @@ VitePress site for Solo Titania Chaos 2026.
 
 ## Local development
 
+Requires Node.js 26.
+
 ```sh
-pnpm install
-pnpm docs:dev
+npm ci
+npm run docs:dev
 ```
 
 ## GitHub Pages
