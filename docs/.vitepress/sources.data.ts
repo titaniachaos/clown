@@ -102,16 +102,16 @@ const entries: SourceEntry[] = [
     id: 'capacity',
     status: 'verified',
     locus: 'concept · 6',
-    work: 'D. W. Winnicott, “The Capacity to be Alone”, Int. J. Psycho-Anal. 39 (1958), 416–420',
+    work: 'D. W. Winnicott, “The Capacity to be Alone”, Int. J. Psycho-Anal. 39 (1958), 416–420; repr. The Maturational Processes and the Facilitating Environment (Hogarth, 1965), 29–36',
     phrase: {
       en: 'Learning to be alone',
       bg: 'Да се научиш да си сам',
       de: 'Alleinsein lernen'
     },
     gloss: {
-      en: 'The capacity is built by being alone in the presence of someone. The project’s extension — that an audience supplies exactly that presence for a solo performer — is the load-bearing claim of the whole concept.',
-      bg: 'Способността се изгражда, докато си сам в присъствието на някого. Приносът на проекта — че публиката осигурява точно това присъствие за соловия изпълнител — е носещото твърдение на цялата концепция.',
-      de: 'Die Fähigkeit entsteht dadurch, dass man in Anwesenheit eines anderen allein ist. Der Beitrag des Projekts — dass ein Publikum genau diese Anwesenheit für eine Solospielerin bereitstellt — ist die tragende Behauptung des gesamten Konzepts.'
+      en: 'Read in full. The paper’s own section heading is *Paradox*, and an editor’s note marks it as the first appearance of that term in Winnicott. Two things the summaries omit. He names the relationship *ego-relatedness*, and allows that the reliable other may be represented by a cot, a pram or the atmosphere of the room — which makes the companion in movement 6 a carrier of presence rather than a substitute for one. And what an undemanding presence permits is floundering: existing without reacting and without direction until an impulse arrives that feels real. The project’s extension — that an audience supplies that presence for a solo performer — is the load-bearing claim of the whole concept.',
+      bg: 'Прочетено изцяло. Заглавието на един от разделите в статията е *Парадокс*, а редакторска бележка го отбелязва като първата поява на този термин у Уиникът. Две неща, които преразказите пропускат. Той нарича отношението *его-свързаност* и допуска, че надеждният друг може да бъде представен от люлка, количка или от атмосферата на стаята — което прави спътника в движение 6 носител на присъствие, а не негов заместител. А онова, което непретенциозното присъствие позволява, е лутането: да съществуваш, без да реагираш и без посока, докато не дойде импулс, който усещаш като истински. Приносът на проекта — че публиката осигурява това присъствие за соловия изпълнител — е носещото твърдение на цялата концепция.',
+      de: 'Vollständig gelesen. Eine Abschnittsüberschrift des Aufsatzes lautet *Paradox*, und eine Herausgebernotiz verzeichnet sie als erstes Auftreten dieses Begriffs bei Winnicott. Zwei Dinge, die die Zusammenfassungen auslassen. Er nennt die Beziehung *Ich-Bezogenheit* und lässt zu, dass der verlässliche andere durch ein Bettchen, einen Kinderwagen oder die Atmosphäre des Raums vertreten sein kann — was die Gefährtin in Bewegung 6 zur Trägerin von Anwesenheit macht statt zu deren Ersatz. Und was eine nicht fordernde Anwesenheit erlaubt, ist das Treiben: existieren ohne Reaktion und ohne Richtung, bis ein Impuls eintrifft, der sich echt anfühlt. Der Beitrag des Projekts — dass ein Publikum diese Anwesenheit für eine Solospielerin bereitstellt — ist die tragende Behauptung des gesamten Konzepts.'
     }
   },
   {
