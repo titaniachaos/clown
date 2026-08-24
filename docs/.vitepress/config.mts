@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Clown',
   description: 'A creative workspace for Solo Titania Chaos 2026',
-  base: '/clown/',
+  base: '/',
   cleanUrls: true,
   themeConfig: {
     nav: [
