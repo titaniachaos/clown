@@ -27,6 +27,7 @@ export default defineConfig({
           { text: 'Studio Process', link: '/studio-process' },
           { text: 'Rehearsal Toolkit', link: '/rehearsal-toolkit' },
           { text: 'Material Research', link: '/material-research' },
+          { text: 'Decision Gates', link: '/decisions' },
           { text: 'Production', link: '/production' },
           { text: 'About', link: '/about' }
         ]

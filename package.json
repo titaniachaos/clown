@@ -12,5 +12,8 @@
   },
   "devDependencies": {
     "vitepress": "next"
+  },
+  "allowScripts": {
+    "fsevents@2.3.3": true
   }
 }
