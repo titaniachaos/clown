@@ -10,8 +10,15 @@ import { defineLoader } from 'vitepress'
 
 export type Lang = 'en' | 'bg' | 'de'
 
-/** How well the attribution is established. Encoded, not decorative. */
-export type Status = 'verified' | 'probable' | 'open'
+/**
+ * How the attribution stands. Encoded, not decorative.
+ *
+ * `verified` — the documentation was already quoting this source.
+ * `chosen`   — the project decided the lineage; the tradition is documented.
+ * `probable` — a close match the documentation has not confirmed.
+ * `open`     — unattributed, and awaiting a decision.
+ */
+export type Status = 'verified' | 'chosen' | 'probable' | 'open'
 
 export interface SourceEntry {
   /** Anchor id, shared across locales. */
@@ -190,18 +197,18 @@ const entries: SourceEntry[] = [
   },
   {
     id: 'playful-anarchy',
-    status: 'open',
-    locus: 'concept',
-    work: '—',
+    status: 'chosen',
+    locus: 'concept · material-research',
+    work: 'Pascal Jacob, « L’Auguste », BnF / Centre national des arts du cirque',
     phrase: {
       en: 'Playful anarchy',
       bg: 'Игрова анархия',
       de: 'Spielerische Anarchie'
     },
     gloss: {
-      en: 'No source. Bouffon is the obvious candidate and the wrong one: it works in a gang and mocks the audience, while this clown is alone and depends on complicity. The auguste, Dario Fo’s *giullare* and Slava Polunin remain open.',
-      bg: 'Няма източник. Буфонът е очевидният кандидат и грешният: той действа на група и се подиграва на публиката, докато този клоун е сам и зависи от съучастието ѝ. Огюстът, *джуларе* на Дарио Фо и Слава Полунин остават отворени.',
-      de: 'Keine Quelle. Bouffon ist der naheliegende und der falsche Kandidat: Er arbeitet in der Gruppe und verspottet das Publikum, während dieser Clown allein ist und auf Komplizenschaft angewiesen bleibt. Der Auguste, Dario Fos *giullare* und Slava Polunin bleiben offen.'
+      en: 'The auguste, decided 25 August 2026. The BnF characterisation carries the register exactly: candour and naivety mingled with “a playful instinct and a liking for dissimulation with no consequences”. Bouffon was ruled out — it works in a gang and mocks the audience. One adjustment the tradition forces: the classical auguste is the *recipient* of the comic doings, subordinate to a whiteface. In a solo there is no whiteface, so the room plays it — which movements 4 and 5 already do. Grock, an auguste who broke free of the pairing and carried the entrée into the theatre, is the precedent.',
+      bg: 'Огюстът, решено на 25 август 2026 г. Характеристиката на BnF предава регистъра точно: прямота и наивност, смесени с „игрови инстинкт и склонност към безобидна прикритост“. Буфонът отпадна — той действа на група и се подиграва на публиката. Една поправка, която традицията налага: класическият огюст е *получателят* на комичното действие, подчинен на белия клоун. В соло няма бял клоун, затова стаята поема ролята — което движения 4 и 5 вече правят. Грок, огюст, който се освобождава от двойката и пренася антрето в театъра, е прецедентът.',
+      de: 'Der Auguste, entschieden am 25. August 2026. Die Charakterisierung der BnF trifft das Register genau: Aufrichtigkeit und Naivität, vermischt mit „einem Spieltrieb und einer Neigung zur folgenlosen Verstellung“. Bouffon scheidet aus — er arbeitet in der Gruppe und verspottet das Publikum. Eine Korrektur, die die Tradition erzwingt: Der klassische Auguste ist der *Empfänger* des komischen Geschehens, dem Weißclown untergeordnet. Im Solo gibt es keinen Weißclown, also übernimmt der Raum die Rolle — was die Bewegungen 4 und 5 bereits tun. Grock, ein Auguste, der sich aus dem Paar löste und die Entrée ins Theater trug, ist der Präzedenzfall.'
     }
   },
   {
@@ -226,20 +233,20 @@ const ui: Data['ui'] = {
   en: {
     phrase: 'In the documentation',
     source: 'Drawing on',
-    status: { verified: 'Verified', probable: 'Probable', open: 'Open' },
-    counts: { verified: 'verified', probable: 'probable', open: 'open' }
+    status: { verified: 'Verified', chosen: 'Chosen', probable: 'Probable', open: 'Open' },
+    counts: { verified: 'verified', chosen: 'chosen', probable: 'probable', open: 'open' }
   },
   bg: {
     phrase: 'В документацията',
     source: 'Опира се на',
-    status: { verified: 'Потвърдено', probable: 'Вероятно', open: 'Отворено' },
-    counts: { verified: 'потвърдени', probable: 'вероятно', open: 'отворени' }
+    status: { verified: 'Потвърдено', chosen: 'Избрано', probable: 'Вероятно', open: 'Отворено' },
+    counts: { verified: 'потвърдени', chosen: 'избрано', probable: 'вероятно', open: 'отворени' }
   },
   de: {
     phrase: 'In der Dokumentation',
     source: 'Stützt sich auf',
-    status: { verified: 'Belegt', probable: 'Wahrscheinlich', open: 'Offen' },
-    counts: { verified: 'belegt', probable: 'wahrscheinlich', open: 'offen' }
+    status: { verified: 'Belegt', chosen: 'Gewählt', probable: 'Wahrscheinlich', open: 'Offen' },
+    counts: { verified: 'belegt', chosen: 'gewählt', probable: 'wahrscheinlich', open: 'offen' }
   }
 }
 

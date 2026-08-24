@@ -1,6 +1,6 @@
 ---
 title: Sources and Lineages
-description: The books and practitioners behind the concepts used in Solo Titania Chaos 2026, and the questions still open.
+description: The books and practitioners behind the concepts used in Solo Titania Chaos 2026, the paradoxes they share, and the question still open.
 outline: [2, 3]
 ---
 
@@ -14,13 +14,31 @@ Several movement titles and modes of solitude are named concepts taken from spec
 
 <SourceLedger />
 
-## Open questions
+## The paradoxes
 
-::: warning Rule out bouffon
-Bouffon is the obvious reading of *playful anarchy* and the wrong one. The bouffon works in a gang and mocks the audience; this clown is alone and depends on the audience's complicity. Adopting that vocabulary would undercut the paradox the solo is built on.
+The project runs on paradoxes rather than on themes, and they are the same paradox seen from different trades. Each is a structure that only works because it contradicts itself.
+
+| The paradox | Where it comes from |
+| --- | --- |
+| The clown cannot be alone while the audience is present, and cannot perform without them | The project's own, in the concept |
+| The capacity to be alone is founded on having been alone in the presence of someone | Winnicott (1958) |
+| Solitude is being two; loneliness is being one | Arendt, *The Life of the Mind* |
+| To make an audience laugh, the clown must repeatedly fail to make them laugh | Purcell Gates, *Theatre, Dance and Performance Training* 2:2 (2011), 231–242 |
+| The room kept wholly one's own stays furnished with borrowed language and absent people | Montaigne I.38, reversed by the project |
+| Language is a technology of company, so a wordless performance begins inside the condition it investigates | The project's own, in the concept |
+| Two and two make five: false in arithmetic, performable by an auguste, and violence in Orwell's hands | The project's own, in the material research |
+
+::: tip They resolve the same way
+Every one of them is settled by a witness rather than by an argument. Winnicott's infant needs a present adult; Arendt's thinker needs a second self; Gaulier's flop needs a room to fail in front of; the auguste's five needs someone who can see four. The solo does not depict solitude and then add an audience. The audience is the term that makes solitude legible at all.
 :::
 
-Two lineages remain unattributed. Both should be decided rather than left to resemblance, because a dramaturg reading the concept page will supply an answer if the page does not.
+## The open question
+
+::: warning The emptied room
+Mode 8 has no source. Letting the self loosen rather than consoling it may point to Weil, to a reading of non-self, or to contemplative solitude. It should be decided rather than left to resemblance, because a dramaturg reading the concept page will supply an answer if the page does not.
+:::
+
+Playful anarchy was the other open lineage and is now settled as the auguste. Bouffon was ruled out: it works in a gang and mocks the audience, while this clown is alone and depends on complicity. See the [material research](/material-research#a-worked-example-two-and-two-make-five) for what the choice makes playable.
 
 ## A correction worth keeping
 
@@ -30,14 +48,16 @@ It is a plausible-sounding title that does not exist. The citable scholarship on
 
 ## Reading order
 
-::: details Seven titles, in the order the documentation needs them
+::: details Nine titles, in the order the documentation needs them
 1. Arendt, *The Life of the Mind*, and the closing chapter of *The Origins of Totalitarianism* — two modes and one movement
 2. Winnicott, "The Capacity to be Alone" — five pages, and the load-bearing claim
 3. Lecoq, *Le Corps Poétique* — two of the five unnamed lineages at once
 4. Montaigne, "De la solitude" — short, public domain, the source of a movement title
-5. Amsden on the flop — useful because the flop scale goes further than it
+5. Amsden on the flop, and Purcell Gates on the training paradox
 6. Turkle, *Alone Together* — the contemporary anchor
 7. Decroux, *Paroles sur le Mime* — the argument for wordlessness
+8. Pascal Jacob on the auguste, for the BnF and the CNAC — the chosen lineage
+9. Grock, *Life's a Lark* (Heinemann, 1931; tr. Madge Pemberton from *Ich lebe gern!*) — the solo auguste who left the pairing behind
 :::
 
 [Return to the artistic concept](/concept){.contact-button}

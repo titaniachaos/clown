@@ -1,6 +1,6 @@
 ---
 title: Quellen und Linien
-description: Die Bücher und Praktiker hinter den Begriffen von Solo Titania Chaos 2026 und die offen gebliebenen Fragen.
+description: Die Bücher und Praktiker hinter den Begriffen von Solo Titania Chaos 2026, die geteilten Paradoxien und die offen gebliebene Frage.
 outline: [2, 3]
 ---
 
@@ -14,13 +14,31 @@ Mehrere Titel der Bewegungen und Modi der Einsamkeit sind Begriffe aus bestimmte
 
 <SourceLedger />
 
-## Offene Fragen
+## Die Paradoxien
 
-::: warning Bouffon scheidet aus
-Bouffon ist die naheliegende Lesart der *spielerischen Anarchie* und die falsche. Der Bouffon arbeitet in der Gruppe und verspottet das Publikum; dieser Clown ist allein und auf dessen Komplizenschaft angewiesen. Dieses Vokabular zu übernehmen würde das Paradox untergraben, auf dem das Solo steht.
+Das Projekt ruht auf Paradoxien statt auf Themen, und es ist dieselbe Paradoxie, aus verschiedenen Gewerken gesehen. Jede ist eine Struktur, die nur funktioniert, weil sie sich selbst widerspricht.
+
+| Die Paradoxie | Woher sie stammt |
+| --- | --- |
+| Der Clown kann nicht allein sein, solange das Publikum da ist, und ohne es nicht spielen | Eigen, im Konzept |
+| Die Fähigkeit zum Alleinsein gründet darauf, in Anwesenheit eines anderen allein gewesen zu sein | Winnicott (1958) |
+| Einsamkeit heißt zwei zu sein; Verlassenheit heißt eins zu sein | Arendt, *Vom Leben des Geistes* |
+| Um ein Publikum zum Lachen zu bringen, muss der Clown wiederholt daran scheitern | Purcell Gates, *Theatre, Dance and Performance Training* 2:2 (2011), 231–242 |
+| Der ganz eigene Raum bleibt mit geliehener Sprache und abwesenden Menschen möbliert | Montaigne I.38, vom Projekt umgekehrt |
+| Sprache ist eine Technik der Gesellschaft, also beginnt ein wortloses Stück im Zustand, den es untersucht | Eigen, im Konzept |
+| Zwei und zwei macht fünf: falsch in der Arithmetik, spielbar für einen Auguste, Gewalt in Orwells Händen | Eigen, in der Materialrecherche |
+
+::: tip Sie lösen sich alle gleich auf
+Jede von ihnen wird durch einen Zeugen entschieden, nicht durch ein Argument. Winnicotts Kind braucht eine anwesende erwachsene Person; Arendts Denkende ein zweites Selbst; Gauliers Flop einen Raum, vor dem er scheitern kann; die Fünf des Auguste jemanden, der vier sehen kann. Das Solo stellt nicht Einsamkeit dar und fügt dann ein Publikum hinzu. Das Publikum ist der Term, der Einsamkeit überhaupt lesbar macht.
 :::
 
-Zwei Linien bleiben unbenannt. Beide sollten entschieden und nicht der Ähnlichkeit überlassen werden, denn eine Dramaturgin, die das Konzept liest, liefert sich selbst eine Antwort, wenn die Seite es nicht tut.
+## Die offene Frage
+
+::: warning Der geleerte Raum
+Modus 8 hat keine Quelle. Das Lockern des Selbst statt seiner Tröstung könnte auf Weil, auf eine Lesart des Nicht-Selbst oder auf kontemplative Einsamkeit deuten. Das sollte entschieden und nicht der Ähnlichkeit überlassen werden, denn eine Dramaturgin, die das Konzept liest, liefert sich selbst eine Antwort, wenn die Seite es nicht tut.
+:::
+
+Die spielerische Anarchie war die andere offene Linie und ist nun als der Auguste entschieden. Bouffon scheidet aus: Er arbeitet in der Gruppe und verspottet das Publikum, während dieser Clown allein ist und auf Komplizenschaft angewiesen bleibt. Die [Materialrecherche](/de/material-research#ein-durchgespieltes-beispiel-zwei-und-zwei-macht-funf) zeigt, was die Wahl spielbar macht.
 
 ## Eine Korrektur, die bleiben sollte
 
@@ -30,14 +48,16 @@ Ein plausibel klingender Titel, den es nicht gibt. Die zitierfähige Forschung z
 
 ## Lesereihenfolge
 
-::: details Sieben Titel, in der Reihenfolge, die die Dokumentation braucht
+::: details Neun Titel, in der Reihenfolge, die die Dokumentation braucht
 1. Arendt, *Vom Leben des Geistes*, und das Schlusskapitel von *Elemente und Ursprünge totaler Herrschaft* — zwei Modi und eine Bewegung
 2. Winnicott, „The Capacity to be Alone“ — fünf Seiten und die tragende Behauptung
 3. Lecoq, *Le Corps Poétique* — zwei der fünf unbenannten Linien auf einmal
 4. Montaigne, „De la solitude“ — kurz, gemeinfrei, Quelle eines Bewegungstitels
-5. Amsden über den Flop — nützlich, weil die Flop-Skala darüber hinausgeht
+5. Amsden über den Flop und Purcell Gates über die Paradoxie der Ausbildung
 6. Turkle, *Alone Together* — der gegenwärtige Anker
 7. Decroux, *Paroles sur le Mime* — das Argument für die Wortlosigkeit
+8. Pascal Jacob über den Auguste, für die BnF und das CNAC — die gewählte Linie
+9. Grock, *Life's a Lark* (Heinemann, 1931; übers. Madge Pemberton nach *Ich lebe gern!*) — der Solo-Auguste, der das Paar verließ
 :::
 
 [Zurück zum künstlerischen Konzept](/de/concept){.contact-button}

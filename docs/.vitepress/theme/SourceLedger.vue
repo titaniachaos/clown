@@ -18,7 +18,7 @@ const lang = computed<Lang>(() =>
 
 const ui = computed(() => data.ui[lang.value])
 
-const ORDER: Status[] = ['verified', 'probable', 'open']
+const ORDER: Status[] = ['verified', 'chosen', 'probable', 'open']
 
 const tally = computed(() =>
   ORDER.map((status) => ({
@@ -111,6 +111,7 @@ function parts(text: string) {
 }
 
 .tally .verified b { color: var(--vp-c-brand-1); }
+.tally .chosen b { color: var(--vp-c-brand-1); }
 .tally .probable b { color: var(--vp-c-text-2); }
 .tally .open b { color: var(--vp-c-warning-1); }
 
@@ -166,6 +167,7 @@ function parts(text: string) {
 }
 
 .badge.verified { background: var(--vp-c-brand-soft); color: var(--vp-c-brand-1); }
+.badge.chosen { background: var(--vp-c-brand-soft); color: var(--vp-c-brand-1); }
 .badge.open { background: var(--vp-c-warning-soft); color: var(--vp-c-warning-1); }
 
 .body > :first-child { margin-top: 0; }
