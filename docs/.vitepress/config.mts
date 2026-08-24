@@ -25,6 +25,7 @@ export default defineConfig({
           { text: 'Audience Relationship', link: '/audience' },
           { text: 'Dramaturgy', link: '/dramaturgy' },
           { text: 'Studio Process', link: '/studio-process' },
+          { text: 'Rehearsal Toolkit', link: '/rehearsal-toolkit' },
           { text: 'Material Research', link: '/material-research' },
           { text: 'Production', link: '/production' },
           { text: 'About', link: '/about' }
