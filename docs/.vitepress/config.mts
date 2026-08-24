@@ -5,16 +5,14 @@ export default defineConfig({
   title: 'Solo Titania Chaos 2026',
   titleTemplate: ':title | Solo Titania Chaos 2026',
   description: 'Research, dramaturgy, rehearsal and production for the wordless Solo Titania Chaos 2026 clown project.',
-  base: '/',
   cleanUrls: true,
-  sitemap: { hostname: 'https://clown.titaniachaos.com' },
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Concept', link: '/concept' },
       { text: 'Dramaturgy', link: '/dramaturgy' },
       { text: 'Studio', link: '/studio-process' },
-      { text: 'Titania Chaos', link: 'https://titaniachaos.github.io/clown/' }
+      { text: 'Titania Chaos', link: 'https://titaniachaos.github.io/' }
     ],
     sidebar: [
       {
