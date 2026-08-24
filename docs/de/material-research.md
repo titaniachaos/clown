@@ -37,6 +37,25 @@ Es lässt sich auch die Flop-Skala hinauf spielen:
 
 Die tiefste Stufe braucht weder Objekt noch Worte.
 
+### Die Stufe 5–6, durchgespielt
+
+Lecoqs Name für den Flop ist ein Versuch einer Glanzleistung, der unweigerlich scheitert. Ein Beweis ist eine Glanzleistung, also ist ein Beweis der Fünf genau diese Stufe.
+
+Einer, der lange genug hält, um geglaubt zu werden:
+
+1. Zwei und zwei macht vier.
+2. Vier, durch die Null gespiegelt, ist sechs. Die Spiegelung ist echt: minus vier ist sechs, wenn man um die Zehn zählt.
+3. Sechs und vier macht zehn, deren Quersumme eins ergibt.
+4. Eins, durch die Null gespiegelt, ist fünf. Auch das ist echt, auf dem Verdopplungskreis eins, zwei, vier, acht, sieben, fünf, wo die Fünf zur Eins zurückschließt.
+
+Jeder Schritt ist ein zulässiger Zug. Der Kunstgriff liegt in der Naht: Schritt 2 braucht ein Rad aus zehn, Schritt 4 den Kreis aus sechs, und kein Rad über zwei trägt beide. Der Beweis wechselt einmal das System, in dem Moment, in dem niemand auf den Boden schaut.
+
+Das ist die ganze Anforderung der Stufe. Eine Demonstration, die sofort scheitert, ist keine Glanzleistung und gewinnt nichts. Eine, die nie scheitert, ist kein Beweis der Fünf. Sie muss beinahe halten.
+
+Was der Fall dann freilegt, ist nicht die Unfähigkeit des Clowns, sondern der Boden, auf dem der Raum ohnehin steht: Alle Anwesenden wissen vier. Die Gewissheit des Publikums ist der gemeinsame Grund, und der Zusammenbruch macht sie als etwas sichtbar, das gemeinsam gehalten und nicht einzeln gewusst wird.
+
+In der Aufführung ist die Verteilung des Wissens streng. Die Spielerin weiß, wo die Naht ist. Der Clown darf es nicht wissen. Der Clown darf sie erst im Augenblick des Falls entdecken, und das Bemerken — der Blick nach oben — kommt nach dem Zusammenbruch, nie während.
+
 Eine Korrektur, die die Tradition erzwingt. Der klassische Auguste ist der Empfänger der komischen Handlung, dem Weißclown untergeordnet, der die Regel liefert. Im Solo gibt es keinen Weißclown, also liefert sie der Raum: Die Möbel, die Objekte und die Regel, die in Bewegung 5 auftaucht, sind der Partner. Grock, ein Auguste, der sich aus dem Paar löste und die Entrée ins Theater trug, ist der Präzedenzfall dafür, das allein zu tun.
 
 ## Die erfundene Gefährtin

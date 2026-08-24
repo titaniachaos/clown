@@ -48,12 +48,13 @@ Ein plausibel klingender Titel, den es nicht gibt. Die zitierfähige Forschung z
 
 ## Lesereihenfolge
 
-::: details Neun Titel, in der Reihenfolge, die die Dokumentation braucht
+::: details Zehn Titel, in der Reihenfolge, die die Dokumentation braucht
 1. Arendt, *Vom Leben des Geistes*, und das Schlusskapitel von *Elemente und Ursprünge totaler Herrschaft* — zwei Modi und eine Bewegung
 2. Winnicott, „The Capacity to be Alone“ — fünf Seiten und die tragende Behauptung
 3. Lecoq, *Le Corps Poétique* — zwei der fünf unbenannten Linien auf einmal
 4. Montaigne, „De la solitude“ — kurz, gemeinfrei, Quelle eines Bewegungstitels
 5. Amsden über den Flop und Purcell Gates über die Paradoxie der Ausbildung
+10. Vincent Laughery, « L'écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — der Fall als ein mit dem Publikum geteilter Boden
 6. Turkle, *Alone Together* — der gegenwärtige Anker
 7. Decroux, *Paroles sur le Mime* — das Argument für die Wortlosigkeit
 8. Pascal Jacob über den Auguste, für die BnF und das CNAC — die gewählte Linie

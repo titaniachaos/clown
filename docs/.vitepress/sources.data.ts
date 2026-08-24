@@ -134,7 +134,7 @@ const entries: SourceEntry[] = [
     id: 'flop',
     status: 'verified',
     locus: 'concept · audience · rehearsal-toolkit',
-    work: 'Philippe Gaulier; Lucy Amsden, “Monsieur Marcel and Monsieur Flop”, Theatre, Dance and Performance Training 8:2 (2017)',
+    work: 'Jacques Lecoq, Le Corps Poétique (1997); Philippe Gaulier; Lucy Amsden, “Monsieur Marcel and Monsieur Flop”, Theatre, Dance and Performance Training 8:2 (2017)',
     ref: '10.1080/19443927.2017.1316304',
     phrase: {
       en: 'The flop',
@@ -142,8 +142,8 @@ const entries: SourceEntry[] = [
       de: 'Der Flop'
     },
     gloss: {
-      en: 'Not simply a failure: the clown registering the failure to make the audience laugh, so that the registration becomes the comic moment. The flop scale rated by exposure rather than laugh size is this project’s instrument, not Gaulier’s.',
-      bg: 'Не просто провал: клоунът осъзнава, че не е разсмял публиката, и това осъзнаване става комичният момент. Скалата на флоповете, оценявана по разкритост, а не по сила на смеха, е инструмент на този проект, не на Голие.',
+      en: 'Two definitions, and the project needs both. Lecoq: an attempt at an exploit that inevitably fails, the student’s own weakness turned into material. Gaulier: the clown *registering* the failure, so the registration becomes the comic moment. Lecoq supplies the attempt, Gaulier the look up afterwards. The flop scale rated by exposure rather than laugh size is this project’s instrument, not either man’s.',
+      bg: 'Две определения, и проектът се нуждае и от двете. Льокок: опит за подвиг, който неизбежно се проваля — собствената слабост на ученика, превърната в материал. Голие: клоунът *осъзнава* провала и това осъзнаване става комичният момент. Льокок дава опита, Голие — вдигането на поглед след него. Скалата на флоповете, оценявана по разкритост, а не по сила на смеха, е инструмент на този проект, не на никого от двамата.',
       de: 'Nicht bloß ein Scheitern: Der Clown bemerkt, dass er das Publikum nicht zum Lachen gebracht hat, und dieses Bemerken wird zum komischen Moment. Die nach Bloßstellung statt nach Lachstärke bewertete Flop-Skala ist ein Instrument dieses Projekts, nicht Gauliers.'
     }
   },

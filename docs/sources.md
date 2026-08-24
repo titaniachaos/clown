@@ -48,12 +48,13 @@ It is a plausible-sounding title that does not exist. The citable scholarship on
 
 ## Reading order
 
-::: details Nine titles, in the order the documentation needs them
+::: details Ten titles, in the order the documentation needs them
 1. Arendt, *The Life of the Mind*, and the closing chapter of *The Origins of Totalitarianism* — two modes and one movement
 2. Winnicott, "The Capacity to be Alone" — five pages, and the load-bearing claim
 3. Lecoq, *Le Corps Poétique* — two of the five unnamed lineages at once
 4. Montaigne, "De la solitude" — short, public domain, the source of a movement title
 5. Amsden on the flop, and Purcell Gates on the training paradox
+10. Vincent Laughery, « L'écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — the fall as a floor shared with the public
 6. Turkle, *Alone Together* — the contemporary anchor
 7. Decroux, *Paroles sur le Mime* — the argument for wordlessness
 8. Pascal Jacob on the auguste, for the BnF and the CNAC — the chosen lineage
