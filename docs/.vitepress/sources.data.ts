@@ -42,7 +42,8 @@ export interface Data {
     phrase: string
     source: string
     status: Record<Status, string>
-    counts: Record<Status, string>
+    /** One form per grammatical number: the tally prints a bare integer. */
+    counts: Record<Status, { one: string; many: string }>
   }>
 }
 
@@ -70,32 +71,32 @@ const entries: SourceEntry[] = [
     id: 'three-terms',
     status: 'verified',
     locus: 'concept · 2',
-    work: 'Hannah Arendt, The Origins of Totalitarianism (1951), closing chapter',
+    work: '“Ideology and Terror: A Novel Form of Government”, Review of Politics 15:3 (1953), 303–27; added as the closing chapter of The Origins of Totalitarianism in the 1958 edition',
     phrase: {
       en: 'Solitude, loneliness and isolation',
       bg: 'Самота, самотност и изолация',
       de: 'Einsamkeit, Verlassenheit und Isolation'
     },
     gloss: {
-      en: 'Arendt’s three-way distinction, in her order and with her boundaries: isolation as the political inability to act together, loneliness as the common ground for terror, solitude as the situation in which one keeps oneself company.',
-      bg: 'Тристранното разграничение на Аренд, в нейния ред и с нейните граници: изолацията като политическа невъзможност за съвместно действие, самотността като обща почва на терора, самотата като положение, в което човек си прави компания.',
-      de: 'Arendts dreiteilige Unterscheidung, in ihrer Reihenfolge und mit ihren Grenzen: Isolation als politische Unfähigkeit zum gemeinsamen Handeln, Verlassenheit als gemeinsamer Boden des Terrors, Einsamkeit als die Lage, in der man sich selbst Gesellschaft leistet.'
+      en: 'Read in the source. The three are not degrees of one condition but three different situations. Isolation is political — the inability to act with others — and Arendt insists it is *required* for all making: the maker withdraws from common concerns and stays in contact with the world as human artifice. Isolation turns into loneliness only when the capacity to add something of one’s own to the common world is destroyed. Loneliness is social, and she calls it the common ground for terror. Solitude is being two-in-one with oneself.',
+      bg: 'Прочетено в източника. Трите не са степени на едно състояние, а три различни положения. Изолацията е политическа — невъзможността да действаш с другите — и Аренд настоява, че тя е *необходима* за всяко правене: правещият се оттегля от общите грижи и остава във връзка със света като човешко творение. Изолацията се превръща в самотност само когато способността да добавиш нещо свое към общия свят бъде разрушена. Самотността е социална и Аренд я нарича обща почва на терора. Самотата е да си двама в един със себе си.',
+      de: 'In der Quelle gelesen. Die drei sind keine Abstufungen eines Zustands, sondern drei verschiedene Lagen. Isolation ist politisch — die Unfähigkeit, mit anderen zu handeln — und Arendt besteht darauf, dass sie für alles Herstellen *nötig* ist: Der Herstellende zieht sich aus den gemeinsamen Angelegenheiten zurück und bleibt mit der Welt als menschlichem Artefakt verbunden. Isolation schlägt erst dann in Verlassenheit um, wenn die Fähigkeit zerstört wird, der gemeinsamen Welt etwas Eigenes hinzuzufügen. Verlassenheit ist sozial, und sie nennt sie den gemeinsamen Boden des Terrors. Einsamkeit heißt, mit sich selbst zwei-in-eins zu sein.'
     }
   },
   {
     id: 'two-in-one',
     status: 'verified',
     locus: 'dramaturgy · 6',
-    work: 'Hannah Arendt, The Life of the Mind (1978)',
+    work: 'Hannah Arendt, “Ideology and Terror” (1953), where the term first appears; developed in The Life of the Mind (1978), whose epigraph is Cato by way of Cicero',
     phrase: {
       en: 'The two-in-one',
       bg: 'Двамата в един',
       de: 'Das Zwei-in-Einem'
     },
     gloss: {
-      en: 'Arendt’s term for thinking as an inner dialogue — the self splitting into questioner and answerer. Movement 6 puts the second half outside the performer, in an object: a wordless clown cannot stage an inner dialogue as dialogue, so the split is externalised into something that can be met, played with and let go.',
-      bg: 'Понятието на Аренд за мисленето като вътрешен диалог — азът се разделя на питащ и отговарящ. Движение 6 поставя втората половина извън изпълнителя, в предмет: безсловесният клоун не може да представи вътрешен диалог като диалог, затова разделението се изнася в нещо, което може да бъде срещнато, да се играе с него и да бъде оставено.',
-      de: 'Arendts Begriff für das Denken als inneren Dialog — das Selbst spaltet sich in Fragenden und Antwortenden. Bewegung 6 setzt die zweite Hälfte außerhalb der Spielerin an, in ein Objekt: Ein wortloser Clown kann einen inneren Dialog nicht als Dialog zeigen, also wird die Spaltung in etwas verlegt, dem man begegnen, mit dem man spielen und das man loslassen kann.'
+      en: 'Arendt takes it from Epictetus by way of Cato: in solitude I am by myself, together with my self, and therefore two-in-one; in loneliness I am actually one, deserted. The crucial difficulty, and the hinge of the hour: *the two-in-one needs the others in order to become one again.* Identity is confirmed only from outside, and company restores the single voice. Solitude splits; being seen makes whole. Movement 6 builds a companion that cannot perform that office — an object can hold presence but cannot confirm an identity — which is why it must be let go while the room is still full.',
+      bg: 'Аренд го взема от Епиктет през Катон: в самотата съм при себе си, заедно със своя аз, и следователно двама в един; в самотността съм действително един, изоставен. Решаващото затруднение и пантата на часа: *двамата в един се нуждаят от другите, за да станат отново един.* Идентичността се потвърждава само отвън, а компанията възстановява единния глас. Самотата разделя; да бъдеш видян те прави цял. Движение 6 изгражда спътник, който не може да изпълни тази служба — предметът може да носи присъствие, но не може да потвърди идентичност — и затова трябва да бъде оставен, докато залата още е пълна.',
+      de: 'Arendt übernimmt es von Epiktet über Cato: In der Einsamkeit bin ich bei mir, zusammen mit meinem Selbst, und also zwei-in-eins; in der Verlassenheit bin ich tatsächlich einer, verlassen. Die entscheidende Schwierigkeit und das Scharnier der Stunde: *Das Zwei-in-Eins braucht die anderen, um wieder eins zu werden.* Identität wird nur von außen bestätigt, und Gesellschaft stellt die eine Stimme wieder her. Einsamkeit spaltet; gesehen zu werden macht ganz. Bewegung 6 baut eine Gefährtin, die dieses Amt nicht ausüben kann — ein Objekt kann Anwesenheit tragen, aber keine Identität bestätigen — weshalb sie losgelassen werden muss, solange der Saal noch voll ist.'
     }
   },
   {
@@ -144,7 +145,7 @@ const entries: SourceEntry[] = [
     gloss: {
       en: 'Two definitions, and the project needs both. Lecoq: an attempt at an exploit that inevitably fails, the student’s own weakness turned into material. Gaulier: the clown *registering* the failure, so the registration becomes the comic moment. Lecoq supplies the attempt, Gaulier the look up afterwards. The flop scale rated by exposure rather than laugh size is this project’s instrument, not either man’s.',
       bg: 'Две определения, и проектът се нуждае и от двете. Льокок: опит за подвиг, който неизбежно се проваля — собствената слабост на ученика, превърната в материал. Голие: клоунът *осъзнава* провала и това осъзнаване става комичният момент. Льокок дава опита, Голие — вдигането на поглед след него. Скалата на флоповете, оценявана по разкритост, а не по сила на смеха, е инструмент на този проект, не на никого от двамата.',
-      de: 'Nicht bloß ein Scheitern: Der Clown bemerkt, dass er das Publikum nicht zum Lachen gebracht hat, und dieses Bemerken wird zum komischen Moment. Die nach Bloßstellung statt nach Lachstärke bewertete Flop-Skala ist ein Instrument dieses Projekts, nicht Gauliers.'
+      de: 'Zwei Definitionen, und das Projekt braucht beide. Lecoq: der Versuch einer Glanzleistung, der unweigerlich scheitert — die eigene Schwäche der Schülerin, in Material verwandelt. Gaulier: der Clown *bemerkt* das Scheitern, und dieses Bemerken wird zum komischen Moment. Lecoq liefert den Versuch, Gaulier den Blick danach. Die nach Bloßstellung statt nach Lachstärke bewertete Flop-Skala ist ein Instrument dieses Projekts, nicht das eines der beiden.'
     }
   },
   {
@@ -234,19 +235,34 @@ const ui: Data['ui'] = {
     phrase: 'In the documentation',
     source: 'Drawing on',
     status: { verified: 'Verified', chosen: 'Chosen', probable: 'Probable', open: 'Open' },
-    counts: { verified: 'verified', chosen: 'chosen', probable: 'probable', open: 'open' }
+    counts: {
+      verified: { one: 'verified', many: 'verified' },
+      chosen: { one: 'chosen', many: 'chosen' },
+      probable: { one: 'probable', many: 'probable' },
+      open: { one: 'open', many: 'open' }
+    }
   },
   bg: {
     phrase: 'В документацията',
     source: 'Опира се на',
     status: { verified: 'Потвърдено', chosen: 'Избрано', probable: 'Вероятно', open: 'Отворено' },
-    counts: { verified: 'потвърдени', chosen: 'избрано', probable: 'вероятно', open: 'отворени' }
+    counts: {
+      verified: { one: 'потвърден', many: 'потвърдени' },
+      chosen: { one: 'избран', many: 'избрани' },
+      probable: { one: 'вероятен', many: 'вероятни' },
+      open: { one: 'отворен', many: 'отворени' }
+    }
   },
   de: {
     phrase: 'In der Dokumentation',
     source: 'Stützt sich auf',
     status: { verified: 'Belegt', chosen: 'Gewählt', probable: 'Wahrscheinlich', open: 'Offen' },
-    counts: { verified: 'belegt', chosen: 'gewählt', probable: 'wahrscheinlich', open: 'offen' }
+    counts: {
+      verified: { one: 'belegt', many: 'belegt' },
+      chosen: { one: 'gewählt', many: 'gewählt' },
+      probable: { one: 'wahrscheinlich', many: 'wahrscheinlich' },
+      open: { one: 'offen', many: 'offen' }
+    }
   }
 }
 
