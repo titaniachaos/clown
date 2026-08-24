@@ -27,6 +27,7 @@ const PAGES = [
   ['rehearsal-toolkit', 'Rehearsal Toolkit', 'Репетиционен инструментариум', 'Probenwerkzeuge'],
   ['material-research', 'Material Research', 'Изследване на материала', 'Materialrecherche'],
   ['decisions', 'Decision Gates', 'Решаващи точки', 'Entscheidungspunkte'],
+  ['sources', 'Sources and Lineages', 'Източници и традиции', 'Quellen und Linien'],
   ['production', 'Production', 'Продукция', 'Produktion'],
   ['about', 'About the Project', 'За проекта', 'Über das Projekt']
 ] as const
