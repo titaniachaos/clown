@@ -114,6 +114,18 @@ kinds:
 - **Personal and political.** `IMG_7052.jpeg` is Titania under a "Safe abortion
   is a human right" banner. Nothing to do with consent — an editorial decision
   about what the professional site says, and hers alone.
+- **Children.** `IMG_1610.jpg` is Titania on a slackline holding both hands of a
+  child of about five, with a second child beside her and more watching. This is
+  the strictest category in the folder, not the same as the adults above. A
+  child cannot consent; a parent or guardian must, in writing, for that specific
+  publication. The GDPR treats children's data as meriting specific protection,
+  and the workshop and birthday pages are exactly where an image like this would
+  be reached for. **Do not publish any frame containing a child without the
+  guardian's written agreement naming the use.**
+- **Fellow performers.** `IMG_1355.jpg` is Titania with an acrobat mid-handstand
+  at a street event. Consent is still needed, but this is the easy case: a
+  colleague at a public performance, usually reachable and usually willing.
+  Ask; do not assume.
 - **Someone else's work.** `f2ed9844-….jpg` photographs a framed ink portrait of
   Titania, signed and dated 16.11.2023. The subject consents to nothing here;
   the question is copyright, and it belongs to whoever drew it. Being the sitter
