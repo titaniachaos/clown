@@ -2,7 +2,7 @@
 layout: home
 title: Solo Titania Chaos — ein wortloses Clown-Solo
 titleTemplate: false
-description: Der lebendige Arbeitsraum für Recherche, Proben, Dramaturgie und Produktion von Solo Titania Chaos 2026.
+description: Der lebendige Arbeitsraum für Recherche, Proben, Dramaturgie und Produktion von Solo Titania Chaos.
 hero:
   name: Clown
   text: Solo Titania Chaos 2026

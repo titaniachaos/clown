@@ -118,7 +118,7 @@ export default defineConfig({
   title: 'Solo Titania Chaos',
   titleTemplate: ':title | Solo Titania Chaos',
   description:
-    'Research, dramaturgy, rehearsal and production for the wordless Solo Titania Chaos 2026 clown project.',
+    'Research, dramaturgy, rehearsal and production for the wordless Solo Titania Chaos clown project.',
   cleanUrls: true,
 
   markdown: {
@@ -264,7 +264,7 @@ export default defineConfig({
       title: 'Соло Титания Хаос',
       titleTemplate: ':title | Соло Титания Хаос',
       description:
-        'Изследване, драматургия, репетиции и продукция за безсловесния клоунски проект „Соло Титания Хаос 2026“.',
+        'Изследване, драматургия, репетиции и продукция за безсловесния клоунски проект „Соло Титания Хаос“.',
       themeConfig: {
         nav: nav('/bg', 2, 'Титания Хаос'),
         sidebar: sidebar('/bg', 'Соло Титания Хаос', 2),
@@ -295,7 +295,7 @@ export default defineConfig({
       lang: 'de-AT',
       titleTemplate: ':title | Solo Titania Chaos',
       description:
-        'Recherche, Dramaturgie, Proben und Produktion für das wortlose Clown-Projekt Solo Titania Chaos 2026.',
+        'Recherche, Dramaturgie, Proben und Produktion für das wortlose Clown-Projekt Solo Titania Chaos.',
       themeConfig: {
         nav: nav('/de', 3, 'Titania Chaos'),
         sidebar: sidebar('/de', 'Solo Titania Chaos', 3),

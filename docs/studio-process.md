@@ -1,6 +1,6 @@
 ---
 title: The Studio
-description: The twelve-week studio process, the rehearsal toolkit and the material research that generate Solo Titania Chaos 2026.
+description: The twelve-week studio process, the rehearsal toolkit and the material research that generate Solo Titania Chaos.
 relations:
   - { from: material, kind: rests-on, to: sources#ledger }
   - { from: two-and-two, kind: rests-on, to: sources#paradoxes }

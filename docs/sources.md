@@ -1,6 +1,6 @@
 ---
 title: Sources and Lineages
-description: The books and practitioners behind the concepts used in Solo Titania Chaos 2026, the paradoxes they share, and the question still open.
+description: The books and practitioners behind the concepts used in Solo Titania Chaos, the paradoxes they share, and the question still open.
 outline: [2, 3]
 relations:
   - { from: reading, kind: grounds, to: concept#concept }

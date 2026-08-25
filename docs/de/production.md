@@ -1,6 +1,6 @@
 ---
 title: Produktion und Unterstützung
-description: Entscheidungspunkte, Produktionsbedarf und wie man Solo Titania Chaos 2026 koproduziert, beherbergt, zeigt oder unterstützt.
+description: Entscheidungspunkte, Produktionsbedarf und wie man Solo Titania Chaos koproduziert, beherbergt, zeigt oder unterstützt.
 ---
 
 # Produktion und Unterstützung

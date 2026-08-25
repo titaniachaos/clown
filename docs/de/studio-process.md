@@ -1,6 +1,6 @@
 ---
 title: Das Studio
-description: Der zwölfwöchige Studioprozess, die Probenwerkzeuge und die Materialrecherche, aus denen Solo Titania Chaos 2026 entsteht.
+description: Der zwölfwöchige Studioprozess, die Probenwerkzeuge und die Materialrecherche, aus denen Solo Titania Chaos entsteht.
 ---
 
 # Das Studio

@@ -1,6 +1,6 @@
 ---
 title: The Work
-description: The artistic concept, the seven-movement structure and the audience relationship behind the wordless Solo Titania Chaos 2026.
+description: The artistic concept, the seven-movement structure and the audience relationship behind the wordless Solo Titania Chaos.
 relations:
   - { from: concept, kind: rests-on, to: sources#ledger }
   - { from: modes, kind: tested-by, to: studio-process#material }

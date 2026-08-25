@@ -1,6 +1,6 @@
 ---
 title: Quellen und Linien
-description: Die Bücher und Praktiker hinter den Begriffen von Solo Titania Chaos 2026, die geteilten Paradoxien und die offen gebliebene Frage.
+description: Die Bücher und Praktiker hinter den Begriffen von Solo Titania Chaos, die geteilten Paradoxien und die offen gebliebene Frage.
 outline: [2, 3]
 ---
 

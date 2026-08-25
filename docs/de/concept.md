@@ -1,6 +1,6 @@
 ---
 title: Die Arbeit
-description: Das künstlerische Konzept, die Struktur aus sieben Bewegungen und die Beziehung zum Publikum hinter dem wortlosen Solo Titania Chaos 2026.
+description: Das künstlerische Konzept, die Struktur aus sieben Bewegungen und die Beziehung zum Publikum hinter dem wortlosen Solo Titania Chaos.
 ---
 
 # Die Arbeit

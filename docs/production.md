@@ -1,6 +1,6 @@
 ---
 title: Production and Support
-description: Decision gates, production needs, and how to co-produce, host, present or support Solo Titania Chaos 2026.
+description: Decision gates, production needs, and how to co-produce, host, present or support Solo Titania Chaos.
 relations:
   - { from: decisions, kind: rests-on, to: concept#dramaturgy }
 ---

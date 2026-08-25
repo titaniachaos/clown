@@ -27,7 +27,7 @@ export const LOCALES: LocaleMeta[] = [
 
 const SITE_NAME = 'Solo Titania Chaos'
 const SITE_DESCRIPTION =
-  'Research, dramaturgy, rehearsal and production for the wordless Solo Titania Chaos 2026 clown project.'
+  'Research, dramaturgy, rehearsal and production for the wordless Solo Titania Chaos clown project.'
 
 // Hosted by the main site. A landscape crop, because every platform that
 // renders a social card crops to roughly 1.91:1.
