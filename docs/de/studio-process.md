@@ -138,6 +138,20 @@ Es lässt sich auch die Flop-Skala hinauf spielen:
 
 Die tiefste Stufe braucht weder Objekt noch Worte.
 
+#### Was die Skala misst und was ihr entgeht
+
+In Amsdens Dissertation gelesen, misst die Skala eine Achse von etwas, das zwei hat.
+
+Dem Schlechten, berichtet sie, wird auf drei Weisen begegnet: als etwas zu **Verneinendem**, als etwas, das **echte Menschlichkeit** jenseits der Darstellung **freilegt**, und als etwas, das **als komisch dargeboten** wird. Das sind Arten, keine Tiefen. Ein Flop kann bei der Bloßstellung hoch stehen und trotzdem von der falschen Art sein, und eine 9 sagt nichts darüber, welche der drei es war.
+
+Die Skala ist deshalb ein Leseinstrument, kein Planungsinstrument. Gauliers Methode ist die *via negativa*: keine Vorschrift, kein Beispiel zur Nachahmung, die Spielerin schlägt vor, bis etwas angenommen wird. Wozu die Zahlen taugen, ist festzuhalten, was der Raum abgelehnt hat, damit es nicht zweimal vorgeschlagen wird.
+
+**Ein Flop ist keine Eigenschaft des Materials.** Gauliers eigene Kompanie spielte 1992 *The End of the Tunnel* an jedem Abend im Wesentlichen gleich; an einem guten Abend war es das Komischste, was die Spielenden je gesehen hatten, an einem schlechten klappte das Publikum die Sitze hoch und ging wütend hinaus. Dasselbe Material, entgegengesetzte Urteile, aufeinanderfolgende Abende. Jedes Fragment, das vor einem Publikum als **behalten** verbucht wird, ist vorläufig verbucht.
+
+**Die Warnung vor der Wiederholung ist konkret und trifft die Wochen 10 bis 12.** In den Proben jener Kompanie wurde nichts festgelegt und nichts wiederholt; das Spiel war frei und ungeheuer komisch, und sobald sie wiederholen wollten, was funktioniert hatte, fiel es flach. Das französische Wort für Probe ist *répétition*, was zugleich der Witz und das Problem ist. Das Verdichten ist die Phase, in der dieses Projekt am stärksten ausgesetzt ist; festgehalten werden sollte deshalb die Bedingung, die die Überraschung erzeugt hat, nicht die Form, die sie zufällig annahm.
+
+Noch etwas, das sich zu stehlen lohnt. Gauliers *Emergency Clown Hospital* stellt eine Studierende, die niemanden zum Lachen gebracht hat, vor den Raum, um die Flops ihres Clowns zu schildern — und das bringt verlässlich Gelächter. Der Bericht vom Scheitern übertrifft das Scheitern. Für ein wortloses Solo ist dieser Weg versperrt, was man besser weiß, als es spät zu entdecken.
+
 #### Die Stufe 5–6, durchgespielt
 
 Lecoqs Name für den Flop ist ein Versuch einer Glanzleistung, der unweigerlich scheitert. Ein Beweis ist eine Glanzleistung, also ist ein Beweis der Fünf genau diese Stufe.

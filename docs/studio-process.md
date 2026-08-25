@@ -141,6 +141,20 @@ It is also playable straight up the flop scale:
 
 The deepest rung needs no object and no words.
 
+#### What the scale measures, and what it misses
+
+Read in Amsden's thesis, the scale is measuring one axis of something that has two.
+
+Badness, she reports, is approached in three ways: as something to be **negated**, as something that **reveals authentic humanity** beyond performance, and as something **presented as funny**. Those are kinds, not depths. A flop can sit high on this scale for exposure and still be the wrong kind, and rating it 9 says nothing about which of the three it was.
+
+The scale is therefore a reading instrument, not a planning one. Gaulier's method is *via negativa*: no prescription, no illustration by example, the performer proposing until something is accepted. What the numbers are good for is recording what the room rejected, so it is not proposed twice.
+
+**A flop is not a property of the material.** Gaulier's own company toured *The End of the Tunnel* in 1992 with substantially the same show each night; on a good night it was the funniest thing the performers had seen, and on a bad one the audience slammed their seats and walked out furious. The same material, opposite verdicts, consecutive nights. Any fragment logged **keep** on one audience is logged provisionally.
+
+**The repetition warning is specific and it lands on weeks 10 to 12.** Rehearsing that company, nothing was fixed and nothing repeated; the playing was free and enormously funny, and whenever they came to repeat something that had worked, it fell flat. The French for rehearsal is *répétition*, which is the joke and the problem at once. Tightening is the phase where this project is most exposed to it, so what gets locked should be the condition that produced the surprise, not the shape the surprise happened to take.
+
+One more thing worth stealing. Gaulier's *Emergency Clown Hospital* puts a student who has made nobody laugh in front of the room to describe their clown's flops, and it reliably gets roars. The account of the failure outperforms the failure. For a wordless solo that route is closed, which is worth knowing rather than discovering late.
+
 #### The 5–6 rung, worked
 
 Lecoq's name for the flop is an attempt at an exploit that inevitably fails. A proof is an exploit, so a proof of five is the rung exactly.
