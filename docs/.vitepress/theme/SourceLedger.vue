@@ -45,15 +45,11 @@ const tally = computed(() =>
 
 const byId = computed(() => new Map(data.entries.map((entry) => [entry.id, entry])))
 
-/** The reading order, derived rather than kept: several records share a seat. */
-const reading = computed(() => {
-  const seats = new Map<number, typeof data.entries>()
-  for (const entry of data.entries) {
-    if (entry.reading === undefined) continue
-    if (!seats.has(entry.reading)) seats.set(entry.reading, [])
-    seats.get(entry.reading)!.push(entry)
-  }
-  return [...seats.entries()].sort((a, b) => a[0] - b[0])
+/** Which seat a record holds, so the matrix row can show it. */
+const seatOf = computed(() => {
+  const seats = new Map<string, number>()
+  for (const seat of data.reading) for (const id of seat.records) seats.set(id, seat.seat)
+  return seats
 })
 
 const withParadox = computed(() => data.entries.filter((e) => e.paradox))
@@ -109,7 +105,7 @@ function parts(text: string) {
         <p class="phrase">{{ entry.phrase[lang] }}</p>
         <p class="locus">{{ entry.locus }}</p>
         <span class="badge" :class="entry.status">{{ ui.status[entry.status] }}</span>
-        <p v-if="entry.reading !== undefined" class="seat">{{ ui.order }} · {{ entry.reading }}</p>
+        <p v-if="seatOf.get(entry.id)" class="seat">{{ ui.order }} · {{ seatOf.get(entry.id) }}</p>
       </div>
 
       <div class="body">
@@ -186,13 +182,21 @@ function parts(text: string) {
     </div>
   </div>
 
-  <!-- the order, derived from the seat each record holds -->
+  <!-- the order, with the reason for each seat, linked to the records it names -->
   <ol v-else class="order">
-    <li v-for="[seat, records] in reading" :key="seat">
-      <template v-for="(record, i) in records" :key="record.id">
-        <span v-if="i" class="and"> · </span>
-        <a :href="`#${record.id}`">{{ shortWork(record.work) }}</a>
-      </template>
+    <li v-for="seat in data.reading" :key="seat.seat">
+      <span class="note">
+        <template v-for="(part, i) in parts(seat.note[lang])" :key="i">
+          <em v-if="part.em">{{ part.text }}</em>
+          <template v-else>{{ part.text }}</template>
+        </template>
+      </span>
+      <span class="seats">
+        <template v-for="(id, i) in seat.records" :key="id">
+          <span v-if="i" class="and"> · </span>
+          <a :href="`#${id}`">{{ phraseOf(id) }}</a>
+        </template>
+      </span>
     </li>
   </ol>
 </template>
@@ -428,7 +432,15 @@ function parts(text: string) {
   color: var(--vp-c-text-2);
 }
 
-.order li { margin-bottom: 0.25rem; }
+.order li { margin-bottom: 0.7rem; }
+
+.order .note { display: block; color: var(--vp-c-text-1); line-height: 1.6; }
+
+.order .seats {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 0.15rem;
+}
 .order .and { color: var(--vp-c-text-3); }
 
 .receipt {

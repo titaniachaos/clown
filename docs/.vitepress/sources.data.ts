@@ -47,9 +47,13 @@ export interface Edge {
 }
 
 /** Facets a record may carry beyond its citation. Merged in by the loader. */
+/** One seat in the reading order: the records to read, and why then. */
+export interface Seat {
+  records: string[]
+  note: Record<Lang, string>
+}
+
 export interface Facets {
-  /** Position in the reading order; several records can share one seat. */
-  reading?: number
   /** The claim the work itself makes, in its own terms. */
   statement?: Record<Lang, string>
   /** The paradox that claim generates for this project. */
@@ -73,6 +77,7 @@ export type Record_ = SourceEntry & Facets & {
 export interface Data {
   entries: Record_[]
   own: OwnParadox[]
+  reading: (Seat & { seat: number })[]
   edges: Edge[]
   /** The addresses folded to one value, recomputed on every build. */
   receipt: string
@@ -387,6 +392,22 @@ const entries: SourceEntry[] = [
     }
   },
   {
+    id: 'whiteface-split',
+    status: 'verified',
+    locus: 'concept · dramaturgy · 5 · 6',
+    work: 'Klara Van Wyk, The Whiteface and the Auguste: The Integration of Structure and Spontaneity in Contemporary Clown Theatre Performance, MA dissertation, University of Cape Town (2015)',
+    phrase: {
+      en: 'The whiteface a solo keeps',
+      bg: 'Белият клоун, който солото запазва',
+      de: 'Der Weißclown, den ein Solo behält'
+    },
+    gloss: {
+      en: 'Clown theatre needs the Whiteface for structure and the Auguste for spontaneity, and the Auguste has come to stand for *clown* so completely that the structural half goes unexamined. On her own solo work she puts the two inside one performer as conceptual counterparts, and argues that where the Auguste is in charge a Whiteface supplying rules, tension and goals is essential. That is why [[playful-anarchy]] does not hand the function to the furniture alone: the room supplies the rule, the performer supplies the aspiration and the collapse out of it, which is [[two-in-one]] reached from clown practice instead of philosophy.',
+      bg: 'Клоунският театър се нуждае от белия клоун за структура и от огюста за спонтанност, а огюстът е започнал да означава *клоун* толкова пълно, че структурната половина остава неразгледана. В собствената си солова работа тя поставя двамата вътре в един изпълнител като понятийни съответствия и твърди, че там, където огюстът води, е необходим бял клоун, който доставя правила, напрежение и цели. Затова [[playful-anarchy]] не предава функцията само на мебелите: стаята доставя правилото, изпълнителят — стремежа и рухването от него, което е [[two-in-one]], стигнато от клоунската практика, а не от философията.',
+      de: 'Clown-Theater braucht den Weißclown für die Struktur und den Auguste für die Spontaneität, und der Auguste ist so vollständig für *Clown* eingetreten, dass die strukturelle Hälfte unbefragt bleibt. In ihrer eigenen Solo-Arbeit legt sie beide als begriffliche Gegenstücke in eine Spielerin und argumentiert, dass dort, wo der Auguste führt, ein Weißclown mit Regeln, Spannung und Zielen unerlässlich ist. Darum übergibt [[playful-anarchy]] die Funktion nicht allein den Möbeln: Der Raum liefert die Regel, die Spielerin das Streben und den Absturz daraus — das ist [[two-in-one]], von der Clown-Praxis her erreicht statt von der Philosophie.'
+    }
+  },
+  {
     id: 'emptied-room',
     status: 'open',
     locus: 'concept · 8',
@@ -405,14 +426,7 @@ const entries: SourceEntry[] = [
 ]
 
 const facets: Record<string, Facets> = {
-  'alone-together': {
-    reading: 7
-  },
-  'authenticity-effect': {
-    reading: 11
-  },
   'back-shop': {
-    reading: 5,
     paradox: {
       en: 'The room kept wholly one’s own stays furnished with borrowed language and absent people',
       bg: 'Стаята, запазена изцяло за себе си, остава обзаведена със заета реч и отсъстващи хора',
@@ -420,7 +434,6 @@ const facets: Record<string, Facets> = {
     }
   },
   'capacity': {
-    reading: 2,
     statement: {
       en: 'The capacity to be alone is *built* by a present, undemanding witness — and that witness may be a cot, a pram, or the atmosphere of the room',
       bg: 'Способността да си сам се **изгражда** от присъстващ, непретенциозен свидетел — а свидетелят може да бъде люлка, количка или атмосферата на стаята',
@@ -432,22 +445,14 @@ const facets: Record<string, Facets> = {
       de: 'Die Fähigkeit zum Alleinsein gründet darauf, in Anwesenheit eines anderen allein gewesen zu sein'
     }
   },
-  'decroux': {
-    reading: 8
-  },
   'flop': {
-    reading: 6,
     statement: {
       en: 'A flop is not a property of the material: the same show was the funniest thing the company had seen one night and drove the audience out furious the next',
       bg: 'Флопът не е свойство на материала: същото представление е най-смешното, което трупата е виждала, в една вечер, и изгонва публиката вбесена в следващата',
       de: 'Ein Flop ist keine Eigenschaft des Materials: dieselbe Aufführung war an einem Abend das Komischste, was die Kompanie gesehen hatte, und trieb das Publikum am nächsten wütend hinaus'
     }
   },
-  'grock': {
-    reading: 12
-  },
   'insensibility': {
-    reading: 3,
     paradox: {
       en: 'To laugh, the spectator must set feeling aside — and this piece wants the feeling',
       bg: 'За да се смее, зрителят трябва да остави чувството настрана — а това представление иска чувството',
@@ -455,7 +460,6 @@ const facets: Record<string, Facets> = {
     }
   },
   'laughter-echo': {
-    reading: 3,
     paradox: {
       en: 'Laughter needs an echo, so a room laughing at solitude is a room disproving it',
       bg: 'Смехът се нуждае от ехо, тъй че зала, която се смее на уединението, е зала, която го опровергава',
@@ -463,7 +467,6 @@ const facets: Record<string, Facets> = {
     }
   },
   'lecoq': {
-    reading: 4,
     statement: {
       en: 'Be yourself as profoundly as you can, *and observe the effect you have on the audience* — the self is read through its effect',
       bg: 'Бъди себе си възможно най-дълбоко **и наблюдавай ефекта, който имаш върху публиката** — азът се чете през своя ефект',
@@ -471,7 +474,6 @@ const facets: Record<string, Facets> = {
     }
   },
   'playful-anarchy': {
-    reading: 9,
     statement: {
       en: 'Two and two make five is a private rule, or terror, or comedy, decided only by who is in the room',
       bg: 'Две и две правят пет е лично правило, или терор, или комедия — решава единствено кой е в залата',
@@ -479,18 +481,13 @@ const facets: Record<string, Facets> = {
     }
   },
   'shared-floor': {
-    reading: 13,
     statement: {
       en: 'In the fall the performer reaches a floor shared with the public',
       bg: 'В падането изпълнителят достига под, споделен с публиката',
       de: 'Im Fall erreicht die Spielende einen mit dem Publikum geteilten Boden'
     }
   },
-  'three-terms': {
-    reading: 1
-  },
   'training-paradox': {
-    reading: 6,
     paradox: {
       en: 'To make an audience laugh, the clown must repeatedly fail to make them laugh',
       bg: 'За да разсмее публиката, клоунът трябва многократно да не успее да я разсмее',
@@ -498,7 +495,6 @@ const facets: Record<string, Facets> = {
     }
   },
   'two-in-one': {
-    reading: 1,
     statement: {
       en: 'Solitude splits the self in two; only other people make it one again, because identity is confirmed only from outside',
       bg: 'Самотата разделя аза на две; само другите го правят отново един, защото идентичността се потвърждава само отвън',
@@ -597,6 +593,118 @@ function address(value: unknown): string {
   return createHash('sha256').update(canonical(value)).digest('hex').slice(0, 12)
 }
 
+/**
+ * The order the documentation needs, with the reason for each seat. A seat can
+ * hold more than one record -- Arendt is two books, Bergson is one book read
+ * twice -- so the sequence is its own list rather than a number on a record.
+ */
+const reading: Seat[] = [
+  {
+    records: ['two-in-one', 'three-terms'],
+    note: {
+      en: 'Arendt, *The Life of the Mind*, and the closing chapter of *The Origins of Totalitarianism* — two modes and one movement',
+      bg: 'Аренд, *Животът на духа*, и последната глава на *Тоталитаризмът* — два режима и едно движение',
+      de: 'Arendt, *Vom Leben des Geistes*, und das Schlusskapitel von *Elemente und Ursprünge totaler Herrschaft* — zwei Modi und eine Bewegung'
+    }
+  },
+  {
+    records: ['capacity'],
+    note: {
+      en: 'Winnicott, “The Capacity to be Alone” — five pages, and the load-bearing claim',
+      bg: 'Уиникът, „Способността да бъдеш сам“ — пет страници и носещото твърдение',
+      de: 'Winnicott, „The Capacity to be Alone“ — fünf Seiten und die tragende Behauptung'
+    }
+  },
+  {
+    records: ['laughter-echo', 'insensibility'],
+    note: {
+      en: 'Bergson, *Le Rire* (1900) — public domain, and the only source here that both supports the concept and argues against it',
+      bg: 'Бергсон, *Le Rire* (1900) — обществено достояние и единственият източник тук, който едновременно подкрепя концепцията и спори с нея',
+      de: 'Bergson, *Le Rire* (1900) — gemeinfrei, und die einzige Quelle hier, die das Konzept zugleich stützt und ihm widerspricht'
+    }
+  },
+  {
+    records: ['lecoq'],
+    note: {
+      en: 'Lecoq, *Le Corps Poétique* — two of the five unnamed lineages at once',
+      bg: 'Льокок, *Le Corps Poétique* — две от петте неназовани традиции наведнъж',
+      de: 'Lecoq, *Le Corps Poétique* — zwei der fünf unbenannten Linien auf einmal'
+    }
+  },
+  {
+    records: ['back-shop'],
+    note: {
+      en: 'Montaigne, “De la solitude” — short, public domain, the source of a movement title',
+      bg: 'Монтен, „За самотата“ — кратко, обществено достояние, източник на заглавие на движение',
+      de: 'Montaigne, „De la solitude“ — kurz, gemeinfrei, Quelle eines Bewegungstitels'
+    }
+  },
+  {
+    records: ['flop', 'training-paradox'],
+    note: {
+      en: 'Amsden on the flop, and Purcell Gates on the training paradox',
+      bg: 'Амсдън за флопа и Пърсел Гейтс за парадокса на обучението',
+      de: 'Amsden über den Flop und Purcell Gates über die Paradoxie der Ausbildung'
+    }
+  },
+  {
+    records: ['alone-together'],
+    note: {
+      en: 'Turkle, *Alone Together* — the contemporary anchor',
+      bg: 'Търкъл, *Alone Together* — съвременната опора',
+      de: 'Turkle, *Alone Together* — der gegenwärtige Anker'
+    }
+  },
+  {
+    records: ['decroux'],
+    note: {
+      en: 'Decroux, *Paroles sur le Mime* — the argument for wordlessness',
+      bg: 'Декру, *Paroles sur le Mime* — аргументът за безсловесността',
+      de: 'Decroux, *Paroles sur le Mime* — das Argument für die Wortlosigkeit'
+    }
+  },
+  {
+    records: ['playful-anarchy'],
+    note: {
+      en: 'Pascal Jacob on the auguste, for the BnF and the CNAC — the chosen lineage',
+      bg: 'Паскал Жакоб за огюста, за BnF и CNAC — избраната традиция',
+      de: 'Pascal Jacob über den Auguste, für die BnF und das CNAC — die gewählte Linie'
+    }
+  },
+  {
+    records: ['whiteface-split'],
+    note: {
+      en: 'Van Wyk, *The Whiteface and the Auguste* (MA, Cape Town, 2015) — the half of the pairing a solo cannot simply drop',
+      bg: 'Ван Вайк, *The Whiteface and the Auguste* (магистърска теза, Кейптаун, 2015) — половината от двойката, която солото не може просто да изостави',
+      de: 'Van Wyk, *The Whiteface and the Auguste* (MA, Kapstadt, 2015) — die Hälfte des Paares, die ein Solo nicht einfach fallen lassen kann'
+    }
+  },
+  {
+    records: ['authenticity-effect'],
+    note: {
+      en: 'Davison, *Clown: Readings in Theatre Practice* (2013) — how recent the red nose is, and what choosing it signs',
+      bg: 'Дейвисън, *Clown: Readings in Theatre Practice* (2013) — колко нов е червеният нос и какво подписва изборът му',
+      de: 'Davison, *Clown: Readings in Theatre Practice* (2013) — wie jung die rote Nase ist und was ihre Wahl unterschreibt'
+    }
+  },
+  {
+    records: ['grock'],
+    note: {
+      en: 'Grock, *Life’s a Lark* (Heinemann, 1931; tr. Madge Pemberton from *Ich lebe gern!*) — the solo auguste who left the pairing behind',
+      bg: 'Грок, *Life’s a Lark* (Heinemann, 1931; прев. Madge Pemberton от *Ich lebe gern!*) — соловият огюст, който напуска двойката',
+      de: 'Grock, *Life’s a Lark* (Heinemann, 1931; übers. Madge Pemberton nach *Ich lebe gern!*) — der Solo-Auguste, der das Paar verließ'
+    }
+  },
+  {
+    records: ['shared-floor'],
+    note: {
+      en: 'Vincent Laughery, « L’écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — the fall as a floor shared with the public',
+      bg: 'Венсан Логери, « L’écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — падането като под, споделен с публиката',
+      de: 'Vincent Laughery, « L’écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — der Fall als ein mit dem Publikum geteilter Boden'
+    }
+  }
+]
+
 const ui: Data['ui'] = {
   en: {
     statement: 'The statement it makes',
@@ -676,9 +784,16 @@ export default defineLoader({
       }
     }
 
+    for (const seat of reading) {
+      for (const id of seat.records) {
+        if (!known.has(id)) throw new Error(`sources: the reading order names ${id}, which is not a record`)
+      }
+    }
+
     return {
       entries: assembled,
       own,
+      reading: reading.map((seat, i) => ({ ...seat, seat: i + 1 })),
       edges,
       receipt: address(assembled.map((e) => e.address).sort()),
       ui
