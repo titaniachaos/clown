@@ -1,40 +1,28 @@
 ---
 title: Production and Support
 description: "Step inside the making of Solo Titania Chaos: its artistic questions, production process and ways to co-produce, host or support the work."
-outline: [2, 3]
+outline: [2, 2]
 relations:
   - { from: decisions, kind: rests-on, to: concept#dramaturgy }
 ---
 
 # Production and support
 
-<span id="solo"></span>
+One clown may stand on stage alone. Making the work is another matter.
 
-> **One clown may stand on stage alone. Making the work is another matter.**
->
-> Solo Titania Chaos needs time, space, outside eyes, audiences and collaborators to move from studio experiment to performance.
->
-> **This page is about that process: how a solo is developed, tested and eventually brought to an audience.**
+Solo Titania Chaos needs time in a room, outside eyes, technical collaboration, encounters with audiences — and eventually partners who can help it move from studio experiment to performance.
 
-## What the work needs {#needs}
-
-#### Time & space
+This page opens the door on that process: what the work needs, what is still being decided, and how people and institutions can become part of it.
 
 The performance is deliberately small. The conditions that allow it to become precise are not.
-
-The artistic method depends on protected studio time, outside eyes, repeated audience tests, controllable light and careful documentation. Production is therefore part of the dramaturgy rather than an administrative layer added later.
 
 The material is developed through physical research rather than from a finished script. Scenes, objects and relationships have to be tried, failed, repeated and changed.
 
 Ideally the process needs a studio where objects and working arrangements can remain in place between sessions.
 
-#### Outside eyes
-
 A solo needs other people.
 
 A regular outside eye or dramaturg helps reveal what cannot be seen from inside the performance.
-
-#### Audiences
 
 The audience is part of the work long before the première.
 
@@ -42,13 +30,9 @@ Four audience tests of increasing size are planned. They ask specific questions 
 
 Decisions are made from what happens in the room, not from the elegance of the written plan.
 
-#### Light & sound
-
 Light is not simply there to illuminate the performer. In this work, it can become a partner, an obstacle, a boundary or another presence.
 
 Sound remains deliberately minimal. Both light and sound need to enter the process early because their presence — and their withdrawal — can change the dramaturgy.
-
-#### Documentation
 
 Late-stage runs need clear video and still documentation.
 
@@ -66,9 +50,9 @@ Some questions can remain open for a long time. Others affect the space, technic
 
 These are some of the questions currently being tested.
 
-### The world
+**The world**
 
-<QuestionDisclosure title="Fiction or bare space?">
+### Fiction or bare space?
 
 How much does the audience need to know about where the clown is?
 
@@ -78,9 +62,7 @@ The audience does not need to be told exactly where they are. But the clown need
 
 Every object therefore has to be usable rather than merely meaningful.
 
-</QuestionDisclosure>
-
-<QuestionDisclosure title="Does the clown know this is a performance?">
+### Does the clown know this is a performance?
 
 A clown and an audience already know about each other. The question is whether the character begins with that knowledge.
 
@@ -90,9 +72,7 @@ If she begins with show-business gestures or behaves from the start as though sh
 
 This is therefore not only an acting choice. It determines the relationship between clown and audience from the beginning.
 
-</QuestionDisclosure>
-
-<QuestionDisclosure title="Which venue is the work for?">
+### Which venue is the work for?
 
 The same piece cannot simply be dropped into every kind of space unchanged.
 
@@ -102,11 +82,9 @@ Daylight, outdoor performance and places where people can come and go create a f
 
 Rather than pretending otherwise, the project may develop a separate, shorter and more robust version for those contexts.
 
-</QuestionDisclosure>
+**Presence & absence**
 
-### Presence & absence
-
-<QuestionDisclosure title="Does companionship succeed?">
+### Does companionship succeed?
 
 One of the possibilities being tested is that the clown, alone in the room, creates a companion out of what is available to her.
 
@@ -116,9 +94,7 @@ Only then can losing it matter.
 
 Without one genuine success, there is nothing to lose — and the clown is never allowed to win.
 
-</QuestionDisclosure>
-
-<QuestionDisclosure title="What can disappear?">
+### What can disappear?
 
 Being alone is not only about whether another person is physically present.
 
@@ -128,9 +104,7 @@ The project is testing whether different forms of presence can withdraw one afte
 
 Because light, sound and audience response behave very differently, these possibilities need to be tested separately rather than treated as one general effect.
 
-</QuestionDisclosure>
-
-<QuestionDisclosure title="Who leaves at the end?">
+### Who leaves at the end?
 
 Usually a performance ends, the performer leaves or returns for applause, and eventually the audience goes home.
 
@@ -142,11 +116,9 @@ A dramaturgical choice therefore becomes a production choice.
 
 Whether this ending belongs to the final piece still has to be discovered in front of an audience.
 
-</QuestionDisclosure>
+**The clown's language**
 
-### The clown's language
-
-<QuestionDisclosure title="Where must comedy remain?">
+### Where must comedy remain?
 
 A piece about solitude can become quiet, uncomfortable or even painful. But this is still a clown piece.
 
@@ -156,9 +128,7 @@ Even in darker or more withdrawn passages, effort, failure, timing or an unexpec
 
 Audience tests will help determine how long quieter passages can hold before the connection is lost.
 
-</QuestionDisclosure>
-
-<QuestionDisclosure title="Is there one vocal sound?">
+### Is there one vocal sound?
 
 The solo is wordless, but wordless does not necessarily mean silent.
 
@@ -168,9 +138,7 @@ In a performance that has withheld the human voice for almost an hour, even one 
 
 Whether such a sound belongs in the piece — and what it would do if it appears — has to be discovered deliberately rather than happening accidentally in a late run.
 
-</QuestionDisclosure>
-
-<QuestionDisclosure title="Red nose or not?">
+### Red nose or not?
 
 A red nose may be tiny, but it changes what an audience sees before the clown has done anything.
 
@@ -182,9 +150,7 @@ The project will therefore test the same material with a small red nose and with
 
 The question is simple: what changes in the relationship with the audience?
 
-</QuestionDisclosure>
-
-<QuestionDisclosure title="What is singing for?">
+### What is singing for?
 
 Titania can sing. That does not mean the solo needs singing.
 
@@ -202,11 +168,9 @@ but **What would singing do to the piece?**
 
 Only if there is an answer does the question of where — or whether — it belongs become useful.
 
-</QuestionDisclosure>
+**Material & form**
 
-### Material & form
-
-<QuestionDisclosure title="Does the tulle earn its place?">
+### Does the tulle earn its place?
 
 An earlier version of the solo worked with tulle. It carried ideas of fragility, fantasy, freedom, dream and chaos against order.
 
@@ -220,9 +184,7 @@ The test is not whether it produces beautiful images, but whether it gives the c
 
 It may turn out that it photographs well and plays thin. If so, it goes.
 
-</QuestionDisclosure>
-
-<QuestionDisclosure title="Is the piece one thing or several?">
+### Is the piece one thing or several?
 
 The project is being developed towards a full-length solo with an overall dramaturgical arc.
 
@@ -238,9 +200,7 @@ The studio process will therefore test both the assembled whole and deliberately
 
 The aim is not to make the work fit everywhere but have it flexible for various settings. It is to discover which forms remain true to it.
 
-</QuestionDisclosure>
-
-#### What has to be decided first?
+**What has to be decided first?**
 
 Not every open question needs an immediate answer.
 
@@ -256,6 +216,16 @@ These choices affect technical design, rehearsal, collaboration and eventually b
 The others can remain alive in the studio for longer.
 
 ## Production approach {#production}
+
+The artistic method depends on practical conditions: protected studio time, an outside eye, repeated audience tests, controllable light and careful documentation. Production is therefore part of the dramaturgy rather than an administrative layer added later.
+
+### What the process needs
+
+- A studio where objects can stay in place between sessions
+- A regular outside eye or dramaturg
+- Four audience tests of increasing size
+- Early collaboration with light and sound
+- Clear video and still documentation of the late-stage runs
 
 ### A testable project
 
@@ -280,6 +250,21 @@ Conversations with presenters begin during rehearsal because programming timelin
 ### Private production documents
 
 Funding deadlines, eligibility rules and working budgets remain in the private production documents because they change and must be verified against live calls before use.
+
+## About the project {#about}
+
+Clown is the documentation home for **Solo Titania Chaos**: a structured knowledge base for research, material generation, dramaturgy, rehearsal planning and production.
+
+### Purpose
+
+This subsite keeps the artistic process legible as the solo develops. It brings questions, experiments and production thinking into one place without mixing them into the public workshop pages.
+
+### Working areas
+
+- Research into clown, presence, rhythm and audience contact
+- Playable material and rehearsal experiments
+- Dramaturgical structures and competing versions
+- Production decisions, milestones and practical preparation
 
 ## Fair pay {#fairpay}
 
