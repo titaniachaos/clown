@@ -77,12 +77,38 @@ for (const l of rows) {
   }
 }
 
+// A lead is only as good as the day it was checked. Age each one, so a
+// stale record cannot hide behind a recently touched file.
+const staleLeads = rows
+  .filter((l) => days(l.verified ?? data.verified) * -1 > 90)
+  .map((l) => l.name)
+
 const age = days(data.verified) * -1
 const stale = age > 90
 console.log(
   `  ${rows.length} live leads · ${urgent} inside 45 days · checked ${age}d ago` +
     (stale ? ' — STALE, re-verify before writing' : '')
 )
+
+// A deadline inside the window is only actionable if the eligibility behind it
+// is settled. Say so, rather than letting `verify-eligibility` read as a note.
+const unsettled = rows.filter(
+  (l) =>
+    l.fit === 'verify-eligibility' &&
+    l.precision === 'exact' &&
+    l.deadline &&
+    days(l.deadline) >= 0 &&
+    days(l.deadline) <= 45
+)
+if (unsettled.length) {
+  console.log(
+    `  ${unsettled.length} inside 45 days with eligibility unconfirmed — settle before drafting:`
+  )
+  for (const l of unsettled) console.log(`      ${l.name}`)
+}
+if (staleLeads.length) {
+  console.log(`  ${staleLeads.length} lead(s) checked over 90 days ago: ${staleLeads.join(', ')}`)
+}
 if (!showAll) {
   const hidden = data.leads.length - rows.length
   if (hidden) console.log(`  ${hidden} ruled out and kept on record (--all to show)`)
