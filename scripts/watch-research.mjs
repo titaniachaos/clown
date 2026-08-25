@@ -41,8 +41,13 @@ const TERMS =
   /\b(clown|clowning|auguste|whiteface|bouffon|buffoon|Gaulier|Lecoq|Decroux|Grock|flop|slapstick|red nose|solitude|loneliness|solo performance|complicit|physical comed|mime)/i
 
 /** A second signal, for hits outside the named journals: "clown" alone also
- *  names a fish, a therapy programme and a Shakespearean role. */
-const CONTEXT = /\b(performance|performing|theatre|theater|stage|staged|audience|spectator|circus|comedy|comic|actor|actress|drama|training)/i
+ *  names two species of fish. Deliberately narrow -- "performance" and
+ *  "training" are not theatre words, as clown loach aquaculture demonstrated. */
+const CONTEXT =
+  /\b(theatr|theater|stage|staged|audience|spectator|circus|comedy|comic|actor|actress|drama|performer|clowning|clown therapy|hospital clown|medical clown|live performance|performance art)/i
+
+/** Domains that keep surfacing on the word alone. */
+const NOT_THIS = /\b(aquacultur|fisher|fish\b|loach|featherback|Chromobotia|Amphiprion|anemonefish|veterinar|oncolog|cardiolog|myocard|larva)/i
 
 /** Distinctive enough to search on across every journal Crossref indexes. */
 const SEARCHES = ['clown', 'clowning auguste', 'Gaulier clown', 'Lecoq clown', 'bouffon performance']
@@ -115,7 +120,7 @@ for (const query of SEARCHES) {
   for (const item of result.items) {
     const title = item.title?.[0] ?? ''
     const text = `${title} ${item.abstract ?? ''}`
-    if (TERMS.test(title) && CONTEXT.test(text)) record(item, `matched "${query}"`)
+    if (TERMS.test(title) && CONTEXT.test(text) && !NOT_THIS.test(text)) record(item, `matched "${query}"`)
   }
 }
 
