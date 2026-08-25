@@ -29,8 +29,10 @@ const SITE_NAME = 'Solo Titania Chaos 2026'
 const SITE_DESCRIPTION =
   'Research, dramaturgy, rehearsal and production for the wordless Solo Titania Chaos 2026 clown project.'
 
-const OG_IMAGE = `${HOSTNAME}/images/titania-chaos.webp`
-const OG_IMAGE_SIZE = { w: 1452, h: 1800, alt: 'Titania Chaos' }
+// Hosted by the main site. A landscape crop, because every platform that
+// renders a social card crops to roughly 1.91:1.
+const OG_IMAGE = `${HOSTNAME}/images/titania-chaos-card.jpg`
+const OG_IMAGE_SIZE = { w: 1200, h: 630, alt: 'Titania Chaos' }
 
 /** `index.md` -> `/`, `bg/concept.md` -> `/bg/concept` (cleanUrls is on). */
 export function toUrlPath(page: string): string {
