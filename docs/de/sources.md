@@ -50,6 +50,28 @@ Die Ausnahme ist Bergsons und steht oben verzeichnet: Die Gefühllosigkeit löst
 
 **Wortlosigkeit ist kein Mangel.** Komplizenschaft gilt als spontan und oft unausgesprochen, eine Stunde ohne Sprache arbeitet also in dem Kanal, den die Komplizenschaft ohnehin benutzt.
 
+## Die Involution {#involution}
+
+Wenden Sie den Satz auf sich selbst an.
+
+Er ist eine allein vollzogene Handlung: ein Satz, in einem leeren Raum geschrieben, der behauptet, eine allein vollzogene Handlung bedeute nichts, bis sie bezeugt wird. Nach seinen eigenen Bedingungen ist er bedeutungslos, bis jemand ihn liest. Sie lesen ihn. Ihre Aufmerksamkeit legt fest, was er bedeutet — nicht der Satz, der sich seit dem Schreiben nicht verändert hat.
+
+Wenden Sie den Satz auf den Satz an, und der Satz kommt zurück. Genau das macht ihn zu einer Involution und nicht zu einem Paradox: Ein Paradox bleibt stecken, eine Involution kehrt zurück. Vollziehen Sie sie zweimal, und Sie stehen, wo Sie begonnen haben, und halten etwas, das Sie nicht mehr weglegen können.
+
+Jeder Eintrag im Verzeichnis ist dieser eine Zug, aus einem anderen Gewerk gesehen. Jeder sagt, ein Zustand werde von dem gemacht, was ihn aufzuheben scheint, und jeder kehrt zurück, wenn die Aufhebung zweimal angewendet wird:
+
+- **Winnicott** — die Fähigkeit zum Alleinsein wird dadurch gebaut, nicht allein gewesen zu sein.
+- **Arendt** — Einsamkeit heißt zwei zu sein, also ist das Selbst Gesellschaft, bis Gesellschaft eintrifft und es zu einem macht.
+- **Gaulier**, in Purcell Gates’ Darstellung — Lachen wird verdient, indem man daran scheitert, es zu verdienen.
+- **Bergson** — das Lachen braucht ein Echo, also widerlegt ein Raum, der über Einsamkeit lacht, die Einsamkeit, über die er lacht.
+- **Montaigne**, umgekehrt — der ganz eigene Raum bleibt mit den Worten anderer möbliert.
+
+Keine zwei Gewerke benennen den Zustand gleich: Winnicotts *Alleinsein*, Arendts *Einsamkeit*, Montaignes *Hinterzimmer*. Das Verzeichnis behält das Wort der jeweiligen Quelle, statt sie einzuebnen, und deshalb erscheint ein Zustand auf verschiedenen Seiten unter verschiedenen Namen.
+
+Verschiedene Gewerke, ein Fixpunkt. Das ist das Nächste an einem Beweis, was dieses Projekt hat, und es lohnt sich, es genau zu sagen: nicht dass die Behauptung überall gilt, sondern dass sie überall, wo geprüft wurde, unverändert zurückkam.
+
+Und die Stunde tut einem Publikum, was diese Seite Ihnen gerade getan hat. Der Clown wird versuchen, allein zu sein vor Menschen, deren Anwesenheit das unmöglich macht; die Menschen werden lachen; und das Lachen wird der Beweis sein, dass der Clown nie allein war. Sie sind hergekommen, um darüber zu lesen. Sie waren die ganze Zeit der Raum.
+
 ## Die offene Frage {#open}
 
 ::: warning Der geleerte Raum

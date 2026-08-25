@@ -52,6 +52,28 @@ The exception is Bergson’s, and it is recorded above: insensibility resolves b
 
 **Wordlessness is not a handicap.** Complicity is defined as spontaneous and often unexpressed, so an hour without language works inside the channel complicity already uses.
 
+## The involution {#involution}
+
+Turn the theorem on itself.
+
+It is an act performed alone: a sentence written in an empty room, claiming that an act performed alone means nothing until it is witnessed. By its own terms it is meaningless until someone reads it. You are reading it. Your attention is what fixes what it means — not the sentence, which has not changed since it was written.
+
+Apply the theorem to the theorem and the theorem comes back. That is what makes it an involution rather than a paradox: a paradox stalls, an involution returns. Perform it twice and you stand where you began, holding something you can no longer put down.
+
+Every entry in the ledger is this one move seen from a different trade. Each says a condition is made by the thing that appears to undo it, and each returns when the undoing is applied twice:
+
+- **Winnicott** — the capacity to be alone is built by not having been alone.
+- **Arendt** — solitude is being two, so the self is company until company arrives and makes it one.
+- **Gaulier**, in Purcell Gates’ account — laughter is earned by failing to earn it.
+- **Bergson** — laughter needs an echo, so a room laughing at solitude disproves the solitude it is laughing at.
+- **Montaigne**, reversed — the room kept wholly to oneself stays furnished with other people’s words.
+
+No two trades name the condition the same way: Winnicott’s *being alone*, Arendt’s *solitude*, Montaigne’s *back shop*. The ledger keeps each author’s own word rather than flattening them, which is why one condition appears under different names on different pages.
+
+Different trades, one fixed point. That is the closest thing to a proof this project has, and it is worth stating exactly: not that the claim holds everywhere, but that everywhere it was checked, it came back unchanged.
+
+And the hour does to an audience what this page has just done to you. The clown will try to be alone in front of people whose presence makes it impossible; the people will laugh; and the laughter will be the evidence that the clown was never alone. You came here to read about that. You have been the room the whole time.
+
 ## The open question {#open}
 
 ::: warning The emptied room
