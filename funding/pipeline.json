@@ -123,18 +123,6 @@
       "url": "https://circusnext.eu/en/call-for-projects-2026/"
     },
     {
-      "id": "ncf-bulgaria",
-      "name": "National Culture Fund Bulgaria — mobility",
-      "body": "Национален фонд Култура",
-      "kind": "mobility",
-      "deadline": null,
-      "precision": "unknown",
-      "amount": "unknown",
-      "fit": "unchecked",
-      "note": "Eligible as a Bulgarian national; the programme exists to move Bulgarian artists into European exchange. 2026 budget contested. Call dates need checking directly at ncf.bg.",
-      "url": "https://www.ncf.bg/"
-    },
-    {
       "id": "oeaw-doc",
       "name": "ÖAW DOC Fellowship",
       "body": "Austrian Academy of Sciences",
@@ -181,6 +169,66 @@
       "fit": "discontinued",
       "note": "DISCONTINUED, folded into ASTRA. Several aggregators still list it. Do not spend a cycle on it.",
       "url": "https://www.fwf.ac.at/en/funding/faq/expiring-programs/elise-richter-and-elise-richter-peek"
+    },
+    {
+      "id": "ncf-small",
+      "name": "НФК — Създаване и разпространение, малки проекти",
+      "body": "Национален фонд Култура (BG)",
+      "kind": "production",
+      "deadline": "2026-09-08",
+      "precision": "exact",
+      "amount": "unknown",
+      "fit": "verify-eligibility",
+      "note": "OPEN NOW (from 06.08.2026). Bulgarian citizenship qualifies you even though you live in Austria. CONFIRM whether физически лица may apply to this programme -- Мобилност says individuals explicitly, this one is unverified.",
+      "url": "https://programs.ncf.bg/bg/programi"
+    },
+    {
+      "id": "ncf-large",
+      "name": "НФК — Създаване и разпространение, големи проекти",
+      "body": "Национален фонд Култура (BG)",
+      "kind": "production",
+      "deadline": "2026-10-15",
+      "precision": "exact",
+      "amount": "unknown",
+      "fit": "verify-eligibility",
+      "note": "Opens 15.09.2026. Same eligibility question as the small-projects call.",
+      "url": "https://programs.ncf.bg/bg/programi"
+    },
+    {
+      "id": "ncf-mobility-2",
+      "name": "НФК — Мобилност, сесия 2",
+      "body": "Национален фонд Култура (BG)",
+      "kind": "mobility",
+      "deadline": "2026-10-27",
+      "precision": "exact",
+      "amount": "unknown",
+      "fit": "strong",
+      "note": "Opens 01.10.2026. Explicitly open to individual artists with Bulgarian citizenship OR right of residence in Bulgaria -- citizenship qualifies you from Vienna. Funds participation in international forums at home and abroad.",
+      "url": "https://programs.ncf.bg/bg/programi"
+    },
+    {
+      "id": "ncf-circus",
+      "name": "НФК — Цирк",
+      "body": "Национален фонд Култура (BG)",
+      "kind": "production",
+      "deadline": null,
+      "precision": "unknown",
+      "amount": "unknown",
+      "fit": "needs-partner",
+      "note": "Artform-matched but ORGANISATIONS ONLY: Bulgarian private cultural organisations and читалища. Needs a Bulgarian organisational partner. 2026 sessions ran June-July and have closed.",
+      "url": "https://programs.ncf.bg/bg/programi"
+    },
+    {
+      "id": "ncf-ce-cofinance",
+      "name": "НФК — Целева подкрепа „Творческа Европа“",
+      "body": "Национален фонд Култура (BG)",
+      "kind": "production",
+      "deadline": "2026-11-26",
+      "precision": "exact",
+      "amount": "co-financing",
+      "fit": "needs-partner",
+      "note": "Co-finances projects already approved under Creative Europe. Legal entities only, so relevant only through a partner organisation.",
+      "url": "https://programs.ncf.bg/bg/programi"
     }
   ]
 }
