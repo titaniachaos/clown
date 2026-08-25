@@ -37,10 +37,12 @@ const SECTIONS = [
     anchor: 'concept',
     label: ['The Work', 'Работата', 'Die Arbeit'],
     items: [
-      ['concept', 'Artistic concept', 'Художествена концепция', 'Künstlerisches Konzept'],
-      ['modes', 'Nine modes of solitude', 'Девет режима на уединението', 'Neun Spielarten'],
-      ['dramaturgy', 'Seven movements', 'Седем движения', 'Sieben Bewegungen'],
-      ['audience', 'Audience relationship', 'Отношение с публиката', 'Beziehung zum Publikum']
+      ['concept', 'What is already known', 'Какво вече знаем', 'Was bereits feststeht'],
+      ['contradiction', 'The central contradiction', 'Централното противоречие', 'Der zentrale Widerspruch'],
+      ['questions', 'Questions for the studio', 'Въпроси за студиото', 'Fragen für das Studio'],
+      ['research', 'The research field', 'Изследователското поле', 'Das Forschungsfeld'],
+      ['unknown', 'What remains unknown', 'Какво остава неизвестно', 'Was unbekannt bleibt'],
+      ['studio', 'Into the studio', 'В студиото', 'Ins Studio']
     ]
   },
   {
@@ -48,11 +50,11 @@ const SECTIONS = [
     anchor: 'process',
     label: ['The Studio', 'Студиото', 'Das Studio'],
     items: [
-      ['process', 'Twelve-week process', 'Дванадесетседмичен процес', 'Zwölfwöchiger Prozess'],
-      ['toolkit', 'Rehearsal toolkit', 'Репетиционен инструментариум', 'Probenwerkzeuge'],
-      ['flop-scale', 'The flop scale', 'Скалата на флоповете', 'Die Flop-Skala'],
-      ['material', 'Material research', 'Изследване на материала', 'Materialrecherche'],
-      ['two-and-two', 'Two and two make five', 'Две и две правят пет', 'Zwei und zwei macht fünf']
+      ['process', 'The process', 'Процесът', 'Der Prozess'],
+      ['principles', 'Working principles', 'Работни принципи', 'Arbeitsprinzipien'],
+      ['tools', 'Studio tools', 'Студийни инструменти', 'Studiowerkzeuge'],
+      ['open', 'What this process does not decide', 'Какво този процес не решава', 'Was dieser Prozess nicht entscheidet'],
+      ['survives', 'What survives the studio', 'Какво оцелява в студиото', 'Was das Studio überlebt']
     ]
   },
   {
@@ -80,22 +82,6 @@ const SECTIONS = [
 ] as const
 
 function sidebar(prefix: string, groupText: string, column: Column): DefaultTheme.SidebarItem[] {
-  const englishConceptItems = [
-    ['concept', 'What is already known'],
-    ['contradiction', 'The central contradiction'],
-    ['questions', 'Questions for the studio'],
-    ['research', 'The research field'],
-    ['unknown', 'What remains unknown'],
-    ['studio', 'Into the studio']
-  ] as const
-  const englishStudioItems = [
-    ['process', 'The process'],
-    ['principles', 'Working principles'],
-    ['tools', 'Studio tools'],
-    ['open', 'What this process does not decide'],
-    ['survives', 'What survives the studio']
-  ] as const
-
   return [
     {
       text: groupText,
@@ -105,16 +91,10 @@ function sidebar(prefix: string, groupText: string, column: Column): DefaultThem
           text: section.label[column - 1],
           link: `${prefix}/${section.slug}#${section.anchor}`,
           collapsed: false,
-          items:
-            column === 1 && (section.slug === 'concept' || section.slug === 'studio-process')
-              ? (section.slug === 'concept' ? englishConceptItems : englishStudioItems).map(([anchor, text]) => ({
-                  text,
-                  link: `${prefix}/${section.slug}#${anchor}`
-                }))
-              : section.items.map(([anchor, ...labels]) => ({
-                  text: labels[column - 1],
-                  link: `${prefix}/${section.slug}#${anchor}`
-                }))
+          items: section.items.map(([anchor, ...labels]) => ({
+            text: labels[column - 1],
+            link: `${prefix}/${section.slug}#${anchor}`
+          }))
         }))
       ]
     }

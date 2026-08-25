@@ -79,15 +79,9 @@ for (const name of rootPages) {
     }
 
     const shape = (p) => p.headings.map((h) => h.level).join(',')
-    // English Production, Concept, Studio and Sources use approved editorial structures;
-    // translated pages retain their previously approved structures until
-    // their corresponding copy is translated and approved.
-    const independentlyStructured = [
-      'production.md',
-      'concept.md',
-      'studio-process.md',
-      'sources.md'
-    ].includes(name)
+    // Production uses editorial disclosures in English while translated
+    // versions retain visible question headings. All other pages are strict.
+    const independentlyStructured = name === 'production.md'
     if (!independentlyStructured && shape(page) !== shape(reference)) {
       add(
         `${locale}/${name}: heading structure differs -- ${page.headings.length} headings ` +

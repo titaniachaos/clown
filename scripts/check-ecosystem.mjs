@@ -1,14 +1,20 @@
 #!/usr/bin/env node
 import { readFile } from 'node:fs/promises'
 
-const [config, fairPay, css, en, bg, de, studio] = await Promise.all([
+const [config, fairPay, css, en, bg, de, studio, bgConcept, deConcept, bgStudio, deStudio, bgSources, deSources] = await Promise.all([
   readFile('docs/.vitepress/config.mts', 'utf8'),
   readFile('docs/.vitepress/theme/FairPay.vue', 'utf8'),
   readFile('docs/.vitepress/theme/custom.css', 'utf8'),
   readFile('docs/production.md', 'utf8'),
   readFile('docs/bg/production.md', 'utf8'),
   readFile('docs/de/production.md', 'utf8'),
-  readFile('docs/studio-process.md', 'utf8')
+  readFile('docs/studio-process.md', 'utf8'),
+  readFile('docs/bg/concept.md', 'utf8'),
+  readFile('docs/de/concept.md', 'utf8'),
+  readFile('docs/bg/studio-process.md', 'utf8'),
+  readFile('docs/de/studio-process.md', 'utf8'),
+  readFile('docs/bg/sources.md', 'utf8'),
+  readFile('docs/de/sources.md', 'utf8')
 ])
 
 const problems = []
@@ -77,6 +83,24 @@ for (const phrase of [
 }
 if (/Weeks?\s+\d/i.test(studio)) problems.push('English Studio retains a fixed week assignment')
 requireText(studio, 'outline: [2, 2]', 'English Studio outline must expose major H2 sections only')
+
+for (const [name, source, required] of [
+  ['Bulgarian Work', bgConcept, 'Все още нямам отговор, на който вярвам.'],
+  ['German Work', deConcept, 'Ich habe noch keine Antwort, der ich vertraue.'],
+  ['Bulgarian Studio', bgStudio, 'Създай условието, вместо да караш Титания да го представя.'],
+  ['German Studio', deStudio, 'Erzeuge die Bedingung, statt Titania aufzufordern, sie darzustellen.'],
+  ['Bulgarian Sources', bgSources, 'Не предписва сцена, последователност или резултат.'],
+  ['German Sources', deSources, 'Sie schreibt keine Szene, Folge oder Wirkung vor.']
+]) requireText(source, required, `${name} lost an approved uncertainty or method statement`)
+
+for (const [name, source, forbidden] of [
+  ['Bulgarian Studio', bgStudio, ['Скалата на флоповете', 'Две и две правят пет', 'дванадесетседмичен']],
+  ['German Studio', deStudio, ['Flop-Skala', 'Zwei und zwei macht fünf', 'Zwölfwöchiger']],
+  ['Bulgarian Work', bgConcept, ['Седем движения', 'Девет режима']],
+  ['German Work', deConcept, ['Sieben Bewegungen', 'Neun Spielarten']]
+]) {
+  for (const phrase of forbidden) if (source.includes(phrase)) problems.push(`${name} retains archived structure: ${phrase}`)
+}
 
 for (const token of [
   '--vp-font-family-base: Inter, ui-sans-serif, system-ui, sans-serif',

@@ -90,7 +90,7 @@ Statt so zu tun, als wäre es anders, kann das Projekt für diese Zusammenhänge
 
 Eine der erprobten Möglichkeiten ist, dass der Clown, allein im Raum, sich aus dem, was ihm zur Verfügung steht, eine Gefährtin erschafft.
 
-Eine Zeit lang muss diese erfundene Beziehung funktionieren. Der Clown muss Gefährtenschaft erfahren und nicht bloß vorgeben, sie zu haben.
+Um diese Möglichkeit zu erproben, muss die Beziehung Zeit bekommen, wirksam zu werden. Die Frage ist, ob der Clown Gefährtenschaft erfahren kann, statt sie nur vorzugeben.
 
 Erst dann kann ihr Verlust etwas bedeuten.
 

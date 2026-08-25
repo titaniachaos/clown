@@ -19,13 +19,13 @@ hero:
       link: /de/production#work
 features:
   - title: Künstlerische Recherche
-    details: "Alleinsein wird als Beziehung zu einer Abwesenheit erforscht – nicht als eine einzelne Stimmung."
-    link: /de/concept#modes
-  - title: Sieben Bewegungen
-    details: "Eine Probenhypothese, kein Plan: ein wortloser Bogen von 45 bis 60 Minuten vom leeren Raum bis zum letzten Abgang, der seine Reihenfolge vor einem Raum verdienen muss."
-    link: /de/concept#dramaturgy
+    details: "Die Recherche schärft Fragen zu Alleinsein, Einsamkeit, Privatheit, Abwesenheit und Verbindung, ohne das Stück zu schreiben."
+    link: /de/concept#research
+  - title: Fragen für das Studio
+    details: "Spielbare Fragen ersetzen eine vorbestimmte Szenenfolge; die Struktur folgt dem, was die Probe überlebt."
+    link: /de/concept#questions
   - title: Studiopraxis
-    details: "Material wird über zwölf Wochen erzeugt, vor Publikum erprobt, zusammengefügt und verdichtet."
+    details: "Material wird in überlappenden Arbeitsphasen erzeugt, mit Menschen erprobt, zusammengesetzt und verdichtet — nicht nach einem festen Kalender."
     link: /de/studio-process#process
   - title: Koproduzieren oder einladen
     details: "Koproduktion, Residenz, Gastspiel, Meisterklassen — und direkte Unterstützung für Studiozeit."

@@ -42,9 +42,11 @@ const IMAGE = /\.(png|jpe?g|webp|gif|avif|svg)$/i
 
 /**
  * Filenames allowed to be unreferenced by the built site, each with the reason.
- * Empty today: everything in docs/public is pointed at by a page or the head.
+ * `margareten.jpg` is the documented first frame from the ethics source-video
+ * archive. It remains available for future editorial use after the former
+ * translated Concept layouts stopped displaying it.
  */
-const KEPT = new Set([])
+const KEPT = new Set(['margareten.jpg'])
 
 // ---- dimensions from headers --------------------------------------------
 
