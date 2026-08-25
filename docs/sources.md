@@ -10,7 +10,7 @@ Several movement titles and modes of solitude are named concepts taken from spec
 
 [[toc]]
 
-## The ledger
+## The ledger {#ledger}
 
 <SourceLedger />
 
@@ -38,7 +38,7 @@ Every one of them is settled by a witness rather than by an argument. Winnicott'
 Mode 8 has no source. Letting the self loosen rather than consoling it may point to Weil, to a reading of non-self, or to contemplative solitude. It should be decided rather than left to resemblance, because a dramaturg reading the concept page will supply an answer if the page does not.
 :::
 
-Playful anarchy was the other open lineage and is now settled as the auguste. Bouffon was ruled out: it works in a gang and mocks the audience, while this clown is alone and depends on complicity. See the [material research](/material-research#a-worked-example-two-and-two-make-five) for what the choice makes playable.
+Playful anarchy was the other open lineage and is now settled as the auguste. Bouffon was ruled out: it works in a gang and mocks the audience, while this clown is alone and depends on complicity. See the [material research](/studio-process#two-and-two) for what the choice makes playable.
 
 ## A correction worth keeping
 
@@ -54,11 +54,17 @@ It is a plausible-sounding title that does not exist. The citable scholarship on
 3. Lecoq, *Le Corps Poétique* — two of the five unnamed lineages at once
 4. Montaigne, "De la solitude" — short, public domain, the source of a movement title
 5. Amsden on the flop, and Purcell Gates on the training paradox
-10. Vincent Laughery, « L'écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — the fall as a floor shared with the public
 6. Turkle, *Alone Together* — the contemporary anchor
 7. Decroux, *Paroles sur le Mime* — the argument for wordlessness
 8. Pascal Jacob on the auguste, for the BnF and the CNAC — the chosen lineage
 9. Grock, *Life's a Lark* (Heinemann, 1931; tr. Madge Pemberton from *Ich lebe gern!*) — the solo auguste who left the pairing behind
+10. Vincent Laughery, « L'écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — the fall as a floor shared with the public
 :::
 
-[Return to the artistic concept](/concept){.contact-button}
+## Where these land {#land}
+
+Every entry above is cited from somewhere in the documentation: the modes it names are on [the work](/concept#modes), the movements that stage them are the [seven movements](/concept#dramaturgy), and the exercises that test them are in [the studio](/studio-process#toolkit).
+
+**Bring this work to your audience.** Co-production, residency and presenting enquiries are welcome at any stage. [What the project offers](/production#work).
+
+[Contact Titania about the project](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos%202026){.contact-button} [Support the project](https://revolut.me/titaniachaos){.contact-button .secondary}

@@ -21,11 +21,11 @@ const ui = computed(() => data.ui[lang.value])
 const ORDER: Status[] = ['verified', 'chosen', 'probable', 'open']
 
 const tally = computed(() =>
-  ORDER.map((status) => ({
-    status,
-    label: ui.value.counts[status],
-    n: data.entries.filter((e) => e.status === status).length
-  }))
+  ORDER.map((status) => {
+    const n = data.entries.filter((e) => e.status === status).length
+    const count = ui.value.counts[status]
+    return { status, n, label: n === 1 ? count.one : count.many }
+  })
 )
 
 /** The glosses carry `*emphasis*`; split it out rather than injecting HTML. */

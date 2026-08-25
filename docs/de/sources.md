@@ -10,7 +10,7 @@ Mehrere Titel der Bewegungen und Modi der Einsamkeit sind Begriffe aus bestimmte
 
 [[toc]]
 
-## Das Verzeichnis
+## Das Verzeichnis {#ledger}
 
 <SourceLedger />
 
@@ -38,7 +38,7 @@ Jede von ihnen wird durch einen Zeugen entschieden, nicht durch ein Argument. Wi
 Modus 8 hat keine Quelle. Das Lockern des Selbst statt seiner Tröstung könnte auf Weil, auf eine Lesart des Nicht-Selbst oder auf kontemplative Einsamkeit deuten. Das sollte entschieden und nicht der Ähnlichkeit überlassen werden, denn eine Dramaturgin, die das Konzept liest, liefert sich selbst eine Antwort, wenn die Seite es nicht tut.
 :::
 
-Die spielerische Anarchie war die andere offene Linie und ist nun als der Auguste entschieden. Bouffon scheidet aus: Er arbeitet in der Gruppe und verspottet das Publikum, während dieser Clown allein ist und auf Komplizenschaft angewiesen bleibt. Die [Materialrecherche](/de/material-research#ein-durchgespieltes-beispiel-zwei-und-zwei-macht-funf) zeigt, was die Wahl spielbar macht.
+Die spielerische Anarchie war die andere offene Linie und ist nun als der Auguste entschieden. Bouffon scheidet aus: Er arbeitet in der Gruppe und verspottet das Publikum, während dieser Clown allein ist und auf Komplizenschaft angewiesen bleibt. Die [Materialrecherche](/de/studio-process#two-and-two) zeigt, was die Wahl spielbar macht.
 
 ## Eine Korrektur, die bleiben sollte
 
@@ -54,11 +54,17 @@ Ein plausibel klingender Titel, den es nicht gibt. Die zitierfähige Forschung z
 3. Lecoq, *Le Corps Poétique* — zwei der fünf unbenannten Linien auf einmal
 4. Montaigne, „De la solitude“ — kurz, gemeinfrei, Quelle eines Bewegungstitels
 5. Amsden über den Flop und Purcell Gates über die Paradoxie der Ausbildung
-10. Vincent Laughery, « L'écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — der Fall als ein mit dem Publikum geteilter Boden
 6. Turkle, *Alone Together* — der gegenwärtige Anker
 7. Decroux, *Paroles sur le Mime* — das Argument für die Wortlosigkeit
 8. Pascal Jacob über den Auguste, für die BnF und das CNAC — die gewählte Linie
 9. Grock, *Life's a Lark* (Heinemann, 1931; übers. Madge Pemberton nach *Ich lebe gern!*) — der Solo-Auguste, der das Paar verließ
+10. Vincent Laughery, « L'écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — der Fall als ein mit dem Publikum geteilter Boden
 :::
 
-[Zurück zum künstlerischen Konzept](/de/concept){.contact-button}
+## Wo sie auftauchen {#land}
+
+Jeder Eintrag oben ist irgendwo in der Dokumentation belegt: die Spielarten, die er benennt, stehen in [der Arbeit](/de/concept#modes), die Bewegungen, die sie auf die Bühne bringen, sind die [sieben Bewegungen](/de/concept#dramaturgy), und die Übungen, die sie erproben, stehen in [dem Studio](/de/studio-process#toolkit).
+
+**Holen Sie diese Arbeit zu Ihrem Publikum.** Anfragen zu Koproduktion, Residenz und Gastspiel sind in jeder Phase willkommen. [Was das Projekt anbietet](/de/production#work).
+
+[Titania zum Projekt kontaktieren](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos%202026){.contact-button} [Das Projekt unterstützen](https://revolut.me/titaniachaos){.contact-button .secondary}

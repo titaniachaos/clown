@@ -12,35 +12,104 @@ import {
 } from './seo.ts'
 
 /** The main Titania Chaos site, of which this project is a part. */
-const MAIN_SITE = `${HOSTNAME}/`
+const MAIN_SITE = (prefix: string) => `${HOSTNAME}${prefix}/`
 
 /**
- * Slugs are identical in every locale so the language switcher can map a page
- * to its counterpart by swapping the path prefix. Only the labels differ.
+ * The main site shares this host, so a link to it is a same-site navigation:
+ * no new tab, no external-link icon, and the referrer is worth keeping.
  */
-const PAGES = [
-  ['', 'Project Home', 'Начало на проекта', 'Projekt-Startseite'],
-  ['concept', 'Artistic Concept', 'Художествена концепция', 'Künstlerisches Konzept'],
-  ['audience', 'Audience Relationship', 'Отношение с публиката', 'Beziehung zum Publikum'],
-  ['dramaturgy', 'Dramaturgy', 'Драматургия', 'Dramaturgie'],
-  ['studio-process', 'Studio Process', 'Студиен процес', 'Studioprozess'],
-  ['rehearsal-toolkit', 'Rehearsal Toolkit', 'Репетиционен инструментариум', 'Probenwerkzeuge'],
-  ['material-research', 'Material Research', 'Изследване на материала', 'Materialrecherche'],
-  ['decisions', 'Decision Gates', 'Решаващи точки', 'Entscheidungspunkte'],
-  ['sources', 'Sources and Lineages', 'Източници и традиции', 'Quellen und Linien'],
-  ['production', 'Production', 'Продукция', 'Produktion'],
-  ['about', 'About the Project', 'За проекта', 'Über das Projekt']
+const SAME_SITE = { target: '_self', rel: '', noIcon: true } as const
+
+/** Where the legal notice lives: it belongs to the main site, one per locale. */
+const LEGAL = (prefix: string) => `${HOSTNAME}${prefix}/legal-data`
+
+/**
+ * Four pages carry the whole project, and each one carries several of the
+ * former pages as sections with stable ids. The ids are written into the
+ * Markdown by hand (`{#dramaturgy}`), so they are identical in every locale
+ * and a cross-link never has to guess a slugified translation.
+ */
+type Column = 1 | 2 | 3
+
+const HOME = ['Project Home', 'Начало на проекта', 'Projekt-Startseite'] as const
+
+const SECTIONS = [
+  {
+    slug: 'concept',
+    anchor: 'concept',
+    label: ['The Work', 'Работата', 'Die Arbeit'],
+    items: [
+      ['concept', 'Artistic concept', 'Художествена концепция', 'Künstlerisches Konzept'],
+      ['modes', 'Nine modes of solitude', 'Девет режима на уединението', 'Neun Spielarten'],
+      ['dramaturgy', 'Seven movements', 'Седем движения', 'Sieben Bewegungen'],
+      ['audience', 'Audience relationship', 'Отношение с публиката', 'Beziehung zum Publikum']
+    ]
+  },
+  {
+    slug: 'studio-process',
+    anchor: 'process',
+    label: ['The Studio', 'Студиото', 'Das Studio'],
+    items: [
+      ['process', 'Twelve-week process', 'Дванадесетседмичен процес', 'Zwölfwöchiger Prozess'],
+      ['toolkit', 'Rehearsal toolkit', 'Репетиционен инструментариум', 'Probenwerkzeuge'],
+      ['flop-scale', 'The flop scale', 'Скалата на флоповете', 'Die Flop-Skala'],
+      ['material', 'Material research', 'Изследване на материала', 'Materialrecherche'],
+      ['two-and-two', 'Two and two make five', 'Две и две правят пет', 'Zwei und zwei macht fünf']
+    ]
+  },
+  {
+    slug: 'sources',
+    anchor: 'ledger',
+    label: ['Sources', 'Източници', 'Quellen'],
+    items: [
+      ['ledger', 'The ledger', 'Регистърът', 'Das Verzeichnis'],
+      ['land', 'Where these land', 'Къде се появяват', 'Wo sie auftauchen']
+    ]
+  },
+  {
+    slug: 'production',
+    anchor: 'decisions',
+    label: ['Production & Support', 'Продукция и подкрепа', 'Produktion & Unterstützung'],
+    items: [
+      ['decisions', 'Decision gates', 'Решаващи точки', 'Entscheidungspunkte'],
+      ['production', 'Production approach', 'Подход към продукцията', 'Produktionsansatz'],
+      ['about', 'About the project', 'За проекта', 'Über das Projekt'],
+      ['work', 'Work with the project', 'Работа с проекта', 'Mit dem Projekt arbeiten']
+    ]
+  }
 ] as const
 
-function sidebar(prefix: string, groupText: string, column: 1 | 2 | 3): DefaultTheme.SidebarItem[] {
+function sidebar(prefix: string, groupText: string, column: Column): DefaultTheme.SidebarItem[] {
   return [
     {
       text: groupText,
-      items: PAGES.map(([slug, ...labels]) => ({
-        text: labels[column - 1],
-        link: `${prefix}/${slug}`
-      }))
+      items: [
+        { text: HOME[column - 1], link: `${prefix}/` },
+        ...SECTIONS.map((section) => ({
+          text: section.label[column - 1],
+          link: `${prefix}/${section.slug}#${section.anchor}`,
+          collapsed: false,
+          items: section.items.map(([anchor, ...labels]) => ({
+            text: labels[column - 1],
+            link: `${prefix}/${section.slug}#${anchor}`
+          }))
+        }))
+      ]
     }
+  ]
+}
+
+function nav(prefix: string, column: Column, mainSiteLabel: string): DefaultTheme.NavItem[] {
+  return [
+    { text: HOME[column - 1], link: `${prefix}/` },
+    ...SECTIONS.map((section) => ({
+      text: section.label[column - 1],
+      link: `${prefix}/${section.slug}#${section.anchor}`,
+      activeMatch: `${prefix}/${section.slug}`
+    })),
+    // Same domain, different repository: keep the reader in their own language
+    // and in the same tab.
+    { text: mainSiteLabel, link: MAIN_SITE(prefix), ...SAME_SITE }
   ]
 }
 
@@ -51,6 +120,29 @@ export default defineConfig({
   description:
     'Research, dramaturgy, rehearsal and production for the wordless Solo Titania Chaos 2026 clown project.',
   cleanUrls: true,
+
+  markdown: {
+    // `markdown.externalLinks` is global, and these two sites share a host:
+    // a link between them is a same-site navigation, while revolut.me really
+    // should open a new tab. So strip the new-tab attributes per host.
+    config: (md) => {
+      const renderLink =
+        md.renderer.rules.link_open ??
+        ((tokens, idx, options, _env, self) => self.renderToken(tokens, idx, options))
+
+      md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
+        const href = tokens[idx].attrGet('href') ?? ''
+        if (!href.startsWith(HOSTNAME)) return renderLink(tokens, idx, options, env, self)
+
+        // The theme also draws the arrow from `a[href*="://"]` in CSS, so the
+        // class is needed as well as dropping the new-tab attributes.
+        tokens[idx].attrJoin('class', 'no-icon')
+        return renderLink(tokens, idx, options, env, self)
+          .replace(' target="_blank"', '')
+          .replace(' rel="noreferrer"', '')
+      }
+    }
+  },
 
   head: [
     ['meta', { name: 'theme-color', content: '#d62246' }],
@@ -68,19 +160,22 @@ export default defineConfig({
 
   sitemap: {
     hostname: `${HOSTNAME}${BASE}`,
-    transformItems: (items) =>
-      items.map((item) => {
+    transformItems: (items) => {
+      const known = new Set(items.map((i) => (i.url.startsWith('/') ? i.url : `/${i.url}`)))
+      const absolute = (path: string) => `${HOSTNAME}${BASE}${path.replace(/^\//, '')}`
+      return items.map((item) => {
         const urlPath = item.url.startsWith('/') ? item.url : `/${item.url}`
         const { slug } = splitLocale(urlPath)
-        const known = new Set(items.map((i) => (i.url.startsWith('/') ? i.url : `/${i.url}`)))
         const links = LOCALES.flatMap((locale) => {
           const alt = slug === '/' ? `${locale.prefix}/` : `${locale.prefix}${slug}`
-          return known.has(alt)
-            ? [{ lang: locale.hreflang, url: `${HOSTNAME}${BASE}${alt.replace(/^\//, '')}` }]
-            : []
+          return known.has(alt) ? [{ lang: locale.hreflang, url: absolute(alt) }] : []
         })
-        return { ...item, links, changefreq: 'monthly' as const, priority: slug === '/' ? 1.0 : 0.7 }
+        // Search Console reads x-default from the sitemap as well as the head.
+        const english = slug === '/' ? '/' : slug
+        if (known.has(english)) links.push({ lang: 'x-default', url: absolute(english) })
+        return { ...item, links, changefreq: 'monthly' as const, priority: slug === '/' ? 1.0 : 0.8 }
       })
+    }
   },
 
   async buildEnd(siteConfig) {
@@ -146,16 +241,14 @@ export default defineConfig({
       label: 'English',
       lang: 'en',
       themeConfig: {
-        nav: [
-          { text: 'Home', link: '/' },
-          { text: 'Concept', link: '/concept' },
-          { text: 'Dramaturgy', link: '/dramaturgy' },
-          { text: 'Studio', link: '/studio-process' },
-          { text: 'Titania Chaos', link: MAIN_SITE }
-        ],
+        nav: nav('', 1, 'Titania Chaos'),
         sidebar: sidebar('', 'Solo Titania Chaos 2026', 1),
         outline: { level: [2, 3], label: 'On this page' },
         docFooter: { prev: 'Previous page', next: 'Next page' },
+        footer: {
+          message: `Part of <a href="${MAIN_SITE('')}">Titania Chaos</a>. · <a href="${LEGAL('')}">Legal notice &amp; privacy</a>`,
+          copyright: '© 2026 Titania Chaos'
+        },
         notFound: {
           title: 'PAGE NOT FOUND',
           quote: 'The clown looked everywhere. This page is not here.',
@@ -173,16 +266,14 @@ export default defineConfig({
       description:
         'Изследване, драматургия, репетиции и продукция за безсловесния клоунски проект „Соло Титания Хаос 2026“.',
       themeConfig: {
-        nav: [
-          { text: 'Начало', link: '/bg/' },
-          { text: 'Концепция', link: '/bg/concept' },
-          { text: 'Драматургия', link: '/bg/dramaturgy' },
-          { text: 'Студио', link: '/bg/studio-process' },
-          { text: 'Титания Хаос', link: MAIN_SITE }
-        ],
+        nav: nav('/bg', 2, 'Титания Хаос'),
         sidebar: sidebar('/bg', 'Соло Титания Хаос 2026', 2),
         outline: { level: [2, 3], label: 'На тази страница' },
         docFooter: { prev: 'Предишна страница', next: 'Следваща страница' },
+        footer: {
+          message: `Част от <a href="${MAIN_SITE('/bg')}">Титания Хаос</a>. · <a href="${LEGAL('/bg')}">Правна информация и поверителност</a>`,
+          copyright: '© 2026 Титания Хаос'
+        },
         darkModeSwitchLabel: 'Изглед',
         lightModeSwitchTitle: 'Към светлата тема',
         darkModeSwitchTitle: 'Към тъмната тема',
@@ -206,16 +297,14 @@ export default defineConfig({
       description:
         'Recherche, Dramaturgie, Proben und Produktion für das wortlose Clown-Projekt Solo Titania Chaos 2026.',
       themeConfig: {
-        nav: [
-          { text: 'Start', link: '/de/' },
-          { text: 'Konzept', link: '/de/concept' },
-          { text: 'Dramaturgie', link: '/de/dramaturgy' },
-          { text: 'Studio', link: '/de/studio-process' },
-          { text: 'Titania Chaos', link: MAIN_SITE }
-        ],
+        nav: nav('/de', 3, 'Titania Chaos'),
         sidebar: sidebar('/de', 'Solo Titania Chaos 2026', 3),
         outline: { level: [2, 3], label: 'Auf dieser Seite' },
         docFooter: { prev: 'Vorherige Seite', next: 'Nächste Seite' },
+        footer: {
+          message: `Teil von <a href="${MAIN_SITE('/de')}">Titania Chaos</a>. · <a href="${LEGAL('/de')}">Impressum &amp; Datenschutz</a>`,
+          copyright: '© 2026 Titania Chaos'
+        },
         darkModeSwitchLabel: 'Darstellung',
         lightModeSwitchTitle: 'Zum hellen Design wechseln',
         darkModeSwitchTitle: 'Zum dunklen Design wechseln',
