@@ -98,3 +98,23 @@ answer takes one sentence.
 2. Draft the consent instruments — before audience test 1.
 3. If enrolled, put them to the committee — their template beats mine.
 4. Keep signed consents with the footage, not separately.
+
+## The photo archive
+
+`100 procenta budni/` holds 68 photographs and 6 videos, 217 MB, outside both
+repositories. It is a camera roll, not a press kit, and it sorts into three
+kinds:
+
+- **Solo, publishable.** `Margareten-2.jpg` — Titania alone, red nose, against
+  Jugendstil façades in Margareten. No third parties.
+- **Events and workshops with identifiable others.** `_DSC4950.jpg` has roughly
+  twenty audience faces; `_DSC4738.jpg` has three people at close range. These
+  are the same people the consent form exists for. Publishing them without it
+  would contradict the position this document takes.
+- **Personal and political.** `IMG_7052.jpeg` is Titania under a "Safe abortion
+  is a human right" banner. Nothing to do with consent — an editorial decision
+  about what the professional site says, and hers alone.
+
+None of it has been published. Anything from the second kind needs consent from
+the people in frame before it goes anywhere public, and the release in
+`consent-en.md` covers exactly this: a separate tick for public use.
