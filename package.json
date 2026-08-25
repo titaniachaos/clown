@@ -8,7 +8,12 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:preview": "vitepress preview docs",
+    "check:sources": "node scripts/check-locales.mjs && node scripts/check-ledger.mjs",
+    "check:build": "node scripts/check-build.mjs",
+    "check:links": "node scripts/check-external.mjs",
+    "check": "npm run check:sources && npm run docs:build && npm run check:build",
+    "watch:research": "node scripts/watch-research.mjs"
   },
   "devDependencies": {
     "vitepress": "2.0.0-alpha.19"

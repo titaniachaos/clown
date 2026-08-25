@@ -43,6 +43,29 @@ page to its counterpart by swapping the path prefix — add a translation as
 `docs/bg/<slug>.md` and `docs/de/<slug>.md`, then add the labels to `SECTIONS` in
 `docs/.vitepress/config.mts`.
 
+## Checks
+
+```sh
+npm run check           # locale parity, ledger integrity, build, section ids
+npm run check:links     # every outward link and DOI still resolves (network)
+npm run watch:research  # what has been published since (network)
+```
+
+`npm run check` runs on every pull request. The two network-dependent scripts
+run on a schedule in `.github/workflows/maintenance.yml` — links weekly, the
+research watch monthly — and either can be started by hand from the Actions tab.
+The research watch reports into the run's job summary and never fails a build.
+
+Each script exists because something got past a human once:
+
+| Script | What it catches |
+| --- | --- |
+| `check-locales.mjs` | a missing translation; heading structures that have drifted apart; a section id present in one language and not another; a page that is half-translated |
+| `check-ledger.mjs` | an entry missing a language, an unknown status, a malformed DOI, or a gloss that has fallen behind the English — which is how the German `flop` gloss went stale |
+| `check-build.mjs` | a dead `#section-id`, which VitePress does not check; images without alt text; duplicate ids |
+| `check-external.mjs` | link rot in the citations. It tells a dead link apart from a publisher refusing an automated request and from an incomplete certificate chain, and fails only on the first. DOIs are checked at Crossref rather than through `doi.org`, which publishers block |
+| `watch-research.mjs` | new articles in the journals the ledger cites, filtered on the project's own vocabulary |
+
 ## SEO
 
 `docs/.vitepress/seo.ts` generates, per page: a canonical URL, the full Open
