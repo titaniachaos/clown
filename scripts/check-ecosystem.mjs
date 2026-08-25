@@ -52,6 +52,13 @@ for (const token of [
   'hyphens: auto'
 ]) requireText(css, token, `typography contract missing: ${token}`)
 
+for (const token of [
+  '.vp-doc._clown_production > div > p:has(> strong:only-child)',
+  'font-size: 1.75rem',
+  '.vp-doc._clown_production > div > p:has(> strong:only-child) + h3',
+  'font-size: 1.25rem'
+]) requireText(css, token, `Production heading hierarchy missing: ${token}`)
+
 if (problems.length) {
   console.error(`check-ecosystem: ${problems.length} problem(s)\n`)
   problems.forEach((p) => console.error(`  ${p}`))
