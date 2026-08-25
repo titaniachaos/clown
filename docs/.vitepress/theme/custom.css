@@ -7,6 +7,16 @@
   --vp-font-family-base: Inter, ui-sans-serif, system-ui, sans-serif;
 }
 
+/* Dark mode needs its own tint: #d62246 on the dark ground is 3.4:1, below the
+   4.5:1 WCAG AA threshold for body text. Same hue (348deg), lifted to 5.4:1.
+   The pill buttons paint white on the brand, so they keep the darker ground. */
+.dark {
+  --vp-c-brand-1: #e7657f;
+  --vp-c-brand-2: #ea7b91;
+  --vp-c-brand-3: #98102d;
+  --vp-c-brand-soft: rgba(231, 101, 127, 0.16);
+}
+
 .VPNavBarTitle .title,
 .VPHomeHero .name,
 .vp-doc h1,
@@ -47,6 +57,10 @@
 }
 .contact-button:hover { background: var(--vp-c-brand-2); transform: translateY(-1px); }
 .contact-button.secondary { background: var(--vp-c-bg-soft); color: var(--vp-c-text-1) !important; }
+/* White on the lifted dark tint would only reach 2.4:1, so the filled buttons
+   keep the light-mode red as their ground in dark mode. */
+.dark .contact-button:not(.secondary) { background: #d62246; }
+.dark .contact-button:not(.secondary):hover { background: #b91839; }
 
 @media (max-width: 640px) {
   .contact-button { width: 100%; text-align: center; }
