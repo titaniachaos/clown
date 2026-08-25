@@ -1,13 +1,44 @@
 ---
 title: Production and Support
 description: Decision gates, production needs, and how to co-produce, host, present or support Solo Titania Chaos.
+outline: [2, 2]
 relations:
   - { from: decisions, kind: rests-on, to: concept#dramaturgy }
 ---
 
 # Production and support
 
-What must be decided before design and booking, what the process needs, and the ways to work with the project. Read alongside [the work](/concept#concept) and [the studio](/studio-process#process).
+One clown may stand on stage alone. Making the work is another matter.
+
+Solo Titania Chaos needs time in a room, outside eyes, technical collaboration, encounters with audiences — and eventually partners who can help it move from studio experiment to performance.
+
+This page opens the door on that process: what the work needs, what is still being decided, and how people and institutions can become part of it.
+
+The performance is deliberately small. The conditions that allow it to become precise are not.
+
+The artistic method depends on protected studio time, outside eyes, repeated audience tests, controllable light and careful documentation. Production is therefore part of the dramaturgy rather than an administrative layer added later.
+
+The material is developed through physical research rather than from a finished script. Scenes, objects and relationships have to be tried, failed, repeated and changed.
+
+Ideally the process needs a studio where objects and working arrangements can remain in place between sessions.
+
+A solo needs other people.
+
+A regular outside eye or dramaturg helps reveal what cannot be seen from inside the performance.
+
+The audience is part of the work long before the première.
+
+Four audience tests of increasing size are planned. They ask specific questions about attention, laughter, silence, comprehension and duration.
+
+Decisions are made from what happens in the room, not from the elegance of the written plan.
+
+Light is not simply there to illuminate the performer. In this work, it can become a partner, an obstacle, a boundary or another presence.
+
+Sound remains deliberately minimal. Both light and sound need to enter the process early because their presence — and their withdrawal — can change the dramaturgy.
+
+Late-stage runs need clear video and still documentation.
+
+A concise, well-lit extract with real audience sound will allow the work to travel beyond the rehearsal room and begin conversations with presenters while the creation is still developing.
 
 ## Inside the making of the solo {#decisions}
 
@@ -169,7 +200,7 @@ A fixed 45–60 minute performance for a controlled theatre space and a shorter 
 
 The studio process will therefore test both the assembled whole and deliberately different arrangements.
 
-The aim is not to make the work fit everywhere at any cost, but to keep it flexible enough for different settings while discovering which forms remain true to it.
+The aim is not to make the work fit everywhere but have it flexible for various settings. It is to discover which forms remain true to it.
 
 **What has to be decided first?**
 
@@ -188,27 +219,27 @@ The others can remain alive in the studio for longer.
 
 ## Production approach {#production}
 
-The artistic method depends on practical conditions: protected studio time, an outside eye, repeated audience tests, controllable light and careful documentation. Production is therefore part of the dramaturgy rather than an administrative layer added later.
-
-### What the process needs
-
-- A studio where objects can remain in place between sessions
-- A regular outside eye or dramaturg
-- Four audience tests of increasing size
-- Early collaboration with lighting and sound
-- Clear video and still documentation of late-stage runs
-
 ### A testable project
 
-The process is divided into phases with observable checkpoints. Each audience test asks specific questions about attention, laughter, silence, comprehension and duration. Decisions are made from what happens in the room, not from the elegance of the written plan.
+The process is divided into phases with observable checkpoints.
+
+Audience tests ask specific questions rather than simply whether people “liked” the work. Attention, laughter, silence, comprehension and duration become evidence for the next decision.
 
 ### A portable performance
 
-Wordlessness makes the work legible across language borders. A compact solo with minimal objects can travel efficiently, but the full version’s dependence on darkness and controlled audience conditions must be designed honestly. A shorter, robust variation may be developed separately for outdoor or less controlled settings.
+Wordlessness makes the work legible across language borders.
+
+A compact solo with minimal objects can travel efficiently, but portability should not pretend away the needs of the work.
+
+The full version depends on darkness and controlled audience conditions. A shorter, robust variation may therefore be developed separately for daylight, outdoor and less controlled settings.
 
 ### Documentation and circulation
 
-Late-stage test audiences should produce a concise, well-lit extract with real audience sound. Conversations with presenters begin during rehearsal because programming timelines often extend well beyond the creation period.
+Late-stage audience tests should produce a concise, well-lit extract with real audience sound.
+
+Conversations with presenters begin during rehearsal because programming timelines often extend well beyond the creation period.
+
+### Private production documents
 
 Funding deadlines, eligibility rules and working budgets remain in the private production documents because they change and must be verified against live calls before use.
 

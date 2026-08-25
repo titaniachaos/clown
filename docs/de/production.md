@@ -1,11 +1,22 @@
 ---
 title: Produktion und Unterstützung
 description: Entscheidungspunkte, Produktionsbedarf und wie man Solo Titania Chaos koproduziert, beherbergt, zeigt oder unterstützt.
+outline: [2, 2]
 ---
 
 # Produktion und Unterstützung
 
-Was vor Ausstattung und Buchung entschieden sein muss, was der Prozess braucht, und die Wege, mit dem Projekt zu arbeiten. Zu lesen neben [der Arbeit](/de/concept#concept) und [dem Studio](/de/studio-process#process).
+Ein Clown mag allein auf der Bühne stehen. Die Arbeit zu erschaffen, ist eine andere Sache.
+
+Solo Titania Chaos braucht Zeit in einem Raum, Blicke von außen, technische Zusammenarbeit, Begegnungen mit Publikum — und schließlich Partner:innen, die dabei helfen können, das Projekt vom Studioexperiment zur Aufführung zu führen.
+
+Diese Seite öffnet die Tür zu diesem Prozess: was die Arbeit braucht, was noch entschieden wird und wie Menschen und Institutionen Teil davon werden können.
+
+Die Aufführung ist bewusst klein. Die Bedingungen, unter denen sie präzise werden kann, sind es nicht.
+
+Die künstlerische Methode hängt von geschützter Studiozeit, Blicken von außen, wiederholten Publikumstests, kontrollierbarem Licht und sorgfältiger Dokumentation ab. Produktion ist daher Teil der Dramaturgie und keine Verwaltungsschicht, die später hinzugefügt wird.
+
+Das Material wird durch körperliche Forschung und nicht aus einem fertigen Skript entwickelt. Szenen, Objekte und Beziehungen müssen ausprobiert, verworfen, wiederholt und verändert werden.
 
 ## Entscheidungspunkte {#decisions}
 
