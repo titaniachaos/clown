@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { withBase } from 'vitepress'
 import { data } from '../relations.data'
 import type { Kind } from '../relations.data'
 import { useLang } from './useLang.ts'
@@ -24,7 +25,7 @@ const groups = computed(() => {
 
   for (const e of mine) {
     const title = data.titles[e.slug]?.[lang.value] ?? data.titles[e.slug]?.en ?? e.slug
-    const href = `${prefix.value}/${e.slug}${e.anchor ? `#${e.anchor}` : ''}`
+    const href = withBase(`${prefix.value}/${e.slug}${e.anchor ? `#${e.anchor}` : ''}`)
     const list = byKind.get(e.kind) ?? []
     if (!list.some((l) => l.href === href)) list.push({ href, text: title })
     byKind.set(e.kind, list)

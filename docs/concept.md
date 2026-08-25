@@ -4,7 +4,7 @@ description: What is known, what is being investigated and what remains open in 
 outline: [2, 2]
 relations:
   - { from: concept, kind: informed-by, to: sources#ledger }
-  - { from: questions, kind: tested-by, to: studio-process#process }
+  - { from: concept, kind: tested-by, to: studio-process#process }
   - { from: concept, kind: developed-through, to: production#needs }
 ---
 
@@ -33,14 +33,6 @@ Audience contact is fundamental to Titania's clown practice.
 That creates a particular problem for a solo about being alone: Titania may be alone on stage, but she is performing in the presence of other people.
 
 What happens to that relationship — whether she seeks it, avoids it, needs it, forgets it or loses it — remains to be discovered.
-
-### Compact, but not at any cost
-
-The work is intended to remain compact and portable.
-
-The full version is conceived for controlled conditions, particularly darkness and audience attention. A shorter, more robust variation may later be developed for daylight, outdoor or less controlled settings.
-
-Portability should not pretend away the needs of the work.
 
 ## The central contradiction {#contradiction}
 
@@ -77,8 +69,7 @@ They are not a hidden synopsis. They are starting points for physical investigat
 
   <section class="studio-question">
     <h3>Can something become company?</h3>
-    <p>Can an object, space, light, sound or repeated action begin to function as company?</p>
-    <p>When does playing <em>as if</em> become a relationship for the clown?</p>
+    <p>Can an object, space, light, sound or repeated action begin to function as company — and when does playing <em>as if</em> become a relationship for the clown?</p>
   </section>
 
   <section class="studio-question">
@@ -88,28 +79,22 @@ They are not a hidden synopsis. They are starting points for physical investigat
 
   <section class="studio-question">
     <h3>What does failure reveal?</h3>
-    <p>Failure already belongs to Titania's clown practice.</p>
-    <p>What happens when something is wanted, attempted and fails — particularly when that failure is witnessed?</p>
-    <p>Could failure become one of the basic units from which material grows?</p>
+    <p>Failure already belongs to Titania's clown practice. When something is wanted, attempted and fails, could that witnessed failure become one of the basic units from which material grows?</p>
   </section>
 
   <section class="studio-question">
     <h3>What can remain private?</h3>
-    <p>Can there be privacy on stage while an audience is watching?</p>
-    <p>What happens when something private becomes visible?</p>
+    <p>Can there be privacy on stage while an audience is watching, and what happens when something private becomes visible?</p>
   </section>
 
   <section class="studio-question">
     <h3>What does wordlessness do?</h3>
-    <p>Wordlessness is not silence.</p>
-    <p>What becomes possible when Titania cannot explain herself and meaning has to travel through body, rhythm, breath, objects, space, light and the audience?</p>
+    <p>Wordlessness is not silence. What becomes possible when Titania cannot explain herself and meaning has to travel through body, rhythm, breath, objects, space, light and the audience?</p>
   </section>
 
   <section class="studio-question">
     <h3>Where does comedy have to remain?</h3>
-    <p>A piece investigating solitude may move through pleasure, discomfort, quietness or sadness.</p>
-    <p>But Titania remains a clown.</p>
-    <p>How far can comedy withdraw without the clown disappearing with it?</p>
+    <p>A piece investigating solitude may move through pleasure, discomfort, quietness or sadness, but Titania remains a clown. How far can comedy withdraw without the clown disappearing with it?</p>
   </section>
 </div>
 
@@ -125,7 +110,7 @@ Research may sharpen a question, expose a contradiction or give a name to someth
 
 **The research is there to sharpen observation, not to write the piece.**
 
-[Explore Sources & lineages →](/sources)
+[Explore Sources & lineages →](./sources)
 
 ## What remains unknown {#unknown}
 
@@ -155,6 +140,6 @@ What emerges may confirm the research, contradict it or make parts of it irrelev
 
 **That is the point.**
 
-[Enter the Studio →](/studio-process)
+[Enter the Studio →](./studio-process)
 
 <PageRelations />

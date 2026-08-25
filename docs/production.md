@@ -3,7 +3,7 @@ title: Production and Support
 description: "Step inside the making of Solo Titania Chaos: its artistic questions, production process and ways to co-produce, host or support the work."
 outline: [2, 3]
 relations:
-  - { from: decisions, kind: rests-on, to: concept#dramaturgy }
+  - { from: decisions, kind: rests-on, to: concept#concept }
 ---
 
 # Production and support
