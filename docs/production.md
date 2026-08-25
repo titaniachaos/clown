@@ -106,6 +106,10 @@ This subsite keeps the artistic process legible as the solo develops. It brings 
 - Dramaturgical structures and competing versions
 - Production decisions, milestones and practical preparation
 
+## Fair pay {#fairpay}
+
+<FairPay />
+
 ## Work with the project {#work}
 
 The solo is in creation and is looking for the partners that a creation needs.

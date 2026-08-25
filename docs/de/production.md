@@ -104,6 +104,10 @@ Diese Website hält den künstlerischen Prozess lesbar, während das Solo entste
 - Dramaturgische Strukturen und konkurrierende Fassungen
 - Produktionsentscheidungen, Meilensteine und praktische Vorbereitung
 
+## Faire Bezahlung {#fairpay}
+
+<FairPay />
+
 ## Mit dem Projekt arbeiten {#work}
 
 Das Solo ist in Entstehung und sucht die Partner, die eine Entstehung braucht.

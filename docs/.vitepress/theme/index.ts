@@ -4,6 +4,7 @@ import DefaultTheme from 'vitepress/theme'
 import SourceLedger from './SourceLedger.vue'
 import PageRelations from './PageRelations.vue'
 import Supporters from './Supporters.vue'
+import FairPay from './FairPay.vue'
 import './custom.css'
 
 export default {
@@ -15,5 +16,6 @@ export default {
   enhanceApp({ app }) {
     app.component('SourceLedger', SourceLedger)
     app.component('PageRelations', PageRelations)
+    app.component('FairPay', FairPay)
   }
 } satisfies Theme
