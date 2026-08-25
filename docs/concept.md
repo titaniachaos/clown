@@ -64,67 +64,54 @@ The project currently has questions rather than scenes.
 
 They are not a hidden synopsis. They are starting points for physical investigation.
 
-<QuestionDisclosure title="Can Titania discover the audience?">
+<div class="studio-questions">
+  <section class="studio-question">
+    <h3>Can Titania discover the audience?</h3>
+    <p>Can noticing the people in the room become an event rather than something taken for granted?</p>
+  </section>
 
-Can noticing the people in the room become an event rather than something taken for granted?
+  <section class="studio-question">
+    <h3>Can Titania stop needing the audience?</h3>
+    <p>Can something else become sufficiently absorbing that her relationship with the audience changes or temporarily disappears?</p>
+  </section>
 
-</QuestionDisclosure>
+  <section class="studio-question">
+    <h3>Can something become company?</h3>
+    <p>Can an object, space, light, sound or repeated action begin to function as company?</p>
+    <p>When does playing <em>as if</em> become a relationship for the clown?</p>
+  </section>
 
-<QuestionDisclosure title="Can Titania stop needing the audience?">
+  <section class="studio-question">
+    <h3>What happens when something disappears?</h3>
+    <p>What kinds of absence actually change Titania's behaviour?</p>
+  </section>
 
-Can something else become sufficiently absorbing that her relationship with the audience changes or temporarily disappears?
+  <section class="studio-question">
+    <h3>What does failure reveal?</h3>
+    <p>Failure already belongs to Titania's clown practice.</p>
+    <p>What happens when something is wanted, attempted and fails — particularly when that failure is witnessed?</p>
+    <p>Could failure become one of the basic units from which material grows?</p>
+  </section>
 
-</QuestionDisclosure>
+  <section class="studio-question">
+    <h3>What can remain private?</h3>
+    <p>Can there be privacy on stage while an audience is watching?</p>
+    <p>What happens when something private becomes visible?</p>
+  </section>
 
-<QuestionDisclosure title="Can something become company?">
+  <section class="studio-question">
+    <h3>What does wordlessness do?</h3>
+    <p>Wordlessness is not silence.</p>
+    <p>What becomes possible when Titania cannot explain herself and meaning has to travel through body, rhythm, breath, objects, space, light and the audience?</p>
+  </section>
 
-Can an object, space, light, sound or repeated action begin to function as company?
-
-When does playing *as if* become a relationship for the clown?
-
-</QuestionDisclosure>
-
-<QuestionDisclosure title="What happens when something disappears?">
-
-What kinds of absence actually change Titania's behaviour?
-
-</QuestionDisclosure>
-
-<QuestionDisclosure title="What does failure reveal?">
-
-Failure already belongs to Titania's clown practice.
-
-What happens when something is wanted, attempted and fails — particularly when that failure is witnessed?
-
-Could failure become one of the basic units from which material grows?
-
-</QuestionDisclosure>
-
-<QuestionDisclosure title="What can remain private?">
-
-Can there be privacy on stage while an audience is watching?
-
-What happens when something private becomes visible?
-
-</QuestionDisclosure>
-
-<QuestionDisclosure title="What does wordlessness do?">
-
-Wordlessness is not silence.
-
-What becomes possible when Titania cannot explain herself and meaning has to travel through body, rhythm, breath, objects, space, light and the audience?
-
-</QuestionDisclosure>
-
-<QuestionDisclosure title="Where does comedy have to remain?">
-
-A piece investigating solitude may move through pleasure, discomfort, quietness or sadness.
-
-But Titania remains a clown.
-
-How far can comedy withdraw without the clown disappearing with it?
-
-</QuestionDisclosure>
+  <section class="studio-question">
+    <h3>Where does comedy have to remain?</h3>
+    <p>A piece investigating solitude may move through pleasure, discomfort, quietness or sadness.</p>
+    <p>But Titania remains a clown.</p>
+    <p>How far can comedy withdraw without the clown disappearing with it?</p>
+  </section>
+</div>
 
 ## The research field {#research}
 
