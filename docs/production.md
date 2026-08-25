@@ -1,6 +1,6 @@
 ---
 title: Production and Support
-description: Decision gates, production needs, and how to co-produce, host, present or support Solo Titania Chaos.
+description: "Step inside the making of Solo Titania Chaos: its artistic questions, production process and ways to co-produce, host or support the work."
 outline: [2, 2]
 relations:
   - { from: decisions, kind: rests-on, to: concept#dramaturgy }

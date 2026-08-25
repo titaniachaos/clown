@@ -68,9 +68,10 @@ const SECTIONS = [
     anchor: 'decisions',
     label: ['Production & Support', 'Продукция и подкрепа', 'Produktion & Unterstützung'],
     items: [
-      ['decisions', 'Decision gates', 'Решаващи точки', 'Entscheidungspunkte'],
+      ['decisions', 'Inside the making', 'В процеса на създаване', 'Einblick in die Entstehung'],
       ['production', 'Production approach', 'Подход към продукцията', 'Produktionsansatz'],
       ['about', 'About the project', 'За проекта', 'Über das Projekt'],
+      ['fairpay', 'Fair pay', 'Справедливо заплащане', 'Faire Bezahlung'],
       ['work', 'Work with the project', 'Работа с проекта', 'Mit dem Projekt arbeiten']
     ]
   }

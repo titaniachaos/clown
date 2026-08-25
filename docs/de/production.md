@@ -1,6 +1,6 @@
 ---
 title: Produktion und Unterstützung
-description: Entscheidungspunkte, Produktionsbedarf und wie man Solo Titania Chaos koproduziert, beherbergt, zeigt oder unterstützt.
+description: "Einblick in die Entstehung von Solo Titania Chaos: künstlerische Fragen, Produktionsprozess und Wege zur Koproduktion, Präsentation oder Unterstützung."
 outline: [2, 2]
 ---
 
@@ -121,13 +121,13 @@ Diese Website hält den künstlerischen Prozess lesbar, während das Solo entste
 
 ## Mit dem Projekt arbeiten {#work}
 
-Das Solo ist in Entstehung und sucht die Partner, die eine Entstehung braucht.
+Das Solo entsteht noch und sucht die Partner:innen, die es braucht, um zu wachsen.
 
 - **Koproduktion** — Risiko und Premiere teilen.
 - **Residenz** — Studiowochen, in denen Objekte zwischen den Sessions liegen bleiben dürfen, im Tausch gegen eine Werkstattpräsentation.
 - **Gastspiel** — die volle Fassung für einen kontrollierbaren Raum, oder die kürzere, robuste Variante für Tageslicht, Draußen und offenen Einlass.
-- **Workshops und Meisterklassen** — Clown, physische Komik und die Flop-Skala, für Festivals und Schulen. Siehe [Clown-Workshops mit Titania Chaos](https://titaniachaos.github.io/de/).
-- **Direkte Unterstützung** — ein Beitrag geht unmittelbar in Studiozeit.
+- **Workshops und Meisterklassen** — Clown und physische Komik in Formaten, die Festival- und Schulaufführungen begleiten können. Siehe **[Clown-Workshops mit Titania Chaos](https://titaniachaos.github.io/de/)**.
+- **Direkte Unterstützung** — unterstützt die Entwicklung des unabhängigen Projekts.
 
 Schicken Sie Datum, Raum und das, was Sie suchen — Sie bekommen eine klare Antwort darüber, was die Arbeit braucht.
 
