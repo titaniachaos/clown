@@ -4,6 +4,7 @@ import type { SiteConfig } from 'vitepress'
 import { BASE, HOSTNAME, LOCALES, splitLocale } from './seo.ts'
 import { WORKS, apaText } from './bibliography.ts'
 import { atom, type FeedItem } from './feed.ts'
+import { fold, workLeaf, RECEIPT_SCHEME } from './receipt.ts'
 
 /**
  * Build-time integrations, in Astro's shape: a named object with a `hooks` map.
@@ -138,6 +139,9 @@ const citations: Integration = {
       const unread = items.filter((i) => i.categories?.some((c) => c.term === 'not-read')).length
       logger.info(`${items.length} works, ${items.length - unread} read at first hand`)
 
+      const receipt = fold(WORKS.map(workLeaf))
+      logger.info(`receipt ${receipt.term} over ${receipt.leaves} works`)
+
       return [
         {
           file: 'citations.atom',
@@ -151,10 +155,33 @@ const citations: Integration = {
             generator: { uri: `${HOSTNAME}${BASE}`, text: 'Solo Titania Chaos source ledger' },
             stylesheet: `${BASE}citations.xsl`,
             updated: stamp,
+            categories: [
+              { term: receipt.term, scheme: RECEIPT_SCHEME, label: 'ledger receipt' }
+            ],
             items
           })
         },
-        { file: 'citations.xsl', body: STYLESHEET }
+        { file: 'citations.xsl', body: STYLESHEET },
+        {
+          // The receipt on its own, for anyone checking the feed without
+          // parsing it. Deliberately not timestamped: it must move when the
+          // bibliography moves and at no other time, so two builds of the same
+          // ledger produce the same bytes.
+          file: 'citations-receipt.json',
+          body: `${JSON.stringify(
+            {
+              algorithm: 'sha256',
+              leaves: receipt.leaves,
+              receipt: receipt.term,
+              covers: `${HOSTNAME}${BASE}citations.atom`,
+              recompute:
+                'sha256 each work as id/title/authors/type/read/records joined on U+001F, ' +
+                'sort the hex addresses, sha256 them joined on newline'
+            },
+            null,
+            2
+          )}\n`
+        }
       ]
     }
   }

@@ -20,6 +20,13 @@ export interface FeedLink {
 export interface FeedCategory {
   term: string
   label?: string
+  /**
+   * The vocabulary the term belongs to (RFC 4287 §4.2.2.2). Item categories
+   * leave it out -- their vocabulary is obvious from the label. A feed-level
+   * category carrying a fingerprint needs it, so a reader can tell a receipt
+   * from a subject keyword without guessing.
+   */
+  scheme?: string
 }
 
 export interface FeedItem {
@@ -51,6 +58,8 @@ export interface FeedOptions {
   /** XSLT that lets a browser render the feed instead of offering a download. */
   stylesheet?: string
   lang?: string
+  /** Categories describing the feed as a whole, not any one entry. */
+  categories?: FeedCategory[]
   items: FeedItem[]
 }
 
@@ -58,6 +67,11 @@ const esc = (t: string) =>
   t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
 const tag = (name: string, value: string) => `  <${name}>${esc(value)}</${name}>`
+
+const renderCategory = (c: FeedCategory, indent: string) =>
+  `${indent}<category term="${esc(c.term)}"` +
+  `${c.scheme ? ` scheme="${esc(c.scheme)}"` : ''}` +
+  `${c.label ? ` label="${esc(c.label)}"` : ''}/>`
 
 function renderItem(item: FeedItem, fallbackStamp: string): string {
   const lines = [
@@ -70,9 +84,7 @@ function renderItem(item: FeedItem, fallbackStamp: string): string {
       (l) =>
         `    <link rel="${esc(l.rel ?? 'alternate')}"${l.type ? ` type="${esc(l.type)}"` : ''} href="${esc(l.href)}"/>`
     ),
-    ...(item.categories ?? []).map(
-      (c) => `    <category term="${esc(c.term)}"${c.label ? ` label="${esc(c.label)}"` : ''}/>`
-    ),
+    ...(item.categories ?? []).map((c) => renderCategory(c, '    ')),
     item.content ? `    <content type="html">${esc(item.content)}</content>` : '',
     '  </entry>'
   ]
@@ -93,6 +105,7 @@ export function atom(o: FeedOptions): string {
     o.alternate ? `  <link rel="alternate" type="text/html" href="${esc(o.alternate)}"/>` : '',
     o.author ? `  <author><name>${esc(o.author)}</name></author>` : '',
     o.generator ? `  <generator uri="${esc(o.generator.uri)}">${esc(o.generator.text)}</generator>` : '',
+    ...(o.categories ?? []).map((c) => renderCategory(c, '  ')),
     ...o.items.map((i) => renderItem(i, o.updated)),
     '</feed>',
     ''

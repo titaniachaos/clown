@@ -10,7 +10,7 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "check:sources": "node scripts/check-locales.mjs && node scripts/check-ecosystem.mjs && node scripts/check-ledger.mjs && node scripts/check-claims.mjs && node scripts/check-bibliography.mjs",
-    "check:build": "node scripts/check-build.mjs && node scripts/check-images.mjs && node scripts/check-page-weight.mjs && node scripts/check-a11y.mjs && node scripts/check-supporters.mjs",
+    "check:build": "node scripts/check-build.mjs && node scripts/check-receipt.mjs && node scripts/check-images.mjs && node scripts/check-page-weight.mjs && node scripts/check-a11y.mjs && node scripts/check-supporters.mjs",
     "check:images": "node scripts/check-images.mjs",
     "check:weight": "node scripts/check-page-weight.mjs",
     "check:links": "node scripts/check-external.mjs",
@@ -24,6 +24,7 @@
     "check:supporters": "node scripts/check-supporters.mjs",
     "budget": "node scripts/budget.mjs",
     "check:bibliography": "node scripts/check-bibliography.mjs",
+    "check:receipt": "node scripts/check-receipt.mjs",
     "funding:watch": "node scripts/funding-watch.mjs",
     "check:origin": "node scripts/check-origin.mjs"
   },
