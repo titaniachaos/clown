@@ -306,6 +306,7 @@ export const WORKS: Work[] = [
     title: 'The whiteface and the auguste: The integration of structure and spontaneity in contemporary clown theatre performance',
     descriptor: "Master's dissertation",
     institution: 'University of Cape Town',
+    note: 'Department of Drama, supervised by Mark Fleishman. Argues that clowning is detrimentally emphasised as a purely spontaneous form, avoiding critical examination, and for the Whiteface as order, form, rules, preparation and critical enquiry.',
     url: 'https://open.uct.ac.za/handle/11427/20128',
     records: ['whiteface-split'],
     read: 'full-text'
