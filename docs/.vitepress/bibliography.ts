@@ -161,7 +161,7 @@ export const WORKS: Work[] = [
     issue: '2',
     doi: '10.1080/19443927.2017.1316304',
     records: ['flop'],
-    read: 'not-read'
+    read: 'full-text'
   },
   {
     id: 'purcell-gates-locating',
@@ -262,7 +262,7 @@ export const WORKS: Work[] = [
     publisher: 'Félix Alcan',
     note: 'Parts I.i and III.',
     records: ['bergson-echo', 'bergson-insensibility'],
-    read: 'not-read'
+    read: 'full-text'
   },
   {
     id: 'davison-clown',
@@ -284,7 +284,7 @@ export const WORKS: Work[] = [
     institution: 'University of Cape Town',
     url: 'https://open.uct.ac.za/handle/11427/20128',
     records: ['playful-anarchy'],
-    read: 'not-read'
+    read: 'full-text'
   }
 ]
 
