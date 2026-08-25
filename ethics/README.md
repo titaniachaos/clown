@@ -138,3 +138,28 @@ the people in frame before it goes anywhere public, and the release in
 `margareten.jpg` on the concept pages is the first frame taken from this folder:
 solo, no third party, resized to 1050×1400 and 173 KB. It is the shape the rest
 has to be in before it goes anywhere.
+
+## The six videos
+
+4.6 to 19.5 seconds each, 1080p, 5–25 MB. They split the same way the
+photographs do, and one of them raises the field-protocol question again:
+
+- **Solo and usable.** `IMG_2246.MOV` — Titania in a park, red coat, red nose,
+  bare trees. Nobody else in frame.
+- **Strangers in the street.** `IMG_7217.MOV` — a city street, two identifiable
+  passers-by, no Titania in the frame at all. This is the field protocol in
+  video form: people filmed without knowing. The wording question above applies
+  to it, and video makes identification easier than notes ever would.
+
+**Self-hosting is not possible inside the page budget, and the numbers are not
+close.** A page must stay under 500 KB and already spends around 200 KB:
+
+| encode | size |
+|---|---|
+| 10s, 720p, no audio | 2,441 KB |
+| 3s, 480p, no audio, crf 30 | 374 KB |
+
+Even three silent seconds at 480p overruns the page. So video means one of three
+things: embedding from a platform, which puts a third party's tracking on the
+page and changes what the privacy policy has to say; raising the budget
+deliberately; or not carrying video. It is a decision, not an optimisation.
