@@ -10,6 +10,7 @@ import {
   localeAlternateTags,
   splitLocale
 } from './seo.ts'
+import { WORKS, apaText } from './bibliography.ts'
 
 /** The main Titania Chaos site, of which this project is a part. */
 const MAIN_SITE = (prefix: string) => `${HOSTNAME}${prefix}/`
@@ -152,6 +153,14 @@ export default defineConfig({
 
   head: [
     ['meta', { name: 'theme-color', content: '#d62246' }],
+    // The bibliography is a feed, so say so in the head: a reference manager
+    // that autodiscovers it gets every citation without scraping the page.
+    ['link', {
+      rel: 'alternate',
+      type: 'application/atom+xml',
+      title: 'Solo Titania Chaos 2026 — source bibliography',
+      href: `${HOSTNAME}${BASE}citations.atom`
+    }],
     ...(GOOGLE_SITE_VERIFICATION
       ? [['meta', { name: 'google-site-verification', content: GOOGLE_SITE_VERIFICATION }] as const]
       : [])
@@ -189,6 +198,51 @@ export default defineConfig({
     // main site, so this file is advisory for anything reading it directly.
     const robots = ['User-agent: *', 'Allow: /', '', `Sitemap: ${HOSTNAME}${BASE}sitemap.xml`, ''].join('\n')
     await writeFile(join(siteConfig.outDir, 'robots.txt'), robots, 'utf-8')
+
+    // The bibliography as an Atom feed: one entry per work, the reference
+    // rendered from the structured record rather than typed twice.
+    const xml = (t: string) =>
+      t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+    const stamp = new Date().toISOString()
+    const self = `${HOSTNAME}${BASE}citations.atom`
+    const entries = WORKS.map((w) => {
+      const cites = w.records.map((r) => `${HOSTNAME}${BASE}sources#${r}`)
+      return [
+        '  <entry>',
+        `    <id>tag:titaniachaos.github.io,2026:clown/work/${xml(w.id)}</id>`,
+        `    <title>${xml(w.title)}</title>`,
+        `    <updated>${stamp}</updated>`,
+        ...w.authors.map((a) => `    <author><name>${xml(a)}</name></author>`),
+        `    <link rel="alternate" href="${xml(cites[0] ?? `${HOSTNAME}${BASE}sources`)}"/>`,
+        w.doi ? `    <link rel="related" href="https://doi.org/${xml(w.doi)}"/>` : '',
+        !w.doi && w.url ? `    <link rel="related" href="${xml(w.url)}"/>` : '',
+        `    <category term="${xml(w.type)}" label="work type"/>`,
+        `    <category term="${xml(w.read)}" label="how far this project read it"/>`,
+        ...w.records.map((r) => `    <category term="${xml(r)}" label="ledger record"/>`),
+        '    <content type="html">',
+        `      ${xml(`<p>${apaText(w)}</p>`)}`,
+        w.note ? `      ${xml(`<p>${w.note}</p>`)}` : '',
+        `      ${xml(`<p>Cited by: ${cites.map((c) => `<a href="${c}">${c}</a>`).join(', ')}</p>`)}`,
+        '    </content>',
+        '  </entry>'
+      ].filter(Boolean).join('\n')
+    })
+    const feed = [
+      '<?xml version="1.0" encoding="utf-8"?>',
+      '<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">',
+      `  <id>tag:titaniachaos.github.io,2026:clown/citations</id>`,
+      '  <title>Solo Titania Chaos 2026 — source bibliography</title>',
+      '  <subtitle>Every work the project cites, in APA form, one entry per work.</subtitle>',
+      `  <updated>${stamp}</updated>`,
+      `  <link rel="self" type="application/atom+xml" href="${self}"/>`,
+      `  <link rel="alternate" type="text/html" href="${HOSTNAME}${BASE}sources"/>`,
+      '  <author><name>Titania Chaos</name></author>',
+      `  <generator uri="${HOSTNAME}${BASE}">Solo Titania Chaos source ledger</generator>`,
+      ...entries,
+      '</feed>',
+      ''
+    ].join('\n')
+    await writeFile(join(siteConfig.outDir, 'citations.atom'), feed, 'utf-8')
   },
 
   themeConfig: {
