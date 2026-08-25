@@ -3,6 +3,7 @@ import {
   BASE,
   GOOGLE_SITE_VERIFICATION,
   HOSTNAME,
+  WRITTEN_HOST,
   buildHead,
   localeAlternateTags
 } from './seo.ts'
@@ -135,7 +136,15 @@ export default defineConfig({
         ((tokens, idx, options, _env, self) => self.renderToken(tokens, idx, options))
 
       md.renderer.rules.link_open = (tokens, idx, options, env, self) => {
-        const href = tokens[idx].attrGet('href') ?? ''
+        // Markdown is written with the host the site has today. On a domain
+        // move SITE_ORIGIN changes and these follow it, so a cross-site link
+        // cannot be left pointing at the old home -- nor be mistaken for an
+        // external link and opened in a new tab.
+        const written = tokens[idx].attrGet('href') ?? ''
+        const href = written.startsWith(WRITTEN_HOST)
+          ? written.replace(WRITTEN_HOST, HOSTNAME)
+          : written
+        if (href !== written) tokens[idx].attrSet('href', href)
         if (!href.startsWith(HOSTNAME)) return renderLink(tokens, idx, options, env, self)
 
         // The theme also draws the arrow from `a[href*="://"]` in CSS, so the
