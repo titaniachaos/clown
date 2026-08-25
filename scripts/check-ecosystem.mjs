@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 import { readFile } from 'node:fs/promises'
 
-const [config, fairPay, css, en, bg, de] = await Promise.all([
+const [config, fairPay, css, en, bg, de, studio] = await Promise.all([
   readFile('docs/.vitepress/config.mts', 'utf8'),
   readFile('docs/.vitepress/theme/FairPay.vue', 'utf8'),
   readFile('docs/.vitepress/theme/custom.css', 'utf8'),
   readFile('docs/production.md', 'utf8'),
   readFile('docs/bg/production.md', 'utf8'),
-  readFile('docs/de/production.md', 'utf8')
+  readFile('docs/de/production.md', 'utf8'),
+  readFile('docs/studio-process.md', 'utf8')
 ])
 
 const problems = []
@@ -53,6 +54,29 @@ if (disclosures !== 12) problems.push(`English Production must contain 12 indivi
 for (const removed of ['## About the project', '### Purpose', '### Working areas']) {
   if (en.includes(removed)) problems.push(`English Production retains removed meta section: ${removed}`)
 }
+
+for (const heading of [
+  '## The process',
+  '## Working principles',
+  '## Studio tools',
+  '## What this process does not decide',
+  '## What survives the studio'
+]) requireText(studio, heading, `English Studio section missing: ${heading}`)
+
+for (const phrase of [
+  'Twelve-week studio process',
+  'Seven-movement',
+  'The discrimination run',
+  'npm run flop:score',
+  'The flop scale',
+  'Two and two make five'
+]) {
+  if (studio.toLowerCase().includes(phrase.toLowerCase())) {
+    problems.push(`English Studio retains archived method: ${phrase}`)
+  }
+}
+if (/Weeks?\s+\d/i.test(studio)) problems.push('English Studio retains a fixed week assignment')
+requireText(studio, 'outline: [2, 2]', 'English Studio outline must expose major H2 sections only')
 
 for (const token of [
   '--vp-font-family-base: Inter, ui-sans-serif, system-ui, sans-serif',

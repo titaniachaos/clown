@@ -1,225 +1,261 @@
 ---
 title: The Studio
-description: The twelve-week studio process, the rehearsal toolkit and the material research that generate Solo Titania Chaos.
+description: The validated studio process and practical tools used to discover material for Solo Titania Chaos.
+outline: [2, 2]
 relations:
-  - { from: material, kind: rests-on, to: sources#ledger }
-  - { from: two-and-two, kind: rests-on, to: sources#paradoxes }
+  - { from: process, kind: rests-on, to: sources#ledger }
   - { from: process, kind: decided-in, to: production#production }
 ---
 
-# The studio
+# The Studio
 
-How the material is made: a twelve-week plan, the laboratories that fill it, and the source catalogue it draws from. Generate before judging; test on people early.
+The studio is where questions become physical tests.
 
-## Twelve-week studio process {#process}
+Material is generated before it is judged, tested with people before it is assembled, and allowed to fail before it becomes precious.
 
-The studio plan protects discovery from premature structure. Material is generated before it is judged, tested with real people before it is assembled, and cut before it becomes precious.
+The aim is not to rehearse an imagined performance, but to discover what Titania actually does under concrete conditions.
 
-### Phase 1 — Gathering · Weeks 1–3
+**Create the condition rather than ask Titania to represent it.**
 
-- Establish the physical body and neutral starting point.
-- Generate many short studies of different kinds of solitude.
-- Observe real solitary behaviour without interpreting it.
-- Explore the chair, coat, lamp and other objects before assigning them fixed roles.
+## The process {#process}
 
-### Phase 2 — Testing · Weeks 4–6
+The work develops through four overlapping phases. They are a working sequence, not a fixed calendar.
 
-- Bring in a first small audience early.
-- Build a practical scale of flops, rated by exposure rather than laugh size.
-- Triage fragments as keep, dead or not yet.
-- Compare what changes when observers are absent, silent or free to laugh.
+### Gathering
 
-### Phase 3 — Assembling · Weeks 7–9
+Generate a large amount of short physical material before deciding what belongs to the piece.
 
-- Place surviving material against the seven-movement map — and against a deliberately different order, because the map is a hypothesis and this is where it is tested rather than assumed.
-- Build missing transitions or counterweights to order.
-- Run the first complete sequence.
-- Test it with a larger audience and record observable behaviour.
+Work from precise tasks, observations, objects, physical conditions and questions.
 
-### Phase 4 — Tightening · Weeks 10–12
+Do not look for scenes yet.
 
-- Cut repetition that does not deepen the relationship.
-- Strengthen comic ballast where the work becomes merely beautiful.
-- Run repeatedly under performance conditions.
-- Lock a version while preserving a record of alternatives.
+### Testing
 
-### Working rules
+Bring other people into the room early.
 
-0. A plan that cannot fail is a schedule. If by the end of week six the observer test shows no difference between playing alone, to silent observers and to a room free to laugh, the [central contradiction](/concept#contradiction) has not generated a useful distinction, and the honest move is to say so rather than to keep assembling. The material would still be worth making; the question would need revisiting.
-1. Generate before judging.
-2. Keep the camera running; timing cannot be assessed accurately from inside the action.
-3. Record behaviour, not feelings.
-4. Test on people early and often.
-5. Keep what surprises the room.
+Repeat promising material under changed conditions. Change presence, response, objects, space or other elements one at a time and observe what this does to the playing.
 
-## Rehearsal toolkit {#toolkit}
+Material that seemed strong alone may die in front of people. Something insignificant may suddenly become alive.
 
-These laboratories generate material without deciding too early what the finished performance must contain.
+Both are useful information.
 
-### Twenty solitudes
+### Assembling
 
-Create twenty one-minute improvisations with no objects. Each receives one precise condition: discovering the body, preparing to be alone without arriving, setting a table for two from habit, moving around a person-shaped absence, or saying goodbye to something that will outlive you.
+Begin placing surviving fragments beside one another.
 
-Keep the studies that produce surprise rather than those that merely illustrate the prompt well.
+Test different orders rather than assuming a sequence in advance.
 
-### The field protocol
+Look for relationships, interruptions, repetitions, contrasts and consequences that emerge between pieces of material.
 
-Observe people’s solitary behaviour in public and domestic spaces without assigning motives. Record concrete actions: repeated checking, private counting systems, rearrangement, unfinished tunes, care given to unused objects. Behaviour is playable; interpretation is not.
+A dramaturgy may begin to appear here. It does not have to resemble anything imagined before rehearsal.
 
-### One object, many relationships
+### Tightening
 
-Work with a chair, coat or lamp as:
+Repeat longer sequences under increasingly realistic performance conditions.
 
-- its ordinary function
-- an obstacle
-- company
-- an opponent
-- the last object in the world
+Cut what has become explanatory, repetitive or merely decorative.
 
-Choose the relationship that resists easy invention. The obvious success often has the shortest life.
+Test what needs precision and what needs enough freedom to remain alive.
 
-### The observer test
+Eventually a version can be fixed without pretending that every useful alternative has ceased to exist.
 
-Repeat identical material under three conditions: completely alone, watched by silent observers, and watched by people free to laugh. Compare posture, timing, breath, attention and recovery rather than subjective feeling.
+## Working principles {#principles}
 
-### The discrimination run {#flop-discrimination}
+### Generate before judging
 
-[The ledger records an objection](/sources#authenticity-effect) that this page cannot settle by writing: what an audience reads as spontaneity may be a learnable technique. The material research stakes the comedy on the conviction being real. Both cannot be load-bearing, and the room decides which.
+Do not demand meaning from an improvisation while it is being made.
 
-A forced choice. Six pairs, each one flop played from genuine not-knowing and one rehearsed until reliable, the order inside each pair set by someone other than the performer. After each pair every observer writes *first* or *second* — no discussion, no “don’t know”, no confidence scale, because a scale is where the impression creeps back in.
+### Record behaviour before interpretation
 
-One difficulty shapes the design: a genuine flop is genuine exactly once, so the two arms can never be the same material, and any difference might be the material rather than the knowing. Two sessions, a week apart, with different observers: this week’s genuine six, once rehearsed, become next week’s crafted six. Discrimination that survives the swap is not the material.
+Write down what happened before deciding what it meant.
 
-Twelve observers judging six pairs is 72 judgements, and chance is 36. Above chance at 44, convincing at 47; the design finds a true rate of 65% about four times in five. Under sixty judgements the room has to be near-clairvoyant before anything registers, which is how a real effect gets missed and called proof of its absence.
+### Test with people early
 
-A flat 36 is not a failed session. It bounds the claim — any true discriminability is then below 60% — and the consequence is exact: **the conviction being real becomes a rehearsal instruction rather than a claim about the audience**, and this page should say so.
+Audience presence is part of the material, not something to add once the work is finished.
 
-Score it with `npm run flop:score -- results.csv`. The script reports the pooled test, the spread across observers, and the result with the two strongest removed, because twelve people sharing one room and one laugh are not twelve independent measurements.
+### Keep what surprises the room
 
-Record the laughter separately, from the camera rather than from memory: whether it came, and how long after the collapse. That answers whether the flop *worked*, which is a different question, and it belongs on the flop scale’s second axis.
+A theoretically perfect idea has no special protection if nothing happens when it is played.
 
-### The flop scale {#flop-scale}
+### Create the condition rather than represent it
 
-Build at least thirty failures and rate them by exposure:
+Where possible, change something real in the room — presence, absence, response, light, sound, distance or an object — rather than asking Titania to demonstrate the corresponding idea.
 
-- **1–2:** a mechanical mishap
-- **3–4:** a small intention defeated
-- **5–6:** a visible plan collapses
-- **7–8:** something visibly valued fails
-- **9–10:** the performer is caught with no cover
+## Studio tools {#tools}
 
-The deepest flop only works after the audience has climbed the lower steps.
+These are working tools, not a recipe for the finished performance.
 
-Record a second axis beside exposure — what **kind** of failure it was:
+### Twenty Solitudes
 
-- **scripted:** the failure is the number’s premise, and the clown is playing it
-- **real:** the room did not laugh, and the clown does not yet know what to do
-- **recovered:** the clown registered the flop and reincorporated it
+Generate **twenty short physical improvisations**, approximately one minute each.
 
-Amsden separates these three and reports that students cannot tell them apart —
-and that the slippage between them is where the training actually happens. A
-scale with one axis hides exactly that.
+In the first round, use no objects.
 
-### The working log
+Each improvisation receives one precise condition or task. The condition should tell Titania what she is doing or what situation she is in — not what emotion or meaning she should express.
 
-For every fragment record the date, prompt, observable behaviour, provisional status and whether something surprising happened. Use **keep**, **dead** and **not yet** generously. Do not turn the log into a diary of feelings.
+Do not improve or repeat an improvisation during the first round. Move on.
 
-## Material research {#material}
+Film the studies.
 
-The source catalogue is deliberately larger than the eventual show. Its purpose is to produce playable options, not to prescribe a sequence.
+Afterwards, look for observable behaviour: changes of rhythm, hesitation, repetition, unexpected solutions, failure, attention and contact with the room or with actual or imagined others.
 
-### Everyday behaviour
+Mark material provisionally:
 
-The strongest seeds are precise actions with a human contradiction: preparing two cups but drinking alone, rehearsing a handshake with the air, dusting the empty chair, waiting for a clock to ring, or arranging objects by a private rule nobody else can understand.
+**keep · not yet · dead**
 
-These are not illustrations of loneliness. They are ordinary tasks whose rhythm, repetition or misplaced care allows the audience to discover the theme.
+Do not keep a study because it illustrates solitude particularly clearly. Keep it because something theatrically alive happened.
 
-### A worked example: two and two make five {#two-and-two}
+The conditions themselves are not supplied by the research in advance. They can come from observation, memory, Titania's existing practice and questions emerging from the studio.
 
-The field protocol already asks for private counting systems. This is one, performed.
+### Observation Practice
 
-The clown counts two, then two, arrives at five, and is satisfied. Nothing is being hidden and nobody is being deceived: the conviction is real. That sincerity is the whole of the comedy, and it is what separates the auguste’s arithmetic from every other version of the same proposition.
+Observe solitary behaviour without assigning motives.
 
-The proposition does not change. The witness does.
+Record what can actually be seen or heard: actions, repetitions, pauses, small rituals, use of space, relationships with objects, interrupted actions, sounds made without addressing another person.
 
-| Who is present | What the act becomes |
-| --- | --- |
-| Nobody | a private rule — precise, harmless, invisible |
-| A regime | terror — assent extracted by force |
-| An audience | comedy — conviction met with complicity |
+Use the distinction:
 
-The same four characters carry the theme through all three of its temperatures, which is why the example belongs in the source catalogue rather than in a list of gags.
+> She checks the door handle three times before leaving.
 
-It is also playable straight up the flop scale:
+rather than:
 
-- **1–2:** miscounts, notices, corrects, moves on
-- **5–6:** builds an elaborate demonstration of five, and watches it collapse
-- **9–10:** stakes everything on five, and then sees the audience see four
+> She is anxious about leaving.
 
-The deepest rung needs no object and no words.
+Keep observations small and literal.
 
-#### What the scale measures, and what it misses
+Later, take selected behaviours out of their original context and test them physically with Titania. See what happens through rhythm, repetition, scale, interruption or failure.
 
-Read in Amsden’s thesis, the scale is measuring one axis of something that has two.
+**Behaviour is playable; interpretation is not.**
 
-Badness, she reports, is approached in three ways: as something to be **negated**, as something that **reveals authentic humanity** beyond performance, and as something **presented as funny**. Those are kinds, not depths. A flop can sit high on this scale for exposure and still be the wrong kind, and rating it 9 says nothing about which of the three it was.
+### One Object, Many Relationships
 
-The scale is therefore a reading instrument, not a planning one. Gaulier’s method is *via negativa*: no prescription, no illustration by example, the performer proposing until something is accepted. What the numbers are good for is recording what the room rejected, so it is not proposed twice.
+Choose one ordinary object.
 
-**A flop is not a property of the material.** Gaulier’s own company toured *The End of the Tunnel* in 1992 with substantially the same show each night; on a good night it was the funniest thing the performers had seen, and on a bad one the audience slammed their seats and walked out furious. The same material, opposite verdicts, consecutive nights. Any fragment logged **keep** on one audience is logged provisionally.
+Begin with its actual properties and ordinary function rather than deciding what it represents.
 
-**The repetition warning is specific and it lands on weeks 10 to 12.** Rehearsing that company, nothing was fixed and nothing repeated; the playing was free and enormously funny, and whenever they came to repeat something that had worked, it fell flat. The French for rehearsal is *répétition*, which is the joke and the problem at once. Tightening is the phase where this project is most exposed to it, so what gets locked should be the condition that produced the surprise, not the shape the surprise happened to take.
+Then explore distinctly different relationships:
 
-One more thing worth stealing. Gaulier’s *Emergency Clown Hospital* puts a student who has made nobody laugh in front of the room to describe their clown’s flops, and it reliably gets roars. The account of the failure outperforms the failure. For a wordless solo that route is closed, which is worth knowing rather than discovering late.
+- **use** — it remains what it is
+- **obstacle** — it interferes with what Titania wants
+- **company** — Titania begins relating to it as something she is with
+- **opponent** — their interests appear to conflict
+- **dependence** — Titania needs something from it or cannot proceed without it
 
-#### The 5–6 rung, worked
+If another relationship appears, follow it.
 
-Lecoq’s name for the flop is an attempt at an exploit that inevitably fails. A proof is an exploit, so a proof of five is the rung exactly.
+Do not begin by deciding that a chair is a person or a coat is a companion.
 
-One that holds long enough to be believed:
+Notice when a relationship emerges through behaviour rather than through illustration.
 
-1. Two and two make four.
-2. Four reflected through zero is six. The reflection is real: negative four is six, counting round ten.
-3. Six and four make ten, whose digital root is one.
-4. One reflected through zero is five. This is also real, on the doubling circuit one, two, four, eight, seven, five — where five closes back to one.
+**Do not decide what the object represents. Discover what relationship its behaviour makes possible.**
 
-Every step is a legitimate move. The sleight is the join: step 2 needs a wheel of ten, step 4 needs the circuit of six, and no wheel above two carries both. The proof changes systems once, at the moment nobody is watching the floor.
+### The Observer Test
 
-That is the whole requirement of the rung. A demonstration that fails at once is not an exploit and earns nothing. One that never fails is not a proof of five. It has to almost hold.
+Take one short piece of already generated material and play it under three conditions:
 
-What the fall then exposes is not the clown’s incompetence but the floor the room is already standing on: everyone present knows four. The audience’s certainty is the common ground, and the collapse is what makes it visible as something held together rather than known separately.
+1. alone
+2. watched by silent observers
+3. watched by people free to respond normally
 
-In performance the division of knowledge is strict. The performer knows where the join is. The clown must not. That rule now has a source rather than only a practice behind it: for Bergson a character is comic in proportion to his ignorance of himself, and a ridiculous defect that feels itself to be ridiculous begins at once to correct itself — so the not-knowing is the condition of the comic, not a convenience. See [the comic person is unconscious](/sources#unconscious), which is also where it collides with Gaulier. The clown may only discover it at the moment of the fall, and the registering of it — the look up — comes after the collapse, never during.
+Keep the task and material as similar as reasonably possible.
 
-One adjustment the tradition forces. The classical auguste is the recipient of the comic action, subordinate to a whiteface who supplies the rule. There is no whiteface in a solo, so the room supplies it: the furniture, the objects and the rule that appears in movement 5 are the straight man. Grock, an auguste who broke free of the pairing and carried the entrée into the theatre, is the precedent for doing this alone.
+Compare what actually changes: timing, rhythm, breath, gaze, posture, hesitation, recovery and attention towards or away from the room.
 
-### The invented companion
+Do not begin with:
 
-One object is explored through several identities before its role is chosen. The aim is not polished puppetry; life should emerge visibly from the clown’s need. The companion must work fully for a time so its eventual loss has weight.
+> Did I feel more alone?
 
-### Audience laboratories
+Begin with:
 
-- Repeat identical material alone, with silent observers, and with responsive observers.
-- Let an observer leave without warning and note when the body notices.
-- Test the withdrawal of sound, light and audience response separately.
-- Rehearse one unrescued flop carefully rather than exhausting it through repetition.
+> **What changed in the playing because somebody was there?**
 
-Everyone in the room is told what is being recorded before it starts, and can
-say no to part of it and still take part. The camera faces the stage; the back
-row on the left is outside the frame for anyone who would rather not appear.
-Working footage is deleted at the première. The information sheet and consent
-form are in the repository, in [English](https://github.com/titaniachaos/clown/blob/main/ethics/consent-en.md),
-[German](https://github.com/titaniachaos/clown/blob/main/ethics/consent-de.md) and [Bulgarian](https://github.com/titaniachaos/clown/blob/main/ethics/consent-bg.md).
+The test is not intended to prove a theory. It is a way of discovering where and how Titania's behaviour changes through presence, observation and response.
 
-### Decisions that block production
+### Reading the Flop
 
-Several choices affect design and booking early: how the audience’s presence withdraws, who leaves at the end, whether a red nose defines the register, and what kind of venue can support the lighting and front-of-house logic.
+Failure is observed after it happens rather than manufactured according to a scale.
 
-## What the material answers to {#next}
+Ask:
 
-The material answers to the [questions for the studio](/concept#questions), while the [research field](/concept#research) sharpens observation without determining the piece. The [source ledger](/sources#ledger) is where the citations live. Several choices here block design and booking — they are on the [decision gates](/production#decisions).
+- What did Titania want?
+- What failed?
+- Could the audience see what she wanted?
+- What was at stake for her?
+- What became exposed?
+- Was the failure played, genuinely unexpected, or somewhere between the two?
+- What happened next?
+- Did the failure generate new behaviour?
 
-**Bring this work to your audience.** Co-production, residency and presenting enquiries are welcome at any stage. [What the project offers](/production#work).
+Different degrees of exposure can still be useful to distinguish:
+
+**mishap → defeated intention → collapsed plan → something valued fails → no cover**
+
+These are distinctions for reading what happened, not levels to climb.
+
+Do not introduce numerical ratings.
+
+### The Working Log
+
+For each fragment, record:
+
+- date
+- starting task or condition
+- who was present
+- objects or materials used
+- what Titania actually did
+- unexpected behaviour or discovery
+- audience response, where relevant
+- failure and what followed it
+- provisional status: **keep / not yet / dead**
+- one possible question for the next test
+
+Subjective experience may also be useful, but it should not replace observable information.
+
+**Record what happened before recording what you think it meant.**
+
+### Audience and Presence Experiments
+
+Change actual conditions rather than representing absence or connection.
+
+An observer can leave during existing material without Titania knowing when this will happen.
+
+An element that has become part of the environment — light, sound, an object or another presence — can be removed.
+
+When something genuinely fails, do not necessarily rescue it immediately. See what Titania does when the expected escape route is unavailable.
+
+Change one condition at a time where possible.
+
+The question remains:
+
+**What does the changed condition make Titania actually do?**
+
+## What this process does not decide {#open}
+
+None of these exercises establishes a scene simply because it has been tried.
+
+There is no predetermined sequence of movements.
+
+There is no numerical hierarchy of flops to climb.
+
+An object becoming company does not mean that the finished piece must contain an invented companion.
+
+An audience experiment does not establish that someone must leave during the performance.
+
+A useful studio result is evidence for further work, not automatically material for the finished solo.
+
+The final dramaturgy remains open.
+
+## What survives the studio {#survives}
+
+The studio answers to the questions of **The Work**.
+
+Research can sharpen what we notice, but it does not prescribe what happens in the room.
+
+Material earns its place through playing and testing — and can lose that place again.
+
+[Return to The Work →](./concept#concept)
+
+[Explore Sources & lineages →](./sources#ledger)
 
 [Contact Titania about the project](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos){.contact-button} [Support the project](https://revolut.me/titaniachaos){.contact-button .secondary}
 

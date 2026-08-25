@@ -79,10 +79,15 @@ for (const name of rootPages) {
     }
 
     const shape = (p) => p.headings.map((h) => h.level).join(',')
-    // English Production and Concept use editorial disclosure structures;
+    // English Production, Concept, Studio and Sources use approved editorial structures;
     // translated pages retain their previously approved structures until
     // their corresponding copy is translated and approved.
-    const independentlyStructured = ['production.md', 'concept.md'].includes(name)
+    const independentlyStructured = [
+      'production.md',
+      'concept.md',
+      'studio-process.md',
+      'sources.md'
+    ].includes(name)
     if (!independentlyStructured && shape(page) !== shape(reference)) {
       add(
         `${locale}/${name}: heading structure differs -- ${page.headings.length} headings ` +

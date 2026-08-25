@@ -88,6 +88,13 @@ function sidebar(prefix: string, groupText: string, column: Column): DefaultThem
     ['unknown', 'What remains unknown'],
     ['studio', 'Into the studio']
   ] as const
+  const englishStudioItems = [
+    ['process', 'The process'],
+    ['principles', 'Working principles'],
+    ['tools', 'Studio tools'],
+    ['open', 'What this process does not decide'],
+    ['survives', 'What survives the studio']
+  ] as const
 
   return [
     {
@@ -99,8 +106,8 @@ function sidebar(prefix: string, groupText: string, column: Column): DefaultThem
           link: `${prefix}/${section.slug}#${section.anchor}`,
           collapsed: false,
           items:
-            column === 1 && section.slug === 'concept'
-              ? englishConceptItems.map(([anchor, text]) => ({
+            column === 1 && (section.slug === 'concept' || section.slug === 'studio-process')
+              ? (section.slug === 'concept' ? englishConceptItems : englishStudioItems).map(([anchor, text]) => ({
                   text,
                   link: `${prefix}/${section.slug}#${anchor}`
                 }))
