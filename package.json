@@ -18,7 +18,8 @@
     "watch:research": "node scripts/watch-research.mjs",
     "flop:score": "node scripts/flop-test.mjs",
     "prepare": "node scripts/install-hooks.mjs",
-    "check:claims": "node scripts/check-claims.mjs"
+    "check:claims": "node scripts/check-claims.mjs",
+    "funding": "node scripts/funding.mjs"
   },
   "devDependencies": {
     "vitepress": "2.0.0-alpha.19"
