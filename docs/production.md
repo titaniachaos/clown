@@ -47,6 +47,18 @@ The nose changes the audience’s contract with abstraction. The smallest possib
 
 It is a lineage question rather than a costume one. Davison notes that the auguste in its red-nose aspect came to signify *clown* itself, and that it is nonetheless a relatively recent phenomenon. So keeping the nose signs the lineage the ledger has just chosen, and dropping it while keeping the auguste is a position that has to be argued rather than simply preferred.
 
+### What is singing for?
+
+The skill is available and its function is not decided. A wordless hour makes any sung note enormous — larger than the single non-word sound the gate above asks about, because a voice that can sing is a voice that has been withholding. An earlier version of this project made singing Titania’s connection to the world; that is a decision, not a given. Settle what it is for before settling whether to use it, and note that it interacts with the vocal sound: two vocal events in an hour is a different piece from one.
+
+### Does the tulle earn its place?
+
+The one material already tied to Titania’s aesthetic world, and the only object here with a history: it used to stand for fragility, fantasy, freedom, dream, chaos against order. That reading is archived and the tulle currently carries no assigned meaning. It is portable, visually distinctive and physically transformable — a case for testing it, not a case for keeping it. The test is whether it produces behaviour that surprises rather than images that are beautiful, and the honest failure mode is that it photographs well and plays thin.
+
+### Is the piece one thing or several?
+
+The studio plan runs twelve weeks toward a single assembled arc and the dramaturgy proposes an order. The open question is whether the strongest material can stand as independent units, reordered or performed apart, without losing the inquiry. It is not only dramaturgical: a modular piece can be programmed into contexts a fixed hour cannot, which is the shorter outdoor variation arriving from the other direction. Test it by running the assembled order against a deliberately different one, in front of different audiences.
+
 ### Which venue is the work for?
 
 The full version needs controlled darkness, audience visibility and front-of-house cooperation. A separate shorter version may be necessary for daylight, outdoor and fluid-entry contexts.

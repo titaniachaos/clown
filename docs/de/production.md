@@ -45,6 +45,18 @@ Die Nase verändert den Vertrag des Publikums mit der Abstraktion. Die kleinstm�
 
 Es ist eine Frage der Linie, nicht des Kostüms. Davison hält fest, dass der Auguste in seiner Rotnasen-Gestalt dazu kam, *Clown* schlechthin zu bezeichnen, und dass er gleichwohl ein verhältnismäßig junges Phänomen ist. Die Nase zu behalten unterschreibt also die Linie, die das Verzeichnis eben gewählt hat, und sie fallen zu lassen und den Auguste zu behalten ist eine Position, die begründet und nicht bloß bevorzugt werden muss.
 
+### Wozu dient der Gesang?
+
+Die Fähigkeit ist vorhanden, ihre Funktion ist nicht entschieden. Eine wortlose Stunde macht jeden gesungenen Ton riesig — größer als der einzelne nichtsprachliche Laut, nach dem der Punkt darüber fragt, denn eine Stimme, die singen kann, ist eine Stimme, die sich zurückgehalten hat. Eine frühere Fassung dieses Projekts machte den Gesang zu Titanias Verbindung zur Welt; das ist eine Entscheidung, keine Gegebenheit. Klären Sie, wozu er dient, bevor Sie klären, ob er vorkommt, und beachten Sie die Wechselwirkung mit dem Vokallaut: Zwei stimmliche Ereignisse in einer Stunde ergeben ein anderes Stück als eines.
+
+### Verdient der Tüll seinen Platz?
+
+Das eine Material, das bereits zu Titanias ästhetischer Welt gehört, und der einzige Gegenstand hier mit einer Geschichte: Er stand für Zerbrechlichkeit, Fantasie, Freiheit, Traum, Chaos gegen Ordnung. Diese Lesart ist archiviert, und der Tüll trägt derzeit keine zugewiesene Bedeutung. Er ist tragbar, visuell unverwechselbar und physisch verwandelbar — ein Grund, ihn zu erproben, kein Grund, ihn zu behalten. Die Probe ist, ob er Verhalten hervorbringt, das überrascht, statt Bilder, die schön sind; die ehrliche Art zu scheitern ist, gut zu fotografieren und dünn zu spielen.
+
+### Ist das Stück eines oder mehrere?
+
+Der Studioplan läuft zwölf Wochen auf einen einzigen zusammengefügten Bogen zu, und die Dramaturgie schlägt eine Reihenfolge vor. Offen ist, ob das stärkste Material als eigenständige Einheiten bestehen kann, anders geordnet oder einzeln gespielt, ohne die Fragestellung zu verlieren. Das ist nicht nur dramaturgisch: Ein modulares Stück lässt sich in Zusammenhänge programmieren, in die eine feste Stunde nicht passt — die kürzere Fassung für draußen, von der anderen Seite her. Erproben Sie es, indem Sie die zusammengefügte Reihenfolge gegen eine bewusst andere spielen, vor unterschiedlichem Publikum.
+
 ### Für welchen Spielort ist die Arbeit?
 
 Die vollständige Fassung braucht kontrollierte Dunkelheit, Sichtbarkeit des Publikums und die Mitarbeit des Einlasses. Für Tageslicht, Außenräume und fließenden Einlass kann eine eigene, kürzere Fassung nötig sein.
