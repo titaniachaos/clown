@@ -79,22 +79,26 @@ for (const name of rootPages) {
     }
 
     const shape = (p) => p.headings.map((h) => h.level).join(',')
-    // English Production uses editorial disclosure groups; translated
-    // production pages retain their approved concise question structure.
-    if (name !== 'production.md' && shape(page) !== shape(reference)) {
+    // English Production and Concept use editorial disclosure structures;
+    // translated pages retain their previously approved structures until
+    // their corresponding copy is translated and approved.
+    const independentlyStructured = ['production.md', 'concept.md'].includes(name)
+    if (!independentlyStructured && shape(page) !== shape(reference)) {
       add(
         `${locale}/${name}: heading structure differs -- ${page.headings.length} headings ` +
           `(${shape(page)}) against ${reference.headings.length} (${shape(reference)})`
       )
     }
 
-    const missing = reference.ids.filter((id) => !page.ids.includes(id))
-    const extra = page.ids.filter((id) => !reference.ids.includes(id))
-    if (missing.length) add(`${locale}/${name}: missing section ids ${missing.join(', ')}`)
-    if (extra.length) add(`${locale}/${name}: section ids not in the reference: ${extra.join(', ')}`)
+    if (!independentlyStructured) {
+      const missing = reference.ids.filter((id) => !page.ids.includes(id))
+      const extra = page.ids.filter((id) => !reference.ids.includes(id))
+      if (missing.length) add(`${locale}/${name}: missing section ids ${missing.join(', ')}`)
+      if (extra.length) add(`${locale}/${name}: section ids not in the reference: ${extra.join(', ')}`)
+    }
 
     const ratio = page.words / (reference.words || 1)
-    if (name !== 'production.md' && (ratio < MIN_RATIO || ratio > MAX_RATIO)) {
+    if (!independentlyStructured && (ratio < MIN_RATIO || ratio > MAX_RATIO)) {
       add(
         `${locale}/${name}: ${page.words} words against ${reference.words} ` +
           `(${ratio.toFixed(2)}x) -- likely half-translated or stale`

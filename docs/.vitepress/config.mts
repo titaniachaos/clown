@@ -80,6 +80,15 @@ const SECTIONS = [
 ] as const
 
 function sidebar(prefix: string, groupText: string, column: Column): DefaultTheme.SidebarItem[] {
+  const englishConceptItems = [
+    ['concept', 'What is already known'],
+    ['contradiction', 'The central contradiction'],
+    ['questions', 'Questions for the studio'],
+    ['research', 'The research field'],
+    ['unknown', 'What remains unknown'],
+    ['studio', 'Into the studio']
+  ] as const
+
   return [
     {
       text: groupText,
@@ -89,10 +98,16 @@ function sidebar(prefix: string, groupText: string, column: Column): DefaultThem
           text: section.label[column - 1],
           link: `${prefix}/${section.slug}#${section.anchor}`,
           collapsed: false,
-          items: section.items.map(([anchor, ...labels]) => ({
-            text: labels[column - 1],
-            link: `${prefix}/${section.slug}#${anchor}`
-          }))
+          items:
+            column === 1 && section.slug === 'concept'
+              ? englishConceptItems.map(([anchor, text]) => ({
+                  text,
+                  link: `${prefix}/${section.slug}#${anchor}`
+                }))
+              : section.items.map(([anchor, ...labels]) => ({
+                  text: labels[column - 1],
+                  link: `${prefix}/${section.slug}#${anchor}`
+                }))
         }))
       ]
     }

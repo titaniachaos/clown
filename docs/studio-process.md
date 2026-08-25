@@ -45,7 +45,7 @@ The studio plan protects discovery from premature structure. Material is generat
 
 ### Working rules
 
-0. A plan that cannot fail is a schedule. If by the end of week six the observer test shows no difference between playing alone, to silent observers and to a room free to laugh, the claim on [what is new here](/concept#contribution) has not survived, and the honest move is to say so on the concept page rather than to keep assembling. The material would still be worth making; the argument would need rewriting.
+0. A plan that cannot fail is a schedule. If by the end of week six the observer test shows no difference between playing alone, to silent observers and to a room free to laugh, the [central contradiction](/concept#contradiction) has not generated a useful distinction, and the honest move is to say so rather than to keep assembling. The material would still be worth making; the question would need revisiting.
 1. Generate before judging.
 2. Keep the camera running; timing cannot be assessed accurately from inside the action.
 3. Record behaviour, not feelings.
@@ -217,7 +217,7 @@ Several choices affect design and booking early: how the audience’s presence w
 
 ## What the material answers to {#next}
 
-The material answers to the argument it came from: the [nine modes](/concept#modes) and the [seven movements](/concept#dramaturgy) are what this work tests, the [audience relationship](/concept#audience) is what the observer test measures, and the [source ledger](/sources#ledger) is where the citations live. Several choices here block design and booking — they are on the [decision gates](/production#decisions).
+The material answers to the [questions for the studio](/concept#questions), while the [research field](/concept#research) sharpens observation without determining the piece. The [source ledger](/sources#ledger) is where the citations live. Several choices here block design and booking — they are on the [decision gates](/production#decisions).
 
 **Bring this work to your audience.** Co-production, residency and presenting enquiries are welcome at any stage. [What the project offers](/production#work).
 

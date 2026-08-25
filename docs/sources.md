@@ -8,7 +8,7 @@ relations:
 
 # Sources and lineages
 
-Several movement titles and modes of solitude are named concepts taken from specific books. This page records where they come from, so the argument can be followed back to its sources.
+The research field draws on concepts taken from specific books and artistic lineages. This page records where they come from, so the questions can be followed back to their sources.
 
 [[toc]]
 
@@ -102,7 +102,7 @@ It is a plausible-sounding title that does not exist. The citable scholarship on
 
 ## Where these land {#land}
 
-Every entry above is cited from somewhere in the documentation: the modes it names are on [the work](/concept#modes), the movements that stage them are the [seven movements](/concept#dramaturgy), and the exercises that test them are in [the studio](/studio-process#toolkit).
+The distinctions and contradictions gathered here inform [the research field](/concept#research), while the exercises that test what becomes playable are in [the studio](/studio-process#toolkit).
 
 **Bring this work to your audience.** Co-production, residency and presenting enquiries are welcome at any stage. [What the project offers](/production#work).
 

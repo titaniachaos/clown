@@ -19,11 +19,11 @@ hero:
       link: /production#work
 features:
   - title: Artistic research
-    details: "Solitude is explored as a relationship with absence—not as a single mood."
-    link: /concept#modes
-  - title: Seven movements
-    details: "A rehearsal hypothesis, not a plan: a wordless 45–60 minute arc from the empty space to the final exit, which has to earn its order in front of a room."
-    link: /concept#dramaturgy
+    details: "Research sharpens the questions around solitude, loneliness, privacy, absence and connection without writing the piece."
+    link: /concept#research
+  - title: Questions for the studio
+    details: "Playable questions replace a predetermined sequence of scenes; structure follows what survives rehearsal."
+    link: /concept#questions
   - title: Studio practice
     details: "Material is generated, tested with audiences, assembled and tightened over twelve weeks."
     link: /studio-process#process
