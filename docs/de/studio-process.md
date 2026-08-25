@@ -210,6 +210,6 @@ Das Material antwortet auf das Argument, aus dem es kommt: die [neun Spielarten]
 
 **Holen Sie diese Arbeit zu Ihrem Publikum.** Anfragen zu Koproduktion, Residenz und Gastspiel sind in jeder Phase willkommen. [Was das Projekt anbietet](/de/production#work).
 
-[Titania zum Projekt kontaktieren](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos%202026){.contact-button} [Das Projekt unterstützen](https://revolut.me/titaniachaos){.contact-button .secondary}
+[Titania zum Projekt kontaktieren](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos){.contact-button} [Das Projekt unterstützen](https://revolut.me/titaniachaos){.contact-button .secondary}
 
 <PageRelations />

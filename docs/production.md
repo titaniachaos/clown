@@ -81,7 +81,7 @@ Funding deadlines, eligibility rules and working budgets remain in the private p
 
 ## About the project {#about}
 
-Clown is the documentation home for **Solo Titania Chaos 2026**: a structured knowledge base for research, material generation, dramaturgy, rehearsal planning and production.
+Clown is the documentation home for **Solo Titania Chaos**: a structured knowledge base for research, material generation, dramaturgy, rehearsal planning and production.
 
 ### Purpose
 
@@ -106,6 +106,6 @@ The solo is in creation and is looking for the partners that a creation needs.
 
 Send the date, the space and what you are looking for, and you will get a straight answer about what the work needs.
 
-[Contact Titania about the project](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos%202026){.contact-button} [Support the project](https://revolut.me/titaniachaos){.contact-button .secondary}
+[Contact Titania about the project](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos){.contact-button} [Support the project](https://revolut.me/titaniachaos){.contact-button .secondary}
 
 <PageRelations />

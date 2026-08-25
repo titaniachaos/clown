@@ -5,7 +5,7 @@ titleTemplate: false
 description: The living research, rehearsal, dramaturgy and production workspace for Solo Titania Chaos.
 hero:
   name: Clown
-  text: Solo Titania Chaos 2026
+  text: Solo Titania Chaos
   tagline: A living workspace for research, rehearsal, dramaturgy and production.
   image:
     src: /images/shadow-hero.jpg
@@ -45,4 +45,4 @@ The working process combines physical-clown research, observed everyday behaviou
 
 Co-production, residency and presenting enquiries are welcome at any stage of the process, and a contribution goes straight into studio time.
 
-[Contact Titania about the project](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos%202026){.contact-button} [Support the project](https://revolut.me/titaniachaos){.contact-button .secondary}
+[Contact Titania about the project](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos){.contact-button} [Support the project](https://revolut.me/titaniachaos){.contact-button .secondary}

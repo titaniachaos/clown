@@ -137,7 +137,7 @@ These are not illustrations of loneliness. They are ordinary tasks whose rhythm,
 
 The field protocol already asks for private counting systems. This is one, performed.
 
-The clown counts two, then two, arrives at five, and is satisfied. Nothing is being hidden and nobody is being deceived: the conviction is real. That sincerity is the whole of the comedy, and it is what separates the auguste's arithmetic from every other version of the same proposition.
+The clown counts two, then two, arrives at five, and is satisfied. Nothing is being hidden and nobody is being deceived: the conviction is real. That sincerity is the whole of the comedy, and it is what separates the auguste’s arithmetic from every other version of the same proposition.
 
 The proposition does not change. The witness does.
 
@@ -159,21 +159,21 @@ The deepest rung needs no object and no words.
 
 #### What the scale measures, and what it misses
 
-Read in Amsden's thesis, the scale is measuring one axis of something that has two.
+Read in Amsden’s thesis, the scale is measuring one axis of something that has two.
 
 Badness, she reports, is approached in three ways: as something to be **negated**, as something that **reveals authentic humanity** beyond performance, and as something **presented as funny**. Those are kinds, not depths. A flop can sit high on this scale for exposure and still be the wrong kind, and rating it 9 says nothing about which of the three it was.
 
-The scale is therefore a reading instrument, not a planning one. Gaulier's method is *via negativa*: no prescription, no illustration by example, the performer proposing until something is accepted. What the numbers are good for is recording what the room rejected, so it is not proposed twice.
+The scale is therefore a reading instrument, not a planning one. Gaulier’s method is *via negativa*: no prescription, no illustration by example, the performer proposing until something is accepted. What the numbers are good for is recording what the room rejected, so it is not proposed twice.
 
-**A flop is not a property of the material.** Gaulier's own company toured *The End of the Tunnel* in 1992 with substantially the same show each night; on a good night it was the funniest thing the performers had seen, and on a bad one the audience slammed their seats and walked out furious. The same material, opposite verdicts, consecutive nights. Any fragment logged **keep** on one audience is logged provisionally.
+**A flop is not a property of the material.** Gaulier’s own company toured *The End of the Tunnel* in 1992 with substantially the same show each night; on a good night it was the funniest thing the performers had seen, and on a bad one the audience slammed their seats and walked out furious. The same material, opposite verdicts, consecutive nights. Any fragment logged **keep** on one audience is logged provisionally.
 
 **The repetition warning is specific and it lands on weeks 10 to 12.** Rehearsing that company, nothing was fixed and nothing repeated; the playing was free and enormously funny, and whenever they came to repeat something that had worked, it fell flat. The French for rehearsal is *répétition*, which is the joke and the problem at once. Tightening is the phase where this project is most exposed to it, so what gets locked should be the condition that produced the surprise, not the shape the surprise happened to take.
 
-One more thing worth stealing. Gaulier's *Emergency Clown Hospital* puts a student who has made nobody laugh in front of the room to describe their clown's flops, and it reliably gets roars. The account of the failure outperforms the failure. For a wordless solo that route is closed, which is worth knowing rather than discovering late.
+One more thing worth stealing. Gaulier’s *Emergency Clown Hospital* puts a student who has made nobody laugh in front of the room to describe their clown’s flops, and it reliably gets roars. The account of the failure outperforms the failure. For a wordless solo that route is closed, which is worth knowing rather than discovering late.
 
 #### The 5–6 rung, worked
 
-Lecoq's name for the flop is an attempt at an exploit that inevitably fails. A proof is an exploit, so a proof of five is the rung exactly.
+Lecoq’s name for the flop is an attempt at an exploit that inevitably fails. A proof is an exploit, so a proof of five is the rung exactly.
 
 One that holds long enough to be believed:
 
@@ -186,7 +186,7 @@ Every step is a legitimate move. The sleight is the join: step 2 needs a wheel o
 
 That is the whole requirement of the rung. A demonstration that fails at once is not an exploit and earns nothing. One that never fails is not a proof of five. It has to almost hold.
 
-What the fall then exposes is not the clown's incompetence but the floor the room is already standing on: everyone present knows four. The audience's certainty is the common ground, and the collapse is what makes it visible as something held together rather than known separately.
+What the fall then exposes is not the clown’s incompetence but the floor the room is already standing on: everyone present knows four. The audience’s certainty is the common ground, and the collapse is what makes it visible as something held together rather than known separately.
 
 In performance the division of knowledge is strict. The performer knows where the join is. The clown must not. The clown may only discover it at the moment of the fall, and the registering of it — the look up — comes after the collapse, never during.
 
@@ -213,6 +213,6 @@ The material answers to the argument it came from: the [nine modes](/concept#mod
 
 **Bring this work to your audience.** Co-production, residency and presenting enquiries are welcome at any stage. [What the project offers](/production#work).
 
-[Contact Titania about the project](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos%202026){.contact-button} [Support the project](https://revolut.me/titaniachaos){.contact-button .secondary}
+[Contact Titania about the project](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos){.contact-button} [Support the project](https://revolut.me/titaniachaos){.contact-button .secondary}
 
 <PageRelations />

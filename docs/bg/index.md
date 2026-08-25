@@ -5,7 +5,7 @@ titleTemplate: false
 description: Живото работно пространство за изследване, репетиции, драматургия и продукция на „Соло Титания Хаос“.
 hero:
   name: Клоун
-  text: Соло Титания Хаос 2026
+  text: Соло Титания Хаос
   tagline: Живо работно пространство за изследване, репетиции, драматургия и продукция.
   image:
     src: /images/shadow-hero.jpg
@@ -45,4 +45,4 @@ features:
 
 Запитвания за копродукция, резиденция и гостуване са добре дошли във всеки етап от процеса, а приносът отива директно в студийно време.
 
-[Свържете се с Титания за проекта](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos%202026){.contact-button} [Подкрепете проекта](https://revolut.me/titaniachaos){.contact-button .secondary}
+[Свържете се с Титания за проекта](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos){.contact-button} [Подкрепете проекта](https://revolut.me/titaniachaos){.contact-button .secondary}

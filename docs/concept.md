@@ -110,19 +110,19 @@ An ordinary object becomes company. A complete relationship appears inside one p
 
 The room is dismantled object by object. The performance returns to the opening emptiness, now charged by everything that has passed through it.
 
-### What Arendt's structure requires {#arendt}
+### What Arendt’s structure requires {#arendt}
 
 Read in the source, the three terms are not degrees of one condition. They are three different situations, and two movements depend on the difference.
 
 **Isolation is productive.** Arendt insists it is required for all making: the maker withdraws from common concerns and, in isolation, stays in contact with the world as human artifice. Movement 3 is therefore not a milder cell. It is fabrication, and its rituals are work.
 
-**The cell is made by stopping the making, not by adding a wall.** Isolation becomes unbearable, and turns into loneliness, only when the capacity to add something of one's own to the common world is destroyed. The rule that appears in movement 5 should prevent the room from being added to. A restriction that merely confines the body leaves the maker intact, and the movement will not turn.
+**The cell is made by stopping the making, not by adding a wall.** Isolation becomes unbearable, and turns into loneliness, only when the capacity to add something of one’s own to the common world is destroyed. The rule that appears in movement 5 should prevent the room from being added to. A restriction that merely confines the body leaves the maker intact, and the movement will not turn.
 
-**The two-in-one is not self-sufficient, and this is the hinge of the hour.** In solitude the self is two. Arendt's difficulty is that the two-in-one needs other people in order to become one again: identity is confirmed only from outside, and company restores the single voice. Solitude splits. Only being seen makes whole.
+**The two-in-one is not self-sufficient, and this is the hinge of the hour.** In solitude the self is two. Arendt’s difficulty is that the two-in-one needs other people in order to become one again: identity is confirmed only from outside, and company restores the single voice. Solitude splits. Only being seen makes whole.
 
-So the audience is not a witness to the clown's solitude. It is the thing that ends it. Movement 6 builds a companion that cannot perform that office — an object can hold presence, as Winnicott allows, but it cannot confirm an identity, which Arendt requires — and that is why it must be let go while the room is still full.
+So the audience is not a witness to the clown’s solitude. It is the thing that ends it. Movement 6 builds a companion that cannot perform that office — an object can hold presence, as Winnicott allows, but it cannot confirm an identity, which Arendt requires — and that is why it must be let go while the room is still full.
 
-**Solitude can become loneliness** when one is deserted by one's own self. That is the risk the middle of the hour runs, and the reason the flops must keep landing: laughter is the evidence that the others are still there.
+**Solitude can become loneliness** when one is deserted by one’s own self. That is the risk the middle of the hour runs, and the reason the flops must keep landing: laughter is the evidence that the others are still there.
 
 ## Audience relationship {#audience}
 
@@ -138,13 +138,13 @@ The performer tests whether the audience remains available: a glance, a shared b
 
 ### Present without making demands
 
-Winnicott's condition is narrower than "company", and the narrowness is the point. What builds the capacity to be alone is a presence that is reliable and makes no claim: someone available, attending, asking for nothing. An audience that demands is not that presence. Neither is one that has stopped attending.
+Winnicott’s condition is narrower than “company”, and the narrowness is the point. What builds the capacity to be alone is a presence that is reliable and makes no claim: someone available, attending, asking for nothing. An audience that demands is not that presence. Neither is one that has stopped attending.
 
 He also allows that the reliable other need not be a person in the ordinary sense. It may be represented by a cot, a pram, or the general atmosphere of the room. The invented companion is therefore not a substitute for presence but a carrier of it, which is why it can work completely before it is lost.
 
 What the condition permits is floundering: existing for a time without reacting to anything and without a direction of interest, until an impulse arrives that feels real rather than manufactured. That is the state this solo needs, and the hardest one to hold in front of people.
 
-The failure mode is named too. Its opposite, in Winnicott's phrase, is a false life built on reactions to external stimuli — the performer who only answers the room. A purely reactive clown is never alone on stage, and the theme cannot appear at all.
+The failure mode is named too. Its opposite, in Winnicott’s phrase, is a false life built on reactions to external stimuli — the performer who only answers the room. A purely reactive clown is never alone on stage, and the theme cannot appear at all.
 
 The practical test is therefore not whether the audience is warm. It is whether the clown can stop reacting to them and still be watched.
 
@@ -176,6 +176,6 @@ The structure above is a rehearsal hypothesis, not a plan. The [twelve-week proc
 
 **Bring this work to your audience.** Co-production, residency and presenting enquiries are welcome at any stage. [What the project offers](/production#work).
 
-[Contact Titania about the project](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos%202026){.contact-button} [Support the project](https://revolut.me/titaniachaos){.contact-button .secondary}
+[Contact Titania about the project](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos){.contact-button} [Support the project](https://revolut.me/titaniachaos){.contact-button .secondary}
 
 <PageRelations />

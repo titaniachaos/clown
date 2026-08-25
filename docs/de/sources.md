@@ -93,8 +93,8 @@ Ein plausibel klingender Titel, den es nicht gibt. Die zitierfähige Forschung z
 9. Pascal Jacob über den Auguste, für die BnF und das CNAC — die gewählte Linie
 10. Van Wyk, *The Whiteface and the Auguste* (MA, Kapstadt, 2015) — die Hälfte des Paares, die ein Solo nicht einfach fallen lassen kann
 11. Davison, *Clown: Readings in Theatre Practice* (2013) — wie jung die rote Nase ist und was ihre Wahl unterschreibt
-12. Grock, *Life's a Lark* (Heinemann, 1931; übers. Madge Pemberton nach *Ich lebe gern!*) — der Solo-Auguste, der das Paar verließ
-13. Vincent Laughery, « L'écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — der Fall als ein mit dem Publikum geteilter Boden
+12. Grock, *Life’s a Lark* (Heinemann, 1931; übers. Madge Pemberton nach *Ich lebe gern!*) — der Solo-Auguste, der das Paar verließ
+13. Vincent Laughery, « L’écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — der Fall als ein mit dem Publikum geteilter Boden
 :::
 
 ## Wo sie auftauchen {#land}
@@ -103,6 +103,6 @@ Jeder Eintrag oben ist irgendwo in der Dokumentation belegt: die Spielarten, die
 
 **Holen Sie diese Arbeit zu Ihrem Publikum.** Anfragen zu Koproduktion, Residenz und Gastspiel sind in jeder Phase willkommen. [Was das Projekt anbietet](/de/production#work).
 
-[Titania zum Projekt kontaktieren](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos%202026){.contact-button} [Das Projekt unterstützen](https://revolut.me/titaniachaos){.contact-button .secondary}
+[Titania zum Projekt kontaktieren](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos){.contact-button} [Das Projekt unterstützen](https://revolut.me/titaniachaos){.contact-button .secondary}
 
 <PageRelations />

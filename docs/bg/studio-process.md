@@ -209,6 +209,6 @@ description: Дванадесетседмичният студиен проце�
 
 **Донесете тази работа на своята публика.** Запитвания за копродукция, резиденция и гостуване са добре дошли във всеки етап. [Какво предлага проектът](/bg/production#work).
 
-[Свържете се с Титания за проекта](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos%202026){.contact-button} [Подкрепете проекта](https://revolut.me/titaniachaos){.contact-button .secondary}
+[Свържете се с Титания за проекта](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos){.contact-button} [Подкрепете проекта](https://revolut.me/titaniachaos){.contact-button .secondary}
 
 <PageRelations />

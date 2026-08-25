@@ -93,8 +93,8 @@ outline: [2, 3]
 9. Паскал Жакоб за огюста, за BnF и CNAC — избраната традиция
 10. Ван Вайк, *The Whiteface and the Auguste* (магистърска теза, Кейптаун, 2015) — половината от двойката, която солото не може просто да изостави
 11. Дейвисън, *Clown: Readings in Theatre Practice* (2013) — колко нов е червеният нос и какво подписва изборът му
-12. Грок, *Life's a Lark* (Heinemann, 1931; прев. Madge Pemberton от *Ich lebe gern!*) — соловият огюст, който напуска двойката
-13. Венсан Логери, « L'écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — падането като под, споделен с публиката
+12. Грок, *Life’s a Lark* (Heinemann, 1931; прев. Madge Pemberton от *Ich lebe gern!*) — соловият огюст, който напуска двойката
+13. Венсан Логери, « L’écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — падането като под, споделен с публиката
 :::
 
 ## Къде се появяват {#land}
@@ -103,6 +103,6 @@ outline: [2, 3]
 
 **Донесете тази работа на своята публика.** Запитвания за копродукция, резиденция и гостуване са добре дошли във всеки етап. [Какво предлага проектът](/bg/production#work).
 
-[Свържете се с Титания за проекта](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos%202026){.contact-button} [Подкрепете проекта](https://revolut.me/titaniachaos){.contact-button .secondary}
+[Свържете се с Титания за проекта](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos){.contact-button} [Подкрепете проекта](https://revolut.me/titaniachaos){.contact-button .secondary}
 
 <PageRelations />

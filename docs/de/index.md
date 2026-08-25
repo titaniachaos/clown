@@ -5,7 +5,7 @@ titleTemplate: false
 description: Der lebendige Arbeitsraum für Recherche, Proben, Dramaturgie und Produktion von Solo Titania Chaos.
 hero:
   name: Clown
-  text: Solo Titania Chaos 2026
+  text: Solo Titania Chaos
   tagline: Ein lebendiger Arbeitsraum für Recherche, Proben, Dramaturgie und Produktion.
   image:
     src: /images/shadow-hero.jpg
@@ -45,4 +45,4 @@ Der Arbeitsprozess verbindet physische Clown-Recherche, beobachtetes Alltagsverh
 
 Anfragen zu Koproduktion, Residenz und Gastspiel sind in jeder Phase des Prozesses willkommen, und ein Beitrag geht unmittelbar in Studiozeit.
 
-[Titania zum Projekt kontaktieren](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos%202026){.contact-button} [Das Projekt unterstützen](https://revolut.me/titaniachaos){.contact-button .secondary}
+[Titania zum Projekt kontaktieren](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos){.contact-button} [Das Projekt unterstützen](https://revolut.me/titaniachaos){.contact-button .secondary}
