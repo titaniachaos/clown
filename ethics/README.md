@@ -114,7 +114,15 @@ kinds:
 - **Personal and political.** `IMG_7052.jpeg` is Titania under a "Safe abortion
   is a human right" banner. Nothing to do with consent — an editorial decision
   about what the professional site says, and hers alone.
+- **Someone else's work.** `f2ed9844-….jpg` photographs a framed ink portrait of
+  Titania, signed and dated 16.11.2023. The subject consents to nothing here;
+  the question is copyright, and it belongs to whoever drew it. Being the sitter
+  is not a licence to publish the drawing.
 
 None of it has been published. Anything from the second kind needs consent from
 the people in frame before it goes anywhere public, and the release in
 `consent-en.md` covers exactly this: a separate tick for public use.
+
+`margareten.jpg` on the concept pages is the first frame taken from this folder:
+solo, no third party, resized to 1050×1400 and 173 KB. It is the shape the rest
+has to be in before it goes anywhere.

@@ -89,6 +89,8 @@ Die Recherche stützt sich auf physische Bewegungsanalyse, auf Ökonomie und Sti
 
 Das [Quellenverzeichnis](/de/sources#ledger) führt diese Linien auf die Bücher zurück, aus denen sie stammen, und hält die spielerische Anarchie als entschieden fest: der Auguste.
 
+![Titania allein auf einer Straße in Margareten, rote Nase, dahinter Jugendstilfassaden](/images/margareten.jpg)
+
 ## Dramaturgie in sieben Bewegungen {#dramaturgy}
 
 Der derzeitige Bogen von 45 bis 60 Minuten führt von **allein** zu **begleitet** – durch Lust, Bloßstellung, Enge und Verdopplung hin zur Lösung. Die Struktur bleibt eine Probenhypothese: Timing und Reihenfolge müssen sich vor Publikum verdienen.

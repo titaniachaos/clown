@@ -96,6 +96,8 @@ The research draws on physical movement analysis, economy and stillness, direct 
 
 The [source ledger](/sources#ledger) traces these lineages back to the books they come from, and records playful anarchy as settled: the auguste.
 
+![Titania alone on a Margareten street, red nose, Jugendstil façades behind her](/images/margareten.jpg)
+
 ## Seven-movement dramaturgy {#dramaturgy}
 
 The current 45-to-60-minute arc moves from **alone** to **accompanied**, through pleasure, exposure, confinement and doubling, toward release. The structure remains a rehearsal hypothesis: timing and order must earn their place in front of an audience.
