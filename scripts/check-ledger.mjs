@@ -7,6 +7,14 @@
 // `flop` gloss, which sat at 0.64x the English for a day, carrying one of the
 // two definitions the English and Bulgarian had gained.
 //
+// Four localised structures live in that one file, and all four are checked:
+// `entries` (phrase and gloss), `facets` (statement and paradox), `own` (where
+// and claim) and `reading` (the note on each seat). Every leaf must carry all
+// three languages. A gap is a failure rather than a note, because nothing
+// downstream reports one: HeroSlider.vue ends its card list with
+// `.filter(c => c.text)`, so a missing Bulgarian paradox is not an error but
+// one fewer hero card, in one language, silently.
+//
 // The file is TypeScript with module-private consts, so it is read as text by
 // a small brace-matching scanner rather than imported.
 //
@@ -79,6 +87,69 @@ function blockField(chunk, key) {
   const open = chunk.indexOf('{', at)
   const end = matchBracket(chunk, open)
   return end === -1 ? null : chunk.slice(open, end + 1)
+}
+
+/**
+ * The body of a `const name ... = {` or `= [` literal, its brackets included.
+ * A type annotation can carry a bracket of its own (`SourceEntry[]`), so this
+ * anchors on the assignment rather than on the first bracket after the name.
+ */
+function literal(name, open) {
+  const assignment = source.match(new RegExp(`const ${name}\\b[^=]*=\\s*\\${open}`))
+  if (!assignment) return null
+  const start = assignment.index + assignment[0].length - 1
+  const end = matchBracket(source, start)
+  return end === -1 ? null : source.slice(start, end + 1)
+}
+
+/** `'key': {...}` pairs directly inside an object literal, in written order. */
+function keyedObjectsIn(objectBody) {
+  const out = []
+  let key = null
+  for (let i = 1; i < objectBody.length; i++) {
+    const c = objectBody[i]
+    if (c === "'" || c === '"') {
+      const quote = c
+      let j = i + 1
+      let value = ''
+      while (j < objectBody.length && objectBody[j] !== quote) {
+        if (objectBody[j] === '\\') { value += objectBody[j + 1]; j += 2 } else value += objectBody[j++]
+      }
+      let after = j + 1
+      while (after < objectBody.length && /\s/.test(objectBody[after])) after++
+      if (objectBody[after] === ':') key = value
+      i = j
+      continue
+    }
+    if (c === '{') {
+      const end = matchBracket(objectBody, i)
+      if (end === -1) break
+      out.push([key ?? `(key ${out.length + 1})`, objectBody.slice(i, end + 1)])
+      key = null
+      i = end
+    }
+  }
+  return out
+}
+
+/**
+ * Require a complete {en,bg,de} triple in the `key:` block of this chunk.
+ * Returns the number of complete triples found, for the tally at the end.
+ */
+function requireTriple(chunk, key, where, { optional = false } = {}) {
+  const block = blockField(chunk, key)
+  if (!block) {
+    if (!optional) add(`${where}: no ${key}`)
+    return 0
+  }
+  let complete = true
+  for (const lang of LANGS) {
+    if (!stringField(block, lang)) {
+      add(`${where}: ${key} has no ${lang}`)
+      complete = false
+    }
+  }
+  return complete ? 1 : 0
 }
 
 // ---- entries -------------------------------------------------------------
@@ -173,12 +244,54 @@ if (uiOpen === -1 || uiEnd === -1) {
   }
 }
 
+// ---- facets --------------------------------------------------------------
+
+// A record may carry a statement, a paradox, both or neither: the type marks
+// both optional. What is not optional is the language triple on a facet that
+// does exist -- see the note at the top about the hero.
+
+let facetLeaves = 0
+const facetsBody = literal('facets', '{')
+if (!facetsBody) {
+  add('could not find the `facets` object')
+} else {
+  for (const [id, facet] of keyedObjectsIn(facetsBody)) {
+    for (const field of ['statement', 'paradox']) {
+      if (!blockField(facet, field)) continue
+      facetLeaves += requireTriple(facet, field, `facets.${id}`, { optional: true })
+    }
+  }
+}
+
+// ---- the paradoxes the project owns --------------------------------------
+
+const ownBody = literal('own', '[')
+const ownParadoxes = ownBody ? objectsIn(ownBody.slice(1, -1)) : []
+if (!ownBody) add('could not find the `own` array')
+ownParadoxes.forEach((paradox, i) => {
+  const where = `own[${i + 1}]`
+  requireTriple(paradox, 'where', where)
+  requireTriple(paradox, 'claim', where)
+})
+
+// ---- the reading order ---------------------------------------------------
+
+const readingBody = literal('reading', '[')
+const seats = readingBody ? objectsIn(readingBody.slice(1, -1)) : []
+if (!readingBody) add('could not find the `reading` array')
+seats.forEach((seat, i) => {
+  requireTriple(seat, 'note', `reading seat ${i + 1}`)
+})
+
+// ---- report --------------------------------------------------------------
+
 if (problems.length) {
   console.error(`check-ledger: ${problems.length} problem(s)\n`)
   for (const p of problems) console.error(`  ${p}`)
   process.exit(1)
 }
 console.log(
-  `check-ledger: ${entries.length} entries, ${LANGS.length} languages -- ` +
-    `each one complete, statuses known, glosses in step`
+  `check-ledger: ${entries.length} entries, ${facetLeaves} facets, ` +
+    `${ownParadoxes.length} own paradoxes, ${seats.length} reading seats, ` +
+    `${LANGS.length} languages -- each one complete, statuses known, glosses in step`
 )

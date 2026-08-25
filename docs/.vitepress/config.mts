@@ -160,6 +160,12 @@ export default defineConfig({
 
   head: [
     ['meta', { name: 'theme-color', content: '#d62246' }],
+    // This site is served from a sub-path of a shared host, so a browser that
+    // is not told otherwise asks for `/favicon.ico` at the root of the domain
+    // -- the main site's territory, and a file that does not exist there. The
+    // icon is the clown's shadow: the social card, cropped square.
+    ['link', { rel: 'icon', type: 'image/png', sizes: '256x256', href: `${BASE}favicon.png` }],
+    ['link', { rel: 'apple-touch-icon', href: `${BASE}favicon.png` }],
     // The bibliography is a feed, so say so in the head: a reference manager
     // that autodiscovers it gets every citation without scraping the page.
     ['link', {

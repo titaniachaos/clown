@@ -12,9 +12,15 @@
 //   badly encoded   a small picture in a big file -- bytes per pixel
 //   a lie           seo.ts declaring dimensions the file does not have, which
 //                   is what social platforms read before they fetch anything
+//   unreferenced    a file the built site never points at, shipped anyway
 //
-// Unreferenced images are reported but do not fail: a file can be linked from
-// somewhere this repository cannot see.
+// The last one used to be a note. It stopped being one when shadow-hero.jpg
+// was found still sitting in docs/public after HeroSlider.vue had replaced the
+// hero photograph with text cards: 96 KB published on every deploy, reported
+// on every run, and read by nobody. A note that is printed and ignored is not a
+// check. An image that something outside this repository really does link to
+// -- a press kit, a poster -- belongs in KEPT below, where the reason for it
+// is written down instead of being assumed.
 //
 // Dimensions are read from the file headers directly -- no dependencies.
 //
@@ -33,6 +39,12 @@ const MAX_EDGE = 2400 // fails: no slot on either site is anywhere near this
 const BYTES_PER_PIXEL = 1.2 // notes: a well-encoded photo is nearer 0.1–0.4
 
 const IMAGE = /\.(png|jpe?g|webp|gif|avif|svg)$/i
+
+/**
+ * Filenames allowed to be unreferenced by the built site, each with the reason.
+ * Empty today: everything in docs/public is pointed at by a page or the head.
+ */
+const KEPT = new Set([])
 
 // ---- dimensions from headers --------------------------------------------
 
@@ -171,7 +183,14 @@ for (const file of files.sort()) {
     notes.push(`${name}: could not read its dimensions`)
   }
 
-  if (!used) notes.push(`${name} is not referenced by the built site (${kb} KB)`)
+  if (!used && !KEPT.has(name)) {
+    failures.push(
+      `${name} is not referenced by the built site (${kb} KB) — ` +
+        'link it, delete it, or name it in KEPT with the reason'
+    )
+  } else if (!used) {
+    notes.push(`${name} is unreferenced but kept on purpose (${kb} KB)`)
+  }
 }
 
 // ---- report --------------------------------------------------------------

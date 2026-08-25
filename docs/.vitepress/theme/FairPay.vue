@@ -6,6 +6,8 @@ const { lang: l } = useLang()
 
 const COPY = {
   en: {
+    // The landmark name a screen reader announces for this region.
+    region: 'Fair pay',
     opening: 'Artistic work is work.',
     budgetBefore: 'Solo Titania Chaos is budgeted according to the',
     hugLabel: 'Honoraruntergrenze',
@@ -17,6 +19,7 @@ const COPY = {
     source: 'Current rates and recommendations:',
   },
   bg: {
+    region: 'Справедливо заплащане',
     opening: 'Художественият труд е труд.',
     budgetBefore: '„Соло Титания Хаос“ се бюджетира според',
     hugLabel: 'Honoraruntergrenze',
@@ -28,6 +31,7 @@ const COPY = {
     source: 'Актуални ставки и препоръки:',
   },
   de: {
+    region: 'Faire Bezahlung',
     opening: 'Künstlerische Arbeit ist Arbeit.',
     budgetBefore: 'Solo Titania Chaos wird nach der von der IG Freie Theaterarbeit veröffentlichten',
     hugLabel: 'Honoraruntergrenze',
@@ -44,7 +48,7 @@ const t = computed(() => COPY[l.value])
 </script>
 
 <template>
-  <aside class="fairpay" aria-label="Fair pay">
+  <aside class="fairpay" :aria-label="t.region">
     <p class="fairpay__lead">{{ t.opening }}</p>
     <p class="fairpay__lead">
       {{ t.budgetBefore }}
@@ -81,12 +85,6 @@ const t = computed(() => COPY[l.value])
   margin: 0 0 12px;
   max-width: 68ch;
   line-height: 1.7;
-}
-.fairpay__standing {
-  padding-left: 14px;
-  border-left: 2px solid var(--vp-c-brand-soft);
-  color: var(--vp-c-text-2);
-  font-size: 14px;
 }
 .fairpay__caveat {
   margin: 16px 0 0;
