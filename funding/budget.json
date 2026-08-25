@@ -1,0 +1,31 @@
+{
+  "note": "Honoraruntergrenze figures from IG Freie Theaterarbeit, applicable to projects from 2025. Gross (Dienstgeber:innen-Brutto for employment, or fee before tax and SVS for self-employment). Verified 2026-08-25 at https://freietheater.at/honoraruntergrenze/ . Vienna's Kuratorium has weighed fee floors in its assessment since 2020, so budgeting below them can count against the application.",
+  "verified": "2026-08-25",
+  "ceiling": {
+    "wien_einzelfoerderung_individual": 30000
+  },
+  "rates": {
+    "probe_beginner_day": 194,
+    "probe_experienced_day": 227,
+    "fairpay_day": 268,
+    "performance_first_two": 390,
+    "performance_from_third": 223
+  },
+  "plan": {
+    "rehearsal_weeks": 12,
+    "rehearsal_days_per_week": 4,
+    "performer_day_rate": 227,
+    "performances": 3,
+    "outside_eye_days": 8,
+    "outside_eye_day_rate": 227
+  },
+  "other_lines": {
+    "_comment": "Not invented. Fill from real quotes -- these vary too much in Vienna to estimate honestly.",
+    "studio_rent": null,
+    "lighting_design": null,
+    "sound_design": null,
+    "documentation": null,
+    "materials_and_objects": null,
+    "travel_and_transport": null
+  }
+}

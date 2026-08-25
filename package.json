@@ -21,7 +21,8 @@
     "check:claims": "node scripts/check-claims.mjs",
     "funding": "node scripts/funding.mjs",
     "check:a11y": "node scripts/check-a11y.mjs",
-    "check:supporters": "node scripts/check-supporters.mjs"
+    "check:supporters": "node scripts/check-supporters.mjs",
+    "budget": "node scripts/budget.mjs"
   },
   "devDependencies": {
     "vitepress": "2.0.0-alpha.19"
