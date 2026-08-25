@@ -24,7 +24,8 @@
     "check:supporters": "node scripts/check-supporters.mjs",
     "budget": "node scripts/budget.mjs",
     "check:bibliography": "node scripts/check-bibliography.mjs",
-    "funding:watch": "node scripts/funding-watch.mjs"
+    "funding:watch": "node scripts/funding-watch.mjs",
+    "check:origin": "node scripts/check-origin.mjs"
   },
   "devDependencies": {
     "vitepress": "2.0.0-alpha.19"
