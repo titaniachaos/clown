@@ -46,7 +46,7 @@ page to its counterpart by swapping the path prefix — add a translation as
 ## Checks
 
 ```sh
-npm run check           # locale parity, ledger integrity, build, section ids, images
+npm run check           # locale parity, ledger integrity, build, section ids, images, page weight
 npm run check:links     # every outward link and DOI still resolves (network)
 npm run watch:research  # what has been published since (network)
 ```
@@ -65,6 +65,7 @@ Each script exists because something got past a human once:
 | `check-build.mjs` | a dead `#section-id`, which VitePress does not check; images without alt text; duplicate ids |
 | `check-external.mjs` | link rot in the citations. It tells a dead link apart from a publisher refusing an automated request and from an incomplete certificate chain, and fails only on the first. DOIs are checked at Crossref rather than through `doi.org`, which publishers block |
 | `check-images.mjs` | an image over the weight budget, pixel dimensions far past any slot on the page, a picture that costs too many bytes per pixel, and — the one no diff shows — `seo.ts` declaring dimensions the file does not have, which is what a social platform reads before it fetches anything. Unreferenced images are reported, not failed: a file may be linked from somewhere this repository cannot see |
+| `check-page-weight.mjs` | a page that costs too much to open. It sums what a browser fetches before it can paint — the HTML, the stylesheets, the module preload chain, the preloaded fonts, every image — counting text compressed, because that is how it is served. The file check and this one come apart: an image well inside its own budget can still be why a page is the heaviest on the site |
 | `watch-research.mjs` | new articles in the journals the ledger cites, filtered on the project's own vocabulary |
 
 ## The observer test
