@@ -112,13 +112,13 @@ This subsite keeps the artistic process legible as the solo develops. It brings 
 
 ## Work with the project {#work}
 
-The solo is in creation and is looking for the partners that a creation needs.
+The solo is in creation and looking for the partners it needs to grow.
 
 - **Co-production** — share the risk and the première.
 - **Residency** — studio weeks where objects can stay in place between sessions, in exchange for a work-in-progress showing.
 - **Presenting** — the full version for a controlled space, or the shorter, robust variation for daylight, outdoor and fluid-entry contexts.
-- **Workshops and masterclasses** — clown, physical comedy and the flop scale, for festivals and schools. See [clown workshops with Titania Chaos](https://titaniachaos.github.io/).
-- **Direct support** — a contribution goes straight into studio time.
+- **Workshops and masterclasses** — clown and physical comedy, with formats that can accompany festival and school presentations. See **[clown workshops with Titania Chaos](https://titaniachaos.github.io/)**.
+- **Direct support** — support the development of the independent project.
 
 Send the date, the space and what you are looking for, and you will get a straight answer about what the work needs.
 
