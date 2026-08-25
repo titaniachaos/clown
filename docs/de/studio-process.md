@@ -200,6 +200,13 @@ Ein Gegenstand wird durch mehrere Identitäten erkundet, bevor seine Rolle gewä
 - Den Entzug von Klang, Licht und Publikumsreaktion getrennt erproben.
 - Einen ungeretteten Flop sorgfältig proben, statt ihn durch Wiederholung zu verbrauchen.
 
+Alle im Raum erfahren vor Beginn, was aufgezeichnet wird, und können einem Teil
+davon widersprechen und trotzdem dabei bleiben. Die Kamera zeigt zur Bühne; die
+hintere Reihe links liegt außerhalb des Bildes für alle, die lieber nicht
+erscheinen. Arbeitsaufnahmen werden zur Premiere gelöscht. Informationsblatt und
+Einwilligung liegen im Repository, auf [Englisch](https://github.com/titaniachaos/clown/blob/main/ethics/consent-en.md),
+[Deutsch](https://github.com/titaniachaos/clown/blob/main/ethics/consent-de.md) und [Bulgarisch](https://github.com/titaniachaos/clown/blob/main/ethics/consent-bg.md).
+
 ### Entscheidungen, die die Produktion blockieren
 
 Mehrere Entscheidungen wirken früh auf Ausstattung und Vermittlung: wie sich die Anwesenheit des Publikums zurückzieht, wer am Ende geht, ob eine rote Nase das Register festlegt und welcher Spielort die Licht- und Einlasslogik tragen kann.

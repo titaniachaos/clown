@@ -68,10 +68,22 @@ Two ways out, both cheap:
 Option 1 costs a sentence. Option 2 costs paperwork. Doing neither costs the
 chapter.
 
+## One exercise that looks like a problem and is not
+
+`Let an observer leave without warning and note when the body notices.`
+
+Read quickly this looks like deception of a participant, and it is not. The
+observer is *told* to leave; the person kept in the dark is the performer, whose
+reaction is the datum. That is the researcher experimenting on herself, which
+needs no approval from anyone.
+
+Worth writing down because it is the kind of line an assessor stops on, and the
+answer takes one sentence.
+
 ## What to prepare
 
 - **Participant information sheet** — what the project is, what is recorded,
-  how long it is kept, who sees it, how to withdraw. Drafts in this directory.
+  how long it is kept, who sees it, how to withdraw. Drafts in this directory, in English, German and Bulgarian.
 - **Consent form** — separate ticks for participating, for being filmed, and
   for the footage being shown publicly. A single "I agree to take part" does
   not carry filming.

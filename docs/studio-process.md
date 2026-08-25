@@ -203,6 +203,13 @@ One object is explored through several identities before its role is chosen. The
 - Test the withdrawal of sound, light and audience response separately.
 - Rehearse one unrescued flop carefully rather than exhausting it through repetition.
 
+Everyone in the room is told what is being recorded before it starts, and can
+say no to part of it and still take part. The camera faces the stage; the back
+row on the left is outside the frame for anyone who would rather not appear.
+Working footage is deleted at the première. The information sheet and consent
+form are in the repository, in [English](https://github.com/titaniachaos/clown/blob/main/ethics/consent-en.md),
+[German](https://github.com/titaniachaos/clown/blob/main/ethics/consent-de.md) and [Bulgarian](https://github.com/titaniachaos/clown/blob/main/ethics/consent-bg.md).
+
 ### Decisions that block production
 
 Several choices affect design and booking early: how the audience’s presence withdraws, who leaves at the end, whether a red nose defines the register, and what kind of venue can support the lighting and front-of-house logic.
