@@ -330,7 +330,7 @@ const entries: SourceEntry[] = [
     id: 'training-paradox',
     status: 'verified',
     locus: 'concept · audience · studio',
-    work: 'Rebekah Purcell Gates, “Locating the self: narratives and practices of authenticity in French clown training”, Theatre, Dance and Performance Training 2:2 (2011), 231–242',
+    work: 'Laura Purcell Gates, “Locating the self: narratives and practices of authenticity in French clown training”, Theatre, Dance and Performance Training 2:2 (2011), 231–242',
     ref: '10.1080/19443927.2011.553239',
     phrase: {
       en: 'Failing in order to succeed',
