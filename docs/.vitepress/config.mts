@@ -1,16 +1,12 @@
-import { writeFile } from 'node:fs/promises'
-import { join } from 'node:path'
 import { defineConfig, type DefaultTheme } from 'vitepress'
 import {
   BASE,
   GOOGLE_SITE_VERIFICATION,
   HOSTNAME,
-  LOCALES,
   buildHead,
-  localeAlternateTags,
-  splitLocale
+  localeAlternateTags
 } from './seo.ts'
-import { WORKS, apaText } from './bibliography.ts'
+import { runBuildHooks, runSitemapHooks } from './generators.ts'
 
 /** The main Titania Chaos site, of which this project is a part. */
 const MAIN_SITE = (prefix: string) => `${HOSTNAME}${prefix}/`
@@ -175,74 +171,13 @@ export default defineConfig({
 
   sitemap: {
     hostname: `${HOSTNAME}${BASE}`,
-    transformItems: (items) => {
-      const known = new Set(items.map((i) => (i.url.startsWith('/') ? i.url : `/${i.url}`)))
-      const absolute = (path: string) => `${HOSTNAME}${BASE}${path.replace(/^\//, '')}`
-      return items.map((item) => {
-        const urlPath = item.url.startsWith('/') ? item.url : `/${item.url}`
-        const { slug } = splitLocale(urlPath)
-        const links = LOCALES.flatMap((locale) => {
-          const alt = slug === '/' ? `${locale.prefix}/` : `${locale.prefix}${slug}`
-          return known.has(alt) ? [{ lang: locale.hreflang, url: absolute(alt) }] : []
-        })
-        // Search Console reads x-default from the sitemap as well as the head.
-        const english = slug === '/' ? '/' : slug
-        if (known.has(english)) links.push({ lang: 'x-default', url: absolute(english) })
-        return { ...item, links, changefreq: 'monthly' as const, priority: slug === '/' ? 1.0 : 0.8 }
-      })
-    }
+    // VitePress enumerates the pages and writes the XML; the integrations only
+    // enrich each item. See generators.ts.
+    transformItems: runSitemapHooks
   },
 
   async buildEnd(siteConfig) {
-    // Scoped to this sub-path: robots.txt at the domain root belongs to the
-    // main site, so this file is advisory for anything reading it directly.
-    const robots = ['User-agent: *', 'Allow: /', '', `Sitemap: ${HOSTNAME}${BASE}sitemap.xml`, ''].join('\n')
-    await writeFile(join(siteConfig.outDir, 'robots.txt'), robots, 'utf-8')
-
-    // The bibliography as an Atom feed: one entry per work, the reference
-    // rendered from the structured record rather than typed twice.
-    const xml = (t: string) =>
-      t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
-    const stamp = new Date().toISOString()
-    const self = `${HOSTNAME}${BASE}citations.atom`
-    const entries = WORKS.map((w) => {
-      const cites = w.records.map((r) => `${HOSTNAME}${BASE}sources#${r}`)
-      return [
-        '  <entry>',
-        `    <id>tag:titaniachaos.github.io,2026:clown/work/${xml(w.id)}</id>`,
-        `    <title>${xml(w.title)}</title>`,
-        `    <updated>${stamp}</updated>`,
-        ...w.authors.map((a) => `    <author><name>${xml(a)}</name></author>`),
-        `    <link rel="alternate" href="${xml(cites[0] ?? `${HOSTNAME}${BASE}sources`)}"/>`,
-        w.doi ? `    <link rel="related" href="https://doi.org/${xml(w.doi)}"/>` : '',
-        !w.doi && w.url ? `    <link rel="related" href="${xml(w.url)}"/>` : '',
-        `    <category term="${xml(w.type)}" label="work type"/>`,
-        `    <category term="${xml(w.read)}" label="how far this project read it"/>`,
-        ...w.records.map((r) => `    <category term="${xml(r)}" label="ledger record"/>`),
-        '    <content type="html">',
-        `      ${xml(`<p>${apaText(w)}</p>`)}`,
-        w.note ? `      ${xml(`<p>${w.note}</p>`)}` : '',
-        `      ${xml(`<p>Cited by: ${cites.map((c) => `<a href="${c}">${c}</a>`).join(', ')}</p>`)}`,
-        '    </content>',
-        '  </entry>'
-      ].filter(Boolean).join('\n')
-    })
-    const feed = [
-      '<?xml version="1.0" encoding="utf-8"?>',
-      '<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">',
-      `  <id>tag:titaniachaos.github.io,2026:clown/citations</id>`,
-      '  <title>Solo Titania Chaos 2026 — source bibliography</title>',
-      '  <subtitle>Every work the project cites, in APA form, one entry per work.</subtitle>',
-      `  <updated>${stamp}</updated>`,
-      `  <link rel="self" type="application/atom+xml" href="${self}"/>`,
-      `  <link rel="alternate" type="text/html" href="${HOSTNAME}${BASE}sources"/>`,
-      '  <author><name>Titania Chaos</name></author>',
-      `  <generator uri="${HOSTNAME}${BASE}">Solo Titania Chaos source ledger</generator>`,
-      ...entries,
-      '</feed>',
-      ''
-    ].join('\n')
-    await writeFile(join(siteConfig.outDir, 'citations.atom'), feed, 'utf-8')
+    await runBuildHooks(siteConfig)
   },
 
   themeConfig: {
