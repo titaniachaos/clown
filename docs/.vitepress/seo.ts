@@ -31,8 +31,8 @@ const SITE_DESCRIPTION =
 
 // Hosted by the main site. A landscape crop, because every platform that
 // renders a social card crops to roughly 1.91:1.
-const OG_IMAGE = `${HOSTNAME}/images/titania-chaos-card.jpg`
-const OG_IMAGE_SIZE = { w: 1200, h: 630, alt: 'Titania Chaos' }
+const OG_IMAGE = `${HOSTNAME}${BASE}images/shadow-card.jpg`
+const OG_IMAGE_SIZE = { w: 1200, h: 630, alt: "The clown's shadow on a wall, hat and nose in profile" }
 
 /** `index.md` -> `/`, `bg/concept.md` -> `/bg/concept` (cleanUrls is on). */
 export function toUrlPath(page: string): string {
