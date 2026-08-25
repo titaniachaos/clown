@@ -266,6 +266,29 @@ export const WORKS: Work[] = [
     read: 'full-text'
   },
   {
+    id: 'weil-pesanteur',
+    type: 'book',
+    authors: ['Weil, S.'],
+    year: '1947',
+    title: 'La pesanteur et la grâce',
+    publisher: 'Plon',
+    note: 'Compiled posthumously by Gustave Thibon from the notebooks Weil left in his keeping. English translation, Gravity and grace, 1952.',
+    records: ['emptied-room'],
+    read: 'scholarship'
+  },
+  {
+    id: 'dickinson-fly',
+    type: 'chapter',
+    authors: ['Dickinson, E.'],
+    year: '1896',
+    title: 'I heard a Fly buzz — when I died',
+    container: 'Poems: Third series',
+    note: 'Numbered 465 by Johnson and 591 by Franklin. Published posthumously as “Dying”. Public domain.',
+    url: 'https://www.poetryfoundation.org/poems/45703/i-heard-a-fly-buzz-when-i-died-591',
+    records: ['emptied-room'],
+    read: 'full-text'
+  },
+  {
     id: 'davison-clown',
     type: 'book',
     authors: ['Davison, J.'],

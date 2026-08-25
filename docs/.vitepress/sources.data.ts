@@ -425,18 +425,18 @@ const entries: SourceEntry[] = [
   },
   {
     id: 'emptied-room',
-    status: 'open',
+    status: 'probable',
     locus: 'concept · 8',
-    work: '—',
+    work: 'Simone Weil, La pesanteur et la grâce (Plon, 1947); Emily Dickinson, “I heard a Fly buzz — when I died” (J465 / F591)',
     phrase: {
       en: 'The emptied room',
       bg: 'Изпразнената стая',
       de: 'Der geleerte Raum'
     },
     gloss: {
-      en: 'No source. Letting the self loosen rather than consoling it may point to Weil, to a reading of non-self, or to contemplative solitude. It should be decided rather than left to resemblance.',
-      bg: 'Няма източник. Отпускането на аза, вместо утешаването му, може да сочи към Вейл, към прочит на не-аза или към съзерцателната самота. Това трябва да бъде решено, а не оставено на прилика.',
-      de: 'Keine Quelle. Das Lockern des Selbst statt seiner Tröstung könnte auf Weil, auf eine Lesart des Nicht-Selbst oder auf kontemplative Einsamkeit deuten. Das sollte entschieden und nicht der Ähnlichkeit überlassen werden.'
+      en: 'Two claims, two sources. The practice is Weil’s *décréation* — “to make something created pass into the uncreated” — which she separates carefully from destruction, “to make something created pass into nothingness”, and calls that a blameworthy substitute. So loosening the self and annihilating it are different operations, and she names the failure mode. *Rather than consoling it* is a live argument rather than a phrase: Merton’s contemplative solitude seeks and communes with the true self, while anattā frees one from the demand to be somebody permanent. Mode 8 has already taken the second side. And the fly is almost certainly Dickinson’s, which builds the whole nineteenth-century deathbed — the watchers, the willed keepsakes, the expected arrival — and substitutes a housefly whose buzz comes between the speaker and the light. Marked probable, not chosen: the reading is close, and the decision is the project’s to confirm.',
+      bg: 'Две твърдения, два източника. Практиката е *décréation* на Вейл — „да направиш сътвореното да премине в несътвореното“ — което тя внимателно отделя от разрушението, „да направиш сътвореното да премине в нищото“, и нарича последното укоримо подобие. Тъй че отпускането на аза и унищожаването му са различни действия, а тя назовава провала. *Вместо да го утешаваш* е жив спор, а не фраза: съзерцателната самота на Мертън търси истинския аз и общува с него, докато анатта освобождава от изискването да бъдеш някой постоянен. Режим 8 вече е избрал втората страна. А мухата почти сигурно е на Дикинсън — стихотворението изгражда целия деветнадесетовековен смъртен одър: свидетелите, завещаните вещи, очакваното пришествие — и подменя всичко това с домашна муха, чието бръмчене застава между говорещата и светлината. Отбелязано като вероятно, не като избрано: прочитът е близък, а решението принадлежи на проекта.',
+      de: 'Zwei Behauptungen, zwei Quellen. Die Praxis ist Weils *décréation* — „etwas Geschaffenes ins Ungeschaffene übergehen lassen“ — das sie sorgfältig von der Zerstörung trennt, „etwas Geschaffenes ins Nichts übergehen lassen“, und diese einen tadelnswerten Ersatz nennt. Das Lockern des Selbst und seine Vernichtung sind also verschiedene Vorgänge, und sie benennt die Fehlform. *Statt es zu trösten* ist ein lebendiger Streit und keine Wendung: Mertons kontemplative Einsamkeit sucht das wahre Selbst und verkehrt mit ihm, während anattā von der Forderung befreit, jemand Dauerhaftes zu sein. Modus 8 hat die zweite Seite bereits gewählt. Und die Fliege ist fast sicher Dickinsons: Das Gedicht baut das ganze Sterbebett des neunzehnten Jahrhunderts auf — die Wachenden, die vermachten Andenken, die erwartete Ankunft — und setzt an seine Stelle eine Stubenfliege, deren Summen zwischen die Sprecherin und das Licht tritt. Als wahrscheinlich markiert, nicht als gewählt: die Lesart ist nah, die Entscheidung gehört dem Projekt.'
     }
   }
 ]
