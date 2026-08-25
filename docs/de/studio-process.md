@@ -77,6 +77,22 @@ Wählen Sie die Beziehung, die sich dem leichten Erfinden widersetzt. Der naheli
 
 Wiederholen Sie identisches Material unter drei Bedingungen: völlig allein, von schweigenden Beobachtenden gesehen und von Menschen gesehen, die frei lachen dürfen. Vergleichen Sie Haltung, Timing, Atem, Aufmerksamkeit und Erholung statt subjektiver Empfindung.
 
+### Der Unterscheidungslauf {#flop-discrimination}
+
+[Das Verzeichnis hält einen Einwand fest](/de/sources#authenticity-effect), den diese Seite nicht schreibend entscheiden kann: Was ein Publikum als Spontaneität liest, könnte eine erlernbare Technik sein. Die Materialrecherche setzt die Komik darauf, dass die Überzeugung echt ist. Beides kann nicht tragend sein, und der Raum entscheidet, welches.
+
+Eine erzwungene Wahl. Sechs Paare, in jedem ein aus echtem Nichtwissen gespielter Flop und einer, der bis zur Verlässlichkeit geprobt wurde; die Reihenfolge innerhalb des Paares legt jemand anderes als die Spielerin fest. Nach jedem Paar schreibt jede beobachtende Person *erster* oder *zweiter* — keine Diskussion, kein „weiß nicht“, keine Sicherheitsskala, denn die Skala ist die Stelle, an der sich der Eindruck zurückschleicht.
+
+Eine Schwierigkeit prägt das Ganze: Ein echter Flop ist genau einmal echt, also können die beiden Seiten nie dasselbe Material sein, und jeder Unterschied könnte das Material sein statt das Wissen. Zwei Sitzungen im Abstand einer Woche, mit verschiedenen Beobachtenden: Die sechs echten Flops dieser Woche werden, einmal geprobt, zu den sechs gearbeiteten der nächsten. Eine Unterscheidung, die den Tausch übersteht, ist nicht das Material.
+
+Zwölf Beobachtende, die sechs Paare beurteilen, ergeben 72 Urteile, und der Zufall liegt bei 36. Über dem Zufall ab 44, überzeugend ab 47; die Anlage findet eine wahre Rate von 65% etwa vier von fünf Malen. Unter sechzig Urteilen muss der Raum nahezu hellsichtig sein, ehe sich etwas zeigt — so wird ein echter Effekt verfehlt und das Verfehlen zum Beweis seiner Abwesenheit erklärt.
+
+Glatte 36 sind keine gescheiterte Sitzung. Sie begrenzen die Behauptung — jede wahre Unterscheidbarkeit liegt dann unter 60% — und die Folge ist genau: **Dass die Überzeugung echt ist, wird zur Probenanweisung statt zu einer Aussage über das Publikum**, und diese Seite sollte das sagen.
+
+Ausgewertet wird mit `npm run flop:score -- results.csv`. Das Skript nennt den gepoolten Test, die Streuung über die Beobachtenden und das Ergebnis ohne die zwei stärksten, denn zwölf Menschen, die einen Raum und ein Lachen teilen, sind keine zwölf unabhängigen Messungen.
+
+Das Lachen wird getrennt festgehalten, von der Kamera und nicht aus dem Gedächtnis: ob es kam und wie lange nach dem Zusammenbruch. Das beantwortet, ob der Flop *gewirkt* hat — eine andere Frage, die auf die zweite Achse der Skala gehört.
+
 ### Die Flop-Skala {#flop-scale}
 
 Bauen Sie mindestens dreißig Fehlschläge und bewerten Sie sie nach Bloßstellung:

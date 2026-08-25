@@ -110,15 +110,24 @@ if (n === 0) {
 // ---- score ---------------------------------------------------------------
 
 const rate = k / n
-const p = upperTail(k, n, 0.5)
 const pct = (x) => `${(x * 100).toFixed(0)}%`
+
+// Below chance is not noise. If observers systematically name the crafted flop
+// as the genuine one, they are discriminating -- and reading it backwards,
+// which is Davison's claim in its strongest available form. Testing only the
+// upper tail would file that under "no difference".
+const above = upperTail(k, n, 0.5)
+const below = lowerTail(k, n, 0.5)
+const direction = k >= n / 2 ? 'above' : 'below'
+const p = Math.min(above, below)
+const show = (x) => (x < 0.0001 ? '< 0.0001' : x.toFixed(4))
 
 console.log(`\nObserver test — the flop, genuine against crafted`)
 console.log(`${'-'.repeat(52)}`)
 console.log(`observers        ${byObserver.size}`)
 console.log(`judgements       ${n}`)
 console.log(`named correctly  ${k}  (${pct(rate)}, chance is 50%)`)
-console.log(`one-sided p      ${p < 0.0001 ? '< 0.0001' : p.toFixed(4)}`)
+console.log(`one-sided p      ${show(p)}  (${direction} chance)`)
 
 console.log(`\nper observer`)
 const perObserver = [...byObserver.entries()].sort((a, b) => b[1].k / b[1].n - a[1].k / a[1].n)
@@ -131,20 +140,32 @@ for (const [who, r] of perObserver) {
 // judgements are not independent -- same room, same laughter, same material.
 const trimmed = perObserver.slice(2).reduce((acc, [, r]) => ({ n: acc.n + r.n, k: acc.k + r.k }), { n: 0, k: 0 })
 if (trimmed.n > 0 && byObserver.size > 3) {
-  const pTrimmed = upperTail(trimmed.k, trimmed.n, 0.5)
+  const rest = trimmed.k / trimmed.n
+  const pTrimmed = Math.min(upperTail(trimmed.k, trimmed.n, 0.5), lowerTail(trimmed.k, trimmed.n, 0.5))
+  const restDirection = rest >= 0.5 ? 'above' : 'below'
   console.log(
-    `\nwithout the two strongest observers: ${trimmed.k}/${trimmed.n} (${pct(trimmed.k / trimmed.n)}), ` +
-      `p ${pTrimmed < 0.0001 ? '< 0.0001' : pTrimmed.toFixed(4)}`
+    `\nwithout the two strongest observers: ${trimmed.k}/${trimmed.n} (${pct(rest)}), ` +
+      `p ${show(pTrimmed)} (${restDirection} chance)`
   )
+  if (direction === 'above' && p <= 0.05 && pTrimmed > 0.05) {
+    console.log(`  the pooled result rests on those two; treat it as unreplicated`)
+  }
 }
 
 console.log(`\nverdict`)
-if (p <= 0.01) {
+if (direction === 'below' && p <= 0.05) {
+  console.log(`  The room can tell, and reads it backwards. Observers named the`)
+  console.log(`  crafted flop as the genuine one more often than chance allows,`)
+  console.log(`  which is Davison's claim in its strongest form: not that the`)
+  console.log(`  difference is invisible, but that craft out-reads the real thing.`)
+  console.log(`  Check the pairing log before believing it -- a systematic error in`)
+  console.log(`  recording which flop was which produces exactly this pattern.`)
+} else if (direction === 'above' && p <= 0.01) {
   console.log(`  The room can tell. Discrimination is above chance at p <= 0.01.`)
   console.log(`  Davison's claim does not hold for this performer and this material:`)
   console.log(`  genuine not-knowing reads differently, and the strict division of`)
   console.log(`  knowledge between performer and clown is doing real work.`)
-} else if (p <= 0.05) {
+} else if (direction === 'above' && p <= 0.05) {
   console.log(`  Suggestive, not settled. Above chance at p <= 0.05, but these`)
   console.log(`  judgements share a room, a laugh and the same material, so they are`)
   console.log(`  not independent and this threshold is generous. Run it again with`)

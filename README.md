@@ -94,6 +94,12 @@ pooled exact binomial, the per-observer spread, and the result with the two
 strongest observers removed, because judgements made in one room over one set
 of material are not independent.
 
+It tests both directions. A result significantly *below* chance is not noise:
+it means the room named the crafted flop as the genuine one, which is the
+objection in its strongest form — not that the difference is invisible, but
+that craft out-reads the real thing. Testing only for above-chance would file
+that under “no difference”.
+
 ## SEO
 
 `docs/.vitepress/seo.ts` generates, per page: a canonical URL, the full Open

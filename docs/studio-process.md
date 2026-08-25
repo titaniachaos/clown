@@ -81,6 +81,22 @@ Choose the relationship that resists easy invention. The obvious success often h
 
 Repeat identical material under three conditions: completely alone, watched by silent observers, and watched by people free to laugh. Compare posture, timing, breath, attention and recovery rather than subjective feeling.
 
+### The discrimination run {#flop-discrimination}
+
+[The ledger records an objection](/sources#authenticity-effect) that this page cannot settle by writing: what an audience reads as spontaneity may be a learnable technique. The material research stakes the comedy on the conviction being real. Both cannot be load-bearing, and the room decides which.
+
+A forced choice. Six pairs, each one flop played from genuine not-knowing and one rehearsed until reliable, the order inside each pair set by someone other than the performer. After each pair every observer writes *first* or *second* — no discussion, no “don’t know”, no confidence scale, because a scale is where the impression creeps back in.
+
+One difficulty shapes the design: a genuine flop is genuine exactly once, so the two arms can never be the same material, and any difference might be the material rather than the knowing. Two sessions, a week apart, with different observers: this week’s genuine six, once rehearsed, become next week’s crafted six. Discrimination that survives the swap is not the material.
+
+Twelve observers judging six pairs is 72 judgements, and chance is 36. Above chance at 44, convincing at 47; the design finds a true rate of 65% about four times in five. Under sixty judgements the room has to be near-clairvoyant before anything registers, which is how a real effect gets missed and called proof of its absence.
+
+A flat 36 is not a failed session. It bounds the claim — any true discriminability is then below 60% — and the consequence is exact: **the conviction being real becomes a rehearsal instruction rather than a claim about the audience**, and this page should say so.
+
+Score it with `npm run flop:score -- results.csv`. The script reports the pooled test, the spread across observers, and the result with the two strongest removed, because twelve people sharing one room and one laugh are not twelve independent measurements.
+
+Record the laughter separately, from the camera rather than from memory: whether it came, and how long after the collapse. That answers whether the flop *worked*, which is a different question, and it belongs on the flop scale’s second axis.
+
 ### The flop scale {#flop-scale}
 
 Build at least thirty failures and rate them by exposure:
