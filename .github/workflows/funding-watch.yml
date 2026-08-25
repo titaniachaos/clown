@@ -1,0 +1,65 @@
+name: Funding deadlines
+
+# The pipeline only helps if someone reads it, and deadlines are what you forget
+# in a busy week. This checks weekly and keeps ONE rolling issue: opened when
+# something is near, updated while it stays near, closed when nothing is due.
+# It never comments, so it cannot accumulate noise.
+
+on:
+  schedule:
+    - cron: '0 7 * * MON'
+  workflow_dispatch:
+    inputs:
+      within:
+        description: Days ahead to report
+        default: '30'
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: funding-watch
+  cancel-in-progress: true
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
+        with:
+          node-version: 26
+
+      - name: Build the report
+        id: report
+        run: |
+          node scripts/funding-watch.mjs --within "${{ inputs.within || 30 }}" > body.md
+          if [ -s body.md ]; then echo 'due=true' >> "$GITHUB_OUTPUT"; else echo 'due=false' >> "$GITHUB_OUTPUT"; fi
+
+      - name: Open, update or close the rolling issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE: Funding deadlines
+        run: |
+          set -euo pipefail
+          existing=$(gh issue list --state open --search "$TITLE in:title" \
+            --json number,title --jq ".[] | select(.title == \"$TITLE\") | .number" | head -1)
+
+          if [ "${{ steps.report.outputs.due }}" = 'true' ]; then
+            if [ -n "$existing" ]; then
+              gh issue edit "$existing" --body-file body.md
+              echo "updated #$existing"
+            else
+              gh issue create --title "$TITLE" --body-file body.md
+            fi
+          elif [ -n "$existing" ]; then
+            gh issue close "$existing" --comment 'Nothing due within the window. Reopens automatically when something is.'
+            echo "closed #$existing"
+          else
+            echo 'nothing due, no issue open'
+          fi
