@@ -89,6 +89,17 @@ Bauen Sie mindestens dreißig Fehlschläge und bewerten Sie sie nach Bloßstellu
 
 Der tiefste Flop wirkt erst, nachdem das Publikum die unteren Stufen erklommen hat.
 
+Halten Sie neben der Bloßstellung eine zweite Achse fest — welche **Art** von
+Fehlschlag es war:
+
+- **geschrieben:** der Fehlschlag ist die Prämisse der Nummer, und der Clown spielt sie
+- **echt:** der Raum hat nicht gelacht, und der Clown weiß noch nicht, was nun
+- **aufgefangen:** der Clown hat den Flop bemerkt und wieder eingebaut
+
+Amsden unterscheidet diese drei und berichtet, dass Studierende sie nicht
+auseinanderhalten können — und dass im Gleiten zwischen ihnen die Ausbildung
+tatsächlich stattfindet. Eine Skala mit einer Achse verbirgt genau das.
+
 ### Das Arbeitsjournal
 
 Halten Sie für jedes Fragment Datum, Vorgabe, beobachtbares Verhalten, vorläufigen Status und fest, ob etwas Überraschendes geschah. Verwenden Sie **behalten**, **tot** und **noch nicht** großzügig. Machen Sie aus dem Journal kein Gefühlstagebuch.

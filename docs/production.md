@@ -45,6 +45,8 @@ Across a wordless 45 to 60 minutes, a single non-word sound becomes a major stru
 
 The nose changes the audience’s contract with abstraction. The smallest possible nose—or none—should be tested early against the same material before the register is fixed.
 
+It is a lineage question rather than a costume one. Davison notes that the auguste in its red-nose aspect came to signify *clown* itself, and that it is nonetheless a relatively recent phenomenon. So keeping the nose signs the lineage the ledger has just chosen, and dropping it while keeping the auguste is a position that has to be argued rather than simply preferred.
+
 ### Which venue is the work for?
 
 The full version needs controlled darkness, audience visibility and front-of-house cooperation. A separate shorter version may be necessary for daylight, outdoor and fluid-entry contexts.

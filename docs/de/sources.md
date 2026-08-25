@@ -23,7 +23,7 @@ Das Projekt ruht auf Paradoxien statt auf Themen, und es ist dieselbe Paradoxie,
 | Der Clown kann nicht allein sein, solange das Publikum da ist, und ohne es nicht spielen | Eigen, im Konzept |
 | Die Fähigkeit zum Alleinsein gründet darauf, in Anwesenheit eines anderen allein gewesen zu sein | Winnicott (1958) |
 | Einsamkeit heißt zwei zu sein; Verlassenheit heißt eins zu sein | Arendt, *Vom Leben des Geistes* |
-| Um ein Publikum zum Lachen zu bringen, muss der Clown wiederholt daran scheitern | Purcell Gates, *Theatre, Dance and Performance Training* 2:2 (2011), 231–242 |
+| Um ein Publikum zum Lachen zu bringen, muss der Clown wiederholt daran scheitern | Purcell Gates, „Locating the self“, *Theatre, Dance and Performance Training* 2:2 (2011), 231–242, doi:10.1080/19443927.2011.553239 |
 | Der ganz eigene Raum bleibt mit geliehener Sprache und abwesenden Menschen möbliert | Montaigne I.38, vom Projekt umgekehrt |
 | Sprache ist eine Technik der Gesellschaft, also beginnt ein wortloses Stück im Zustand, den es untersucht | Eigen, im Konzept |
 | Zwei und zwei macht fünf: falsch in der Arithmetik, spielbar für einen Auguste, Gewalt in Orwells Händen | Eigen, in der Materialrecherche |

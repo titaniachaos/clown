@@ -25,7 +25,7 @@ The project runs on paradoxes rather than on themes, and they are the same parad
 | The clown cannot be alone while the audience is present, and cannot perform without them | The project's own, in the concept |
 | The capacity to be alone is founded on having been alone in the presence of someone | Winnicott (1958) |
 | Solitude is being two; loneliness is being one | Arendt, *The Life of the Mind* |
-| To make an audience laugh, the clown must repeatedly fail to make them laugh | Purcell Gates, *Theatre, Dance and Performance Training* 2:2 (2011), 231–242 |
+| To make an audience laugh, the clown must repeatedly fail to make them laugh | Purcell Gates, “Locating the self”, *Theatre, Dance and Performance Training* 2:2 (2011), 231–242, doi:10.1080/19443927.2011.553239 |
 | The room kept wholly one's own stays furnished with borrowed language and absent people | Montaigne I.38, reversed by the project |
 | Language is a technology of company, so a wordless performance begins inside the condition it investigates | The project's own, in the concept |
 | Two and two make five: false in arithmetic, performable by an auguste, and violence in Orwell's hands | The project's own, in the material research |

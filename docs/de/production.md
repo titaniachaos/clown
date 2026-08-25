@@ -43,6 +43,8 @@ In wortlosen 45 bis 60 Minuten wird ein einzelner nichtsprachlicher Laut zu eine
 
 Die Nase verändert den Vertrag des Publikums mit der Abstraktion. Die kleinstmögliche Nase – oder gar keine – sollte früh am gleichen Material erprobt werden, bevor das Register feststeht.
 
+Es ist eine Frage der Linie, nicht des Kostüms. Davison hält fest, dass der Auguste in seiner Rotnasen-Gestalt dazu kam, *Clown* schlechthin zu bezeichnen, und dass er gleichwohl ein verhältnismäßig junges Phänomen ist. Die Nase zu behalten unterschreibt also die Linie, die das Verzeichnis eben gewählt hat, und sie fallen zu lassen und den Auguste zu behalten ist eine Position, die begründet und nicht bloß bevorzugt werden muss.
+
 ### Für welchen Spielort ist die Arbeit?
 
 Die vollständige Fassung braucht kontrollierte Dunkelheit, Sichtbarkeit des Publikums und die Mitarbeit des Einlasses. Für Tageslicht, Außenräume und fließenden Einlass kann eine eigene, kürzere Fassung nötig sein.

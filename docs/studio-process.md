@@ -93,6 +93,16 @@ Build at least thirty failures and rate them by exposure:
 
 The deepest flop only works after the audience has climbed the lower steps.
 
+Record a second axis beside exposure — what **kind** of failure it was:
+
+- **scripted:** the failure is the number’s premise, and the clown is playing it
+- **real:** the room did not laugh, and the clown does not yet know what to do
+- **recovered:** the clown registered the flop and reincorporated it
+
+Amsden separates these three and reports that students cannot tell them apart —
+and that the slippage between them is where the training actually happens. A
+scale with one axis hides exactly that.
+
 ### The working log
 
 For every fragment record the date, prompt, observable behaviour, provisional status and whether something surprising happened. Use **keep**, **dead** and **not yet** generously. Do not turn the log into a diary of feelings.
