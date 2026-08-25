@@ -14,14 +14,7 @@ const eur = (n: number) => `€${n.toLocaleString('de-AT')}`
 
 const COPY = {
   en: {
-    lead: 'Austrian independent performing arts has a published fee floor, the Honoraruntergrenze, and a higher Fair Pay level above it. Both are recommendations, not law.',
-    budgeted: (f: string, d: number) =>
-      `This project budgets artistic work at the floor: ${f} a day, the experienced rehearsal rate, across ${d} rehearsal days.`,
-    fairAt: (fp: string) => `Fair Pay sits at ${fp} a day.`,
-    standing: 'Vienna has no law on this. The floor is a non-binding recommendation, worked out between artists of the Wiener Perspektive and IG Freie Theaterarbeit. What the city has is a position: Fair Pay is a field of action in the Kulturstrategie 2030, the Gemeinderat resolved funding for the free performing arts on that basis in May 2021, and since 2020 the Kuratorium für Theater, Tanz und Performance has weighed the floors when assessing applications.',
-    what: 'Supporting the project supports work paid at least at that floor. Contributions are not earmarked and buy no ticket and no thank-you — they go into studio time.',
     cta: 'Support the project',
-    caveat: 'Rates from IG Freie Theaterarbeit, applicable from 2025, gross. The project is in creation and not yet funded — these are the rates it is budgeted at, not wages already paid.'
   },
   bg: {
     lead: 'Свободната сцена в Австрия има публикуван долен праг на хонорара — Honoraruntergrenze — и по-високо ниво Fair Pay над него. И двете са препоръки, не закон.',
@@ -50,11 +43,29 @@ const t = computed(() => COPY[l.value])
 
 <template>
   <aside class="fairpay" aria-label="Fair pay">
-    <p class="fairpay__lead">{{ t.lead }}</p>
-    <p class="fairpay__lead">{{ t.budgeted(eur(data.floorDay), data.rehearsalDays) }}</p>
-    <p class="fairpay__lead">{{ t.fairAt(eur(data.fairPayDay)) }}</p>
-    <p class="fairpay__lead fairpay__standing">{{ t.standing }}</p>
-    <p class="fairpay__lead">{{ t.what }}</p>
+    <template v-if="l === 'en'">
+      <p class="fairpay__lead">Artistic work is work.</p>
+      <p class="fairpay__lead">
+        Solo Titania Chaos is budgeted according to the
+        <strong><a href="https://freietheater.at/honoraruntergrenze/">Honoraruntergrenze</a></strong>
+        published by IG Freie Theaterarbeit for professional artistic work in Austria. Where funding
+        allows, the aim is to work towards the higher
+        <strong><a href="https://freietheater.at/honoraruntergrenze/">Fair Pay recommendation</a></strong>.
+      </p>
+      <p class="fairpay__lead">
+        These are professional recommendations rather than statutory minimum rates. For this project,
+        they provide a transparent basis for budgeting rehearsal, artistic collaboration and production
+        work.
+      </p>
+      <p class="fairpay__lead">The project is currently in creation and not yet funded.</p>
+    </template>
+    <template v-else>
+      <p class="fairpay__lead">{{ t.lead }}</p>
+      <p class="fairpay__lead">{{ t.budgeted(eur(data.floorDay), data.rehearsalDays) }}</p>
+      <p class="fairpay__lead">{{ t.fairAt(eur(data.fairPayDay)) }}</p>
+      <p class="fairpay__lead fairpay__standing">{{ t.standing }}</p>
+      <p class="fairpay__lead">{{ t.what }}</p>
+    </template>
 
     <a
       class="contact-button"
@@ -64,7 +75,10 @@ const t = computed(() => COPY[l.value])
       >{{ t.cta }}</a
     >
 
-    <p class="fairpay__caveat">{{ t.caveat }}</p>
+    <p v-if="l === 'en'" class="fairpay__caveat">
+      <em>Current rates and recommendations: <a href="https://freietheater.at/">IG Freie Theaterarbeit</a>.</em>
+    </p>
+    <p v-else class="fairpay__caveat">{{ t.caveat }}</p>
   </aside>
 </template>
 
