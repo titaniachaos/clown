@@ -69,9 +69,10 @@ const SECTIONS = [
     anchor: 'decisions',
     label: ['Production & Support', 'Продукция и подкрепа', 'Produktion & Unterstützung'],
     items: [
+      ['solo', 'A solo is not made alone', 'Солото не се създава само', 'Ein Solo entsteht nicht allein'],
+      ['needs', 'What the work needs', 'От какво се нуждае работата', 'Was die Arbeit braucht'],
       ['decisions', 'Inside the making', 'В процеса на създаване', 'Einblick in die Entstehung'],
       ['production', 'Production approach', 'Подход към продукцията', 'Produktionsansatz'],
-      ['about', 'About the project', 'За проекта', 'Über das Projekt'],
       ['fairpay', 'Fair pay', 'Справедливо заплащане', 'Faire Bezahlung'],
       ['work', 'Work with the project', 'Работа с проекта', 'Mit dem Projekt arbeiten']
     ]

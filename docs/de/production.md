@@ -6,6 +6,8 @@ outline: [2, 2]
 
 # Produktion und Unterstützung
 
+## Ein Solo entsteht nicht allein {#solo}
+
 Ein Clown mag allein auf der Bühne stehen. Die Arbeit zu erschaffen, ist eine andere Sache.
 
 Solo Titania Chaos braucht Zeit in einem Raum, Blicke von außen, technische Zusammenarbeit, Begegnungen mit Publikum — und schließlich Partner:innen, die dabei helfen können, das Projekt vom Studioexperiment zur Aufführung zu führen.
@@ -13,6 +15,8 @@ Solo Titania Chaos braucht Zeit in einem Raum, Blicke von außen, technische Zus
 Diese Seite öffnet die Tür zu diesem Prozess: was die Arbeit braucht, was noch entschieden wird und wie Menschen und Institutionen Teil davon werden können.
 
 Die Aufführung ist bewusst klein. Die Bedingungen, unter denen sie präzise werden kann, sind es nicht.
+
+## Was die Arbeit braucht {#needs}
 
 Die künstlerische Methode hängt von geschützter Studiozeit, Blicken von außen, wiederholten Publikumstests, kontrollierbarem Licht und sorgfältiger Dokumentation ab. Produktion ist daher Teil der Dramaturgie und keine Verwaltungsschicht, die später hinzugefügt wird.
 
@@ -99,21 +103,6 @@ Wortlosigkeit macht die Arbeit über Sprachgrenzen hinweg lesbar. Ein kompaktes 
 Späte Testvorstellungen sollten einen knappen, gut ausgeleuchteten Ausschnitt mit echtem Publikumston ergeben. Gespräche mit Veranstaltenden beginnen bereits während der Proben, weil Programmplanungen oft weit über den Entstehungszeitraum hinausreichen.
 
 Förderfristen, Zugangsvoraussetzungen und Arbeitsbudgets bleiben in den internen Produktionsunterlagen, weil sie sich ändern und vor der Verwendung an den aktuellen Ausschreibungen geprüft werden müssen.
-
-## Über das Projekt {#about}
-
-Clown ist der Dokumentationsort für **Solo Titania Chaos**: eine strukturierte Wissensbasis für Recherche, Materialerzeugung, Dramaturgie, Probenplanung und Produktion.
-
-### Zweck
-
-Diese Website hält den künstlerischen Prozess lesbar, während das Solo entsteht. Sie bringt Fragen, Experimente und Produktionsdenken an einen Ort, ohne sie mit den öffentlichen Workshop-Seiten zu vermischen.
-
-### Arbeitsfelder
-
-- Recherche zu Clown, Präsenz, Rhythmus und Publikumskontakt
-- Spielbares Material und Probenexperimente
-- Dramaturgische Strukturen und konkurrierende Fassungen
-- Produktionsentscheidungen, Meilensteine und praktische Vorbereitung
 
 ## Faire Bezahlung {#fairpay}
 

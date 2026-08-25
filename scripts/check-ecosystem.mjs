@@ -42,7 +42,17 @@ for (const text of ['Honoraruntergrenze', 'Fair Pay recommendation', 'IG Freie T
   requireText(fairPay, text, `Fair Pay source contract missing: ${text}`)
 }
 
-for (const page of [en, bg, de]) requireText(page, 'outline: [2, 2]', 'Production outline must remain H2-only')
+requireText(en, 'outline: [2, 3]', 'English Production outline must expose H2 sections and H3 groups')
+for (const page of [bg, de]) requireText(page, 'outline: [2, 2]', 'Translated Production outlines must remain H2-only')
+
+for (const heading of ['### The world', '### Presence & absence', "### The clown's language", '### Material & form']) {
+  requireText(en, heading, `English Production group missing: ${heading}`)
+}
+const disclosures = (en.match(/<QuestionDisclosure title=/g) ?? []).length
+if (disclosures !== 12) problems.push(`English Production must contain 12 individual disclosures, found ${disclosures}`)
+for (const removed of ['## About the project', '### Purpose', '### Working areas']) {
+  if (en.includes(removed)) problems.push(`English Production retains removed meta section: ${removed}`)
+}
 
 for (const token of [
   '--vp-font-family-base: Inter, ui-sans-serif, system-ui, sans-serif',
@@ -53,11 +63,10 @@ for (const token of [
 ]) requireText(css, token, `typography contract missing: ${token}`)
 
 for (const token of [
-  '.vp-doc._clown_production > div > p:has(> strong:only-child)',
-  'font-size: 1.75rem',
-  '.vp-doc._clown_production > div > p:has(> strong:only-child) + h3',
-  'font-size: 1.25rem'
-]) requireText(css, token, `Production heading hierarchy missing: ${token}`)
+  '.question-disclosure summary',
+  '.question-disclosure summary:focus-visible',
+  '.question-disclosure__answer'
+]) requireText(css, token, `Production disclosure styling missing: ${token}`)
 
 if (problems.length) {
   console.error(`check-ecosystem: ${problems.length} problem(s)\n`)

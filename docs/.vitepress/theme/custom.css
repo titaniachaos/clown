@@ -46,19 +46,39 @@
 
 /* Production uses quiet thematic dividers above its individual questions.
    They must read as the parent level: larger and more widely spaced than h3. */
-.vp-doc._clown_production > div > p:has(> strong:only-child) {
-  margin: 2.75rem 0 1rem;
-  font-size: 1.75rem;
+.vp-doc._clown_production h4 {
+  margin: 1.75rem 0 0.5rem;
+  color: var(--vp-c-text-1);
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: -0.025em;
-  line-height: 1.2;
-  text-wrap: balance;
+  letter-spacing: 0.02em;
 }
 
-.vp-doc._clown_production > div > p:has(> strong:only-child) + h3 {
-  margin-top: 1.5rem;
-  font-size: 1.25rem;
+.question-disclosure {
+  margin: 0.75rem 0;
+  border-top: 1px solid var(--vp-c-divider);
 }
+.question-disclosure:last-of-type { border-bottom: 1px solid var(--vp-c-divider); }
+.question-disclosure summary {
+  padding: 0.9rem 0;
+  color: var(--vp-c-text-1);
+  font-size: 1.05rem;
+  font-weight: 650;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.question-disclosure summary:hover { color: var(--vp-c-brand-1); }
+.question-disclosure summary:focus-visible {
+  border-radius: 4px;
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 4px;
+}
+.question-disclosure__answer {
+  padding: 0 0 1rem 1.25rem;
+  border-left: 2px solid var(--vp-c-brand-soft);
+}
+.question-disclosure__answer > :first-child { margin-top: 0; }
+.question-disclosure__answer > :last-child { margin-bottom: 0; }
 
 /* ---- three languages, three sets of needs ----------------------------------
    The measure and the wrapping were tuned on English. German runs about ten

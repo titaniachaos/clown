@@ -5,6 +5,7 @@ import SourceLedger from './SourceLedger.vue'
 import PageRelations from './PageRelations.vue'
 import Supporters from './Supporters.vue'
 import FairPay from './FairPay.vue'
+import QuestionDisclosure from './QuestionDisclosure.vue'
 import HeroSlider from './HeroSlider.vue'
 import './custom.css'
 
@@ -21,5 +22,6 @@ export default {
     app.component('SourceLedger', SourceLedger)
     app.component('PageRelations', PageRelations)
     app.component('FairPay', FairPay)
+    app.component('QuestionDisclosure', QuestionDisclosure)
   }
 } satisfies Theme
