@@ -1,5 +1,6 @@
 import { createContentLoader, defineLoader } from 'vitepress'
 import { parsePage, type Lang, type Localised } from './locale.ts'
+import { BASE } from './seo.ts'
 
 /**
  * The relation graph, built at build time from page frontmatter.
@@ -84,7 +85,7 @@ export default defineLoader({
     }
 
     for (const page of pages) {
-      const id = parsePage(page.url)
+      const id = parsePage(page.url, BASE)
       const title = page.frontmatter?.title
       if (title) (titles[id.slug] ||= {})[id.lang] = String(title)
     }
@@ -92,7 +93,7 @@ export default defineLoader({
     // Declared edges are read from the English page only; the graph is
     // locale-independent, so reading it three times would just triple it.
     for (const page of pages) {
-      const id = parsePage(page.url)
+      const id = parsePage(page.url, BASE)
       if (id.lang !== 'en') continue
       const declared = page.frontmatter?.relations
       if (!Array.isArray(declared)) continue

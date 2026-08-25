@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
-import { useData } from 'vitepress'
 import { data } from '../sources.data'
 import type { Lang } from '../sources.data'
+import { useLang } from './useLang.ts'
 
 /**
  * The hero, as the project's own paradoxes rather than a photograph.
@@ -16,11 +16,7 @@ import type { Lang } from '../sources.data'
  * the cards do not advance on their own, and the controls still work.
  */
 
-const { lang } = useData()
-const l = computed<Lang>(() => {
-  const base = lang.value.split('-')[0]
-  return (['en', 'bg', 'de'] as const).includes(base as Lang) ? (base as Lang) : 'en'
-})
+const { lang: l } = useLang()
 
 const cards = computed(() => {
   const fromWorks = data.entries

@@ -1,13 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useData } from 'vitepress'
+import { useLang } from './useLang.ts'
 
-const { lang } = useData()
-type Lang = 'en' | 'bg' | 'de'
-const l = computed<Lang>(() => {
-  const base = lang.value.split('-')[0]
-  return (['en', 'bg', 'de'] as const).includes(base as Lang) ? (base as Lang) : 'en'
-})
+const { lang: l } = useLang()
 
 const COPY = {
   en: {

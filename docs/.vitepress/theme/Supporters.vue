@@ -1,22 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useData } from 'vitepress'
-import {
-  awards,
-  disclaimer,
-  EU_EMBLEM,
-  STATEMENT,
-  SUPPORTED_BY,
-  type Lang
-} from '../supporters.ts'
+import { awards, disclaimer, EU_EMBLEM, STATEMENT, SUPPORTED_BY } from '../supporters.ts'
+import { useLang } from './useLang.ts'
 
-const { lang } = useData()
-
-// `lang` carries region subtags such as de-AT; match on the base language.
-const l = computed<Lang>(() => {
-  const base = lang.value.split('-')[0]
-  return (['en', 'bg', 'de'] as const).includes(base as Lang) ? (base as Lang) : 'en'
-})
+const { lang: l } = useLang()
 
 const eu = computed(() => awards.find((a) => a.kind === 'eu'))
 const national = computed(() => awards.filter((a) => a.kind === 'national'))

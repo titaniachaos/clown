@@ -14,7 +14,7 @@
 //   - the emblem at least as prominent as any logo shown with it
 // The last one is enforced in CSS: every logo inherits the emblem's height.
 
-export type Lang = 'en' | 'bg' | 'de'
+import type { Lang } from './locale.ts'
 
 export interface Award {
   /** Funder name, as it should appear. */

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useData } from 'vitepress'
 import { data } from '../sources.data'
-import type { Lang, Relation, Status } from '../sources.data'
+import type { Relation, Status } from '../sources.data'
+import { useLang } from './useLang.ts'
 
 /**
  * One matrix, one page, one record shape.
@@ -24,12 +24,7 @@ const props = withDefaults(
   { view: 'matrix' }
 )
 
-const { localeIndex } = useData()
-
-/** `root` is the English locale; the others match their directory name. */
-const lang = computed<Lang>(() =>
-  localeIndex.value === 'bg' ? 'bg' : localeIndex.value === 'de' ? 'de' : 'en'
-)
+const { lang } = useLang()
 
 const ui = computed(() => data.ui[lang.value])
 
