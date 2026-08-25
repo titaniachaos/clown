@@ -263,6 +263,22 @@ const entries: SourceEntry[] = [
     }
   },
   {
+    id: 'unconscious',
+    status: 'verified',
+    locus: 'studio · two-and-two · dramaturgy · 4',
+    work: 'Henri Bergson, Le Rire (1900), I.iv',
+    phrase: {
+      en: 'The comic person is unconscious',
+      bg: 'Комичният човек е несъзнаващ',
+      de: 'Der komische Mensch ist unbewusst'
+    },
+    gloss: {
+      en: 'A character is comic in proportion to his ignorance of himself, Bergson writes: invisible to himself while remaining visible to everyone else, and a ridiculous defect that *feels* itself to be ridiculous starts at once to correct itself. That is the source the material research needed and did not have. The division of knowledge — the performer knows where the join is, the clown must not — is not a rehearsal convenience but the condition of the comic. It also sets Bergson against [[flop]]: for Gaulier the registering *is* the comic moment, and for Bergson consciousness of the defect is what ends it. Sequence resolves it, as with [[insensibility]]: unconscious during the collapse, conscious only after, which is why the look up must never arrive during.',
+      bg: 'Един герой е комичен в степента, в която не познава себе си, пише Бергсон: невидим за себе си, оставайки видим за всички останали, а смешният недостатък, който *усети*, че е смешен, веднага започва да се поправя. Това е източникът, от който изследването на материала се нуждаеше и нямаше. Разделението на знанието — изпълнителят знае къде е сглобката, клоунът не бива — не е репетиционно удобство, а условие на комичното. То също изправя Бергсон срещу [[flop]]: за Голие осъзнаването *е* комичният момент, а за Бергсон съзнанието за недостатъка е онова, което го прекратява. Последователността го решава, както при [[insensibility]]: несъзнаващ по време на рухването, осъзнаващ едва след него — затова вдигнатият поглед не бива да идва по време на.',
+      de: 'Eine Figur ist komisch im Verhältnis zu ihrer Unkenntnis ihrer selbst, schreibt Bergson: sich selbst unsichtbar, während sie allen anderen sichtbar bleibt — und ein lächerlicher Fehler, der sich als lächerlich *empfindet*, beginnt sofort, sich zu korrigieren. Das ist die Quelle, die der Materialrecherche fehlte. Die Teilung des Wissens — die Spielerin weiß, wo die Naht sitzt, der Clown darf es nicht — ist keine Probenbequemlichkeit, sondern die Bedingung des Komischen. Sie stellt Bergson zugleich gegen [[flop]]: Für Gaulier *ist* das Bemerken der komische Moment, für Bergson beendet das Bewusstsein des Fehlers ihn. Die Abfolge löst das, wie bei [[insensibility]]: unbewusst während des Zusammenbruchs, bewusst erst danach — darum darf der Blick nie währenddessen kommen.'
+    }
+  },
+  {
     id: 'authenticity-effect',
     status: 'verified',
     locus: 'concept · studio · two-and-two',
@@ -426,6 +442,18 @@ const entries: SourceEntry[] = [
 ]
 
 const facets: Record<string, Facets> = {
+  'unconscious': {
+    statement: {
+      en: 'A comic character is comic in proportion to his ignorance of himself — invisible to himself, visible to everyone else',
+      bg: 'Комичният герой е комичен в степента, в която не познава себе си — невидим за себе си, видим за всички останали',
+      de: 'Eine komische Figur ist komisch im Verhältnis zu ihrer Unkenntnis ihrer selbst — sich selbst unsichtbar, allen anderen sichtbar'
+    },
+    paradox: {
+      en: 'The clown must not know what the performer knows: consciousness of the defect is what ends the comedy of it',
+      bg: 'Клоунът не бива да знае онова, което изпълнителят знае: съзнанието за недостатъка е онова, което прекратява комизма му',
+      de: 'Der Clown darf nicht wissen, was die Spielerin weiß: das Bewusstsein des Fehlers beendet seine Komik'
+    }
+  },
   'back-shop': {
     paradox: {
       en: 'The room kept wholly one’s own stays furnished with borrowed language and absent people',
@@ -561,6 +589,8 @@ const edges: Edge[] = [
   { from: 'authenticity-effect', to: 'playful-anarchy', kind: 'contests' },
   { from: 'authenticity-effect', to: 'complicity', kind: 'contests' },
   { from: 'insensibility', to: 'laughter-echo', kind: 'contests' },
+  { from: 'unconscious', to: 'flop', kind: 'contests' },
+  { from: 'unconscious', to: 'insensibility', kind: 'converges' },
   { from: 'laughter-echo', to: 'complicity', kind: 'supports' },
   { from: 'insensibility', to: 'flop', kind: 'supports' },
   { from: 'capacity', to: 'complicity', kind: 'converges' },
@@ -616,7 +646,7 @@ const reading: Seat[] = [
     }
   },
   {
-    records: ['laughter-echo', 'insensibility'],
+    records: ['laughter-echo', 'insensibility', 'unconscious'],
     note: {
       en: 'Bergson, *Le Rire* (1900) — public domain, and the only source here that both supports the concept and argues against it',
       bg: 'Бергсон, *Le Rire* (1900) — обществено достояние и единственият източник тук, който едновременно подкрепя концепцията и спори с нея',

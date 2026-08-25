@@ -188,7 +188,7 @@ That is the whole requirement of the rung. A demonstration that fails at once is
 
 What the fall then exposes is not the clown’s incompetence but the floor the room is already standing on: everyone present knows four. The audience’s certainty is the common ground, and the collapse is what makes it visible as something held together rather than known separately.
 
-In performance the division of knowledge is strict. The performer knows where the join is. The clown must not. The clown may only discover it at the moment of the fall, and the registering of it — the look up — comes after the collapse, never during.
+In performance the division of knowledge is strict. The performer knows where the join is. The clown must not. That rule now has a source rather than only a practice behind it: for Bergson a character is comic in proportion to his ignorance of himself, and a ridiculous defect that feels itself to be ridiculous begins at once to correct itself — so the not-knowing is the condition of the comic, not a convenience. See [the comic person is unconscious](/sources#unconscious), which is also where it collides with Gaulier. The clown may only discover it at the moment of the fall, and the registering of it — the look up — comes after the collapse, never during.
 
 One adjustment the tradition forces. The classical auguste is the recipient of the comic action, subordinate to a whiteface who supplies the rule. There is no whiteface in a solo, so the room supplies it: the furniture, the objects and the rule that appears in movement 5 are the straight man. Grock, an auguste who broke free of the pairing and carried the entrée into the theatre, is the precedent for doing this alone.
 
