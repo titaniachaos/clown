@@ -20,17 +20,8 @@ Several movement titles and modes of solitude are named concepts taken from spec
 
 The project runs on paradoxes rather than on themes, and they are the same paradox seen from different trades. Each is a structure that only works because it contradicts itself.
 
-| The paradox | Where it comes from |
-| --- | --- |
-| The clown cannot be alone while the audience is present, and cannot perform without them | The project’s own, in the concept |
-| The capacity to be alone is founded on having been alone in the presence of someone | Winnicott (1958) |
-| Solitude is being two; loneliness is being one | Arendt, *The Life of the Mind* |
-| To make an audience laugh, the clown must repeatedly fail to make them laugh | Purcell Gates, “Locating the self”, *Theatre, Dance and Performance Training* 2:2 (2011), 231–242, doi:10.1080/19443927.2011.553239 |
-| The room kept wholly one’s own stays furnished with borrowed language and absent people | Montaigne I.38, reversed by the project |
-| Language is a technology of company, so a wordless performance begins inside the condition it investigates | The project’s own, in the concept |
-| Two and two make five: false in arithmetic, performable by an auguste, and violence in Orwell’s hands | The project’s own, in the material research |
-| Laughter needs an echo, so a room laughing at solitude is a room disproving it | Bergson, *Le Rire* (1900), I.i |
-| To laugh, the spectator must set feeling aside — and this piece wants the feeling | Bergson, *Le Rire* (1900), I.i and III |
+<SourceLedger view="paradoxes" />
+
 
 ::: tip They resolve the same way
 Every one of them is settled by a witness rather than by an argument. Winnicott’s infant needs a present adult; Arendt’s thinker needs a second self; Gaulier’s flop needs a room to fail in front of; the auguste’s five needs someone who can see four. The solo does not depict solitude and then add an audience. The audience is the term that makes solitude legible at all.
@@ -44,14 +35,8 @@ Approached from its own trade, every source above states one thing:
 
 > An act done alone carries no meaning until it is witnessed, and its meaning is fixed by who witnesses it rather than by what is done.
 
-| The book | Its form of the statement |
-| --- | --- |
-| Winnicott | The capacity to be alone is *built* by a present, undemanding witness — and that witness may be a cot, a pram, or the atmosphere of the room |
-| Arendt | Solitude splits the self in two; only other people make it one again, because identity is confirmed only from outside |
-| Lecoq | Be yourself as profoundly as you can, *and observe the effect you have on the audience* — the self is read through its effect |
-| Gaulier, via Amsden | A flop is not a property of the material: the same show was the funniest thing the company had seen one night and drove the audience out furious the next |
-| Laughery | In the fall the performer reaches a floor shared with the public |
-| The auguste | Two and two make five is a private rule, or terror, or comedy, decided only by who is in the room |
+<SourceLedger view="statements" />
+
 
 The exception is Bergson’s, and it is recorded above: insensibility resolves by sequence, not by a witness. A theorem with a named exception is worth more than one without.
 
@@ -83,21 +68,7 @@ It is a plausible-sounding title that does not exist. The citable scholarship on
 
 ## Reading order {#reading}
 
-::: details Thirteen titles, in the order the documentation needs them
-1. Arendt, *The Life of the Mind*, and the closing chapter of *The Origins of Totalitarianism* — two modes and one movement
-2. Winnicott, “The Capacity to be Alone” — five pages, and the load-bearing claim
-3. Bergson, *Le Rire* (1900) — public domain, and the only source here that both supports the concept and argues against it
-4. Lecoq, *Le Corps Poétique* — two of the five unnamed lineages at once
-5. Montaigne, “De la solitude” — short, public domain, the source of a movement title
-6. Amsden on the flop, and Purcell Gates on the training paradox
-7. Turkle, *Alone Together* — the contemporary anchor
-8. Decroux, *Paroles sur le Mime* — the argument for wordlessness
-9. Pascal Jacob on the auguste, for the BnF and the CNAC — the chosen lineage
-10. Van Wyk, *The Whiteface and the Auguste* (MA, Cape Town, 2015) — the half of the pairing a solo cannot simply drop
-11. Davison, *Clown: Readings in Theatre Practice* (2013) — how recent the red nose is, and what choosing it signs
-12. Grock, *Life’s a Lark* (Heinemann, 1931; tr. Madge Pemberton from *Ich lebe gern!*) — the solo auguste who left the pairing behind
-13. Vincent Laughery, « L’écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — the fall as a floor shared with the public
-:::
+<SourceLedger view="order" />
 
 ## Where these land {#land}
 

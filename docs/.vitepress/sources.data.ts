@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto'
 import { defineLoader } from 'vitepress'
 import type { Lang, Localised } from './locale.ts'
 
@@ -36,14 +37,58 @@ export interface SourceEntry {
   gloss: Localised
 }
 
+/** How one record stands to another. Edges, not prose. */
+export type Relation = 'cites' | 'supports' | 'contests' | 'converges'
+
+export interface Edge {
+  from: string
+  to: string
+  kind: Relation
+}
+
+/** Facets a record may carry beyond its citation. Merged in by the loader. */
+export interface Facets {
+  /** Position in the reading order; several records can share one seat. */
+  reading?: number
+  /** The claim the work itself makes, in its own terms. */
+  statement?: Record<Lang, string>
+  /** The paradox that claim generates for this project. */
+  paradox?: Record<Lang, string>
+}
+
+/** A paradox the project owns: no source, and the page should say so. */
+export interface OwnParadox {
+  where: Record<Lang, string>
+  claim: Record<Lang, string>
+}
+
+/** One record, once every facet is folded in. */
+export type Record_ = SourceEntry & Facets & {
+  /** Content address: changes when any part of the record changes. */
+  address: string
+  out: Edge[]
+  in: Edge[]
+}
+
 export interface Data {
-  entries: SourceEntry[]
+  entries: Record_[]
+  own: OwnParadox[]
+  edges: Edge[]
+  /** The addresses folded to one value, recomputed on every build. */
+  receipt: string
   ui: Localised<{
     phrase: string
     source: string
     status: Record<Status, string>
     /** One form per grammatical number: the tally prints a bare integer. */
     counts: Record<Status, { one: string; many: string }>
+    statement: string
+    paradox: string
+    relations: string
+    order: string
+    own: string
+    receipt: string
+    kinds: Record<Relation, string>
   }>
 }
 
@@ -277,6 +322,71 @@ const entries: SourceEntry[] = [
     }
   },
   {
+    id: 'training-paradox',
+    status: 'verified',
+    locus: 'concept · audience · studio',
+    work: 'Rebekah Purcell Gates, “Locating the self: narratives and practices of authenticity in French clown training”, Theatre, Dance and Performance Training 2:2 (2011), 231–242',
+    ref: '10.1080/19443927.2011.553239',
+    phrase: {
+      en: 'Failing in order to succeed',
+      bg: 'Да се провалиш, за да успееш',
+      de: 'Scheitern, um zu gelingen'
+    },
+    gloss: {
+      en: 'The article the flop paradox is quoted from, and the study of the thing [[authenticity-effect]] says is an effect: narratives and practices of *authenticity* in French clown training. Her definition is the one [[flop]] rests on — before an audience the flop is a rehearsed mistake, in the classroom it is genuine, and the student cannot always tell which one is happening.',
+      bg: 'Статията, от която е цитиран парадоксът на флопа, и изследването на онова, което [[authenticity-effect]] нарича ефект: разкази и практики на *автентичност* във френското клоунско обучение. Нейното определение е онова, върху което стъпва [[flop]] — пред публика флопът е репетирана грешка, в клас е истински, а ученикът не винаги различава кое от двете се случва.',
+      de: 'Der Aufsatz, aus dem die Flop-Paradoxie zitiert ist, und die Untersuchung dessen, was [[authenticity-effect]] einen Effekt nennt: Erzählungen und Praktiken der *Authentizität* in der französischen Clownausbildung. Ihre Definition trägt [[flop]] — vor Publikum ist der Flop ein geprobter Fehler, im Unterricht ein echter, und die Lernende kann nicht immer sagen, welcher gerade geschieht.'
+    }
+  },
+  {
+    id: 'shared-floor',
+    status: 'verified',
+    locus: 'dramaturgy · 4 · studio',
+    work: 'Vincent Laughery, « L’écoute et la chute », Fabula, Lieu(x) commun(s) (2022)',
+    phrase: {
+      en: 'The shared floor',
+      bg: 'Споделеният под',
+      de: 'Der geteilte Boden'
+    },
+    gloss: {
+      en: 'The fall does not lower the performer beneath the room; it puts them on a floor the room is already standing on. That is the same move the material research makes when the collapse of a proof exposes what everybody present already knows, and it is why [[flop]] produces company rather than pity.',
+      bg: 'Падането не смъква изпълнителя под залата; поставя го на под, върху който залата вече стои. Това е същият ход, който прави изследването на материала, когато рухването на едно доказателство разкрива онова, което всички присъстващи вече знаят, и затова [[flop]] произвежда компания, а не съжаление.',
+      de: 'Der Fall senkt die Spielende nicht unter den Raum; er stellt sie auf einen Boden, auf dem der Raum ohnehin steht. Das ist derselbe Zug, den die Materialrecherche macht, wenn der Zusammenbruch eines Beweises freilegt, was alle Anwesenden längst wissen — und darum erzeugt [[flop]] Gesellschaft statt Mitleid.'
+    }
+  },
+  {
+    id: 'grock',
+    status: 'verified',
+    locus: 'concept · studio',
+    work: 'Grock, Life’s a Lark (Heinemann, 1931; tr. Madge Pemberton from Ich lebe gern!)',
+    phrase: {
+      en: 'The auguste who left the pairing',
+      bg: 'Огюстът, който напусна двойката',
+      de: 'Der Auguste, der das Paar verließ'
+    },
+    gloss: {
+      en: 'The precedent [[playful-anarchy]] leans on, and the reason a solo auguste is not a contradiction in terms: he broke free of the whiteface pairing and carried the entrée into the theatre. What the autobiography supplies is the fact of it, not a method — the case is precedent, not instruction.',
+      bg: 'Прецедентът, на който се опира [[playful-anarchy]], и причината соловият огюст да не е противоречие: той се освобождава от двойката с белия клоун и пренася антрето в театъра. Автобиографията дава факта, а не метод — случаят е прецедент, не указание.',
+      de: 'Der Präzedenzfall, auf den sich [[playful-anarchy]] stützt, und der Grund, warum ein Solo-Auguste kein Widerspruch ist: Er löste sich aus dem Paar mit dem Weißclown und trug die Entrée ins Theater. Die Autobiografie liefert die Tatsache, keine Methode — der Fall ist Präzedenz, keine Anweisung.'
+    }
+  },
+  {
+    id: 'two-and-two',
+    status: 'verified',
+    locus: 'studio · two-and-two',
+    work: 'George Orwell, Nineteen Eighty-Four (Secker & Warburg, 1949)',
+    phrase: {
+      en: 'Two and two make five',
+      bg: 'Две и две правят пет',
+      de: 'Zwei und zwei macht fünf'
+    },
+    gloss: {
+      en: 'The phrase is Orwell’s, and the material research borrows it without the novel’s meaning: there it is assent extracted by force, here it is a private conviction met with complicity. Recorded so the borrowing is visible — the worked example turns on the same four characters carrying terror in one room and comedy in another, which only reads as an argument if the first room is named.',
+      bg: 'Изразът е на Оруел и изследването на материала го заема без значението на романа: там е съгласие, изтръгнато със сила, тук е лично убеждение, посрещнато със съучастие. Записано, за да е видимо заемането — работният пример се върти около същите четири знака, които носят терор в едната стая и комедия в другата, а това звучи като довод само ако първата стая е назована.',
+      de: 'Die Formel ist Orwells, und die Materialrecherche entleiht sie ohne die Bedeutung des Romans: dort ist sie erzwungene Zustimmung, hier eine private Überzeugung, der Komplizenschaft begegnet. Festgehalten, damit die Anleihe sichtbar ist — das durchgespielte Beispiel dreht sich um dieselben vier Zeichen, die im einen Raum Terror und im anderen Komik tragen, was nur dann ein Argument ergibt, wenn der erste Raum benannt wird.'
+    }
+  },
+  {
     id: 'emptied-room',
     status: 'open',
     locus: 'concept · 8',
@@ -294,8 +404,208 @@ const entries: SourceEntry[] = [
   }
 ]
 
+const facets: Record<string, Facets> = {
+  'alone-together': {
+    reading: 7
+  },
+  'authenticity-effect': {
+    reading: 11
+  },
+  'back-shop': {
+    reading: 5,
+    paradox: {
+      en: 'The room kept wholly one’s own stays furnished with borrowed language and absent people',
+      bg: 'Стаята, запазена изцяло за себе си, остава обзаведена със заета реч и отсъстващи хора',
+      de: 'Der ganz eigene Raum bleibt mit geliehener Sprache und abwesenden Menschen möbliert'
+    }
+  },
+  'capacity': {
+    reading: 2,
+    statement: {
+      en: 'The capacity to be alone is *built* by a present, undemanding witness — and that witness may be a cot, a pram, or the atmosphere of the room',
+      bg: 'Способността да си сам се **изгражда** от присъстващ, непретенциозен свидетел — а свидетелят може да бъде люлка, количка или атмосферата на стаята',
+      de: 'Die Fähigkeit zum Alleinsein wird von einem anwesenden, nicht fordernden Zeugen **aufgebaut** — und dieser Zeuge kann ein Bettchen, ein Kinderwagen oder die Atmosphäre des Raums sein'
+    },
+    paradox: {
+      en: 'The capacity to be alone is founded on having been alone in the presence of someone',
+      bg: 'Способността да си сам се гради върху това да си бил сам в присъствието на някого',
+      de: 'Die Fähigkeit zum Alleinsein gründet darauf, in Anwesenheit eines anderen allein gewesen zu sein'
+    }
+  },
+  'decroux': {
+    reading: 8
+  },
+  'flop': {
+    reading: 6,
+    statement: {
+      en: 'A flop is not a property of the material: the same show was the funniest thing the company had seen one night and drove the audience out furious the next',
+      bg: 'Флопът не е свойство на материала: същото представление е най-смешното, което трупата е виждала, в една вечер, и изгонва публиката вбесена в следващата',
+      de: 'Ein Flop ist keine Eigenschaft des Materials: dieselbe Aufführung war an einem Abend das Komischste, was die Kompanie gesehen hatte, und trieb das Publikum am nächsten wütend hinaus'
+    }
+  },
+  'grock': {
+    reading: 12
+  },
+  'insensibility': {
+    reading: 3,
+    paradox: {
+      en: 'To laugh, the spectator must set feeling aside — and this piece wants the feeling',
+      bg: 'За да се смее, зрителят трябва да остави чувството настрана — а това представление иска чувството',
+      de: 'Um zu lachen, muss der Zuschauer das Fühlen beiseitelegen — und dieses Stück will das Fühlen'
+    }
+  },
+  'laughter-echo': {
+    reading: 3,
+    paradox: {
+      en: 'Laughter needs an echo, so a room laughing at solitude is a room disproving it',
+      bg: 'Смехът се нуждае от ехо, тъй че зала, която се смее на уединението, е зала, която го опровергава',
+      de: 'Das Lachen braucht ein Echo, also widerlegt ein Raum, der über Alleinsein lacht, es gerade'
+    }
+  },
+  'lecoq': {
+    reading: 4,
+    statement: {
+      en: 'Be yourself as profoundly as you can, *and observe the effect you have on the audience* — the self is read through its effect',
+      bg: 'Бъди себе си възможно най-дълбоко **и наблюдавай ефекта, който имаш върху публиката** — азът се чете през своя ефект',
+      de: 'Sei so tief wie möglich du selbst **und beobachte die Wirkung, die du auf das Publikum hast** — das Selbst wird an seiner Wirkung gelesen'
+    }
+  },
+  'playful-anarchy': {
+    reading: 9,
+    statement: {
+      en: 'Two and two make five is a private rule, or terror, or comedy, decided only by who is in the room',
+      bg: 'Две и две правят пет е лично правило, или терор, или комедия — решава единствено кой е в залата',
+      de: 'Zwei und zwei macht fünf ist eine private Regel, oder Terror, oder Komik — entschieden allein davon, wer im Raum ist'
+    }
+  },
+  'shared-floor': {
+    reading: 13,
+    statement: {
+      en: 'In the fall the performer reaches a floor shared with the public',
+      bg: 'В падането изпълнителят достига под, споделен с публиката',
+      de: 'Im Fall erreicht die Spielende einen mit dem Publikum geteilten Boden'
+    }
+  },
+  'three-terms': {
+    reading: 1
+  },
+  'training-paradox': {
+    reading: 6,
+    paradox: {
+      en: 'To make an audience laugh, the clown must repeatedly fail to make them laugh',
+      bg: 'За да разсмее публиката, клоунът трябва многократно да не успее да я разсмее',
+      de: 'Um ein Publikum zum Lachen zu bringen, muss der Clown wiederholt daran scheitern'
+    }
+  },
+  'two-in-one': {
+    reading: 1,
+    statement: {
+      en: 'Solitude splits the self in two; only other people make it one again, because identity is confirmed only from outside',
+      bg: 'Самотата разделя аза на две; само другите го правят отново един, защото идентичността се потвърждава само отвън',
+      de: 'Einsamkeit spaltet das Selbst in zwei; erst andere machen es wieder eins, denn Identität wird nur von außen bestätigt'
+    },
+    paradox: {
+      en: 'Solitude is being two; loneliness is being one',
+      bg: 'Самотата е да си двама; самотността е да си един',
+      de: 'Einsamkeit heißt zwei zu sein; Verlassenheit heißt eins zu sein'
+    }
+  }
+}
+
+const own: OwnParadox[] = [
+  {
+    where: {
+      en: 'The project’s own, in the concept',
+      bg: 'Собствен на проекта, в концепцията',
+      de: 'Eigen, im Konzept'
+    },
+    claim: {
+      en: 'The clown cannot be alone while the audience is present, and cannot perform without them',
+      bg: 'Клоунът не може да бъде сам, докато публиката присъства, и не може да играе без нея',
+      de: 'Der Clown kann nicht allein sein, solange das Publikum da ist, und ohne es nicht spielen'
+    }
+  },
+  {
+    where: {
+      en: 'The project’s own, in the concept',
+      bg: 'Собствен на проекта, в концепцията',
+      de: 'Eigen, im Konzept'
+    },
+    claim: {
+      en: 'Language is a technology of company, so a wordless performance begins inside the condition it investigates',
+      bg: 'Езикът е технология на общността, затова безсловесното представление започва вътре в състоянието, което изследва',
+      de: 'Sprache ist eine Technik der Gesellschaft, also beginnt ein wortloses Stück im Zustand, den es untersucht'
+    }
+  },
+  {
+    where: {
+      en: 'The project’s own, in the material research',
+      bg: 'Собствен на проекта, в изследването на материала',
+      de: 'Eigen, in der Materialrecherche'
+    },
+    claim: {
+      en: 'Two and two make five: false in arithmetic, performable by an auguste, and violence in Orwell’s hands',
+      bg: 'Две и две правят пет: невярно в аритметиката, изиграемо от огюст и насилие в ръцете на Оруел',
+      de: 'Zwei und zwei macht fünf: falsch in der Arithmetik, spielbar für einen Auguste, Gewalt in Orwells Händen'
+    }
+  }
+]
+
+/**
+ * The relations, as data rather than as prose. A gloss can still name another
+ * record with [[id]]; these are the edges the matrix draws and the reason the
+ * page can show what argues with what without anyone maintaining a list.
+ */
+const edges: Edge[] = [
+  { from: 'flop', to: 'training-paradox', kind: 'cites' },
+  { from: 'flop', to: 'lecoq', kind: 'cites' },
+  { from: 'training-paradox', to: 'authenticity-effect', kind: 'contests' },
+  { from: 'authenticity-effect', to: 'lecoq', kind: 'contests' },
+  { from: 'authenticity-effect', to: 'flop', kind: 'contests' },
+  { from: 'authenticity-effect', to: 'playful-anarchy', kind: 'contests' },
+  { from: 'authenticity-effect', to: 'complicity', kind: 'contests' },
+  { from: 'insensibility', to: 'laughter-echo', kind: 'contests' },
+  { from: 'laughter-echo', to: 'complicity', kind: 'supports' },
+  { from: 'insensibility', to: 'flop', kind: 'supports' },
+  { from: 'capacity', to: 'complicity', kind: 'converges' },
+  { from: 'two-in-one', to: 'playful-anarchy', kind: 'converges' },
+  { from: 'shared-floor', to: 'flop', kind: 'converges' },
+  { from: 'playful-anarchy', to: 'grock', kind: 'cites' },
+  { from: 'playful-anarchy', to: 'two-and-two', kind: 'cites' },
+  { from: 'three-terms', to: 'two-in-one', kind: 'supports' },
+  { from: 'back-shop', to: 'capacity', kind: 'converges' },
+  { from: 'alone-together', to: 'three-terms', kind: 'supports' },
+  { from: 'decroux', to: 'complicity', kind: 'supports' },
+  { from: 'final-exit', to: 'three-terms', kind: 'converges' },
+  { from: 'emptied-room', to: 'back-shop', kind: 'converges' }
+]
+
+/**
+ * A content address per record, folded to one receipt for the whole ledger.
+ * Deterministic: the same records always give the same value, and any edit --
+ * including to a single translation -- moves it. It is a fingerprint, not a
+ * signature: it proves nothing about who wrote a record, only that a published
+ * page and a local checkout are carrying the same one.
+ */
+function address(value: unknown): string {
+  const canonical = (v: unknown): string =>
+    Array.isArray(v)
+      ? `[${v.map(canonical).join(',')}]`
+      : v && typeof v === 'object'
+        ? `{${Object.keys(v as object).sort().map((k) => `${k}:${canonical((v as any)[k])}`).join(',')}}`
+        : JSON.stringify(v ?? null)
+  return createHash('sha256').update(canonical(value)).digest('hex').slice(0, 12)
+}
+
 const ui: Data['ui'] = {
   en: {
+    statement: 'The statement it makes',
+    paradox: 'The paradox that follows',
+    relations: 'Stands to',
+    order: 'Reading order',
+    own: 'Paradoxes the project owns',
+    receipt: 'Ledger receipt',
+    kinds: { cites: 'cites', supports: 'supports', contests: 'contests', converges: 'converges with' },
     phrase: 'In the documentation',
     source: 'Drawing on',
     status: { verified: 'Verified', chosen: 'Chosen', probable: 'Probable', open: 'Open' },
@@ -307,6 +617,13 @@ const ui: Data['ui'] = {
     }
   },
   bg: {
+    statement: 'Твърдението, което прави',
+    paradox: 'Парадоксът, който следва',
+    relations: 'Отнася се към',
+    order: 'Ред на четене',
+    own: 'Парадокси, които са на проекта',
+    receipt: 'Отпечатък на регистъра',
+    kinds: { cites: 'цитира', supports: 'подкрепя', contests: 'оспорва', converges: 'се схожда с' },
     phrase: 'В документацията',
     source: 'Опира се на',
     status: { verified: 'Потвърдено', chosen: 'Избрано', probable: 'Вероятно', open: 'Отворено' },
@@ -318,6 +635,13 @@ const ui: Data['ui'] = {
     }
   },
   de: {
+    statement: 'Die Aussage, die es macht',
+    paradox: 'Die Paradoxie, die folgt',
+    relations: 'Steht zu',
+    order: 'Lesereihenfolge',
+    own: 'Paradoxien, die dem Projekt gehören',
+    receipt: 'Verzeichnis-Fingerabdruck',
+    kinds: { cites: 'zitiert', supports: 'stützt', contests: 'bestreitet', converges: 'trifft sich mit' },
     phrase: 'In der Dokumentation',
     source: 'Stützt sich auf',
     status: { verified: 'Belegt', chosen: 'Gewählt', probable: 'Wahrscheinlich', open: 'Offen' },
@@ -332,6 +656,32 @@ const ui: Data['ui'] = {
 
 export default defineLoader({
   async load(): Promise<Data> {
-    return { entries, ui }
+    // One place assembles the record: citation, facets and edges. Everything
+    // that renders -- the matrix, the paradoxes, the reading order, the
+    // microdata -- reads this and nothing else.
+    const assembled: Record_[] = entries.map((entry) => {
+      const record = { ...entry, ...(facets[entry.id] ?? {}) }
+      return {
+        ...record,
+        address: address(record),
+        out: edges.filter((e) => e.from === entry.id),
+        in: edges.filter((e) => e.to === entry.id)
+      }
+    })
+
+    const known = new Set(assembled.map((e) => e.id))
+    for (const edge of edges) {
+      if (!known.has(edge.from) || !known.has(edge.to)) {
+        throw new Error(`sources: relation ${edge.from} -> ${edge.to} names a record that does not exist`)
+      }
+    }
+
+    return {
+      entries: assembled,
+      own,
+      edges,
+      receipt: address(assembled.map((e) => e.address).sort()),
+      ui
+    }
   }
 })

@@ -18,17 +18,8 @@ Mehrere Titel der Bewegungen und Modi der Einsamkeit sind Begriffe aus bestimmte
 
 Das Projekt ruht auf Paradoxien statt auf Themen, und es ist dieselbe Paradoxie, aus verschiedenen Gewerken gesehen. Jede ist eine Struktur, die nur funktioniert, weil sie sich selbst widerspricht.
 
-| Die Paradoxie | Woher sie stammt |
-| --- | --- |
-| Der Clown kann nicht allein sein, solange das Publikum da ist, und ohne es nicht spielen | Eigen, im Konzept |
-| Die Fähigkeit zum Alleinsein gründet darauf, in Anwesenheit eines anderen allein gewesen zu sein | Winnicott (1958) |
-| Einsamkeit heißt zwei zu sein; Verlassenheit heißt eins zu sein | Arendt, *Vom Leben des Geistes* |
-| Um ein Publikum zum Lachen zu bringen, muss der Clown wiederholt daran scheitern | Purcell Gates, „Locating the self“, *Theatre, Dance and Performance Training* 2:2 (2011), 231–242, doi:10.1080/19443927.2011.553239 |
-| Der ganz eigene Raum bleibt mit geliehener Sprache und abwesenden Menschen möbliert | Montaigne I.38, vom Projekt umgekehrt |
-| Sprache ist eine Technik der Gesellschaft, also beginnt ein wortloses Stück im Zustand, den es untersucht | Eigen, im Konzept |
-| Zwei und zwei macht fünf: falsch in der Arithmetik, spielbar für einen Auguste, Gewalt in Orwells Händen | Eigen, in der Materialrecherche |
-| Das Lachen braucht ein Echo, also widerlegt ein Raum, der über Alleinsein lacht, es gerade | Bergson, *Le Rire* (1900), I.i |
-| Um zu lachen, muss der Zuschauer das Fühlen beiseitelegen — und dieses Stück will das Fühlen | Bergson, *Le Rire* (1900), I.i und III |
+<SourceLedger view="paradoxes" />
+
 
 ::: tip Sie lösen sich alle gleich auf
 Jede von ihnen wird durch einen Zeugen entschieden, nicht durch ein Argument. Winnicotts Kind braucht eine anwesende erwachsene Person; Arendts Denkende ein zweites Selbst; Gauliers Flop einen Raum, vor dem er scheitern kann; die Fünf des Auguste jemanden, der vier sehen kann. Das Solo stellt nicht Einsamkeit dar und fügt dann ein Publikum hinzu. Das Publikum ist der Term, der Einsamkeit überhaupt lesbar macht.
@@ -42,14 +33,8 @@ Aus dem je eigenen Gewerk betrachtet, sagt jede Quelle oben dasselbe:
 
 > Eine allein vollzogene Handlung trägt keine Bedeutung, bis sie gesehen wird, und ihre Bedeutung entscheidet, wer sie sieht, nicht was getan wird.
 
-| Das Buch | Seine Fassung des Satzes |
-| --- | --- |
-| Winnicott | Die Fähigkeit zum Alleinsein wird von einem anwesenden, nicht fordernden Zeugen **aufgebaut** — und dieser Zeuge kann ein Bettchen, ein Kinderwagen oder die Atmosphäre des Raums sein |
-| Arendt | Einsamkeit spaltet das Selbst in zwei; erst andere machen es wieder eins, denn Identität wird nur von außen bestätigt |
-| Lecoq | Sei so tief wie möglich du selbst **und beobachte die Wirkung, die du auf das Publikum hast** — das Selbst wird an seiner Wirkung gelesen |
-| Gaulier, über Amsden | Ein Flop ist keine Eigenschaft des Materials: dieselbe Aufführung war an einem Abend das Komischste, was die Kompanie gesehen hatte, und trieb das Publikum am nächsten wütend hinaus |
-| Laughery | Im Fall erreicht die Spielende einen mit dem Publikum geteilten Boden |
-| Der Auguste | Zwei und zwei macht fünf ist eine private Regel, oder Terror, oder Komik — entschieden allein davon, wer im Raum ist |
+<SourceLedger view="statements" />
+
 
 Die Ausnahme ist Bergsons und steht oben verzeichnet: Die Gefühllosigkeit löst sich durch Abfolge, nicht durch einen Zeugen. Ein Satz mit benannter Ausnahme ist mehr wert als einer ohne.
 
@@ -81,21 +66,7 @@ Ein plausibel klingender Titel, den es nicht gibt. Die zitierfähige Forschung z
 
 ## Lesereihenfolge {#reading}
 
-::: details Dreizehn Titel, in der Reihenfolge, die die Dokumentation braucht
-1. Arendt, *Vom Leben des Geistes*, und das Schlusskapitel von *Elemente und Ursprünge totaler Herrschaft* — zwei Modi und eine Bewegung
-2. Winnicott, „The Capacity to be Alone“ — fünf Seiten und die tragende Behauptung
-3. Bergson, *Le Rire* (1900) — gemeinfrei, und die einzige Quelle hier, die das Konzept zugleich stützt und ihm widerspricht
-4. Lecoq, *Le Corps Poétique* — zwei der fünf unbenannten Linien auf einmal
-5. Montaigne, „De la solitude“ — kurz, gemeinfrei, Quelle eines Bewegungstitels
-6. Amsden über den Flop und Purcell Gates über die Paradoxie der Ausbildung
-7. Turkle, *Alone Together* — der gegenwärtige Anker
-8. Decroux, *Paroles sur le Mime* — das Argument für die Wortlosigkeit
-9. Pascal Jacob über den Auguste, für die BnF und das CNAC — die gewählte Linie
-10. Van Wyk, *The Whiteface and the Auguste* (MA, Kapstadt, 2015) — die Hälfte des Paares, die ein Solo nicht einfach fallen lassen kann
-11. Davison, *Clown: Readings in Theatre Practice* (2013) — wie jung die rote Nase ist und was ihre Wahl unterschreibt
-12. Grock, *Life’s a Lark* (Heinemann, 1931; übers. Madge Pemberton nach *Ich lebe gern!*) — der Solo-Auguste, der das Paar verließ
-13. Vincent Laughery, « L’écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — der Fall als ein mit dem Publikum geteilter Boden
-:::
+<SourceLedger view="order" />
 
 ## Wo sie auftauchen {#land}
 

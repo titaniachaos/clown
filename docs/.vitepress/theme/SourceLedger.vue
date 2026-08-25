@@ -1,15 +1,35 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useData } from 'vitepress'
 import { data } from '../sources.data'
-import type { Status } from '../sources.data'
-import { useLang } from './useLang.ts'
+import type { Lang, Relation, Status } from '../sources.data'
 
 /**
- * Renders the source ledger for whichever locale the page is in. The entries
- * live in the build-time loader, so all three locales read the same records.
+ * One matrix, one page, one record shape.
+ *
+ * Everything here is read from the loader: the citation, the statement the
+ * work makes, the paradox that follows, where it lands in the documentation,
+ * its place in the reading order, and how it stands to the other records.
+ * Nothing is maintained twice, and nothing is maintained in Markdown -- the
+ * three languages come from the same record, so a row cannot exist in English
+ * and quietly not in German.
+ *
+ * The rows carry schema.org microdata, so the citations are readable by a
+ * machine without a second copy of them in JSON-LD.
  */
 
-const { lang } = useLang()
+/** One component, four combinations. Every one reads the same records. */
+const props = withDefaults(
+  defineProps<{ view?: 'matrix' | 'paradoxes' | 'statements' | 'order' }>(),
+  { view: 'matrix' }
+)
+
+const { localeIndex } = useData()
+
+/** `root` is the English locale; the others match their directory name. */
+const lang = computed<Lang>(() =>
+  localeIndex.value === 'bg' ? 'bg' : localeIndex.value === 'de' ? 'de' : 'en'
+)
 
 const ui = computed(() => data.ui[lang.value])
 
@@ -23,13 +43,31 @@ const tally = computed(() =>
   })
 )
 
-/** Entries cite each other by id, and the id is already the anchor. */
 const byId = computed(() => new Map(data.entries.map((entry) => [entry.id, entry])))
 
+/** The reading order, derived rather than kept: several records share a seat. */
+const reading = computed(() => {
+  const seats = new Map<number, typeof data.entries>()
+  for (const entry of data.entries) {
+    if (entry.reading === undefined) continue
+    if (!seats.has(entry.reading)) seats.set(entry.reading, [])
+    seats.get(entry.reading)!.push(entry)
+  }
+  return [...seats.entries()].sort((a, b) => a[0] - b[0])
+})
+
+const withParadox = computed(() => data.entries.filter((e) => e.paradox))
+const withStatement = computed(() => data.entries.filter((e) => e.statement))
+
+/** The short form of a citation: everything before the first comma. */
+const shortWork = (work: string) => work.split(',')[0]
+
+const phraseOf = (id: string) => byId.value.get(id)?.phrase[lang.value] ?? id
+
 /**
- * The glosses carry `*emphasis*` and `[[entry-id]]`; split both out rather
- * than injecting HTML. A `[[link]]` renders as that entry's phrase in the
- * current language, pointing at its anchor further down the page.
+ * The glosses carry `*emphasis*` and `[[record-id]]`; split both out rather
+ * than injecting HTML. A `[[link]]` renders as that record's phrase in the
+ * current language, pointing at its row.
  */
 function parts(text: string) {
   return text
@@ -38,8 +76,7 @@ function parts(text: string) {
     .map((chunk) => {
       if (chunk.startsWith('[[') && chunk.endsWith(']]')) {
         const id = chunk.slice(2, -2)
-        const entry = byId.value.get(id)
-        return { link: id, text: entry ? entry.phrase[lang.value] : id, em: false }
+        return { link: id, text: phraseOf(id), em: false }
       }
       if (chunk.length > 2 && chunk.startsWith('*') && chunk.endsWith('*')) {
         return { em: true, text: chunk.slice(1, -1), link: '' }
@@ -49,26 +86,38 @@ function parts(text: string) {
 }
 </script>
 
+
 <template>
-  <div class="ledger">
+  <!-- the whole record, every facet -->
+  <div v-if="props.view === 'matrix'" class="ledger" itemscope itemtype="https://schema.org/WebPage">
     <ul class="tally">
       <li v-for="t in tally" :key="t.status" :class="t.status">
         <b>{{ t.n }}</b><span>{{ t.label }}</span>
       </li>
     </ul>
 
-    <div v-for="entry in data.entries" :key="entry.id" :id="entry.id" class="entry">
+    <div
+      v-for="entry in data.entries"
+      :key="entry.id"
+      :id="entry.id"
+      class="entry"
+      itemprop="citation"
+      itemscope
+      itemtype="https://schema.org/CreativeWork"
+    >
       <div class="side">
         <p class="phrase">{{ entry.phrase[lang] }}</p>
         <p class="locus">{{ entry.locus }}</p>
         <span class="badge" :class="entry.status">{{ ui.status[entry.status] }}</span>
+        <p v-if="entry.reading !== undefined" class="seat">{{ ui.order }} · {{ entry.reading }}</p>
       </div>
 
       <div class="body">
         <p class="work">
           <span class="label">{{ ui.source }}</span>
-          <cite>{{ entry.work }}</cite>
+          <cite itemprop="name">{{ entry.work }}</cite>
         </p>
+
         <p class="gloss">
           <template v-for="(part, i) in parts(entry.gloss[lang])" :key="i">
             <a v-if="part.link" :href="`#${part.link}`" class="xref">{{ part.text }}</a>
@@ -76,10 +125,76 @@ function parts(text: string) {
             <template v-else>{{ part.text }}</template>
           </template>
         </p>
-        <p v-if="entry.ref" class="ref">doi:{{ entry.ref }}</p>
+
+        <p v-if="entry.statement" class="facet" itemprop="abstract">
+          <span class="label">{{ ui.statement }}</span>
+          <template v-for="(part, i) in parts(entry.statement[lang])" :key="i">
+            <em v-if="part.em">{{ part.text }}</em>
+            <template v-else>{{ part.text }}</template>
+          </template>
+        </p>
+
+        <p v-if="entry.paradox" class="facet paradox">
+          <span class="label">{{ ui.paradox }}</span>
+          {{ entry.paradox[lang] }}
+        </p>
+
+        <p v-if="entry.out.length || entry.in.length" class="facet relations">
+          <span class="label">{{ ui.relations }}</span>
+          <span v-for="edge in entry.out" :key="`o${edge.to}${edge.kind}`" class="edge">
+            <span :class="['kind', edge.kind]">{{ ui.kinds[edge.kind] }}</span>
+            <a :href="`#${edge.to}`">{{ phraseOf(edge.to) }}</a>
+          </span>
+          <span v-for="edge in entry.in" :key="`i${edge.from}${edge.kind}`" class="edge inbound">
+            <a :href="`#${edge.from}`">{{ phraseOf(edge.from) }}</a>
+            <span :class="['kind', edge.kind]">{{ ui.kinds[edge.kind] }}</span>
+          </span>
+        </p>
+
+        <p v-if="entry.ref" class="ref">
+          doi:<span itemprop="identifier">{{ entry.ref }}</span>
+        </p>
+        <p class="address"><span itemprop="identifier">{{ entry.address }}</span></p>
       </div>
     </div>
+
+    <p class="receipt">{{ ui.receipt }} · <span class="mono">{{ data.receipt }}</span></p>
   </div>
+
+  <!-- the claim each record generates, and the ones the project owns -->
+  <div v-else-if="props.view === 'paradoxes'" class="grid">
+    <div v-for="entry in withParadox" :key="entry.id" class="cell">
+      <p class="claim">{{ entry.paradox[lang] }}</p>
+      <p class="from"><a :href="`#${entry.id}`">{{ shortWork(entry.work) }}</a></p>
+    </div>
+    <div v-for="(paradox, i) in data.own" :key="`own${i}`" class="cell own">
+      <p class="claim">{{ paradox.claim[lang] }}</p>
+      <p class="from">{{ paradox.where[lang] }}</p>
+    </div>
+  </div>
+
+  <!-- what each book states, in its own terms -->
+  <div v-else-if="props.view === 'statements'" class="grid">
+    <div v-for="entry in withStatement" :key="entry.id" class="cell">
+      <p class="from"><a :href="`#${entry.id}`">{{ shortWork(entry.work) }}</a></p>
+      <p class="claim">
+        <template v-for="(part, i) in parts(entry.statement[lang])" :key="i">
+          <em v-if="part.em">{{ part.text }}</em>
+          <template v-else>{{ part.text }}</template>
+        </template>
+      </p>
+    </div>
+  </div>
+
+  <!-- the order, derived from the seat each record holds -->
+  <ol v-else class="order">
+    <li v-for="[seat, records] in reading" :key="seat">
+      <template v-for="(record, i) in records" :key="record.id">
+        <span v-if="i" class="and"> · </span>
+        <a :href="`#${record.id}`">{{ shortWork(record.work) }}</a>
+      </template>
+    </li>
+  </ol>
 </template>
 
 <style scoped>
@@ -124,7 +239,7 @@ function parts(text: string) {
 .tally .probable b { color: var(--vp-c-text-2); }
 .tally .open b { color: var(--vp-c-warning-1); }
 
-/* ---- entries ---- */
+/* ---- rows ---- */
 
 .entry {
   display: grid;
@@ -136,8 +251,13 @@ function parts(text: string) {
   scroll-margin-top: var(--vp-nav-height);
 }
 
-.entry:last-child {
+.entry:last-of-type {
   border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.entry.own .phrase {
+  color: var(--vp-c-text-2);
+  font-size: 0.92rem;
 }
 
 .side {
@@ -155,7 +275,8 @@ function parts(text: string) {
   text-wrap: balance;
 }
 
-.locus {
+.locus,
+.seat {
   margin: 0;
   font-size: 0.78rem;
   line-height: 1.5;
@@ -189,7 +310,7 @@ function parts(text: string) {
   color: var(--vp-c-text-2);
 }
 
-.work .label {
+.label {
   display: block;
   font-size: 0.7rem;
   font-weight: 600;
@@ -216,12 +337,107 @@ function parts(text: string) {
   text-underline-offset: 0.16em;
 }
 
-.ref {
+.facet {
+  margin: 0.9rem 0 0;
+  max-width: 62ch;
+  font-size: 0.93rem;
+  line-height: 1.65;
+  color: var(--vp-c-text-2);
+}
+
+.facet.paradox {
+  border-left: 2px solid var(--vp-c-brand-soft);
+  padding-left: 0.85rem;
+  color: var(--vp-c-text-1);
+}
+
+.relations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.9rem;
+  align-items: baseline;
+}
+
+.relations .label { flex: 1 0 100%; }
+
+.edge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+}
+
+.kind {
+  font-size: 0.66rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--vp-c-text-3);
+}
+
+.kind.contests { color: var(--vp-c-warning-1); }
+.kind.supports,
+.kind.converges { color: var(--vp-c-brand-1); }
+
+.edge.inbound { opacity: 0.75; }
+
+.ref,
+.address,
+.receipt {
   margin: 0.55rem 0 0;
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   color: var(--vp-c-text-3);
   font-family: var(--vp-font-family-mono);
 }
+
+.address { opacity: 0.55; }
+
+.grid {
+  display: grid;
+  gap: 1px;
+  background: var(--vp-c-divider);
+  border: 1px solid var(--vp-c-divider);
+  margin: 1.5rem 0 2rem;
+}
+
+.cell {
+  background: var(--vp-c-bg);
+  padding: 1rem 1.2rem;
+}
+
+.cell.own { background: var(--vp-c-bg-soft); }
+
+.claim {
+  margin: 0 0 0.4rem;
+  line-height: 1.6;
+  max-width: 68ch;
+}
+
+.from {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--vp-c-text-3);
+}
+
+.statements .cell .from { margin-bottom: 0.4rem; }
+
+.order {
+  margin: 1.5rem 0 0;
+  padding-left: 1.4rem;
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+}
+
+.order li { margin-bottom: 0.25rem; }
+.order .and { color: var(--vp-c-text-3); }
+
+.receipt {
+  margin-top: 1.6rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.mono { color: var(--vp-c-text-2); }
 
 @media (max-width: 720px) {
   .entry {
