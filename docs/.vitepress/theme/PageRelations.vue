@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useData } from 'vitepress'
 import { data } from '../relations.data'
-import type { Kind, Lang } from '../relations.data'
+import type { Kind } from '../relations.data'
+import { useLang } from './useLang.ts'
 
 /**
  * Renders how this page connects to the rest of the documentation, from the
@@ -10,19 +10,7 @@ import type { Kind, Lang } from '../relations.data'
  * declared, and what other pages declared about it.
  */
 
-const { localeIndex, page } = useData()
-
-const lang = computed<Lang>(() =>
-  localeIndex.value === 'bg' ? 'bg' : localeIndex.value === 'de' ? 'de' : 'en'
-)
-
-/** `bg/concept.md` -> `concept`; `index.md` -> `index`. */
-const slug = computed(() =>
-  page.value.relativePath.replace(/\.md$/, '').replace(/^(bg|de)\//, '') || 'index'
-)
-
-/** '' for the root locale, `/bg` and `/de` for the others. */
-const prefix = computed(() => (lang.value === 'en' ? '' : `/${lang.value}`))
+const { lang, prefix, slug } = useLang()
 
 const HEADING = {
   en: 'How this connects',

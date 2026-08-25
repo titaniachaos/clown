@@ -1,4 +1,5 @@
 import { createContentLoader, defineLoader } from 'vitepress'
+import { parsePage, type Lang, type Localised } from './locale.ts'
 
 /**
  * The relation graph, built at build time from page frontmatter.
@@ -8,8 +9,6 @@ import { createContentLoader, defineLoader } from 'vitepress'
  * disagree. Target titles are read from the target locale's own frontmatter,
  * which means no link text is ever hand-translated.
  */
-
-export type Lang = 'en' | 'bg' | 'de'
 
 /** The kinds of connection this documentation actually has. */
 export const KINDS = {
@@ -40,6 +39,7 @@ export const KINDS = {
 } as const
 
 export type Kind = keyof typeof KINDS
+export type { Lang }
 
 export interface Edge {
   /** Anchor on the page this edge is rendered on; '' for the page itself. */
@@ -55,7 +55,7 @@ export interface Edge {
 
 export interface Data {
   /** slug -> locale -> page title, read from each locale's frontmatter. */
-  titles: Record<string, Partial<Record<Lang, string>>>
+  titles: Record<string, Partial<Localised<string>>>
   /** slug -> edges to render on that page. */
   edges: Record<string, Edge[]>
   kinds: typeof KINDS
@@ -63,16 +63,6 @@ export interface Data {
 
 declare const data: Data
 export { data }
-
-/** `/clown/bg/concept` and `bg/concept.md` both reduce to `bg|concept`. */
-function parse(url: string): { lang: Lang; slug: string } | null {
-  const clean = url.replace(/^\/?clown\//, '/').replace(/\.md$/, '').replace(/^\/+/, '')
-  const parts = clean.split('/').filter(Boolean)
-  if (!parts.length) return { lang: 'en', slug: 'index' }
-  const lang: Lang = parts[0] === 'bg' ? 'bg' : parts[0] === 'de' ? 'de' : 'en'
-  const rest = lang === 'en' ? parts : parts.slice(1)
-  return { lang, slug: rest.join('/') || 'index' }
-}
 
 /** `sources#ledger` -> { slug: 'sources', anchor: 'ledger' } */
 function target(spec: string): { slug: string; anchor: string } {
@@ -94,8 +84,7 @@ export default defineLoader({
     }
 
     for (const page of pages) {
-      const id = parse(page.url)
-      if (!id) continue
+      const id = parsePage(page.url)
       const title = page.frontmatter?.title
       if (title) (titles[id.slug] ||= {})[id.lang] = String(title)
     }
@@ -103,8 +92,8 @@ export default defineLoader({
     // Declared edges are read from the English page only; the graph is
     // locale-independent, so reading it three times would just triple it.
     for (const page of pages) {
-      const id = parse(page.url)
-      if (!id || id.lang !== 'en') continue
+      const id = parsePage(page.url)
+      if (id.lang !== 'en') continue
       const declared = page.frontmatter?.relations
       if (!Array.isArray(declared)) continue
 

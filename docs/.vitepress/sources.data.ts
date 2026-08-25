@@ -1,4 +1,5 @@
 import { defineLoader } from 'vitepress'
+import type { Lang, Localised } from './locale.ts'
 
 /**
  * Build-time data loader for the source ledger.
@@ -8,8 +9,6 @@ import { defineLoader } from 'vitepress'
  * The loader runs in Node during the build; the result is inlined as JSON.
  */
 
-export type Lang = 'en' | 'bg' | 'de'
-
 /**
  * How the attribution stands. Encoded, not decorative.
  *
@@ -18,6 +17,7 @@ export type Lang = 'en' | 'bg' | 'de'
  * `probable` — a close match the documentation has not confirmed.
  * `open`     — unattributed, and awaiting a decision.
  */
+export type { Lang }
 export type Status = 'verified' | 'chosen' | 'probable' | 'open'
 
 export interface SourceEntry {
@@ -31,14 +31,14 @@ export interface SourceEntry {
   /** Persistent identifier, where one exists. */
   ref?: string
   /** The phrase as it stands in the documentation. */
-  phrase: Record<Lang, string>
+  phrase: Localised
   /** What it is drawing on. */
-  gloss: Record<Lang, string>
+  gloss: Localised
 }
 
 export interface Data {
   entries: SourceEntry[]
-  ui: Record<Lang, {
+  ui: Localised<{
     phrase: string
     source: string
     status: Record<Status, string>
