@@ -7,9 +7,6 @@ hero:
   name: Clown
   text: Solo Titania Chaos
   tagline: Ein lebendiger Arbeitsraum für Recherche, Proben, Dramaturgie und Produktion.
-  image:
-    src: /images/shadow-hero.jpg
-    alt: Der Schatten des Clowns an einer Wand, Hut und Nase im Profil, eine offene Hand
   actions:
     - theme: brand
       text: Die Arbeit erkunden
