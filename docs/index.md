@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Solo Titania Chaos 2026 — a wordless clown solo
+title: Solo Titania Chaos — a wordless clown solo
 titleTemplate: false
 description: The living research, rehearsal, dramaturgy and production workspace for Solo Titania Chaos 2026.
 hero:

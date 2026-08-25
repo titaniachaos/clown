@@ -115,8 +115,8 @@ function nav(prefix: string, column: Column, mainSiteLabel: string): DefaultThem
 
 export default defineConfig({
   base: BASE,
-  title: 'Solo Titania Chaos 2026',
-  titleTemplate: ':title | Solo Titania Chaos 2026',
+  title: 'Solo Titania Chaos',
+  titleTemplate: ':title | Solo Titania Chaos',
   description:
     'Research, dramaturgy, rehearsal and production for the wordless Solo Titania Chaos 2026 clown project.',
   cleanUrls: true,
@@ -242,7 +242,7 @@ export default defineConfig({
       lang: 'en',
       themeConfig: {
         nav: nav('', 1, 'Titania Chaos'),
-        sidebar: sidebar('', 'Solo Titania Chaos 2026', 1),
+        sidebar: sidebar('', 'Solo Titania Chaos', 1),
         outline: { level: [2, 3], label: 'On this page' },
         docFooter: { prev: 'Previous page', next: 'Next page' },
         footer: {
@@ -261,13 +261,13 @@ export default defineConfig({
     bg: {
       label: 'Български',
       lang: 'bg',
-      title: 'Соло Титания Хаос 2026',
-      titleTemplate: ':title | Соло Титания Хаос 2026',
+      title: 'Соло Титания Хаос',
+      titleTemplate: ':title | Соло Титания Хаос',
       description:
         'Изследване, драматургия, репетиции и продукция за безсловесния клоунски проект „Соло Титания Хаос 2026“.',
       themeConfig: {
         nav: nav('/bg', 2, 'Титания Хаос'),
-        sidebar: sidebar('/bg', 'Соло Титания Хаос 2026', 2),
+        sidebar: sidebar('/bg', 'Соло Титания Хаос', 2),
         outline: { level: [2, 3], label: 'На тази страница' },
         docFooter: { prev: 'Предишна страница', next: 'Следваща страница' },
         footer: {
@@ -293,12 +293,12 @@ export default defineConfig({
     de: {
       label: 'Deutsch',
       lang: 'de-AT',
-      titleTemplate: ':title | Solo Titania Chaos 2026',
+      titleTemplate: ':title | Solo Titania Chaos',
       description:
         'Recherche, Dramaturgie, Proben und Produktion für das wortlose Clown-Projekt Solo Titania Chaos 2026.',
       themeConfig: {
         nav: nav('/de', 3, 'Titania Chaos'),
-        sidebar: sidebar('/de', 'Solo Titania Chaos 2026', 3),
+        sidebar: sidebar('/de', 'Solo Titania Chaos', 3),
         outline: { level: [2, 3], label: 'Auf dieser Seite' },
         docFooter: { prev: 'Vorherige Seite', next: 'Nächste Seite' },
         footer: {
