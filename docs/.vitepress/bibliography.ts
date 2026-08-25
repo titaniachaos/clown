@@ -283,8 +283,8 @@ export const WORKS: Work[] = [
     year: '1896',
     title: 'I heard a Fly buzz — when I died',
     container: 'Poems: Third series',
-    note: 'Numbered 465 by Johnson and 591 by Franklin. Published posthumously as “Dying”. Public domain.',
-    url: 'https://www.poetryfoundation.org/poems/45703/i-heard-a-fly-buzz-when-i-died-591',
+    note: 'Numbered 465 by Johnson and 591 by Franklin. Published posthumously as “Dying”. Public domain. Linked to the manuscript in Amherst College Digital Collections rather than to an anthology page.',
+    url: 'https://acdc.amherst.edu/view/EmilyDickinson/ma00167-16-16-00155',
     records: ['emptied-room'],
     read: 'full-text'
   },
