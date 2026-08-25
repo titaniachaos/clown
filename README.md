@@ -66,6 +66,34 @@ Each script exists because something got past a human once:
 | `check-external.mjs` | link rot in the citations. It tells a dead link apart from a publisher refusing an automated request and from an incomplete certificate chain, and fails only on the first. DOIs are checked at Crossref rather than through `doi.org`, which publishers block |
 | `watch-research.mjs` | new articles in the journals the ledger cites, filtered on the project's own vocabulary |
 
+## The observer test
+
+```sh
+npm run flop:score -- results.csv
+```
+
+`scripts/flop-test.mjs` scores the forced-choice run of the observer test: can
+a room tell a flop played from genuine not-knowing from one played as rehearsed
+craft? It is the studio answer to the `authenticity-effect` entry in the source
+ledger, where Davison argues that what an audience reads as spontaneity is a
+learnable technique — while the material research stakes the comedy on the
+conviction being real. Both cannot be load-bearing.
+
+The CSV needs one row per judgement and nothing else:
+
+```
+observer,pair,correct
+A,1,1
+A,2,0
+```
+
+Twelve observers judging six pairs is 72 judgements: above chance at 44 (61%),
+convincingly so at 47 (65%). A flat 36 is not a failed test — it bounds the
+claim, ruling out any true discriminability above 60%. The script reports the
+pooled exact binomial, the per-observer spread, and the result with the two
+strongest observers removed, because judgements made in one room over one set
+of material are not independent.
+
 ## SEO
 
 `docs/.vitepress/seo.ts` generates, per page: a canonical URL, the full Open

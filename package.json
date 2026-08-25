@@ -13,7 +13,8 @@
     "check:build": "node scripts/check-build.mjs",
     "check:links": "node scripts/check-external.mjs",
     "check": "npm run check:sources && npm run docs:build && npm run check:build",
-    "watch:research": "node scripts/watch-research.mjs"
+    "watch:research": "node scripts/watch-research.mjs",
+    "flop:score": "node scripts/flop-test.mjs"
   },
   "devDependencies": {
     "vitepress": "2.0.0-alpha.19"
