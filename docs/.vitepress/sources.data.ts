@@ -134,7 +134,7 @@ const entries: SourceEntry[] = [
   {
     id: 'flop',
     status: 'verified',
-    locus: 'concept · audience · rehearsal-toolkit',
+    locus: 'concept · audience · studio',
     work: 'Jacques Lecoq, Le Corps Poétique (1997); Philippe Gaulier; Lucy Amsden, “Monsieur Marcel and Monsieur Flop”, Theatre, Dance and Performance Training 8:2 (2017)',
     ref: '10.1080/19443927.2017.1316304',
     phrase: {
@@ -151,17 +151,33 @@ const entries: SourceEntry[] = [
   {
     id: 'lecoq',
     status: 'verified',
-    locus: 'concept · rehearsal-toolkit',
-    work: 'Jacques Lecoq, Le Corps Poétique (1997)',
+    locus: 'concept · studio',
+    work: 'Jacques Lecoq, Le Corps Poétique (1997) / The Moving Body, 154 and 159',
     phrase: {
       en: 'Movement analysis and observed behaviour',
       bg: 'Анализ на движението и наблюдавано поведение',
       de: 'Bewegungsanalyse und beobachtetes Verhalten'
     },
     gloss: {
-      en: 'Two of the five unnamed lineages are both Lecoq: *tout bouge* and the observation practice the field protocol prescribes. He also supplies the route — the clown is not reached except through the neutral mask, which is what movement 1 is in all but name.',
-      bg: 'Две от петте неназовани традиции са и двете на Льокок: *tout bouge* и практиката на наблюдение, която полевият протокол предписва. Той дава и пътя — до клоуна се стига само през неутралната маска, каквото по същество е движение 1.',
-      de: 'Zwei der fünf unbenannten Linien sind beide Lecoq: *tout bouge* und die Beobachtungspraxis, die das Feldprotokoll vorschreibt. Er liefert auch den Weg — zum Clown gelangt man nur durch die neutrale Maske, was Bewegung 1 der Sache nach ist.'
+      en: 'Two of the five unnamed lineages are both Lecoq: *tout bouge* and the observation practice the field protocol prescribes. He also supplies the route — the clown is not reached except through the neutral mask, which is what movement 1 is in all but name. Two cautions, from Amsden. Lecoq wrote *little* on clown and wrote it abstractly, so the lineage is real but thin on the page. And his clown work was a tool for the freedom of actors, not training for clown performers. What is citable is precise: the search for one’s own clown as a fundamental principle, and his instruction to be oneself as profoundly as possible and observe the effect one has on the audience.',
+      bg: 'Две от петте неназовани традиции са и двете на Льокок: *tout bouge* и практиката на наблюдение, която полевият протокол предписва. Той дава и пътя — до клоуна се стига само през неутралната маска, каквото по същество е движение 1. Две предупреждения, от Амсдън. Льокок е писал *малко* за клоуна и то абстрактно, тъй че традицията е истинска, но тънка на хартия. А работата му с клоуна е била средство за свободата на актьора, не обучение за клоуни. Цитируемото е точно: търсенето на собствения клоун като основен принцип и указанието му да бъдеш себе си възможно най-дълбоко и да наблюдаваш ефекта, който имаш върху публиката.',
+      de: 'Zwei der fünf unbenannten Linien sind beide Lecoq: *tout bouge* und die Beobachtungspraxis, die das Feldprotokoll vorschreibt. Er liefert auch den Weg — zum Clown gelangt man nur durch die neutrale Maske, was Bewegung 1 der Sache nach ist. Zwei Vorbehalte, von Amsden. Lecoq schrieb *wenig* über den Clown und schrieb es abstrakt, die Linie ist also echt, aber dünn auf dem Papier. Und seine Clown-Arbeit war ein Mittel zur Freiheit der Schauspielenden, keine Ausbildung für Clowns. Zitierbar ist Genaues: die Suche nach dem eigenen Clown als Grundprinzip und seine Anweisung, so tief wie möglich man selbst zu sein und die Wirkung zu beobachten, die man auf das Publikum hat.'
+    }
+  },
+  {
+    id: 'complicity',
+    status: 'verified',
+    locus: 'concept · audience',
+    work: 'Philippe Gaulier, Le Gégèneur / The Tormentor (2007), 204–205, glossing Le Robert; Murray and Keefe, Physical Theatres (2007), 146',
+    phrase: {
+      en: 'Complicity',
+      bg: 'Съучастие',
+      de: 'Komplizenschaft'
+    },
+    gloss: {
+      en: 'Gaulier reaches for a dictionary: complicity is a profound understanding between people, *spontaneous and often unexpressed*. Murray and Keefe report that *complicité* has no immediate translation. The unexpressed part is the argument for this solo’s silence — complicity is already a wordless channel, so an hour without language is not working against its medium but inside the one complicity uses. Its companion term is *disponibilité*, the state of being ready for play, which is Winnicott’s floundering arrived at from the studio rather than the clinic.',
+      bg: 'Голие посяга към речника: съучастието е дълбоко разбирателство между хора, *спонтанно и често неизказано*. Мъри и Кийф отбелязват, че *complicité* няма непосредствен превод. Неизказаното е доводът за мълчанието на това соло — съучастието вече е безсловесен канал, тъй че час без език не работи срещу средата си, а вътре в онази, която съучастието използва. Сродното понятие е *disponibilité*, готовността за игра, което е лутането на Уиникът, стигнато от студиото, а не от кабинета.',
+      de: 'Gaulier greift zum Wörterbuch: Komplizenschaft ist ein tiefes Einverständnis zwischen Menschen, *spontan und oft unausgesprochen*. Murray und Keefe halten fest, dass *complicité* keine unmittelbare Übersetzung hat. Das Unausgesprochene ist das Argument für das Schweigen dieses Solos — Komplizenschaft ist bereits ein wortloser Kanal, eine Stunde ohne Sprache arbeitet also nicht gegen ihr Medium, sondern in dem, das die Komplizenschaft ohnehin benutzt. Ihr Schwesterbegriff ist *disponibilité*, die Bereitschaft zum Spiel, also Winnicotts Treiben, vom Studio her erreicht statt aus der Praxis.'
     }
   },
   {
@@ -199,7 +215,7 @@ const entries: SourceEntry[] = [
   {
     id: 'playful-anarchy',
     status: 'chosen',
-    locus: 'concept · material-research',
+    locus: 'concept · studio',
     work: 'Pascal Jacob, « L’Auguste », BnF / Centre national des arts du cirque',
     phrase: {
       en: 'Playful anarchy',
