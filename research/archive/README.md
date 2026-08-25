@@ -20,3 +20,10 @@ The prescriptive English Sources synthesis preceding the research-field
 revision is preserved in Git at commit `e7051ce`, path `docs/sources.md`. It
 contains the movement-specific conclusions, companion-loss trajectory, Flop
 Scale and twelve-week references removed from the current public Sources page.
+
+The complete trilingual source-ledger presentation immediately preceding the
+public provenance rebuild is preserved in Git at commit `f60ea38`, path
+`docs/sources.md`, with its underlying records in
+`docs/.vitepress/sources.data.ts`. The public page no longer exposes internal
+record loci, graph relations, reading order or receipt hashes; the underlying
+research records remain available for editorial history and future checking.

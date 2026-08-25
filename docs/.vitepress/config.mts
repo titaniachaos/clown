@@ -59,11 +59,15 @@ const SECTIONS = [
   },
   {
     slug: 'sources',
-    anchor: 'ledger',
+    anchor: 'a-map-of-the-research',
     label: ['Sources', 'Източници', 'Quellen'],
     items: [
-      ['ledger', 'The ledger', 'Регистърът', 'Das Verzeichnis'],
-      ['land', 'Where these land', 'Къде се появяват', 'Wo sie auftauchen']
+      ['a-map-of-the-research', 'A map of the research', 'Карта на изследването', 'Eine Karte der Forschung'],
+      ['questions-and-contradictions', 'Questions and contradictions', 'Въпроси и противоречия', 'Fragen und Widersprüche'],
+      ['the-source-ledger', 'The source ledger', 'Регистър на източниците', 'Das Quellenverzeichnis'],
+      ['limits-and-corrections', 'Limits and corrections', 'Граници и корекции', 'Grenzen und Korrekturen'],
+      ['key-references', 'Key references', 'Основни източници', 'Wichtige Referenzen'],
+      ['where-to-continue', 'Where to continue', 'Накъде оттук', 'Wie es weitergeht']
     ]
   },
   {

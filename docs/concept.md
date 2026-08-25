@@ -3,7 +3,7 @@ title: The Work
 description: What is known, what is being investigated and what remains open in the development of the wordless clown solo Solo Titania Chaos.
 outline: [2, 2]
 relations:
-  - { from: concept, kind: informed-by, to: sources#ledger }
+  - { from: concept, kind: informed-by, to: sources#the-source-ledger }
   - { from: concept, kind: tested-by, to: studio-process#process }
   - { from: concept, kind: developed-through, to: production#needs }
 ---

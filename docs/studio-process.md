@@ -3,7 +3,7 @@ title: The Studio
 description: The validated studio process and practical tools used to discover material for Solo Titania Chaos.
 outline: [2, 2]
 relations:
-  - { from: process, kind: rests-on, to: sources#ledger }
+  - { from: process, kind: rests-on, to: sources#the-source-ledger }
   - { from: process, kind: decided-in, to: production#production }
 ---
 
@@ -255,7 +255,7 @@ Material earns its place through playing and testing — and can lose that place
 
 [Return to The Work →](./concept#concept)
 
-[Explore Sources & lineages →](./sources#ledger)
+[Explore Sources & lineages →](./sources#the-source-ledger)
 
 [Contact Titania about the project](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos){.contact-button} [Support the project](https://revolut.me/titaniachaos){.contact-button .secondary}
 

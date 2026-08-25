@@ -111,7 +111,7 @@ const citations: Integration = {
   hooks: {
     'build:done': ({ stamp, logger }) => {
       const items: FeedItem[] = WORKS.map((w) => {
-        const cites = w.records.map((r) => `${HOSTNAME}${BASE}sources#${r}`)
+        const cites = w.records.map(() => `${HOSTNAME}${BASE}sources#the-source-ledger`)
         return {
           id: `tag:titaniachaos.github.io,2026:clown/work/${w.id}`,
           title: w.title,

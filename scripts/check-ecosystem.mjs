@@ -89,9 +89,23 @@ for (const [name, source, required] of [
   ['German Work', deConcept, 'Ich habe noch keine Antwort, der ich vertraue.'],
   ['Bulgarian Studio', bgStudio, 'Създай условието, вместо да караш Титания да го представя.'],
   ['German Studio', deStudio, 'Erzeuge die Bedingung, statt Titania aufzufordern, sie darzustellen.'],
-  ['Bulgarian Sources', bgSources, 'Не предписва сцена, последователност или резултат.'],
-  ['German Sources', deSources, 'Sie schreibt keine Szene, Folge oder Wirkung vor.']
+  ['Bulgarian Sources', bgSources, 'Изследването изостря наблюдението. Студиото решава какво става играемо.'],
+  ['German Sources', deSources, 'Forschung schärft die Beobachtung. Das Studio entscheidet, was spielbar wird.']
 ]) requireText(source, required, `${name} lost an approved uncertainty or method statement`)
+
+for (const [name, source, required] of [
+  ['Bulgarian Sources', bgSources, ['Карта на изследването', 'Въпроси и противоречия', 'Регистър на източниците', 'Граници и корекции', 'Основни източници', 'Накъде оттук', 'изпълнителката лично е прочела цялото произведение']],
+  ['German Sources', deSources, ['Eine Karte der Forschung', 'Fragen und Widersprüche', 'Das Quellenverzeichnis', 'Grenzen und Korrekturen', 'Wichtige Referenzen', 'Wie es weitergeht', 'bedeutet **nicht**, dass die Performerin das gesamte Werk persönlich gelesen hat']]
+]) {
+  for (const phrase of required) requireText(source, phrase, `${name} lost provenance structure: ${phrase}`)
+}
+
+for (const [name, source, forbidden] of [
+  ['Bulgarian Sources', bgSources, ['Седем движения', 'Девет режима', 'Скалата на флоповете', 'Две и две правят пет']],
+  ['German Sources', deSources, ['Sieben Bewegungen', 'Neun Spielarten', 'Flop-Skala', 'Zwei und zwei macht fünf']]
+]) {
+  for (const phrase of forbidden) if (source.includes(phrase)) problems.push(`${name} retains archived research: ${phrase}`)
+}
 
 for (const [name, source, forbidden] of [
   ['Bulgarian Studio', bgStudio, ['Скалата на флоповете', 'Две и две правят пет', 'дванадесетседмичен']],
