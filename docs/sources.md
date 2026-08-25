@@ -29,9 +29,13 @@ The project runs on paradoxes rather than on themes, and they are the same parad
 | The room kept wholly one's own stays furnished with borrowed language and absent people | Montaigne I.38, reversed by the project |
 | Language is a technology of company, so a wordless performance begins inside the condition it investigates | The project's own, in the concept |
 | Two and two make five: false in arithmetic, performable by an auguste, and violence in Orwell's hands | The project's own, in the material research |
+| Laughter needs an echo, so a room laughing at solitude is a room disproving it | Bergson, *Le Rire* (1900), I.i |
+| To laugh, the spectator must set feeling aside — and this piece wants the feeling | Bergson, *Le Rire* (1900), I.i and III |
 
 ::: tip They resolve the same way
 Every one of them is settled by a witness rather than by an argument. Winnicott's infant needs a present adult; Arendt's thinker needs a second self; Gaulier's flop needs a room to fail in front of; the auguste's five needs someone who can see four. The solo does not depict solitude and then add an audience. The audience is the term that makes solitude legible at all.
+
+One of them does not resolve that way. Bergson’s insensibility is settled by sequence rather than by a witness: the collapse takes the laugh, and the look up afterwards takes the feeling back. It is the only paradox here whose answer is a running order.
 :::
 
 ## The open question {#open}
@@ -50,17 +54,20 @@ It is a plausible-sounding title that does not exist. The citable scholarship on
 
 ## Reading order {#reading}
 
-::: details Ten titles, in the order the documentation needs them
+::: details Thirteen titles, in the order the documentation needs them
 1. Arendt, *The Life of the Mind*, and the closing chapter of *The Origins of Totalitarianism* — two modes and one movement
 2. Winnicott, "The Capacity to be Alone" — five pages, and the load-bearing claim
-3. Lecoq, *Le Corps Poétique* — two of the five unnamed lineages at once
-4. Montaigne, "De la solitude" — short, public domain, the source of a movement title
-5. Amsden on the flop, and Purcell Gates on the training paradox
-6. Turkle, *Alone Together* — the contemporary anchor
-7. Decroux, *Paroles sur le Mime* — the argument for wordlessness
-8. Pascal Jacob on the auguste, for the BnF and the CNAC — the chosen lineage
-9. Grock, *Life's a Lark* (Heinemann, 1931; tr. Madge Pemberton from *Ich lebe gern!*) — the solo auguste who left the pairing behind
-10. Vincent Laughery, « L'écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — the fall as a floor shared with the public
+3. Bergson, *Le Rire* (1900) — public domain, and the only source here that both supports the concept and argues against it
+4. Lecoq, *Le Corps Poétique* — two of the five unnamed lineages at once
+5. Montaigne, "De la solitude" — short, public domain, the source of a movement title
+6. Amsden on the flop, and Purcell Gates on the training paradox
+7. Turkle, *Alone Together* — the contemporary anchor
+8. Decroux, *Paroles sur le Mime* — the argument for wordlessness
+9. Pascal Jacob on the auguste, for the BnF and the CNAC — the chosen lineage
+10. Van Wyk, *The Whiteface and the Auguste* (MA, Cape Town, 2015) — the half of the pairing a solo cannot simply drop
+11. Davison, *Clown: Readings in Theatre Practice* (2013) — how recent the red nose is, and what choosing it signs
+12. Grock, *Life's a Lark* (Heinemann, 1931; tr. Madge Pemberton from *Ich lebe gern!*) — the solo auguste who left the pairing behind
+13. Vincent Laughery, « L'écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — the fall as a floor shared with the public
 :::
 
 ## Where these land {#land}

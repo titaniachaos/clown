@@ -27,9 +27,13 @@ Das Projekt ruht auf Paradoxien statt auf Themen, und es ist dieselbe Paradoxie,
 | Der ganz eigene Raum bleibt mit geliehener Sprache und abwesenden Menschen möbliert | Montaigne I.38, vom Projekt umgekehrt |
 | Sprache ist eine Technik der Gesellschaft, also beginnt ein wortloses Stück im Zustand, den es untersucht | Eigen, im Konzept |
 | Zwei und zwei macht fünf: falsch in der Arithmetik, spielbar für einen Auguste, Gewalt in Orwells Händen | Eigen, in der Materialrecherche |
+| Das Lachen braucht ein Echo, also widerlegt ein Raum, der über Alleinsein lacht, es gerade | Bergson, *Le Rire* (1900), I.i |
+| Um zu lachen, muss der Zuschauer das Fühlen beiseitelegen — und dieses Stück will das Fühlen | Bergson, *Le Rire* (1900), I.i und III |
 
 ::: tip Sie lösen sich alle gleich auf
 Jede von ihnen wird durch einen Zeugen entschieden, nicht durch ein Argument. Winnicotts Kind braucht eine anwesende erwachsene Person; Arendts Denkende ein zweites Selbst; Gauliers Flop einen Raum, vor dem er scheitern kann; die Fünf des Auguste jemanden, der vier sehen kann. Das Solo stellt nicht Einsamkeit dar und fügt dann ein Publikum hinzu. Das Publikum ist der Term, der Einsamkeit überhaupt lesbar macht.
+
+Eine von ihnen löst sich nicht so auf. Bergsons Unempfindlichkeit wird durch eine Abfolge entschieden, nicht durch einen Zeugen: Der Zusammenbruch nimmt das Lachen, und der Blick danach holt das Fühlen zurück. Es ist die einzige Paradoxie hier, deren Antwort eine Reihenfolge ist.
 :::
 
 ## Die offene Frage {#open}
@@ -48,17 +52,20 @@ Ein plausibel klingender Titel, den es nicht gibt. Die zitierfähige Forschung z
 
 ## Lesereihenfolge {#reading}
 
-::: details Zehn Titel, in der Reihenfolge, die die Dokumentation braucht
+::: details Dreizehn Titel, in der Reihenfolge, die die Dokumentation braucht
 1. Arendt, *Vom Leben des Geistes*, und das Schlusskapitel von *Elemente und Ursprünge totaler Herrschaft* — zwei Modi und eine Bewegung
 2. Winnicott, „The Capacity to be Alone“ — fünf Seiten und die tragende Behauptung
-3. Lecoq, *Le Corps Poétique* — zwei der fünf unbenannten Linien auf einmal
-4. Montaigne, „De la solitude“ — kurz, gemeinfrei, Quelle eines Bewegungstitels
-5. Amsden über den Flop und Purcell Gates über die Paradoxie der Ausbildung
-6. Turkle, *Alone Together* — der gegenwärtige Anker
-7. Decroux, *Paroles sur le Mime* — das Argument für die Wortlosigkeit
-8. Pascal Jacob über den Auguste, für die BnF und das CNAC — die gewählte Linie
-9. Grock, *Life's a Lark* (Heinemann, 1931; übers. Madge Pemberton nach *Ich lebe gern!*) — der Solo-Auguste, der das Paar verließ
-10. Vincent Laughery, « L'écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — der Fall als ein mit dem Publikum geteilter Boden
+3. Bergson, *Le Rire* (1900) — gemeinfrei, und die einzige Quelle hier, die das Konzept zugleich stützt und ihm widerspricht
+4. Lecoq, *Le Corps Poétique* — zwei der fünf unbenannten Linien auf einmal
+5. Montaigne, „De la solitude“ — kurz, gemeinfrei, Quelle eines Bewegungstitels
+6. Amsden über den Flop und Purcell Gates über die Paradoxie der Ausbildung
+7. Turkle, *Alone Together* — der gegenwärtige Anker
+8. Decroux, *Paroles sur le Mime* — das Argument für die Wortlosigkeit
+9. Pascal Jacob über den Auguste, für die BnF und das CNAC — die gewählte Linie
+10. Van Wyk, *The Whiteface and the Auguste* (MA, Kapstadt, 2015) — die Hälfte des Paares, die ein Solo nicht einfach fallen lassen kann
+11. Davison, *Clown: Readings in Theatre Practice* (2013) — wie jung die rote Nase ist und was ihre Wahl unterschreibt
+12. Grock, *Life's a Lark* (Heinemann, 1931; übers. Madge Pemberton nach *Ich lebe gern!*) — der Solo-Auguste, der das Paar verließ
+13. Vincent Laughery, « L'écoute et la chute » (Fabula, *Lieu(x) commun(s)*, 2022) — der Fall als ein mit dem Publikum geteilter Boden
 :::
 
 ## Wo sie auftauchen {#land}
