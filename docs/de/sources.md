@@ -14,7 +14,7 @@ Mehrere Titel der Bewegungen und Modi der Einsamkeit sind Begriffe aus bestimmte
 
 <SourceLedger />
 
-## Die Paradoxien
+## Die Paradoxien {#paradoxes}
 
 Das Projekt ruht auf Paradoxien statt auf Themen, und es ist dieselbe Paradoxie, aus verschiedenen Gewerken gesehen. Jede ist eine Struktur, die nur funktioniert, weil sie sich selbst widerspricht.
 
@@ -32,7 +32,7 @@ Das Projekt ruht auf Paradoxien statt auf Themen, und es ist dieselbe Paradoxie,
 Jede von ihnen wird durch einen Zeugen entschieden, nicht durch ein Argument. Winnicotts Kind braucht eine anwesende erwachsene Person; Arendts Denkende ein zweites Selbst; Gauliers Flop einen Raum, vor dem er scheitern kann; die Fünf des Auguste jemanden, der vier sehen kann. Das Solo stellt nicht Einsamkeit dar und fügt dann ein Publikum hinzu. Das Publikum ist der Term, der Einsamkeit überhaupt lesbar macht.
 :::
 
-## Die offene Frage
+## Die offene Frage {#open}
 
 ::: warning Der geleerte Raum
 Modus 8 hat keine Quelle. Das Lockern des Selbst statt seiner Tröstung könnte auf Weil, auf eine Lesart des Nicht-Selbst oder auf kontemplative Einsamkeit deuten. Das sollte entschieden und nicht der Ähnlichkeit überlassen werden, denn eine Dramaturgin, die das Konzept liest, liefert sich selbst eine Antwort, wenn die Seite es nicht tut.
@@ -40,13 +40,13 @@ Modus 8 hat keine Quelle. Das Lockern des Selbst statt seiner Tröstung könnte 
 
 Die spielerische Anarchie war die andere offene Linie und ist nun als der Auguste entschieden. Bouffon scheidet aus: Er arbeitet in der Gruppe und verspottet das Publikum, während dieser Clown allein ist und auf Komplizenschaft angewiesen bleibt. Die [Materialrecherche](/de/studio-process#two-and-two) zeigt, was die Wahl spielbar macht.
 
-## Eine Korrektur, die bleiben sollte
+## Eine Korrektur, die bleiben sollte {#correction}
 
 ::: danger Es gibt kein Buch mit dem Titel *In Praise of Flop*
 Ein plausibel klingender Titel, den es nicht gibt. Die zitierfähige Forschung zu Gauliers Flop ist Lucy Amsdens Aufsatz von 2017 in *Theatre, Dance and Performance Training* und ihre Glasgower Dissertation von 2015. Diese gehören in jede Bibliografie, die an eine Förderstelle geht.
 :::
 
-## Lesereihenfolge
+## Lesereihenfolge {#reading}
 
 ::: details Zehn Titel, in der Reihenfolge, die die Dokumentation braucht
 1. Arendt, *Vom Leben des Geistes*, und das Schlusskapitel von *Elemente und Ursprünge totaler Herrschaft* — zwei Modi und eine Bewegung
@@ -68,3 +68,5 @@ Jeder Eintrag oben ist irgendwo in der Dokumentation belegt: die Spielarten, die
 **Holen Sie diese Arbeit zu Ihrem Publikum.** Anfragen zu Koproduktion, Residenz und Gastspiel sind in jeder Phase willkommen. [Was das Projekt anbietet](/de/production#work).
 
 [Titania zum Projekt kontaktieren](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos%202026){.contact-button} [Das Projekt unterstützen](https://revolut.me/titaniachaos){.contact-button .secondary}
+
+<PageRelations />

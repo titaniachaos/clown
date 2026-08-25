@@ -2,6 +2,8 @@
 title: Sources and Lineages
 description: The books and practitioners behind the concepts used in Solo Titania Chaos 2026, the paradoxes they share, and the question still open.
 outline: [2, 3]
+relations:
+  - { from: reading, kind: grounds, to: concept#concept }
 ---
 
 # Sources and lineages
@@ -14,7 +16,7 @@ Several movement titles and modes of solitude are named concepts taken from spec
 
 <SourceLedger />
 
-## The paradoxes
+## The paradoxes {#paradoxes}
 
 The project runs on paradoxes rather than on themes, and they are the same paradox seen from different trades. Each is a structure that only works because it contradicts itself.
 
@@ -32,7 +34,7 @@ The project runs on paradoxes rather than on themes, and they are the same parad
 Every one of them is settled by a witness rather than by an argument. Winnicott's infant needs a present adult; Arendt's thinker needs a second self; Gaulier's flop needs a room to fail in front of; the auguste's five needs someone who can see four. The solo does not depict solitude and then add an audience. The audience is the term that makes solitude legible at all.
 :::
 
-## The open question
+## The open question {#open}
 
 ::: warning The emptied room
 Mode 8 has no source. Letting the self loosen rather than consoling it may point to Weil, to a reading of non-self, or to contemplative solitude. It should be decided rather than left to resemblance, because a dramaturg reading the concept page will supply an answer if the page does not.
@@ -40,13 +42,13 @@ Mode 8 has no source. Letting the self loosen rather than consoling it may point
 
 Playful anarchy was the other open lineage and is now settled as the auguste. Bouffon was ruled out: it works in a gang and mocks the audience, while this clown is alone and depends on complicity. See the [material research](/studio-process#two-and-two) for what the choice makes playable.
 
-## A correction worth keeping
+## A correction worth keeping {#correction}
 
 ::: danger There is no book called *In Praise of Flop*
 It is a plausible-sounding title that does not exist. The citable scholarship on Gaulier's flop is Lucy Amsden's 2017 article in *Theatre, Dance and Performance Training* and her 2015 Glasgow doctoral thesis. Use those in any bibliography that goes to a funder.
 :::
 
-## Reading order
+## Reading order {#reading}
 
 ::: details Ten titles, in the order the documentation needs them
 1. Arendt, *The Life of the Mind*, and the closing chapter of *The Origins of Totalitarianism* — two modes and one movement
@@ -68,3 +70,5 @@ Every entry above is cited from somewhere in the documentation: the modes it nam
 **Bring this work to your audience.** Co-production, residency and presenting enquiries are welcome at any stage. [What the project offers](/production#work).
 
 [Contact Titania about the project](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos%202026){.contact-button} [Support the project](https://revolut.me/titaniachaos){.contact-button .secondary}
+
+<PageRelations />

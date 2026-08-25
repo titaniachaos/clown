@@ -1,6 +1,13 @@
 ---
 title: The Work
 description: The artistic concept, the seven-movement structure and the audience relationship behind the wordless Solo Titania Chaos 2026.
+relations:
+  - { from: concept, kind: rests-on, to: sources#ledger }
+  - { from: modes, kind: tested-by, to: studio-process#material }
+  - { from: dramaturgy, kind: tested-by, to: studio-process#process }
+  - { from: dramaturgy, kind: decided-in, to: production#decisions }
+  - { from: arendt, kind: rests-on, to: sources#paradoxes }
+  - { from: audience, kind: tested-by, to: studio-process#toolkit }
 ---
 
 # The work
@@ -103,6 +110,20 @@ An ordinary object becomes company. A complete relationship appears inside one p
 
 The room is dismantled object by object. The performance returns to the opening emptiness, now charged by everything that has passed through it.
 
+### What Arendt's structure requires {#arendt}
+
+Read in the source, the three terms are not degrees of one condition. They are three different situations, and two movements depend on the difference.
+
+**Isolation is productive.** Arendt insists it is required for all making: the maker withdraws from common concerns and, in isolation, stays in contact with the world as human artifice. Movement 3 is therefore not a milder cell. It is fabrication, and its rituals are work.
+
+**The cell is made by stopping the making, not by adding a wall.** Isolation becomes unbearable, and turns into loneliness, only when the capacity to add something of one's own to the common world is destroyed. The rule that appears in movement 5 should prevent the room from being added to. A restriction that merely confines the body leaves the maker intact, and the movement will not turn.
+
+**The two-in-one is not self-sufficient, and this is the hinge of the hour.** In solitude the self is two. Arendt's difficulty is that the two-in-one needs other people in order to become one again: identity is confirmed only from outside, and company restores the single voice. Solitude splits. Only being seen makes whole.
+
+So the audience is not a witness to the clown's solitude. It is the thing that ends it. Movement 6 builds a companion that cannot perform that office — an object can hold presence, as Winnicott allows, but it cannot confirm an identity, which Arendt requires — and that is why it must be let go while the room is still full.
+
+**Solitude can become loneliness** when one is deserted by one's own self. That is the risk the middle of the hour runs, and the reason the flops must keep landing: laughter is the evidence that the others are still there.
+
 ## Audience relationship {#audience}
 
 The audience is not a passive witness. Its presence makes the solo possible and simultaneously disproves the clown’s claim to be alone.
@@ -156,3 +177,5 @@ The structure above is a rehearsal hypothesis, not a plan. The [twelve-week proc
 **Bring this work to your audience.** Co-production, residency and presenting enquiries are welcome at any stage. [What the project offers](/production#work).
 
 [Contact Titania about the project](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos%202026){.contact-button} [Support the project](https://revolut.me/titaniachaos){.contact-button .secondary}
+
+<PageRelations />

@@ -103,3 +103,5 @@ Das Solo ist in Entstehung und sucht die Partner, die eine Entstehung braucht.
 Schicken Sie Datum, Raum und das, was Sie suchen — Sie bekommen eine klare Antwort darüber, was die Arbeit braucht.
 
 [Titania zum Projekt kontaktieren](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos%202026){.contact-button} [Das Projekt unterstützen](https://revolut.me/titaniachaos){.contact-button .secondary}
+
+<PageRelations />

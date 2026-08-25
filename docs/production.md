@@ -1,6 +1,8 @@
 ---
 title: Production and Support
 description: Decision gates, production needs, and how to co-produce, host, present or support Solo Titania Chaos 2026.
+relations:
+  - { from: decisions, kind: rests-on, to: concept#dramaturgy }
 ---
 
 # Production and support
@@ -103,3 +105,5 @@ The solo is in creation and is looking for the partners that a creation needs.
 Send the date, the space and what you are looking for, and you will get a straight answer about what the work needs.
 
 [Contact Titania about the project](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos%202026){.contact-button} [Support the project](https://revolut.me/titaniachaos){.contact-button .secondary}
+
+<PageRelations />

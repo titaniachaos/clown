@@ -1,6 +1,10 @@
 ---
 title: The Studio
 description: The twelve-week studio process, the rehearsal toolkit and the material research that generate Solo Titania Chaos 2026.
+relations:
+  - { from: material, kind: rests-on, to: sources#ledger }
+  - { from: two-and-two, kind: rests-on, to: sources#paradoxes }
+  - { from: process, kind: decided-in, to: production#production }
 ---
 
 # The studio
@@ -170,3 +174,5 @@ The material answers to the argument it came from: the [nine modes](/concept#mod
 **Bring this work to your audience.** Co-production, residency and presenting enquiries are welcome at any stage. [What the project offers](/production#work).
 
 [Contact Titania about the project](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos%202026){.contact-button} [Support the project](https://revolut.me/titaniachaos){.contact-button .secondary}
+
+<PageRelations />
