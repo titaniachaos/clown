@@ -23,16 +23,29 @@ const tally = computed(() =>
   })
 )
 
-/** The glosses carry `*emphasis*`; split it out rather than injecting HTML. */
+/** Entries cite each other by id, and the id is already the anchor. */
+const byId = computed(() => new Map(data.entries.map((entry) => [entry.id, entry])))
+
+/**
+ * The glosses carry `*emphasis*` and `[[entry-id]]`; split both out rather
+ * than injecting HTML. A `[[link]]` renders as that entry's phrase in the
+ * current language, pointing at its anchor further down the page.
+ */
 function parts(text: string) {
   return text
-    .split(/(\*[^*]+\*)/g)
+    .split(/(\*[^*]+\*|\[\[[a-z0-9-]+\]\])/g)
     .filter(Boolean)
-    .map((chunk) =>
-      chunk.length > 2 && chunk.startsWith('*') && chunk.endsWith('*')
-        ? { em: true, text: chunk.slice(1, -1) }
-        : { em: false, text: chunk }
-    )
+    .map((chunk) => {
+      if (chunk.startsWith('[[') && chunk.endsWith(']]')) {
+        const id = chunk.slice(2, -2)
+        const entry = byId.value.get(id)
+        return { link: id, text: entry ? entry.phrase[lang.value] : id, em: false }
+      }
+      if (chunk.length > 2 && chunk.startsWith('*') && chunk.endsWith('*')) {
+        return { em: true, text: chunk.slice(1, -1), link: '' }
+      }
+      return { em: false, text: chunk, link: '' }
+    })
 }
 </script>
 
@@ -58,7 +71,8 @@ function parts(text: string) {
         </p>
         <p class="gloss">
           <template v-for="(part, i) in parts(entry.gloss[lang])" :key="i">
-            <em v-if="part.em">{{ part.text }}</em>
+            <a v-if="part.link" :href="`#${part.link}`" class="xref">{{ part.text }}</a>
+            <em v-else-if="part.em">{{ part.text }}</em>
             <template v-else>{{ part.text }}</template>
           </template>
         </p>
@@ -192,6 +206,14 @@ function parts(text: string) {
   line-height: 1.7;
   max-width: 62ch;
   text-wrap: pretty;
+}
+
+.gloss .xref {
+  color: var(--vp-c-brand-1);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.16em;
 }
 
 .ref {
