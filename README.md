@@ -114,11 +114,48 @@ To verify the site in Google Search Console, paste the token from the **HTML
 tag** method into `GOOGLE_SITE_VERIFICATION` in that file. The HTML-file method
 cannot be used, because the main site's deploy workflow rejects `.html` sources.
 
+## Moving to a custom domain
+
+A `github.io` address is a real cost on a business card and in search results,
+and nothing in this setup prevents the move. Four things change, in this order.
+
+1. **The origin.** `HOSTNAME` in `docs/.vitepress/seo.ts` reads
+   `SITE_ORIGIN` and falls back to today's value, so the build takes it from the
+   environment. Verify before committing anything:
+
+   ```sh
+   SITE_ORIGIN=https://example.at npm run docs:build
+   ```
+
+   Canonicals, `hreflang`, the sitemap and every schema.org `@id` follow it.
+   Set the same variable in both deploy workflows.
+
+2. **The DNS and the Pages setting**, on the **main** repository only. The
+   Clown site follows automatically at `example.at/clown/`.
+
+3. **The three absolute links** from `docs/production.md` and its two
+   translations to the main site. They cannot read the config, so they are
+   edited by hand — and `npm run check:links` fails on the old domain once it
+   stops resolving, which is the safety net.
+
+4. **Search Console**: add the new property and use the change-of-address tool.
+   The old `github.io` URLs keep working, so nothing 404s during the move.
+
+What does **not** change: the `tag:` identifiers in the citations feed. Those
+are permanent by design — a tag URI is not a URL and must survive a move, which
+is the whole reason the feed uses them.
+
 ## Deployment
 
 Pushing to `main` builds the site and deploys it to GitHub Pages.
 
-> **Pages → Custom domain must stay empty.** The repository is served from the
-> `/clown/` sub-path of `titaniachaos.github.io`, which is what `base` in
-> `docs/.vitepress/config.mts` and every canonical URL assume. Setting a custom
-> domain redirects the sub-path away and breaks those URLs.
+> **Do not set a custom domain on *this* repository.** The Clown site is a
+> project site served from the `/clown/` sub-path, and `base` in
+> `docs/.vitepress/config.mts` assumes it. A custom domain here would move it to
+> the root of that domain and every internal path would be wrong.
+>
+> A custom domain on the **main** repository is a different matter, and is
+> supported: GitHub serves project sites from the user site's custom domain with
+> the repository name appended, so `example.at/clown/` would keep working. See
+> [About custom domains and GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages).
+> What does need changing is listed under Moving to a custom domain below.
