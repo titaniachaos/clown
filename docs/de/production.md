@@ -6,11 +6,15 @@ outline: [2, 2]
 
 # Produktion und Unterstützung
 
+<span id="solo"></span>
+
 Ein Clown mag allein auf der Bühne stehen. Die Arbeit zu erschaffen, ist eine andere Sache.
 
 Solo Titania Chaos braucht Zeit in einem Raum, Blicke von außen, technische Zusammenarbeit, Begegnungen mit Publikum — und schließlich Partner:innen, die dabei helfen können, das Projekt vom Studioexperiment zur Aufführung zu führen.
 
 Diese Seite öffnet die Tür zu diesem Prozess: was die Arbeit braucht, was noch entschieden wird und wie Menschen und Institutionen Teil davon werden können.
+
+## Was die Arbeit braucht {#needs}
 
 Die Aufführung ist bewusst klein. Die Bedingungen, unter denen sie präzise werden kann, sind es nicht.
 
@@ -248,21 +252,6 @@ Gespräche mit Veranstaltenden beginnen bereits während der Proben, weil Progra
 ### Interne Produktionsunterlagen
 
 Förderfristen, Zugangsvoraussetzungen und Arbeitsbudgets bleiben in den internen Produktionsunterlagen, weil sie sich ändern und vor der Verwendung an den aktuellen Ausschreibungen geprüft werden müssen.
-
-## Über das Projekt {#about}
-
-Clown ist der Dokumentationsort für **Solo Titania Chaos**: eine strukturierte Wissensbasis für Recherche, Materialerzeugung, Dramaturgie, Probenplanung und Produktion.
-
-### Zweck
-
-Diese Website hält den künstlerischen Prozess lesbar, während das Solo entsteht. Sie bringt Fragen, Experimente und Produktionsdenken an einen Ort, ohne sie mit den öffentlichen Workshop-Seiten zu vermischen.
-
-### Arbeitsfelder
-
-- Recherche zu Clown, Präsenz, Rhythmus und Publikumskontakt
-- Spielbares Material und Probenexperimente
-- Dramaturgische Strukturen und konkurrierende Fassungen
-- Produktionsentscheidungen, Meilensteine und praktische Vorbereitung
 
 ## Faire Bezahlung {#fairpay}
 
