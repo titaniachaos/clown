@@ -174,7 +174,7 @@ export const WORKS: Work[] = [
     issue: '2',
     pages: '231–242',
     doi: '10.1080/19443927.2011.553239',
-    records: ['flop'],
+    records: ['training-paradox'],
     read: 'scholarship'
   },
   {
@@ -185,7 +185,7 @@ export const WORKS: Work[] = [
     title: 'L’écoute et la chute: Le sens du lieu commun dans le jeu clownesque et ses échos dans l’écriture poétique',
     container: 'Fabula, Lieu(x) commun(s)',
     url: 'https://www.fabula.org/colloques/document8603.php',
-    records: ['flop'],
+    records: ['shared-floor'],
     read: 'full-text'
   },
   {
@@ -240,7 +240,7 @@ export const WORKS: Work[] = [
     publisher: 'Heinemann',
     translator: 'M. Pemberton',
     note: 'Translated from Ich lebe gern!; edited by Eduard Behrens.',
-    records: ['playful-anarchy'],
+    records: ['grock'],
     read: 'not-read'
   },
   {
@@ -260,8 +260,9 @@ export const WORKS: Work[] = [
     year: '1900',
     title: 'Le rire: Essai sur la signification du comique',
     publisher: 'Félix Alcan',
-    note: 'Parts I.i and III.',
-    records: ['bergson-echo', 'bergson-insensibility'],
+    note: 'Parts I.i, I.iv and III. Read in the Brereton and Rothwell translation, where the three conditions are named together: unsociability in the performer, insensibility in the spectator, and automatism.',
+    url: 'https://www.gutenberg.org/cache/epub/4352/pg4352.txt',
+    records: ['laughter-echo', 'insensibility', 'unconscious'],
     read: 'full-text'
   },
   {
@@ -271,7 +272,7 @@ export const WORKS: Work[] = [
     year: '2013',
     title: 'Clown: Readings in theatre practice',
     publisher: 'Palgrave Macmillan',
-    records: ['davison'],
+    records: ['authenticity-effect'],
     read: 'not-read'
   },
   {
@@ -283,7 +284,7 @@ export const WORKS: Work[] = [
     descriptor: "Master's dissertation",
     institution: 'University of Cape Town',
     url: 'https://open.uct.ac.za/handle/11427/20128',
-    records: ['playful-anarchy'],
+    records: ['whiteface-split'],
     read: 'full-text'
   }
 ]
