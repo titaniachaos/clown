@@ -22,16 +22,16 @@ hero:
       link: /de/production#work
 features:
   - title: Künstlerische Recherche
-    details: Alleinsein wird als Beziehung zu einer Abwesenheit erforscht – nicht als eine einzelne Stimmung.
+    details: "Alleinsein wird als Beziehung zu einer Abwesenheit erforscht – nicht als eine einzelne Stimmung."
     link: /de/concept#modes
   - title: Sieben Bewegungen
-    details: Ein wortloser Bogen von 45 bis 60 Minuten führt vom leeren Raum bis zum letzten Abgang.
+    details: "Eine Probenhypothese, kein Plan: ein wortloser Bogen von 45 bis 60 Minuten vom leeren Raum bis zum letzten Abgang, der seine Reihenfolge vor einem Raum verdienen muss."
     link: /de/concept#dramaturgy
   - title: Studiopraxis
-    details: Material wird über zwölf Wochen erzeugt, vor Publikum erprobt, zusammengefügt und verdichtet.
+    details: "Material wird über zwölf Wochen erzeugt, vor Publikum erprobt, zusammengefügt und verdichtet."
     link: /de/studio-process#process
   - title: Koproduzieren oder einladen
-    details: Koproduktion, Residenz, Gastspiel, Meisterklassen — und direkte Unterstützung für Studiozeit.
+    details: "Koproduktion, Residenz, Gastspiel, Meisterklassen — und direkte Unterstützung für Studiozeit."
     link: /de/production#work
 ---
 

@@ -57,6 +57,24 @@ Kann ein wortloses Clown-Solo ein Publikum das Alleinsein erfahren lassen, statt
 
 Der Clown ist das richtige Instrument, weil Clownerie auf Komplizenschaft beruht. Ein Clown wird durch die Aufmerksamkeit des Publikums, den geteilten Atem und das Lachen lebendig. Alleinsein zu spielen erzeugt daher ein Live-Paradox: Der Clown kann nicht allein sein, solange das Publikum da ist, und nicht spielen ohne es.
 
+### Was hier neu ist {#contribution}
+
+Die Behauptung, die dieses Projekt aufstellt und an der es zu messen ist: **Ein Publikum stellt den anwesenden, nicht fordernden Zeugen bereit, den die Fähigkeit zum Alleinsein braucht.** Trifft das zu, ist ein Solo über das Alleinsein keine Darstellung des Zustands, sondern ein Fall dessen, was ihn hervorbringt — der Raum schaut dem Alleinsein nicht zu, er ist der Grund, warum es vor ihm ausgehalten werden kann.
+
+Drei Folgen ergeben sich daraus, und sie sind überprüfbar statt schmückend. [Das Lachen braucht ein Echo](/de/sources#laughter-echo), also ist jedes Lachen ein Beleg dafür, dass der Raum nicht allein ist — auf Stichwort hervorgerufen von einer Figur, die das Gegenteil behauptet. Die Flop-Skala bewertet das Scheitern nach Bloßstellung statt nach Lachstärke und misst damit das, worum es der Behauptung geht, statt das, wonach Komik sonst beurteilt wird. Und [das Zwei-in-Einem](/de/sources#two-in-one) wird aus der Spielerin heraus in ein Objekt verlegt, weil ein wortloser Clown einen inneren Dialog nicht als Dialog zeigen kann.
+
+Nichts davon gehört Winnicott, Bergson oder Arendt. Die Erweiterung ist die des Projekts, und sie ist der Teil, der falsch sein könnte.
+
+### Was als Antwort zählen würde {#answer}
+
+Die zentrale Frage zielt auf eine Erfahrung, und Erfahrungen werden nicht direkt gemessen. Zwei Dinge lassen sich messen, und darauf legt sich das Projekt fest.
+
+**Im Raum.** Der Beobachtungstest hält Haltung, Timing, Atem, Aufmerksamkeit und Erholung unter drei Bedingungen fest — allein, stille Beobachtende, Beobachtende, die lachen dürfen. Tut die Anwesenheit des Publikums, was die Behauptung ihr zuschreibt, unterscheiden sich diese Maße zwischen den Bedingungen. Unterscheiden sie sich nicht, steht die Behauptung schlecht da, wie immer sich das Stück anfühlt.
+
+**An der Methode.** [Der Unterscheidungslauf](/de/studio-process#flop-discrimination) prüft, ob echtes Nichtwissen überhaupt lesbar ist. Ein Nullbefund versenkt das Stück nicht; er verschiebt *die Überzeugung ist echt* von einer Aussage über das Publikum zu einer Anweisung an die Spielerin.
+
+Was nicht zählen wird: dass Zuschauende sich einsam fühlten, dass eine Kritik das Wort Alleinsein benutzte, oder dass der Abend bewegend war. Ein gutes trauriges Stück bringt alle drei hervor, und die Frage ist, ob diese Form etwas kann, was ein trauriges Stück nicht kann.
+
 ### Die kleinste dramatische Einheit
 
 Der **Flop** ist eine kurze Erfahrung des Bloßgestelltseins. Etwas misslingt, der Clown wird ohne Schutz ertappt, und das Lachen des Publikums stellt den Kontakt wieder her. Diesen Kreislauf in unterschiedlicher Intensität zu wiederholen, lässt Komik und Verletzlichkeit dieselbe Struktur teilen.

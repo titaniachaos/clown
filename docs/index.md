@@ -22,16 +22,16 @@ hero:
       link: /production#work
 features:
   - title: Artistic research
-    details: Solitude is explored as a relationship with absence—not as a single mood.
+    details: "Solitude is explored as a relationship with absence—not as a single mood."
     link: /concept#modes
   - title: Seven movements
-    details: A wordless 45–60 minute arc moves from the empty space to the final exit.
+    details: "A rehearsal hypothesis, not a plan: a wordless 45–60 minute arc from the empty space to the final exit, which has to earn its order in front of a room."
     link: /concept#dramaturgy
   - title: Studio practice
-    details: Material is generated, tested with audiences, assembled and tightened over twelve weeks.
+    details: "Material is generated, tested with audiences, assembled and tightened over twelve weeks."
     link: /studio-process#process
   - title: Co-produce or host
-    details: Co-production, residency, presenting, masterclasses — and direct support for studio time.
+    details: "Co-production, residency, presenting, masterclasses — and direct support for studio time."
     link: /production#work
 ---
 

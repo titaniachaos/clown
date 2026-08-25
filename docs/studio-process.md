@@ -31,7 +31,7 @@ The studio plan protects discovery from premature structure. Material is generat
 
 ### Phase 3 — Assembling · Weeks 7–9
 
-- Place surviving material against the seven-movement map.
+- Place surviving material against the seven-movement map — and against a deliberately different order, because the map is a hypothesis and this is where it is tested rather than assumed.
 - Build missing transitions or counterweights to order.
 - Run the first complete sequence.
 - Test it with a larger audience and record observable behaviour.
@@ -45,6 +45,7 @@ The studio plan protects discovery from premature structure. Material is generat
 
 ### Working rules
 
+0. A plan that cannot fail is a schedule. If by the end of week six the observer test shows no difference between playing alone, to silent observers and to a room free to laugh, the claim on [what is new here](/concept#contribution) has not survived, and the honest move is to say so on the concept page rather than to keep assembling. The material would still be worth making; the argument would need rewriting.
 1. Generate before judging.
 2. Keep the camera running; timing cannot be assessed accurately from inside the action.
 3. Record behaviour, not feelings.

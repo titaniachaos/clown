@@ -82,6 +82,14 @@ Mode 8 has no source. Letting the self loosen rather than consoling it may point
 
 Playful anarchy was the other open lineage and is now settled as the auguste. Bouffon was ruled out: it works in a gang and mocks the audience, while this clown is alone and depends on complicity. See the [material research](/studio-process#two-and-two) for what the choice makes playable.
 
+## What this ledger does not cover {#boundary}
+
+Two limits, stated so that neither has to be discovered by a reader.
+
+**The reading is European.** Twenty-one works, all of them French, German, English or Swiss in origin. There is no non-Western clown or comic tradition here, no trickster scholarship, no Bakhtin. The project works inside a European physical-comedy lineage and claims nothing beyond it; where the pages say *solitude*, they mean the condition as that lineage describes it, not a universal.
+
+**A claim without a source is the project's own.** The ledger gives the provenance of every borrowed idea. Everything else on these pages — the flop scale, the twelve-week shape, the rule that the registering comes after the collapse — is practitioner knowledge, offered as that and not as established. Where a practice claim later finds a source it moves into the ledger, as [the comic person is unconscious](#unconscious) did.
+
 ## A correction worth keeping {#correction}
 
 ::: danger There is no book called *In Praise of Flop*

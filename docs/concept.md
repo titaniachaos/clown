@@ -64,6 +64,24 @@ Can a wordless clown solo make an audience experience solitude rather than watch
 
 The clown is the right instrument because clowning is built on complicity. A clown comes alive through the audience’s attention, shared breath and laughter. Performing solitude therefore creates a live paradox: the clown cannot be alone while the audience is present, but cannot perform without them.
 
+### What is new here {#contribution}
+
+The claim this project makes, and the one it can be held to: **an audience supplies the present, undemanding witness that the capacity to be alone requires.** If that is right, a solo about solitude is not a depiction of the condition but an instance of the thing that produces it — the room is not watching solitude, it is the reason solitude can be borne in front of it.
+
+Three consequences follow, and they are testable rather than decorative. [Laughter needs an echo](/sources#laughter-echo), so every laugh is evidence that the room is not alone, produced on cue by a figure claiming to be. The flop scale rates failure by exposure rather than by laugh size, which measures what the claim is about instead of what comedy is usually judged by. And [the two-in-one](/sources#two-in-one) is put outside the performer into an object, because a wordless clown cannot stage an inner dialogue as dialogue.
+
+None of that is Winnicott's, Bergson's or Arendt's. The extension is the project's own, and it is the part that could be wrong.
+
+### What would count as an answer {#answer}
+
+The central question asks after an experience, and experiences are not measured directly. Two things can be, and the project commits to them.
+
+**In the room.** The observer test records posture, timing, breath, attention and recovery under three conditions — alone, silent observers, observers free to laugh. If the audience's presence does the work the claim says it does, those measures differ between conditions. If they do not differ, the claim is in trouble however the piece feels.
+
+**On the method.** [The discrimination run](/studio-process#flop-discrimination) tests whether genuine not-knowing is legible at all. A null there does not sink the piece; it moves *the conviction is real* from a claim about the audience to an instruction for the performer.
+
+What will not count: that spectators reported feeling lonely, that a review used the word solitude, or that the evening was moving. A competent sad play produces all three, and the question is whether this form does something a sad play cannot.
+
 ### The smallest dramatic unit
 
 The **flop** is a brief experience of exposure. Something fails, the clown is caught without protection, and the audience’s laughter restores contact. Repeating that cycle at different intensities allows comedy and vulnerability to share the same structure.

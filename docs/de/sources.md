@@ -80,6 +80,14 @@ Modus 8 hat keine Quelle. Das Lockern des Selbst statt seiner Tröstung könnte 
 
 Die spielerische Anarchie war die andere offene Linie und ist nun als der Auguste entschieden. Bouffon scheidet aus: Er arbeitet in der Gruppe und verspottet das Publikum, während dieser Clown allein ist und auf Komplizenschaft angewiesen bleibt. Die [Materialrecherche](/de/studio-process#two-and-two) zeigt, was die Wahl spielbar macht.
 
+## Was dieses Verzeichnis nicht abdeckt {#boundary}
+
+Zwei Grenzen, benannt, damit keine davon erst entdeckt werden muss.
+
+**Die Lektüre ist europäisch.** Einundzwanzig Werke, sämtlich französischer, deutscher, englischer oder Schweizer Herkunft. Keine außereuropäische Clown- oder Komiktradition, keine Trickster-Forschung, kein Bachtin. Das Projekt arbeitet innerhalb einer europäischen Linie der physischen Komik und beansprucht nichts darüber hinaus; wo die Seiten *Alleinsein* sagen, meinen sie den Zustand, wie diese Linie ihn beschreibt, nicht ein Allgemeines.
+
+**Eine Behauptung ohne Quelle gehört dem Projekt.** Das Verzeichnis gibt die Herkunft jeder entliehenen Idee an. Alles andere auf diesen Seiten — die Flop-Skala, die Zwölf-Wochen-Form, die Regel, dass das Bemerken nach dem Zusammenbruch kommt — ist Wissen aus der Praxis, als solches angeboten und nicht als gesichert. Findet eine Praxisbehauptung später eine Quelle, wandert sie ins Verzeichnis, wie es [der komische Mensch ist unbewusst](#unconscious) getan hat.
+
 ## Eine Korrektur, die bleiben sollte {#correction}
 
 ::: danger Es gibt kein Buch mit dem Titel *In Praise of Flop*

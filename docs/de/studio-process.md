@@ -27,7 +27,7 @@ Der Studioplan schützt die Entdeckung vor verfrühter Struktur. Material wird e
 
 ### Phase 3 — Zusammenfügen · Wochen 7–9
 
-- Überlebendes Material an der Karte der sieben Bewegungen ausrichten.
+- Überlebendes Material an der Karte der sieben Bewegungen ausrichten — und an einer bewusst anderen Reihenfolge, denn die Karte ist eine Hypothese, und hier wird sie erprobt statt vorausgesetzt.
 - Fehlende Übergänge oder Gegengewichte zur Reihenfolge bauen.
 - Den ersten vollständigen Durchlauf spielen.
 - Ihn vor größerem Publikum erproben und beobachtbares Verhalten protokollieren.
@@ -41,6 +41,7 @@ Der Studioplan schützt die Entdeckung vor verfrühter Struktur. Material wird e
 
 ### Arbeitsregeln
 
+0. Ein Plan, der nicht scheitern kann, ist ein Terminkalender. Zeigt der Beobachtungstest bis Ende der sechsten Woche keinen Unterschied zwischen dem Spiel allein, vor stillen Beobachtenden und vor einem Raum, der lachen darf, hat die Behauptung unter [was hier neu ist](/de/concept#contribution) nicht überlebt — und der ehrliche Zug ist, das auf der Konzeptseite zu sagen, statt weiter zusammenzufügen. Das Material wäre weiterhin wert, gemacht zu werden; das Argument müsste neu geschrieben werden.
 1. Erzeugen, bevor beurteilt wird.
 2. Die Kamera laufen lassen; Timing lässt sich aus der Handlung heraus nicht genau beurteilen.
 3. Verhalten aufzeichnen, nicht Gefühle.
