@@ -9,61 +9,182 @@ relations:
 
 What must be decided before design and booking, what the process needs, and the ways to work with the project. Read alongside [the work](/concept#concept) and [the studio](/studio-process#process).
 
-## Decision gates {#decisions}
+## Inside the making of the solo {#decisions}
 
-Some questions can remain alive in rehearsal. Others become expensive when answered late because they determine sound, light, venue, set and audience management.
+A wordless clown solo can look simple from the outside: one performer, a few objects, light, an audience.
+
+But small choices can change the entire piece.
+
+Does the clown know she is performing? Can she invent company when she is alone? How long can comedy disappear? Does a red nose change what the audience expects? What happens if a voice that has been silent for almost an hour suddenly makes a sound?
+
+Some questions can remain open for a long time. Others affect the space, technical design, dramaturgy and even where the work can eventually be presented.
+
+These are some of the questions currently being tested.
+
+**The world**
 
 ### Fiction or bare space?
 
-The working recommendation is a located but unexplained room: ordinary furniture, no backstory and nothing placed only as a symbol. Every object must be usable.
+How much does the audience need to know about where the clown is?
 
-### Does companionship succeed?
+The current direction is towards a recognisable but unexplained place: ordinary furniture, no elaborate backstory and nothing placed on stage merely as a symbol.
 
-The invented companion must work completely for a short period. Without one genuine victory, the eventual loss carries no cost and the clown is never allowed to win.
+The audience does not need to be told exactly where they are. But the clown needs a world in which things can actually happen.
 
-### What withdraws?
-
-Sound, light and audience response can withdraw in sequence. This requires early collaboration with designers and separate audience tests for each layer.
+Every object therefore has to be usable rather than merely meaningful.
 
 ### Does the clown know this is a performance?
 
-If the clown does not begin as a performer, discovering the audience remains a true event. Show-business gestures and an imagined theatre inside the fiction would weaken that discovery.
+A clown and an audience already know about each other. The question is whether the character begins with that knowledge.
 
-### Where must comedy remain?
+One possibility is that she does not begin by presenting herself as a performer. The discovery that other people are there can then become an actual event inside the piece.
 
-The cell must stay funny through effort and speed. The final withdrawal needs one early laugh before it can sustain a quieter register. Duration is cut when the audience evidence does not support it.
+If she begins with show-business gestures or behaves from the start as though she is putting on a show, that discovery largely disappears.
 
-### Who leaves at the end?
-
-The current proposal lets the audience leave while the clown remains. This choice affects house lights, doors, ushers, curtain-call expectations and festival scheduling.
-
-### Is there one vocal sound?
-
-Across a wordless 45 to 60 minutes, a single non-word sound becomes a major structural event. Its quality and placement must be chosen, not discovered accidentally in a late run.
-
-### Red nose or not?
-
-The nose changes the audience’s contract with abstraction. The smallest possible nose—or none—should be tested early against the same material before the register is fixed.
-
-It is a lineage question rather than a costume one. Davison notes that the auguste in its red-nose aspect came to signify *clown* itself, and that it is nonetheless a relatively recent phenomenon. So keeping the nose signs the lineage the ledger has just chosen, and dropping it while keeping the auguste is a position that has to be argued rather than simply preferred.
-
-### What is singing for?
-
-The skill is available and its function is not decided. A wordless hour makes any sung note enormous — larger than the single non-word sound the gate above asks about, because a voice that can sing is a voice that has been withholding. An earlier version of this project made singing Titania’s connection to the world; that is a decision, not a given. Settle what it is for before settling whether to use it, and note that it interacts with the vocal sound: two vocal events in an hour is a different piece from one.
-
-### Does the tulle earn its place?
-
-The one material already tied to Titania’s aesthetic world, and the only object here with a history: it used to stand for fragility, fantasy, freedom, dream, chaos against order. That reading is archived and the tulle currently carries no assigned meaning. It is portable, visually distinctive and physically transformable — a case for testing it, not a case for keeping it. The test is whether it produces behaviour that surprises rather than images that are beautiful, and the honest failure mode is that it photographs well and plays thin.
-
-### Is the piece one thing or several?
-
-The studio plan runs twelve weeks toward a single assembled arc and the dramaturgy proposes an order. The open question is whether the strongest material can stand as independent units, reordered or performed apart, without losing the inquiry. It is not only dramaturgical: a modular piece can be programmed into contexts a fixed hour cannot, which is the shorter outdoor variation arriving from the other direction. Test it by running the assembled order against a deliberately different one, in front of different audiences.
+This is therefore not only an acting choice. It determines the relationship between clown and audience from the beginning.
 
 ### Which venue is the work for?
 
-The full version needs controlled darkness, audience visibility and front-of-house cooperation. A separate shorter version may be necessary for daylight, outdoor and fluid-entry contexts.
+The same piece cannot simply be dropped into every kind of space unchanged.
 
-The build-blocking choices are withdrawal, ending, nose and venue. They must be resolved before technical design and booking.
+The full version currently depends on controlled darkness, the possibility of seeing or sensing the audience at particular moments, and some control over entrances, exits and attention.
+
+Daylight, outdoor performance and places where people can come and go create a fundamentally different situation.
+
+Rather than pretending otherwise, the project may develop a separate, shorter and more robust version for those contexts.
+
+**Presence & absence**
+
+### Does companionship succeed?
+
+One of the possibilities being tested is that the clown, alone in the room, creates a companion out of what is available to her.
+
+For a while, this invented relationship has to work. The clown needs to experience companionship rather than merely pretend to have it.
+
+Only then can losing it matter.
+
+Without one genuine success, there is nothing to lose — and the clown is never allowed to win.
+
+### What can disappear?
+
+Being alone is not only about whether another person is physically present.
+
+A room can become lonelier when a sound stops, when light changes, when something that seemed responsive no longer responds — or when the audience itself changes its relationship to the clown.
+
+The project is testing whether different forms of presence can withdraw one after another.
+
+Because light, sound and audience response behave very differently, these possibilities need to be tested separately rather than treated as one general effect.
+
+### Who leaves at the end?
+
+Usually a performance ends, the performer leaves or returns for applause, and eventually the audience goes home.
+
+This solo is testing another possibility: the audience leaves while the clown remains.
+
+That would turn departure itself into part of the performance. It also raises practical questions. When do the house lights change? When are doors opened? Is there a curtain call? How do the audience and front-of-house staff know what to do?
+
+A dramaturgical choice therefore becomes a production choice.
+
+Whether this ending belongs to the final piece still has to be discovered in front of an audience.
+
+**The clown's language**
+
+### Where must comedy remain?
+
+A piece about solitude can become quiet, uncomfortable or even painful. But this is still a clown piece.
+
+The question is not whether every moment must be funny, but where comedy has to remain alive.
+
+Even in darker or more withdrawn passages, effort, failure, timing or an unexpected shift can keep the clown present.
+
+Audience tests will help determine how long quieter passages can hold before the connection is lost.
+
+### Is there one vocal sound?
+
+The solo is wordless, but wordless does not necessarily mean silent.
+
+One possibility is to allow the clown a single non-verbal vocal sound.
+
+In a performance that has withheld the human voice for almost an hour, even one breath, cry, hum or other sound can become a major event.
+
+Whether such a sound belongs in the piece — and what it would do if it appears — has to be discovered deliberately rather than happening accidentally in a late run.
+
+### Red nose or not?
+
+A red nose may be tiny, but it changes what an audience sees before the clown has done anything.
+
+For many people it immediately says: **clown**. That can be useful, but it also creates expectations about what kind of clown they are about to meet.
+
+The red nose is not timeless or universal. It belongs to a particular history and tradition of clowning. Titania's own practice comes partly from that tradition, so wearing it — or deliberately not wearing it — is more than a costume decision.
+
+The project will therefore test the same material with a small red nose and without one.
+
+The question is simple: what changes in the relationship with the audience?
+
+### What is singing for?
+
+Titania can sing. That does not mean the solo needs singing.
+
+In a wordless performance, the arrival of a singing voice would be impossible to treat as a neutral detail. A voice that has remained unheard suddenly revealing itself changes the audience's understanding of the performer.
+
+Singing also belongs to an earlier stage in the development of the project, where it had a more explicit role as a form of connection.
+
+That earlier dramaturgy is no longer binding.
+
+So the question comes in the opposite order from the obvious one:
+
+Not **Can Titania sing here?**
+
+but **What would singing do to the piece?**
+
+Only if there is an answer does the question of where — or whether — it belongs become useful.
+
+**Material & form**
+
+### Does the tulle earn its place?
+
+An earlier version of the solo worked with tulle. It carried ideas of fragility, fantasy, freedom, dream and chaos against order.
+
+That earlier dramaturgy has been abandoned, but the material itself remains interesting.
+
+Tulle is light, portable, visually distinctive and physically transformable. None of that is enough reason to keep it.
+
+If it returns, it has to earn its place through play: by provoking behaviour, resistance, failure or discovery that would not happen without it.
+
+The test is not whether it produces beautiful images, but whether it gives the clown something worth doing.
+
+It may turn out that it photographs well and plays thin. If so, it goes.
+
+### Is the piece one thing or several?
+
+The project is being developed towards a full-length solo with an overall dramaturgical arc.
+
+But not every context needs — or can accommodate — the same performance.
+
+This raises a second question: can some of the strongest material also exist independently? Could parts be reordered, shortened or performed separately without becoming arbitrary fragments?
+
+This matters artistically, but also practically.
+
+A fixed 45–60 minute performance for a controlled theatre space and a shorter piece for a festival, outdoor setting or fluid audience are not necessarily the same work in different lengths.
+
+The studio process will therefore test both the assembled whole and deliberately different arrangements.
+
+The aim is not to make the work fit everywhere at any cost, but to keep it flexible enough for different settings while discovering which forms remain true to it.
+
+**What has to be decided first?**
+
+Not every open question needs an immediate answer.
+
+Four decisions, however, affect much of what comes afterwards:
+
+- **withdrawal** — what can disappear, and how?
+- **ending** — who ultimately leaves?
+- **nose** — what relationship with clown tradition and audience expectation does the piece establish?
+- **venue** — what conditions does the full work genuinely need?
+
+These choices affect technical design, rehearsal, collaboration and eventually booking.
+
+The others can remain alive in the studio for longer.
 
 ## Production approach {#production}
 
