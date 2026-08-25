@@ -21,7 +21,11 @@ export interface Award {
   funder: string
   /** 'eu' pulls the emblem, statement and disclaimer. 'national' is a plain credit. */
   kind: 'eu' | 'national'
-  /** Which statement the grant agreement specifies. */
+  /**
+   * Which statement the grant agreement specifies. REQUIRED for an EU award:
+   * the variant is written in the agreement, and defaulting it would be
+   * guessing at a legal statement. check-supporters fails if it is missing.
+   */
   statement?: 'funded' | 'co-funded'
   programme?: string
   /** Optional line of credit for national funders, per language. */

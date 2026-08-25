@@ -31,16 +31,16 @@ const national = computed(() => awards.filter((a) => a.kind === 'national'))
     <div class="supporters__row">
       <!-- The emblem is never combined with another mark, and sets the height
            every other logo inherits, so none can out-scale it. -->
-      <div v-if="eu" class="supporters__eu">
+      <div v-if="eu && eu.statement" class="supporters__eu">
         <svg
           class="supporters__emblem"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 300 200"
           role="img"
-          :aria-label="STATEMENT[eu.statement ?? 'co-funded'][l]"
+          :aria-label="STATEMENT[eu.statement!][l]"
           v-html="EU_EMBLEM"
         />
-        <p class="supporters__statement">{{ STATEMENT[eu.statement ?? 'co-funded'][l] }}</p>
+        <p class="supporters__statement">{{ STATEMENT[eu.statement!][l] }}</p>
       </div>
 
       <p v-for="a in national" :key="a.funder" class="supporters__credit">
@@ -48,7 +48,7 @@ const national = computed(() => awards.filter((a) => a.kind === 'national'))
       </p>
     </div>
 
-    <p v-if="eu" class="supporters__disclaimer">{{ disclaimer(eu.statement ?? 'co-funded', l) }}</p>
+    <p v-if="eu && eu.statement" class="supporters__disclaimer">{{ disclaimer(eu.statement!, l) }}</p>
   </section>
 </template>
 
