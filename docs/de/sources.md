@@ -36,6 +36,35 @@ Jede von ihnen wird durch einen Zeugen entschieden, nicht durch ein Argument. Wi
 Eine von ihnen löst sich nicht so auf. Bergsons Unempfindlichkeit wird durch eine Abfolge entschieden, nicht durch einen Zeugen: Der Zusammenbruch nimmt das Lachen, und der Blick danach holt das Fühlen zurück. Es ist die einzige Paradoxie hier, deren Antwort eine Reihenfolge ist.
 :::
 
+## Der Satz, den die Bücher ergeben {#theorem}
+
+Aus dem je eigenen Gewerk betrachtet, sagt jede Quelle oben dasselbe:
+
+> Eine allein vollzogene Handlung trägt keine Bedeutung, bis sie gesehen wird, und ihre Bedeutung entscheidet, wer sie sieht, nicht was getan wird.
+
+| Das Buch | Seine Fassung des Satzes |
+| --- | --- |
+| Winnicott | Die Fähigkeit zum Alleinsein wird von einem anwesenden, nicht fordernden Zeugen **aufgebaut** — und dieser Zeuge kann ein Bettchen, ein Kinderwagen oder die Atmosphäre des Raums sein |
+| Arendt | Einsamkeit spaltet das Selbst in zwei; erst andere machen es wieder eins, denn Identität wird nur von außen bestätigt |
+| Lecoq | Sei so tief wie möglich du selbst **und beobachte die Wirkung, die du auf das Publikum hast** — das Selbst wird an seiner Wirkung gelesen |
+| Gaulier, über Amsden | Ein Flop ist keine Eigenschaft des Materials: dieselbe Aufführung war an einem Abend das Komischste, was die Kompanie gesehen hatte, und trieb das Publikum am nächsten wütend hinaus |
+| Laughery | Im Fall erreicht die Spielende einen mit dem Publikum geteilten Boden |
+| Der Auguste | Zwei und zwei macht fünf ist eine private Regel, oder Terror, oder Komik — entschieden allein davon, wer im Raum ist |
+
+Die Ausnahme ist Bergsons und steht oben verzeichnet: Die Gefühllosigkeit löst sich durch Abfolge, nicht durch einen Zeugen. Ein Satz mit benannter Ausnahme ist mehr wert als einer ohne.
+
+### Was daraus für die Stunde folgt
+
+**Bewegung 2 ist kein Ereignis innerhalb der Fiktion.** Dass der Clown das Publikum sieht, ist der Augenblick, in dem das Stück überhaupt lesbar wird. Davor gibt es Verhalten, danach Bedeutung.
+
+**Bewegung 6 ist der Satz bis zum Bruch geprüft.** Die Gefährtin kann Anwesenheit tragen, was Winnicott zulässt, aber keine Identität bestätigen, was Arendt verlangt. Also funktioniert sie vollständig und kann die Sache dann nicht zu Ende bringen — weshalb sie losgelassen wird, solange der Saal noch voll ist.
+
+**Die Regel in Bewegung 5 muss das Herstellen beenden.** Arendts Isolation ist produktiv und schlägt erst in Verlassenheit um, wenn die Fähigkeit zerstört wird, Eigenes hinzuzufügen. Eine Wand, die bloß den Körper hält, lässt die Herstellende unversehrt.
+
+**Die Flop-Skala liest den Raum, nicht das Material.** Was als **behalten** verbucht wird, ist gegen ein Publikum verbucht.
+
+**Wortlosigkeit ist kein Mangel.** Komplizenschaft gilt als spontan und oft unausgesprochen, eine Stunde ohne Sprache arbeitet also in dem Kanal, den die Komplizenschaft ohnehin benutzt.
+
 ## Die offene Frage {#open}
 
 ::: warning Der geleerte Raum

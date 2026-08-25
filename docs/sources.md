@@ -38,6 +38,35 @@ Every one of them is settled by a witness rather than by an argument. Winnicott'
 One of them does not resolve that way. Bergson’s insensibility is settled by sequence rather than by a witness: the collapse takes the laugh, and the look up afterwards takes the feeling back. It is the only paradox here whose answer is a running order.
 :::
 
+## The theorem the books make {#theorem}
+
+Approached from its own trade, every source above states one thing:
+
+> An act done alone carries no meaning until it is witnessed, and its meaning is fixed by who witnesses it rather than by what is done.
+
+| The book | Its form of the statement |
+| --- | --- |
+| Winnicott | The capacity to be alone is *built* by a present, undemanding witness — and that witness may be a cot, a pram, or the atmosphere of the room |
+| Arendt | Solitude splits the self in two; only other people make it one again, because identity is confirmed only from outside |
+| Lecoq | Be yourself as profoundly as you can, *and observe the effect you have on the audience* — the self is read through its effect |
+| Gaulier, via Amsden | A flop is not a property of the material: the same show was the funniest thing the company had seen one night and drove the audience out furious the next |
+| Laughery | In the fall the performer reaches a floor shared with the public |
+| The auguste | Two and two make five is a private rule, or terror, or comedy, decided only by who is in the room |
+
+The exception is Bergson's, and it is recorded above: insensibility resolves by sequence, not by a witness. A theorem with a named exception is worth more than one without.
+
+### What follows for the hour
+
+**Movement 2 is not an event inside the fiction.** The clown seeing the audience is the moment the piece becomes readable at all. Before it there is behaviour; after it there is meaning.
+
+**Movement 6 is the theorem tested to destruction.** The companion can hold presence, which Winnicott allows, but cannot confirm an identity, which Arendt requires. So it works completely and then cannot finish the job — which is why it is let go while the room is still full.
+
+**Movement 5's rule must stop the making.** Arendt's isolation is productive and turns to loneliness only when the capacity to add something of one's own is destroyed. A wall that merely holds the body leaves the maker intact.
+
+**The flop scale reads the room, not the material.** Whatever is logged *keep* is logged against one audience.
+
+**Wordlessness is not a handicap.** Complicity is defined as spontaneous and often unexpressed, so an hour without language works inside the channel complicity already uses.
+
 ## The open question {#open}
 
 ::: warning The emptied room
