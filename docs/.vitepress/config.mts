@@ -1,3 +1,4 @@
+import { readdirSync, readFileSync } from 'node:fs'
 import { defineConfig, type DefaultTheme } from 'vitepress'
 import {
   BASE,
@@ -30,6 +31,31 @@ const LEGAL = (prefix: string) => `${HOSTNAME}${prefix}/legal-data`
 type Column = 1 | 2 | 3
 
 const HOME = ['Project Home', 'Начало на проекта', 'Projekt-Startseite'] as const
+
+/**
+ * The journal moved here from the main site, because it is the diary of this
+ * project: every entry already cited `/clown/concept` as its source. It does
+ * not fit SECTIONS -- that shape is one page with anchors, and this is a
+ * directory of posts -- so it is a section of its own, and its sidebar is read
+ * off the posts rather than typed out. Twelve entries in three languages is
+ * thirty-six titles nobody should be maintaining by hand.
+ */
+const JOURNAL = ['Journal', 'Дневник', 'Journal'] as const
+
+function journalItems(prefix: string, column: Column): DefaultTheme.SidebarItem[] {
+  const dir = new URL(`..${prefix}/blog/`, import.meta.url)
+  let names: string[] = []
+  try {
+    names = readdirSync(dir).filter((n) => n.endsWith('.md') && n !== 'index.md').sort()
+  } catch {
+    return []
+  }
+  return names.flatMap((name) => {
+    const source = readFileSync(new URL(name, dir), 'utf8')
+    const title = /^# +(.+)$/m.exec(source)?.[1]?.trim()
+    return title ? [{ text: title, link: `${prefix}/blog/${name.replace(/\.md$/, '')}` }] : []
+  })
+}
 
 const SECTIONS = [
   {
@@ -99,7 +125,13 @@ function sidebar(prefix: string, groupText: string, column: Column): DefaultThem
             text: labels[column - 1],
             link: `${prefix}/${section.slug}#${anchor}`
           }))
-        }))
+        })),
+        {
+          text: JOURNAL[column - 1],
+          link: `${prefix}/blog/`,
+          collapsed: true,
+          items: journalItems(prefix, column)
+        }
       ]
     }
   ]
@@ -113,6 +145,7 @@ function nav(prefix: string, column: Column, mainSiteLabel: string): DefaultThem
       link: `${prefix}/${section.slug}#${section.anchor}`,
       activeMatch: `${prefix}/${section.slug}`
     })),
+    { text: JOURNAL[column - 1], link: `${prefix}/blog/`, activeMatch: `${prefix}/blog` },
     // Same domain, different repository: keep the reader in their own language
     // and in the same tab.
     { text: mainSiteLabel, link: MAIN_SITE(prefix), ...SAME_SITE }
