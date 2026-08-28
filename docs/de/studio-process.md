@@ -180,7 +180,7 @@ Material verdient seinen Platz durch Spielen und Erproben — und kann ihn wiede
 
 [Zurück zur Arbeit →](./concept#concept)
 
-[Quellen und Linien erkunden →](./sources#ledger)
+[Quellen und Linien erkunden →](./sources#the-source-ledger)
 
 [Titania wegen des Projekts kontaktieren](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos){.contact-button} [Projekt unterstützen](https://revolut.me/titaniachaos){.contact-button .secondary}
 

@@ -58,7 +58,11 @@ const decode = (s) =>
 
 for (const file of files) {
   const html = await readFile(file, 'utf8')
-  const from = norm(urlOf(file))
+  // `here` keeps the trailing slash that urlOf leaves on an index page, because
+  // that is what a relative link resolves against: `./post` means `/blog/post`
+  // from /blog/ and `/post` from /blog.
+  const here = urlOf(file)
+  const from = norm(here)
 
   for (const raw of new Set([...html.matchAll(/href="([^"]*)"/g)].map((m) => m[1]))) {
     const href = decode(raw)
@@ -69,7 +73,34 @@ for (const file of files) {
       if (id && !pages.get(from).has(id)) add(file, `dead fragment ${href}`)
       continue
     }
-    if (!href.startsWith(base)) continue
+    // A relative link -- `../blog/twenty-solitudes` -- was checked by nothing
+    // at all: it starts with neither the base nor a slash, so both branches
+    // below skipped it. Relative paths are base-independent, so resolving
+    // against this page's own un-based URL gives the target directly. Moving
+    // the topic pages one directory up broke every one of their post links,
+    // and this is what said so.
+    if (!href.startsWith('/')) {
+      const [path, fragment] = decodeURI(new URL(href, `http://x${here}`).pathname + (href.includes('#') ? '#' + href.split('#')[1] : '')).split('#')
+      if (ASSET.test(path)) continue
+      const target = norm(path)
+      if (!pages.has(target)) add(file, `dead relative link ${href} -> ${target}`)
+      else if (fragment && !pages.get(target).has(fragment)) add(file, `dead relative anchor ${href}`)
+      continue
+    }
+
+    // A root-relative link that does not carry the base is normally a link to
+    // the main site, which shares this domain -- `/pictures` is theirs, not
+    // ours. But if prefixing the base makes it land on a page in this build,
+    // it is not a cross-site link at all: it is one of ours with the base
+    // left off, and it 404s in production while resolving in `vitepress dev`,
+    // which serves from the root. That is how the topic chips shipped broken.
+    if (!href.startsWith(base)) {
+      const [ours] = href.split('#')
+      if (base !== '/' && href.startsWith('/') && pages.has(norm(ours))) {
+        add(file, `link ${href} is missing the base — use withBase(), or it 404s at ${base.slice(0, -1)}${href}`)
+      }
+      continue
+    }
 
     const [path, fragment] = href.split('#')
     if (ASSET.test(path)) continue

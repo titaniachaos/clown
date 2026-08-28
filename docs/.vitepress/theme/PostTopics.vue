@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useData } from 'vitepress'
+import { useData, withBase } from 'vitepress'
 import { data } from '../media.data'
 import { TOPIC_NAMES, topicPath } from '../topics.ts'
 import type { Topic } from '../topics.ts'
@@ -35,7 +35,7 @@ const topics = computed(() => {
 
 <template>
   <nav v-if="topics.length" class="post-topics">
-    <a v-for="topic in topics" :key="topic" :href="topicPath(lang, topic)">
+    <a v-for="topic in topics" :key="topic" :href="withBase(topicPath(lang, topic))">
       {{ TOPIC_NAMES[lang][topic as Topic] }}
     </a>
   </nav>

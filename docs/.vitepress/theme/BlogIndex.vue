@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { withBase } from 'vitepress'
 import { data } from '../media.data'
 import { TOPICS, TOPIC_NAMES, topicPath } from '../topics.ts'
 import type { Topic } from '../topics.ts'
@@ -35,7 +36,7 @@ const topics = computed(() => {
   return TOPICS.map((topic) => ({
     topic,
     name: TOPIC_NAMES[lang.value][topic as Topic],
-    path: topicPath(lang.value, topic),
+    path: withBase(topicPath(lang.value, topic)),
     count: all.filter((p) => p.topics.includes(topic)).length
   }))
     .filter((t) => t.count > 0)

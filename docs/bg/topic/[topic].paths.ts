@@ -10,13 +10,13 @@ import { TOPICS, TOPIC_NAMES, TOPIC_UI, fill } from '../../.vitepress/topics.ts'
  */
 export default {
   paths() {
-    const ui = TOPIC_UI['en']
+    const ui = TOPIC_UI['bg']
     return TOPICS.map((topic) => ({
       params: {
         topic,
-        name: TOPIC_NAMES['en'][topic],
-        title: fill(ui.title, TOPIC_NAMES['en'][topic]),
-        description: fill(ui.description, TOPIC_NAMES['en'][topic])
+        name: TOPIC_NAMES['bg'][topic],
+        title: fill(ui.title, TOPIC_NAMES['bg'][topic]),
+        description: fill(ui.description, TOPIC_NAMES['bg'][topic])
       }
     }))
   }

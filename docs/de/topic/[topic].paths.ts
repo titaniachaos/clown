@@ -1,4 +1,4 @@
-import { TOPICS, TOPIC_NAMES, TOPIC_UI, fill } from '../../../.vitepress/topics.ts'
+import { TOPICS, TOPIC_NAMES, TOPIC_UI, fill } from '../../.vitepress/topics.ts'
 
 /**
  * A page per topic, generated from the vocabulary rather than written.
@@ -10,13 +10,13 @@ import { TOPICS, TOPIC_NAMES, TOPIC_UI, fill } from '../../../.vitepress/topics.
  */
 export default {
   paths() {
-    const ui = TOPIC_UI['bg']
+    const ui = TOPIC_UI['de']
     return TOPICS.map((topic) => ({
       params: {
         topic,
-        name: TOPIC_NAMES['bg'][topic],
-        title: fill(ui.title, TOPIC_NAMES['bg'][topic]),
-        description: fill(ui.description, TOPIC_NAMES['bg'][topic])
+        name: TOPIC_NAMES['de'][topic],
+        title: fill(ui.title, TOPIC_NAMES['de'][topic]),
+        description: fill(ui.description, TOPIC_NAMES['de'][topic])
       }
     }))
   }

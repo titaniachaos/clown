@@ -105,4 +105,4 @@ export const fill = (template: string, value: string | number) => template.repla
 
 /** A topic's page, per language. */
 export const topicPath = (lang: Lang, topic: string) =>
-  `${lang === 'en' ? '' : `/${lang}`}/blog/topic/${topic}`
+  `${lang === 'en' ? '' : `/${lang}`}/topic/${topic}`

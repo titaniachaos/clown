@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useData } from 'vitepress'
+import { useData, withBase } from 'vitepress'
 import { data } from '../media.data'
 import { TOPIC_NAMES, TOPIC_UI, fill, topicPath } from '../topics.ts'
 import type { Topic } from '../topics.ts'
@@ -34,7 +34,7 @@ const posts = computed(() =>
 const siblings = computed(() =>
   Object.keys(names.value)
     .filter((other) => other !== topic.value && data.posts[lang.value].some((p) => p.topics.includes(other)))
-    .map((other) => ({ topic: other, name: names.value[other as Topic], path: topicPath(lang.value, other) }))
+    .map((other) => ({ topic: other, name: names.value[other as Topic], path: withBase(topicPath(lang.value, other)) }))
 )
 
 const countOf = (n: number) => (n === 1 ? t.value.one : fill(t.value.many, n))
@@ -47,7 +47,7 @@ const countOf = (n: number) => (n === 1 ? t.value.one : fill(t.value.many, n))
 
     <ul class="topic__list">
       <li v-for="post in posts" :key="post.slug" class="topic__item">
-        <a class="topic__link" :href="`../${post.slug}`">
+        <a class="topic__link" :href="`../blog/${post.slug}`">
           <img
             v-if="post.frame"
             class="topic__tile"
@@ -67,7 +67,7 @@ const countOf = (n: number) => (n === 1 ? t.value.one : fill(t.value.many, n))
           <a
             v-for="other in post.topics"
             :key="other"
-            :href="topicPath(lang, other)"
+            :href="withBase(topicPath(lang, other))"
             :class="{ 'topic__tag--here': other === topic }"
           >{{ names[other as Topic] }}</a>
         </p>
@@ -75,7 +75,7 @@ const countOf = (n: number) => (n === 1 ? t.value.one : fill(t.value.many, n))
     </ul>
 
     <nav v-if="siblings.length" class="topic__siblings">
-      <a :href="`../`">{{ t.all }}</a>
+      <a :href="`../blog/`">{{ t.all }}</a>
       <a v-for="other in siblings" :key="other.topic" :href="other.path">{{ other.name }}</a>
     </nav>
   </section>

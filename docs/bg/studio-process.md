@@ -180,7 +180,7 @@ outline: [2, 2]
 
 [Обратно към Работата →](./concept#concept)
 
-[Разгледайте източниците и линиите →](./sources#ledger)
+[Разгледайте източниците и линиите →](./sources#the-source-ledger)
 
 [Свържете се с Титания за проекта](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos){.contact-button} [Подкрепете проекта](https://revolut.me/titaniachaos){.contact-button .secondary}
 
