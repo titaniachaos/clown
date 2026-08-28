@@ -27,4 +27,4 @@ tags: ["Български","Clown Project","Solitude","Studio Practice","Failur
 
 **Източник и контекст:** [/clown/bg/studio-process](https://titaniachaos.github.io/clown/bg/studio-process#двадесет-уединения)
 
-[← Обратно към дневника](./)
+[← Обратно към блога](./)

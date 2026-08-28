@@ -33,4 +33,4 @@ The conditions themselves are not supplied by the research in advance. They can 
 
 **Source and context:** [/clown/studio-process](https://titaniachaos.github.io/clown/studio-process#twenty-solitudes)
 
-[← Back to the journal](./)
+[← Back to the blog](./)

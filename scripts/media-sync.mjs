@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Refreshes the borrowed media index from the main site.
 //
-// The journal's photographs live on titaniachaos.github.io. This repository
+// the blog's photographs live on titaniachaos.github.io. This repository
 // stores no image files at all -- only `docs/.vitepress/media-index.json`, a
 // copy of what that site publishes at `/media.json`: ids, tags, dimensions,
 // alt text and captions in three languages, and the absolute URLs the pages

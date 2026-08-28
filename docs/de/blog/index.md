@@ -1,74 +1,20 @@
 ---
-title: "Journal"
+title: "Blog"
 description: "Notizen über Clownkunst, künstlerische Forschung, Studiopraxis, Lachen, Alleinsein und die Arbeit mit Publikum."
 outline: [2, 2]
 ---
 
-# Journal
+# Blog
 
-Ein mehrsprachiges Journal aus Titania Chaos’ künstlerischer Praxis, ihren Workshops und der Entwicklung des wortlosen Clown-Solos.
+Ein mehrsprachiger Blog aus Titania Chaos’ künstlerischer Praxis, ihren Workshops und der Entwicklung des wortlosen Clown-Solos.
 
-<JournalIndex />
+<BlogIndex />
 
-## [Der zentrale Widerspruch](./the-central-contradiction)
 
-Kann ein Clown das Alleinsein untersuchen, wenn Clown durch Beziehung existiert? Clown entsteht durch Kontakt. Etwas geschieht, der Clown registriert es, das Publikum registriert…
 
-`Deutsch` `Clown Project` `Clowning` `Solitude`
 
-[Artikel lesen →](./the-central-contradiction)
 
----
 
-## [Fragen für das Studio](./questions-for-the-studio)
-
-Das Projekt hat derzeit Fragen statt Szenen. Sie sind keine verborgene Synopsis, sondern Ausgangspunkte körperlicher Untersuchung. Kann Titania das Publikum entdecken? Kann das…
-
-`Deutsch` `Clown Project` `Clowning` `Solitude`
-
-[Artikel lesen →](./questions-for-the-studio)
-
----
-
-## [Was unbekannt bleibt](./what-remains-unknown)
-
-Sehr vieles — mit Absicht. Warum dieses Thema jetzt? Ich habe noch keine Antwort, der ich vertraue. Unbekannt ist auch, welches Material die Probe überlebt, welche Gesamtstruktur…
-
-`Deutsch` `Clown Project` `Solo Titania Chaos` `Audience`
-
-[Artikel lesen →](./what-remains-unknown)
-
----
-
-## [Was bereits feststeht](./what-is-already-known)
-
-Solo Titania Chaos wird als körperliches, wortloses Clown-Solo über Alleinsein / allein sein entwickelt. Das Feld umfasst Alleinsein, Einsamkeit, Isolation, Verbindung,…
-
-`Deutsch` `Clown Project` `Clowning` `Solo Titania Chaos`
-
-[Artikel lesen →](./what-is-already-known)
-
----
-
-## [Das Forschungsfeld](./the-research-field)
-
-Die Recherche versammelt unterschiedliche Denkweisen über das Alleinsein: Alleinsein, Einsamkeit, Isolation, gewähltes und auferlegtes Alleinsein, Privatheit, Abwesenheit,…
-
-`Deutsch` `Clown Project` `Solitude` `Studio Practice`
-
-[Artikel lesen →](./the-research-field)
-
----
-
-## [Was die Arbeit braucht](./what-the-work-needs)
-
-Die Aufführung ist bewusst klein. Die Bedingungen, unter denen sie präzise werden kann, sind es nicht. Das Material wird durch körperliche Forschung und nicht aus einem fertigen…
-
-`Deutsch` `Clown Project` `Solo Titania Chaos` `Audience`
-
-[Artikel lesen →](./what-the-work-needs)
-
----
 
 ## [Zwanzig Formen des Alleinseins](./twenty-solitudes)
 

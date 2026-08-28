@@ -21,4 +21,4 @@ tags: ["English","Clown Project","Solo Titania Chaos","Audience","Sources","Perf
 
 **Source and context:** [/clown/sources](https://titaniachaos.github.io/clown/sources#philippe-gaulier-complicite)
 
-[← Back to the journal](./)
+[← Back to the blog](./)

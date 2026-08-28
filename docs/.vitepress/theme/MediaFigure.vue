@@ -4,15 +4,15 @@ import { data } from '../media.data'
 import { useLang } from './useLang.ts'
 
 /**
- * A photograph from the main site, set into the text of a journal entry.
+ * A photograph from the main site, set into the text of a blog entry.
  *
- * The picture is named rather than searched for: a journal entry is about one
+ * The picture is named rather than searched for: a blog entry is about one
  * thing, and the photograph beside it was chosen for those words. `id` is a
  * frame on `titaniachaos.github.io`, which is where the archive, the alt text
  * and the record of who is in the frame all live. Nothing is copied here.
  *
  * The home page keeps its own hero of paradoxes -- text, not photographs, and
- * deliberately so. Pictures belong in the prose of the journal, not in front
+ * deliberately so. Pictures belong in the prose of the blog, not in front
  * of the argument.
  */
 

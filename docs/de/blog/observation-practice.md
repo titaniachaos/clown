@@ -27,4 +27,4 @@ Halte Beobachtungen klein und wörtlich. Löse ausgewählte Verhaltensweisen sp�
 
 **Quelle und Kontext:** [/clown/de/studio-process](https://titaniachaos.github.io/clown/de/studio-process#beobachtungspraxis)
 
-[← Zurück zum Journal](./)
+[← Zurück zum Blog](./)

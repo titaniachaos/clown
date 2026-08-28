@@ -44,7 +44,7 @@ export interface Frame {
   othersInFrame?: string
 }
 
-/** A journal post, as its index needs to link to it. */
+/** A blog post, as its index needs to link to it. */
 export interface Post {
   slug: string
   title: string
@@ -55,7 +55,7 @@ export interface Post {
 export interface Data {
   origin: string
   frames: Frame[]
-  /** The journal, per language, in the order the index lists it. */
+  /** The blog, per language, in the order the index lists it. */
   posts: Record<Lang, Post[]>
   /** `Watch on YouTube` and the like, per language. */
   ui: Record<Lang, { photo: string; video: string; source: string }>
@@ -74,7 +74,7 @@ const LANGS: Lang[] = ['en', 'bg', 'de']
 const DOCS = join(HERE, '..')
 
 /**
- * The journal, read off the posts themselves.
+ * The blog, read off the posts themselves.
  *
  * The index page could list the posts by hand, and did; what it could not do
  * is know which photograph each one carries, because the post decides that.
@@ -82,7 +82,7 @@ const DOCS = join(HERE, '..')
  * that changes its picture changes the index without anybody remembering the
  * index exists.
  */
-async function journal(): Promise<Data['posts']> {
+async function blog(): Promise<Data['posts']> {
   const out = { en: [] as Post[], bg: [] as Post[], de: [] as Post[] }
   for (const lang of LANGS) {
     const dir = join(DOCS, lang === 'en' ? 'blog' : `${lang}/blog`)
@@ -104,12 +104,12 @@ async function journal(): Promise<Data['posts']> {
 export default defineLoader({
   watch: ['./media-index.json', '../blog/*.md', '../bg/blog/*.md', '../de/blog/*.md'],
   async load(): Promise<Data> {
-    const posts = await journal()
+    const posts = await blog()
     let index: { origin?: string; media?: Frame[] }
     try {
       index = JSON.parse(await readFile(join(HERE, 'media-index.json'), 'utf8'))
     } catch {
-      // No index is not an error: the journal simply renders without pictures,
+      // No index is not an error: the blog simply renders without pictures,
       // which is better than a build that fails on a file this repository does
       // not own.
       return { origin: '', frames: [], posts, ui }

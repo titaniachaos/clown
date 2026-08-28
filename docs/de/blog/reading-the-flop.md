@@ -23,4 +23,4 @@ Das sind Unterscheidungen zum Lesen des Geschehenen, keine Stufen zum Erklimmen.
 
 **Quelle und Kontext:** [/clown/de/studio-process](https://titaniachaos.github.io/clown/de/studio-process#den-flop-lesen)
 
-[← Zurück zum Journal](./)
+[← Zurück zum Blog](./)

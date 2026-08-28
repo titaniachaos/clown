@@ -23,4 +23,4 @@ tags: ["English","Clown Project","Solitude","Audience","Studio Practice","Source
 
 **Source and context:** [/clown/sources](https://titaniachaos.github.io/clown/sources#d-w-winnicott-the-capacity-to-be-alone)
 
-[← Back to the journal](./)
+[← Back to the blog](./)

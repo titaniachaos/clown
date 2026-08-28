@@ -31,4 +31,4 @@ Later, take selected behaviours out of their original context and test them phys
 
 **Source and context:** [/clown/studio-process](https://titaniachaos.github.io/clown/studio-process#observation-practice)
 
-[← Back to the journal](./)
+[← Back to the blog](./)

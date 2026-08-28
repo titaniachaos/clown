@@ -23,4 +23,4 @@ tags: ["English","Clown Project","Clowning","Studio Practice","Failure","Sources
 
 **Source and context:** [/clown/sources](https://titaniachaos.github.io/clown/sources#henri-bergson-comic-unconsciousness)
 
-[← Back to the journal](./)
+[← Back to the blog](./)

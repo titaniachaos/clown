@@ -34,4 +34,4 @@ Do not introduce numerical ratings.
 
 **Source and context:** [/clown/studio-process](https://titaniachaos.github.io/clown/studio-process#reading-the-flop)
 
-[← Back to the journal](./)
+[← Back to the blog](./)

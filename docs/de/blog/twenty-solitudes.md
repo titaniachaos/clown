@@ -27,4 +27,4 @@ Die Bedingungen werden nicht im Voraus von der Recherche geliefert. Sie können 
 
 **Quelle und Kontext:** [/clown/de/studio-process](https://titaniachaos.github.io/clown/de/studio-process#zwanzig-formen-des-alleinseins)
 
-[← Zurück zum Journal](./)
+[← Zurück zum Blog](./)

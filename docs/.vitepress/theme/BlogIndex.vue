@@ -4,7 +4,7 @@ import { data } from '../media.data'
 import { useLang } from './useLang.ts'
 
 /**
- * The journal as pictures, above the written index.
+ * The blog as pictures, above the written index.
  *
  * The entries below are twelve hand-written summaries and they are the better
  * read. What they cannot show is that each post carries a photograph, so a

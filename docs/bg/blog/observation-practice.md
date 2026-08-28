@@ -27,4 +27,4 @@ tags: ["Български","Clown Project","Solitude","Failure","Object Play","
 
 **Източник и контекст:** [/clown/bg/studio-process](https://titaniachaos.github.io/clown/bg/studio-process#практика-на-наблюдението)
 
-[← Обратно към дневника](./)
+[← Обратно към блога](./)

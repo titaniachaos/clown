@@ -1,74 +1,20 @@
 ---
-title: "Journal"
+title: "Blog"
 description: "Notes on clowning, artistic research, studio practice, laughter, solitude and working with audiences."
 outline: [2, 2]
 ---
 
-# Journal
+# Blog
 
-A multilingual journal drawn from Titania Chaos’ artistic practice, workshops and the development of the wordless clown solo.
+A multilingual blog drawn from Titania Chaos’ artistic practice, workshops and the development of the wordless clown solo.
 
-<JournalIndex />
+<BlogIndex />
 
-## [The central contradiction](./the-central-contradiction)
 
-Can a clown investigate being alone when clown exists through relationship? Clown happens through contact. Something occurs, the clown registers it, the audience registers the…
 
-`English` `Clown Project` `Clowning` `Solitude`
 
-[Read article →](./the-central-contradiction)
 
----
 
-## [Questions for the studio](./questions-for-the-studio)
-
-The project currently has questions rather than scenes. They are not a hidden synopsis. They are starting points for physical investigation. Can Titania discover the audience? Can…
-
-`English` `Clown Project` `Clowning` `Solitude`
-
-[Read article →](./questions-for-the-studio)
-
----
-
-## [What remains unknown](./what-remains-unknown)
-
-A great deal — deliberately. Why this subject now? I do not yet have an answer that I trust. It is also not yet known what material will survive rehearsal, what overall structure…
-
-`English` `Clown Project` `Solo Titania Chaos` `Audience`
-
-[Read article →](./what-remains-unknown)
-
----
-
-## [What is already known](./what-is-already-known)
-
-Solo Titania Chaos is being developed as a physical, wordless clown solo around solitude / being alone. The field includes solitude, loneliness, isolation, connection, privacy,…
-
-`English` `Clown Project` `Clowning` `Solo Titania Chaos`
-
-[Read article →](./what-is-already-known)
-
----
-
-## [The research field](./the-research-field)
-
-Research around the project brings together different ways of thinking about being alone: solitude, loneliness, isolation, chosen and imposed aloneness, privacy, absence,…
-
-`English` `Clown Project` `Solitude` `Studio Practice`
-
-[Read article →](./the-research-field)
-
----
-
-## [What the work needs](./what-the-work-needs)
-
-The performance is deliberately small. The conditions that allow it to become precise are not. The material is developed through physical research rather than from a finished…
-
-`English` `Clown Project` `Solo Titania Chaos` `Audience`
-
-[Read article →](./what-the-work-needs)
-
----
 
 ## [Twenty Solitudes](./twenty-solitudes)
 

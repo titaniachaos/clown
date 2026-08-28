@@ -21,4 +21,4 @@ tags: ["Български","Clown Project","Solo Titania Chaos","Audience","Sou
 
 **Източник и контекст:** [/clown/bg/sources](https://titaniachaos.github.io/clown/bg/sources#филип-голие-complicite)
 
-[← Обратно към дневника](./)
+[← Обратно към блога](./)

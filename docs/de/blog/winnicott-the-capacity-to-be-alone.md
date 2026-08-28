@@ -23,4 +23,4 @@ tags: ["Deutsch","Clown Project","Solitude","Audience","Studio Practice","Source
 
 **Quelle und Kontext:** [/clown/de/sources](https://titaniachaos.github.io/clown/de/sources#d-w-winnicott-die-fahigkeit-zum-alleinsein)
 
-[← Zurück zum Journal](./)
+[← Zurück zum Blog](./)

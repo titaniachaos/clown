@@ -23,4 +23,4 @@ tags: ["Български","Clown Project","Clowning","Studio Practice","Failur
 
 **Източник и контекст:** [/clown/bg/sources](https://titaniachaos.github.io/clown/bg/sources#анри-бергсон-комичното-несъзнаване)
 
-[← Обратно към дневника](./)
+[← Обратно към блога](./)

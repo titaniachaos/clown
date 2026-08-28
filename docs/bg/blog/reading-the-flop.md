@@ -23,4 +23,4 @@ tags: ["Български","Clown Project","Audience","Failure","question"]
 
 **Източник и контекст:** [/clown/bg/studio-process](https://titaniachaos.github.io/clown/bg/studio-process#разчитане-на-флопа)
 
-[← Обратно към дневника](./)
+[← Обратно към блога](./)

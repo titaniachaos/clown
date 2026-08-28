@@ -23,4 +23,4 @@ tags: ["Deutsch","Clown Project","Clowning","Studio Practice","Failure","Sources
 
 **Quelle und Kontext:** [/clown/de/sources](https://titaniachaos.github.io/clown/de/sources#henri-bergson-komische-unbewusstheit)
 
-[← Zurück zum Journal](./)
+[← Zurück zum Blog](./)

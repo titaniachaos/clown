@@ -23,4 +23,4 @@ tags: ["Български","Clown Project","Solitude","Audience","Studio Practi
 
 **Източник и контекст:** [/clown/bg/sources](https://titaniachaos.github.io/clown/bg/sources#д-у-уиникът-способността-да-бъдеш-сам)
 
-[← Обратно към дневника](./)
+[← Обратно към блога](./)

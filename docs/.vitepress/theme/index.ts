@@ -8,7 +8,7 @@ import FairPay from './FairPay.vue'
 import QuestionDisclosure from './QuestionDisclosure.vue'
 import HeroSlider from './HeroSlider.vue'
 import MediaFigure from './MediaFigure.vue'
-import JournalIndex from './JournalIndex.vue'
+import BlogIndex from './BlogIndex.vue'
 import './custom.css'
 
 export default {
@@ -28,6 +28,6 @@ export default {
     // The journal's photographs. They are served from the main site; this
     // repository stores only the index of them. See media.data.ts.
     app.component('MediaFigure', MediaFigure)
-    app.component('JournalIndex', JournalIndex)
+    app.component('BlogIndex', BlogIndex)
   }
 } satisfies Theme
