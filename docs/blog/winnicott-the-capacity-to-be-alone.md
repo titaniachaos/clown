@@ -2,7 +2,7 @@
 title: "D. W. Winnicott — the capacity to be alone"
 description: "Status: Verified Source finding: Winnicott describes the capacity to be alone through the paradox of being alone in the presence of a reliable, non-demanding other. For this."
 outline: [2, 3]
-tags: ["English","Clown Project","Solitude","Audience","Studio Practice","Sources","Performance","source card"]
+tags: ["solitude","audience","studio-practice","sources","performance","reading-note"]
 ---
 
 # D. W. Winnicott — the capacity to be alone

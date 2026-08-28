@@ -44,12 +44,16 @@ export interface Frame {
   othersInFrame?: string
 }
 
-/** A blog post, as its index needs to link to it. */
+/** A blog post, as its index and its topic pages need it. */
 export interface Post {
   slug: string
   title: string
   /** The frame the post names, if it names one. */
   id?: string
+  /** What it is about and what kind of thing it is. See topics.ts. */
+  topics: string[]
+  /** The first line of it, for a topic page that has to say what a post is. */
+  summary: string
 }
 
 export interface Data {
@@ -91,10 +95,19 @@ async function blog(): Promise<Data['posts']> {
       const source = await readFile(join(dir, name), 'utf8')
       const title = /^# +(.+)$/m.exec(source)?.[1]?.trim()
       if (!title) continue
+      const body = source.replace(/^---\n[\s\S]*?\n---\n/, '')
+      const summary = body
+        .split('\n')
+        .find((line) => /^[A-Za-zА-Яа-яÄÖÜäöü*]/.test(line.trim()) && !line.startsWith('#'))
+        ?.replace(/\*\*/g, '')
+        .trim()
+
       out[lang].push({
         slug: name.replace(/\.md$/, ''),
         title,
-        id: /<MediaFigure[^>]*\bid="([^"]+)"/.exec(source)?.[1]
+        id: /<MediaFigure[^>]*\bid="([^"]+)"/.exec(source)?.[1],
+        topics: [...(/^tags: \[(.*)\]$/m.exec(source)?.[1] ?? '').matchAll(/"([a-z-]+)"/g)].map((m) => m[1]),
+        summary: summary ?? ''
       })
     }
   }

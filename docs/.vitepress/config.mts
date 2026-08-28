@@ -218,6 +218,19 @@ export default defineConfig({
       : [])
   ],
 
+  // A generated page's frontmatter can hold `{{ $params.title }}`, and Vue will
+  // interpolate it in the body -- but not in <title> or the meta description,
+  // which are read before any component runs. Every topic page shipped with the
+  // literal braces in its tab and its search result. The params are already
+  // here, so the page data is filled in from them.
+  transformPageData(pageData) {
+    const params = pageData.params as { title?: string; description?: string } | undefined
+    if (!params?.title) return
+    pageData.title = params.title
+    pageData.description = params.description ?? pageData.description
+    pageData.frontmatter = { ...pageData.frontmatter, title: params.title, description: params.description }
+  },
+
   transformHead: (ctx) => buildHead(ctx, ctx.siteConfig),
 
   transformHtml: (code, _id, ctx) => {

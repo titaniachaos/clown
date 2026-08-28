@@ -9,6 +9,8 @@ import QuestionDisclosure from './QuestionDisclosure.vue'
 import HeroSlider from './HeroSlider.vue'
 import MediaFigure from './MediaFigure.vue'
 import BlogIndex from './BlogIndex.vue'
+import BlogTopic from './BlogTopic.vue'
+import PostTopics from './PostTopics.vue'
 import './custom.css'
 
 export default {
@@ -18,6 +20,9 @@ export default {
   // until a grant is signed.
   Layout: () => h(DefaultTheme.Layout, null, {
       'home-hero-image': () => h(HeroSlider),
+      // The tags a post already carries, as links. Placed here rather than in
+      // eighteen Markdown files; renders nothing off a post.
+      'doc-after': () => h(PostTopics),
       'layout-bottom': () => h(Supporters)
     }),
   enhanceApp({ app }) {
@@ -29,5 +34,6 @@ export default {
     // repository stores only the index of them. See media.data.ts.
     app.component('MediaFigure', MediaFigure)
     app.component('BlogIndex', BlogIndex)
+    app.component('BlogTopic', BlogTopic)
   }
 } satisfies Theme

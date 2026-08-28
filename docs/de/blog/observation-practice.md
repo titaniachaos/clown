@@ -2,7 +2,7 @@
 title: "Beobachtungspraxis"
 description: "Beobachte alleiniges Verhalten, ohne Motive zuzuschreiben. Notiere nur Sicht- oder Hörbares: Handlungen, Wiederholungen, Pausen, kleine Rituale, Raumnutzung, Beziehungen zu."
 outline: [2, 3]
-tags: ["Deutsch","Clown Project","Solitude","Studio Practice","Failure","Object Play","quotation"]
+tags: ["failure","object-play","exercise"]
 ---
 
 # Beobachtungspraxis

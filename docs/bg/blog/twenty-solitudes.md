@@ -2,7 +2,7 @@
 title: "Двадесет уединения"
 description: "Създай двадесет кратки физически импровизации от приблизително по една минута. В първия кръг не използвай предмети. Всяка импровизация получава едно точно условие или задача.."
 outline: [2, 3]
-tags: ["Български","Clown Project","Solitude","Studio Practice","Failure","Object Play","Performance","Field Note"]
+tags: ["solitude","audience","studio-practice","failure","object-play","exercise"]
 ---
 
 # Двадесет уединения

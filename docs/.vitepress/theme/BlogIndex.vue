@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { data } from '../media.data'
+import { TOPICS, TOPIC_NAMES, topicPath } from '../topics.ts'
+import type { Topic } from '../topics.ts'
 import { useLang } from './useLang.ts'
 
 /**
@@ -22,9 +24,32 @@ const posts = computed(() =>
     .map((post) => ({ ...post, frame: data.frames.find((f) => f.id === post.id) }))
     .filter((p) => p.frame)
 )
+
+/**
+ * The topics that have something in them, with how much, most-written-about
+ * first. A topic page for a subject nobody has written about yet would be an
+ * empty room with a sign on it, so it is not offered here.
+ */
+const topics = computed(() => {
+  const all = data.posts[lang.value]
+  return TOPICS.map((topic) => ({
+    topic,
+    name: TOPIC_NAMES[lang.value][topic as Topic],
+    path: topicPath(lang.value, topic),
+    count: all.filter((p) => p.topics.includes(topic)).length
+  }))
+    .filter((t) => t.count > 0)
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
+})
 </script>
 
 <template>
+  <nav v-if="topics.length" class="topics">
+    <a v-for="topic in topics" :key="topic.topic" :href="topic.path">
+      {{ topic.name }}<span class="topics__count">{{ topic.count }}</span>
+    </a>
+  </nav>
+
   <ul v-if="posts.length" class="posts">
     <li v-for="post in posts" :key="post.slug">
       <a class="posts__card" :href="`./${post.slug}`">
@@ -36,6 +61,29 @@ const posts = computed(() =>
 </template>
 
 <style scoped>
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0 0;
+}
+.topics a {
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: baseline;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 999px;
+  color: var(--vp-c-text-2);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.topics a:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
+.topics__count { color: var(--vp-c-text-3); font-variant-numeric: tabular-nums; }
+
 .posts {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));

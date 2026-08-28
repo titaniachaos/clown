@@ -2,7 +2,7 @@
 title: "Den Flop lesen"
 description: "Scheitern wird beobachtet, nachdem es geschieht, statt nach einer Skala hergestellt zu werden. Frage: Was wollte Titania? Was scheiterte? Konnte das Publikum ihr Ziel erkennen?."
 outline: [2, 3]
-tags: ["Deutsch","Clown Project","Audience","Failure","question"]
+tags: ["audience","failure","question"]
 ---
 
 # Den Flop lesen

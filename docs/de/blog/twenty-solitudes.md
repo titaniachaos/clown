@@ -2,7 +2,7 @@
 title: "Zwanzig Formen des Alleinseins"
 description: "Erzeuge zwanzig kurze körperliche Improvisationen von jeweils ungefähr einer Minute. Verwende in der ersten Runde keine Objekte. Jede Improvisation erhält eine genaue Bedingung."
 outline: [2, 3]
-tags: ["Deutsch","Clown Project","Solitude","Studio Practice","Failure","Object Play","Field Note"]
+tags: ["solitude","audience","studio-practice","failure","object-play","exercise"]
 ---
 
 # Zwanzig Formen des Alleinseins

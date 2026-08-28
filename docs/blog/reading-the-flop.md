@@ -2,7 +2,7 @@
 title: "Reading the Flop"
 description: "Failure is observed after it happens rather than manufactured according to a scale. Ask: - What did Titania want? - What failed? - Could the audience see what she wanted? - What."
 outline: [2, 3]
-tags: ["English","Clown Project","Audience","Failure","question"]
+tags: ["audience","failure","question"]
 ---
 
 # Reading the Flop

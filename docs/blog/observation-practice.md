@@ -2,7 +2,7 @@
 title: "Observation Practice"
 description: "Observe solitary behaviour without assigning motives. Record what can actually be seen or heard: actions, repetitions, pauses, small rituals, use of space, relationships with."
 outline: [2, 3]
-tags: ["English","Clown Project","Failure","Object Play","quotation"]
+tags: ["failure","object-play","exercise"]
 ---
 
 # Observation Practice

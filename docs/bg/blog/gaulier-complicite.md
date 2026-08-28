@@ -2,7 +2,7 @@
 title: "Филип Голие — complicité"
 description: "Статус: Избрана линия Източникът подкрепя: Голие използва complicité за спонтанно, често неизказано разбиране между изпълнители и с публиката. За този проект: Понятието е важно,."
 outline: [2, 3]
-tags: ["Български","Clown Project","Solo Titania Chaos","Audience","Sources","Performance","source card"]
+tags: ["audience","sources","performance","reading-note"]
 ---
 
 # Филип Голие — complicité

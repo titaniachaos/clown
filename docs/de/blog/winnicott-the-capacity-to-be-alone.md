@@ -2,7 +2,7 @@
 title: "D. W. Winnicott — die Fähigkeit zum Alleinsein"
 description: "Status: Verifiziert Quellenbefund: Winnicott beschreibt die Fähigkeit zum Alleinsein durch das Paradox, in Anwesenheit eines verlässlichen, nicht fordernden anderen allein zu."
 outline: [2, 3]
-tags: ["Deutsch","Clown Project","Solitude","Audience","Studio Practice","Sources","source card"]
+tags: ["solitude","audience","studio-practice","sources","performance","reading-note"]
 ---
 
 # D. W. Winnicott — die Fähigkeit zum Alleinsein

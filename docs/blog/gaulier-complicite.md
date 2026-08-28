@@ -2,7 +2,7 @@
 title: "Philippe Gaulier — complicité"
 description: "Gaulier's complicité: the spontaneous, often unspoken understanding between performers, and between performer and audience. What it means for a solo about being alone."
 outline: [2, 3]
-tags: ["English","Clown Project","Solo Titania Chaos","Audience","Sources","Performance","source card"]
+tags: ["audience","sources","performance","reading-note"]
 ---
 
 # Philippe Gaulier — complicité

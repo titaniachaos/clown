@@ -2,7 +2,7 @@
 title: "Henri Bergson — komische Unbewusstheit"
 description: "Status: Verifiziert Quellenbefund: Bergson verbindet komische Wirkung mit dem begrenzten Bewusstsein einer Figur für das, was andere sehen. Für dieses Projekt: Das lässt sich mit."
 outline: [2, 3]
-tags: ["Deutsch","Clown Project","Clowning","Studio Practice","Failure","Sources","source card"]
+tags: ["clowning","studio-practice","failure","sources","reading-note"]
 ---
 
 # Henri Bergson — komische Unbewusstheit

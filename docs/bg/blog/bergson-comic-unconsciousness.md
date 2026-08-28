@@ -2,7 +2,7 @@
 title: "Анри Бергсон — комичното несъзнаване"
 description: "Статус: Проверено Източникът подкрепя: Бергсон свързва комичния ефект с ограниченото съзнание на героя за онова, което другите виждат. За този проект: Това може да се сравни с."
 outline: [2, 3]
-tags: ["Български","Clown Project","Clowning","Studio Practice","Failure","Sources","source card"]
+tags: ["clowning","studio-practice","failure","sources","reading-note"]
 ---
 
 # Анри Бергсон — комичното несъзнаване

@@ -2,7 +2,7 @@
 title: "Henri Bergson — comic unconsciousness"
 description: "Status: Verified Source finding: Bergson connects comic effect with a character's limited awareness of what others can see. For this project: This can be compared with clown."
 outline: [2, 3]
-tags: ["English","Clown Project","Clowning","Studio Practice","Failure","Sources","source card"]
+tags: ["clowning","studio-practice","failure","sources","reading-note"]
 ---
 
 # Henri Bergson — comic unconsciousness

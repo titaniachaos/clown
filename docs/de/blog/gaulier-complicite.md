@@ -2,7 +2,7 @@
 title: "Philippe Gaulier — Complicité"
 description: "Status: Gewählte Linie Quellenbefund: Gaulier verwendet complicité für ein spontanes, oft unausgesprochenes Verständnis zwischen Spielenden und mit einem Publikum. Für dieses."
 outline: [2, 3]
-tags: ["Deutsch","Clown Project","Solo Titania Chaos","Audience","Sources","Performance","source card"]
+tags: ["audience","sources","performance","reading-note"]
 ---
 
 # Philippe Gaulier — Complicité

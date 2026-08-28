@@ -2,7 +2,7 @@
 title: "Д. У. Уиникът — способността да бъдеш сам"
 description: "Статус: Проверено Източникът подкрепя: Уиникът описва способността да бъдеш сам чрез парадокса да си сам в присъствието на надежден и ненатрапчив друг. За този проект:."
 outline: [2, 3]
-tags: ["Български","Clown Project","Solitude","Audience","Studio Practice","Sources","source card"]
+tags: ["solitude","audience","studio-practice","sources","performance","reading-note"]
 ---
 
 # Д. У. Уиникът — способността да бъдеш сам

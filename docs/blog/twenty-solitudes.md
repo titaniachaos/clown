@@ -2,7 +2,7 @@
 title: "Twenty Solitudes"
 description: "A studio exercise: twenty short physical improvisations on being alone, one minute each, one precise condition apiece, no objects in the first round."
 outline: [2, 3]
-tags: ["English","Clown Project","Solitude","Audience","Studio Practice","Failure","Object Play","exercise"]
+tags: ["solitude","audience","studio-practice","failure","object-play","exercise"]
 ---
 
 # Twenty Solitudes

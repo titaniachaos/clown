@@ -83,6 +83,14 @@ for (const file of files) {
     if (!/\salt=/.test(img)) add(file, `image without alt: ${img.slice(0, 80)}`)
   }
 
+  // Frontmatter is read before any component runs, so `{{ $params.title }}` in
+  // a generated page's title ships as those literal characters -- in the tab,
+  // in the search result and in the sitemap. It looks right in the body, which
+  // is why it went unnoticed until a topic page's tab read the braces aloud.
+  for (const [, expression] of html.matchAll(/\{\{\s*([^}]+?)\s*\}\}/g)) {
+    add(file, `un-interpolated template expression in the output: {{ ${expression} }}`)
+  }
+
   const seen = new Set()
   for (const [, id] of html.matchAll(/\sid="([^"]+)"/g)) {
     if (seen.has(id)) add(file, `duplicate id "${id}"`)
