@@ -2,12 +2,17 @@
 import { computed } from 'vue'
 import { useData, withBase } from 'vitepress'
 import { data } from '../media.data'
-import { TOPIC_NAMES, TOPIC_UI, fill, topicPath } from '../topics.ts'
+import { TOPIC_NAMES, TOPIC_UI, topicPath } from '../topics.ts'
 import type { Topic } from '../topics.ts'
 import { useLang } from './useLang.ts'
 
 /**
- * Every post about one thing.
+ * Everything about one thing: the blog posts, then the written pages.
+ *
+ * They are kept apart rather than merged into one list because they are
+ * different in kind -- a page is the standing account of something, a post is
+ * one day's thinking about it -- and a reader looking for the concept page
+ * should not have to find it among four diary entries.
  *
  * The heading is here rather than in the Markdown because `# {{ $params.name }}`
  * renders the right words and then hangs a permalink off them built from the
@@ -30,22 +35,31 @@ const posts = computed(() =>
     .map((post) => ({ ...post, frame: data.frames.find((f) => f.id === post.id) }))
 )
 
+const pages = computed(() =>
+  data.pages[lang.value].filter((page) => page.topics.includes(topic.value))
+)
+
 /** The other topics that actually have something in them. */
 const siblings = computed(() =>
   Object.keys(names.value)
-    .filter((other) => other !== topic.value && data.posts[lang.value].some((p) => p.topics.includes(other)))
+    .filter(
+      (other) =>
+        other !== topic.value &&
+        [...data.posts[lang.value], ...data.pages[lang.value]].some((p) => p.topics.includes(other))
+    )
     .map((other) => ({ topic: other, name: names.value[other as Topic], path: withBase(topicPath(lang.value, other)) }))
 )
 
-const countOf = (n: number) => (n === 1 ? t.value.one : fill(t.value.many, n))
 </script>
 
 <template>
   <section class="topic">
     <h1 class="topic__title">{{ name }}</h1>
-    <p class="topic__count">{{ countOf(posts.length) }}</p>
 
-    <ul class="topic__list">
+    <h2 v-if="posts.length" class="topic__section">
+      {{ t.posts }}<span class="topic__count">{{ posts.length }}</span>
+    </h2>
+    <ul v-if="posts.length" class="topic__list">
       <li v-for="post in posts" :key="post.slug" class="topic__item">
         <a class="topic__link" :href="`../blog/${post.slug}`">
           <img
@@ -74,6 +88,26 @@ const countOf = (n: number) => (n === 1 ? t.value.one : fill(t.value.many, n))
       </li>
     </ul>
 
+    <h2 v-if="pages.length" class="topic__section">
+      {{ t.pages }}<span class="topic__count">{{ pages.length }}</span>
+    </h2>
+    <ul v-if="pages.length" class="topic__list topic__list--pages">
+      <li v-for="page in pages" :key="page.slug" class="topic__item">
+        <a class="topic__page" :href="`../${page.slug === 'index' ? '' : page.slug}`">
+          <span class="topic__name">{{ page.title }}</span>
+          <span class="topic__summary">{{ page.summary }}</span>
+        </a>
+        <p class="topic__tags topic__tags--flush">
+          <a
+            v-for="other in page.topics"
+            :key="other"
+            :href="withBase(topicPath(lang, other))"
+            :class="{ 'topic__tag--here': other === topic }"
+          >{{ names[other as Topic] }}</a>
+        </p>
+      </li>
+    </ul>
+
     <nav v-if="siblings.length" class="topic__siblings">
       <a :href="`../blog/`">{{ t.all }}</a>
       <a v-for="other in siblings" :key="other.topic" :href="other.path">{{ other.name }}</a>
@@ -90,14 +124,19 @@ const countOf = (n: number) => (n === 1 ? t.value.one : fill(t.value.many, n))
   letter-spacing: -0.03em;
   line-height: 1.1;
 }
-.topic__count {
-  margin: 0 0 1.6rem;
-  color: var(--vp-c-text-3);
-  font-size: 11px;
+.topic__section {
+  margin: 2rem 0 1rem;
+  padding: 0;
+  border: 0;
+  font-size: 13px;
   font-weight: 700;
-  font-variant-numeric: tabular-nums;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+.topic__count {
+  margin-left: 0.5rem;
+  color: var(--vp-c-text-3);
+  font-variant-numeric: tabular-nums;
 }
 .topic__list { margin: 0; padding: 0; list-style: none; }
 .topic__item {
@@ -129,7 +168,9 @@ const countOf = (n: number) => (n === 1 ? t.value.one : fill(t.value.many, n))
   font-size: 0.875rem;
   line-height: 1.5;
 }
+.topic__page { display: block; text-decoration: none; }
 .topic__tags { display: flex; flex-wrap: wrap; gap: 0.2rem 0.6rem; margin: 0.5rem 0 0 6rem; }
+.topic__tags--flush { margin-left: 0; }
 .topic__tags a {
   color: var(--vp-c-text-3);
   font-size: 10px;
@@ -165,5 +206,6 @@ const countOf = (n: number) => (n === 1 ? t.value.one : fill(t.value.many, n))
 @media (max-width: 560px) {
   .topic__link { grid-template-columns: 4rem minmax(0, 1fr); gap: 0.8rem; }
   .topic__tags { margin-left: 4.8rem; }
+  .topic__tags--flush { margin-left: 0; }
 }
 </style>

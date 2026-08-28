@@ -4,6 +4,7 @@ description: Forschung, Herkunft der Ideen und künstlerische Linien, die die Fr
 outline: [2, 2]
 relations:
   - { from: the-source-ledger, kind: grounds, to: concept#research }
+tags: ["sources", "solitude", "clowning", "failure"]
 ---
 
 # Quellen und Linien

@@ -10,7 +10,7 @@ import HeroSlider from './HeroSlider.vue'
 import MediaFigure from './MediaFigure.vue'
 import BlogIndex from './BlogIndex.vue'
 import BlogTopic from './BlogTopic.vue'
-import PostTopics from './PostTopics.vue'
+import PageTopics from './PageTopics.vue'
 import './custom.css'
 
 export default {
@@ -20,9 +20,10 @@ export default {
   // until a grant is signed.
   Layout: () => h(DefaultTheme.Layout, null, {
       'home-hero-image': () => h(HeroSlider),
-      // The tags a post already carries, as links. Placed here rather than in
-      // eighteen Markdown files; renders nothing off a post.
-      'doc-after': () => h(PostTopics),
+      // The tags a page already carries, as links. Placed here rather than in
+      // thirty-three Markdown files; renders nothing on a page with no tags.
+      // The home page has no such slot and writes it out itself.
+      'doc-after': () => h(PageTopics),
       'layout-bottom': () => h(Supporters)
     }),
   enhanceApp({ app }) {
@@ -35,5 +36,6 @@ export default {
     app.component('MediaFigure', MediaFigure)
     app.component('BlogIndex', BlogIndex)
     app.component('BlogTopic', BlogTopic)
+    app.component('PageTopics', PageTopics)
   }
 } satisfies Theme

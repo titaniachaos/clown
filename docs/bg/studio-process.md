@@ -2,6 +2,7 @@
 title: Студиото
 description: Утвърденият студиен процес и практическите инструменти за откриване на материала на „Соло Титания Хаос“.
 outline: [2, 2]
+tags: ["studio-practice", "exercise", "failure", "object-play"]
 ---
 
 # Студиото

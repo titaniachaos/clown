@@ -30,6 +30,7 @@ features:
   - title: Co-produce or host
     details: "Co-production, residency, presenting, masterclasses — and direct support for studio time."
     link: /production#work
+tags: ["solitude", "audience", "clowning", "studio-practice"]
 ---
 
 ## A wordless solo about being alone together
@@ -43,3 +44,9 @@ The working process combines physical-clown research, observed everyday behaviou
 Co-production, residency and presenting enquiries are welcome at any stage of the process, and a contribution goes straight into studio time.
 
 [Contact Titania about the project](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos){.contact-button} [Support the project](https://revolut.me/titaniachaos){.contact-button .secondary}
+
+<!-- The subjects this page touches, as links to their topic pages.
+     Written here rather than dropped into a layout slot because the home
+     layout has none after its content: VPHome renders <Content /> last. The
+     component still works out the chips itself -- this only says where. -->
+<PageTopics />

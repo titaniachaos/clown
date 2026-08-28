@@ -4,6 +4,7 @@ description: "Step inside the making of Solo Titania Chaos: its artistic questio
 outline: [2, 3]
 relations:
   - { from: decisions, kind: rests-on, to: concept#concept }
+tags: ["performance", "studio-practice", "audience"]
 ---
 
 # Production and support

@@ -30,6 +30,7 @@ features:
   - title: Koproduzieren oder einladen
     details: "Koproduktion, Residenz, Gastspiel, Meisterklassen — und direkte Unterstützung für Studiozeit."
     link: /de/production#work
+tags: ["solitude", "audience", "clowning", "studio-practice"]
 ---
 
 ## Ein wortloses Solo darüber, gemeinsam allein zu sein
@@ -43,3 +44,9 @@ Der Arbeitsprozess verbindet physische Clown-Recherche, beobachtetes Alltagsverh
 Anfragen zu Koproduktion, Residenz und Gastspiel sind in jeder Phase des Prozesses willkommen, und ein Beitrag geht unmittelbar in Studiozeit.
 
 [Titania zum Projekt kontaktieren](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos){.contact-button} [Das Projekt unterstützen](https://revolut.me/titaniachaos){.contact-button .secondary}
+
+<!-- The subjects this page touches, as links to their topic pages.
+     Written here rather than dropped into a layout slot because the home
+     layout has none after its content: VPHome renders <Content /> last. The
+     component still works out the chips itself -- this only says where. -->
+<PageTopics />

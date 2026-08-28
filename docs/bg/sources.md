@@ -4,6 +4,7 @@ description: Изследванията, произходът на идеите 
 outline: [2, 2]
 relations:
   - { from: the-source-ledger, kind: grounds, to: concept#research }
+tags: ["sources", "solitude", "clowning", "failure"]
 ---
 
 # Източници и линии

@@ -6,6 +6,7 @@ relations:
   - { from: concept, kind: informed-by, to: sources#the-source-ledger }
   - { from: concept, kind: tested-by, to: studio-process#process }
   - { from: concept, kind: developed-through, to: production#needs }
+tags: ["solitude", "audience", "failure", "clowning", "question"]
 ---
 
 # The Work

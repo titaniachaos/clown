@@ -2,6 +2,7 @@
 title: Produktion und Unterstützung
 description: "Einblick in die Entstehung von Solo Titania Chaos: künstlerische Fragen, Produktionsprozess und Wege zur Koproduktion, Präsentation oder Unterstützung."
 outline: [2, 2]
+tags: ["performance", "studio-practice", "audience"]
 ---
 
 # Produktion und Unterstützung

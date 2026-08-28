@@ -30,6 +30,7 @@ features:
   - title: Копродукция и гостуване
     details: "Копродукция, резиденция, гостуване, майсторски класове — и пряка подкрепа за студийно време."
     link: /bg/production#work
+tags: ["solitude", "audience", "clowning", "studio-practice"]
 ---
 
 ## Безсловесно соло за това да си сам заедно с други
@@ -43,3 +44,9 @@ features:
 Запитвания за копродукция, резиденция и гостуване са добре дошли във всеки етап от процеса, а приносът отива директно в студийно време.
 
 [Свържете се с Титания за проекта](mailto:agent@tatianapetkova.com?subject=Solo%20Titania%20Chaos){.contact-button} [Подкрепете проекта](https://revolut.me/titaniachaos){.contact-button .secondary}
+
+<!-- The subjects this page touches, as links to their topic pages.
+     Written here rather than dropped into a layout slot because the home
+     layout has none after its content: VPHome renders <Content /> last. The
+     component still works out the chips itself -- this only says where. -->
+<PageTopics />

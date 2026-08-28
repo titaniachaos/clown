@@ -2,6 +2,7 @@
 title: Die Arbeit
 description: Was über die Entwicklung des wortlosen Clown-Solos Solo Titania Chaos bekannt ist, untersucht wird und offenbleibt.
 outline: [2, 2]
+tags: ["solitude", "audience", "failure", "clowning", "question"]
 ---
 
 # Die Arbeit

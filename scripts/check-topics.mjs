@@ -1,18 +1,24 @@
 #!/usr/bin/env node
-// Checks that the blog's tags mean the same thing in all three languages.
+// Checks that the tags mean the same thing in all three languages.
 //
-// Every post carries a `tags:` list, and for a long time nothing read it. That
+// Every post carried a `tags:` list, and for a long time nothing read it. That
 // is how `twenty-solitudes` came to be an `exercise` about the `audience` in
 // English and a `field-note` about `Performance` in German: nothing compared
 // them, so nothing could notice. Now the tags build the topic pages, and a
-// disagreement is not a private inconsistency -- it is a post that appears
+// disagreement is not a private inconsistency -- it is a page that appears
 // under one heading for German readers and another for everybody else.
 //
-// Three things are checked:
+// The written pages carry them too, so a topic collects the standing account
+// of something as well as the diary entries about it.
+//
+// Four things are checked:
 //   1. every tag is in the closed vocabulary (a typo is a dead link, not a
 //      new topic);
-//   2. the three languages of one post carry identical tags;
-//   3. every post has at least one, so it is reachable from a topic page.
+//   2. the three languages of one file carry identical tags;
+//   3. every post and page has at least one, so it is reachable from a topic;
+//   4. `<PageTopics />` is written on the home pages and nowhere else -- the
+//      layout renders it for every page that has a doc-after slot, and the
+//      home layout has none.
 //
 // Usage: node scripts/check-topics.mjs
 
@@ -22,7 +28,12 @@ import { fileURLToPath } from 'node:url'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const LANGS = ['en', 'bg', 'de']
-const dirFor = (lang) => join(ROOT, 'docs', lang === 'en' ? 'blog' : `${lang}/blog`)
+
+/** The blog, then the written pages. `topic/` is generated, not written. */
+const SOURCES = [
+  { kind: 'post', dir: (lang) => join(ROOT, 'docs', lang === 'en' ? 'blog' : `${lang}/blog`), skip: ['index.md'] },
+  { kind: 'page', dir: (lang) => join(ROOT, 'docs', lang === 'en' ? '' : lang), skip: [] }
+]
 
 // Read the vocabulary out of the module rather than restating it here; a check
 // with its own copy of the list is a check that can be wrong.
@@ -37,38 +48,63 @@ if (VOCABULARY.length === 0) {
 const problems = []
 const add = (m) => problems.push(m)
 
-/** slug -> lang -> tags */
-const byPost = new Map()
+/** `${kind}/${slug}` -> lang -> tags */
+const byFile = new Map()
 
-for (const lang of LANGS) {
-  const dir = dirFor(lang)
-  const names = (await readdir(dir).catch(() => [])).filter((n) => n.endsWith('.md') && n !== 'index.md')
-  for (const name of names.sort()) {
-    const slug = name.replace(/\.md$/, '')
-    const source = await readFile(join(dir, name), 'utf8')
-    const line = /^tags: \[(.*)\]$/m.exec(source)
+/** lang -> whether its home page writes <PageTopics /> itself. */
+const homes = {}
 
-    if (!line) {
-      add(`${lang}/${slug}: no tags`)
-      continue
-    }
-    const tags = [...line[1].matchAll(/"([^"]+)"/g)].map((m) => m[1])
-    if (tags.length === 0) add(`${lang}/${slug}: tags list is empty -- it appears on no topic page`)
+for (const { kind, dir: dirOf, skip } of SOURCES) {
+  for (const lang of LANGS) {
+    const dir = dirOf(lang)
+    const names = (await readdir(dir).catch(() => []))
+      .filter((n) => n.endsWith('.md') && !skip.includes(n) && !n.startsWith('['))
+    for (const name of names.sort()) {
+      const slug = name.replace(/\.md$/, '')
+      const where = `${lang}/${kind === 'post' ? 'blog/' : ''}${slug}`
+      const source = await readFile(join(dir, name), 'utf8')
 
-    for (const tag of tags) {
-      if (!VOCABULARY.includes(tag)) {
-        add(`${lang}/${slug}: "${tag}" is not in the vocabulary -- its chip links to a page that is not built`)
+      // The chips come from the doc-after slot everywhere but the home page,
+      // whose layout has none. Written anywhere else they would appear twice.
+      const writesChips = /<PageTopics\s*\/>/.test(source)
+      if (kind === 'page' && slug === 'index') homes[lang] = writesChips
+      else if (writesChips) {
+        add(`${where}: writes <PageTopics /> and the layout renders it too -- the chips would appear twice`)
       }
+
+      const line = /^tags: \[(.*)\]$/m.exec(source)
+      if (!line) {
+        add(`${where}: no tags`)
+        continue
+      }
+      const tags = [...line[1].matchAll(/"([^"]+)"/g)].map((m) => m[1])
+      if (tags.length === 0) add(`${where}: tags list is empty -- it appears on no topic page`)
+
+      for (const tag of tags) {
+        if (!VOCABULARY.includes(tag)) {
+          add(`${where}: "${tag}" is not in the vocabulary -- its chip links to a page that is not built`)
+        }
+      }
+      const key = `${kind}/${slug}`
+      if (!byFile.has(key)) byFile.set(key, {})
+      byFile.get(key)[lang] = tags
     }
-    if (!byPost.has(slug)) byPost.set(slug, {})
-    byPost.get(slug)[lang] = tags
   }
 }
 
-for (const [slug, langs] of byPost) {
+for (const lang of LANGS) {
+  if (homes[lang] === false) {
+    add(`${lang}/index: no <PageTopics /> -- the home layout has no slot for it, so this page has no chips`)
+  }
+}
+
+for (const [key, langs] of byFile) {
+  // `post/twenty-solitudes` -> `blog/twenty-solitudes`, `page/sources` -> `sources`:
+  // the path a reader would recognise, not the bookkeeping key.
+  const name = key.startsWith('post/') ? `blog/${key.slice(5)}` : key.slice(5)
   const reference = langs.en
   if (!reference) {
-    add(`${slug}: no English post to compare the translations against`)
+    add(`${name}: no English file to compare the translations against`)
     continue
   }
   for (const lang of LANGS.slice(1)) {
@@ -78,7 +114,7 @@ for (const [slug, langs] of byPost) {
     const extra = tags.filter((t) => !reference.includes(t))
     if (missing.length || extra.length) {
       add(
-        `${lang}/${slug}: tags differ from English` +
+        `${lang}/${name}: tags differ from English` +
           (missing.length ? ` -- missing ${missing.join(', ')}` : '') +
           (extra.length ? ` -- has ${extra.join(', ')}` : '')
       )
@@ -89,7 +125,7 @@ for (const [slug, langs] of byPost) {
 // A vocabulary word nobody uses builds a page with nothing on it. Not an
 // error -- the word may be waiting for the post that needs it -- but it should
 // be said out loud rather than discovered by a reader.
-const used = new Set([...byPost.values()].flatMap((l) => l.en ?? []))
+const used = new Set([...byFile.values()].flatMap((l) => l.en ?? []))
 const unused = VOCABULARY.filter((t) => !used.has(t))
 
 if (problems.length) {
@@ -98,7 +134,9 @@ if (problems.length) {
   process.exit(1)
 }
 
+const posts = [...byFile.keys()].filter((k) => k.startsWith('post/')).length
 console.log(
-  `check-topics: ${byPost.size} posts x ${LANGS.length} languages -- same tags, all ${VOCABULARY.length} in the vocabulary`
+  `check-topics: ${posts} posts and ${byFile.size - posts} pages x ${LANGS.length} languages -- ` +
+    `same tags, all ${VOCABULARY.length} in the vocabulary`
 )
 if (unused.length) console.log(`  no posts yet: ${unused.join(', ')}`)

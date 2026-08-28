@@ -4,6 +4,7 @@ description: Research, provenance and artistic lineages that sharpen the questio
 outline: [2, 2]
 relations:
   - { from: the-source-ledger, kind: grounds, to: concept#research }
+tags: ["sources", "solitude", "clowning", "failure"]
 ---
 
 # Sources & lineages

@@ -2,6 +2,7 @@
 title: Das Studio
 description: Der bestätigte Studioprozess und die praktischen Werkzeuge, mit denen Material für Solo Titania Chaos entdeckt wird.
 outline: [2, 2]
+tags: ["studio-practice", "exercise", "failure", "object-play"]
 ---
 
 # Das Studio

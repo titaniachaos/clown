@@ -5,6 +5,7 @@ outline: [2, 2]
 relations:
   - { from: process, kind: rests-on, to: sources#the-source-ledger }
   - { from: process, kind: decided-in, to: production#production }
+tags: ["studio-practice", "exercise", "failure", "object-play"]
 ---
 
 # The Studio

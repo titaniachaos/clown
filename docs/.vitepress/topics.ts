@@ -76,28 +76,48 @@ export const TOPIC_NAMES: Record<Lang, Record<Topic, string>> = {
   }
 }
 
-/** The copy a generated topic page needs. */
-export const TOPIC_UI: Record<Lang, { title: string; description: string; one: string; many: string; all: string }> = {
+/**
+ * The copy a generated topic page needs.
+ *
+ * No singular/plural pair: the counts sit beside their section headings as
+ * numerals, which is one fewer thing to get wrong in three languages and
+ * reads the same in all of them.
+ */
+export const TOPIC_UI: Record<Lang, {
+  /** `%1` is the topic name. */
+  title: string
+  description: string
+  /** Headings for the two kinds of thing a topic collects. */
+  posts: string
+  pages: string
+  /** The link back to the whole blog. */
+  all: string
+  /** Before the chips at the foot of a page. */
+  about: string
+}> = {
   en: {
-    title: 'Blog: %1',
-    description: 'Blog posts from the Solo Titania Chaos studio on %1.',
-    one: '1 post',
-    many: '%1 posts',
-    all: 'All posts'
+    title: '%1',
+    description: 'Everything in the Solo Titania Chaos workspace on %1: blog posts and pages.',
+    posts: 'Posts',
+    pages: 'Pages',
+    all: 'All posts',
+    about: 'This page is about'
   },
   bg: {
-    title: 'Блог: %1',
-    description: 'Публикации от студиото на Соло Титания Хаос на тема %1.',
-    one: '1 публикация',
-    many: '%1 публикации',
-    all: 'Всички публикации'
+    title: '%1',
+    description: 'Всичко в работното пространство на Соло Титания Хаос на тема %1: публикации и страници.',
+    posts: 'Публикации',
+    pages: 'Страници',
+    all: 'Всички публикации',
+    about: 'Тази страница е за'
   },
   de: {
-    title: 'Blog: %1',
-    description: 'Beiträge aus dem Studio von Solo Titania Chaos zum Thema %1.',
-    one: '1 Beitrag',
-    many: '%1 Beiträge',
-    all: 'Alle Beiträge'
+    title: '%1',
+    description: 'Alles im Arbeitsraum von Solo Titania Chaos zum Thema %1: Beiträge und Seiten.',
+    posts: 'Beiträge',
+    pages: 'Seiten',
+    all: 'Alle Beiträge',
+    about: 'Diese Seite handelt von'
   }
 }
 

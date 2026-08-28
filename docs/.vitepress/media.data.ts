@@ -61,6 +61,16 @@ export interface Data {
   frames: Frame[]
   /** The blog, per language, in the order the index lists it. */
   posts: Record<Lang, Post[]>
+  /**
+   * The written pages -- concept, production, sources, the studio, the home
+   * page -- under the same vocabulary as the blog.
+   *
+   * They are not posts and are not listed as posts: a page is the standing
+   * account of something and a post is one day's thinking about it. But a
+   * reader who follows `solitude` off a post wants the concept page as much
+   * as the other four posts, and until now a topic page could not offer it.
+   */
+  pages: Record<Lang, Post[]>
   /** `Watch on YouTube` and the like, per language. */
   ui: Record<Lang, { photo: string; video: string; source: string }>
 }
@@ -86,14 +96,18 @@ const DOCS = join(HERE, '..')
  * that changes its picture changes the index without anybody remembering the
  * index exists.
  */
-async function blog(): Promise<Data['posts']> {
+async function read(where: (lang: Lang) => string, skip: string[]): Promise<Data['posts']> {
   const out = { en: [] as Post[], bg: [] as Post[], de: [] as Post[] }
   for (const lang of LANGS) {
-    const dir = join(DOCS, lang === 'en' ? 'blog' : `${lang}/blog`)
-    const names = (await readdir(dir).catch(() => [])).filter((n) => n.endsWith('.md') && n !== 'index.md')
+    const dir = join(DOCS, where(lang))
+    const names = (await readdir(dir).catch(() => [])).filter((n) => n.endsWith('.md') && !skip.includes(n))
     for (const name of names.sort()) {
       const source = await readFile(join(dir, name), 'utf8')
-      const title = /^# +(.+)$/m.exec(source)?.[1]?.trim()
+      // The home page has no h1 -- its name is in the hero -- so fall back to
+      // the front-matter title, which is what a link to it should say anyway.
+      const title =
+        /^# +(.+)$/m.exec(source)?.[1]?.trim() ??
+        /^title:\s*(.+)$/m.exec(source)?.[1]?.trim().replace(/^['"]|['"]$/g, '')
       if (!title) continue
       const body = source.replace(/^---\n[\s\S]*?\n---\n/, '')
       const summary = body
@@ -114,10 +128,24 @@ async function blog(): Promise<Data['posts']> {
   return out
 }
 
+/** The blog. Its index page is a listing, not a post. */
+const blog = () => read((lang) => (lang === 'en' ? 'blog' : `${lang}/blog`), ['index.md'])
+
+/**
+ * The written pages. Only this directory: the blog is read separately and the
+ * generated topic routes live in `topic/`, which is not a page anybody wrote.
+ */
+const written = () => read((lang) => (lang === 'en' ? '.' : lang), [])
+
 export default defineLoader({
-  watch: ['./media-index.json', '../blog/*.md', '../bg/blog/*.md', '../de/blog/*.md'],
+  watch: [
+    './media-index.json',
+    '../*.md', '../bg/*.md', '../de/*.md',
+    '../blog/*.md', '../bg/blog/*.md', '../de/blog/*.md'
+  ],
   async load(): Promise<Data> {
     const posts = await blog()
+    const pages = await written()
     let index: { origin?: string; media?: Frame[] }
     try {
       index = JSON.parse(await readFile(join(HERE, 'media-index.json'), 'utf8'))
@@ -125,8 +153,8 @@ export default defineLoader({
       // No index is not an error: the blog simply renders without pictures,
       // which is better than a build that fails on a file this repository does
       // not own.
-      return { origin: '', frames: [], posts, ui }
+      return { origin: '', frames: [], posts, pages, ui }
     }
-    return { origin: index.origin ?? '', frames: index.media ?? [], posts, ui }
+    return { origin: index.origin ?? '', frames: index.media ?? [], posts, pages, ui }
   }
 })
