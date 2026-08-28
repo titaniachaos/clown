@@ -110,11 +110,26 @@ async function read(where: (lang: Lang) => string, skip: string[]): Promise<Data
         /^title:\s*(.+)$/m.exec(source)?.[1]?.trim().replace(/^['"]|['"]$/g, '')
       if (!title) continue
       const body = source.replace(/^---\n[\s\S]*?\n---\n/, '')
+      // The first line that is a sentence rather than a label.
+      //
+      // The reading notes open with `**Status:** Verified`, and taking the
+      // first prose line meant three of the six posts introduced themselves
+      // on the topic pages as "Status: Verified" -- true, and no use to
+      // anybody deciding whether to read them. Six words is the shortest
+      // thing here that says something; it clears the labels and keeps
+      // "Observe solitary behaviour without assigning motives."
       const summary = body
         .split('\n')
-        .find((line) => /^[A-Za-zА-Яа-яÄÖÜäöü*]/.test(line.trim()) && !line.startsWith('#'))
-        ?.replace(/\*\*/g, '')
-        .trim()
+        .map((line) => line.replace(/\*\*/g, '').trim())
+        .find(
+          (line) =>
+            // A letter or an opening quotation mark. The hand-written class this
+            // replaces had no `„`, so the Bulgarian concept page skipped its
+            // own first sentence and introduced itself with its second.
+            /^[\p{L}„“«"']/u.test(line) &&
+            !line.startsWith('#') &&
+            line.split(/\s+/).length >= 6
+        )
 
       out[lang].push({
         slug: name.replace(/\.md$/, ''),
