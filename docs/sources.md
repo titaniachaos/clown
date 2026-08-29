@@ -9,6 +9,8 @@ tags: ["sources", "solitude", "clowning", "failure"]
 
 # Sources & lineages
 
+<MediaFigure id="a-0679147602f4d57d" />
+
 This page records research gathered around **Solo Titania Chaos**.
 
 It is not a reading diary and not a theoretical blueprint for the performance.

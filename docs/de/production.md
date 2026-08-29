@@ -7,6 +7,8 @@ tags: ["performance", "studio-practice", "audience"]
 
 # Produktion und Unterstützung
 
+<MediaFigure id="a-img-3341" />
+
 <span id="solo"></span>
 
 Ein Clown mag allein auf der Bühne stehen. Die Arbeit zu erschaffen, ist eine andere Sache.

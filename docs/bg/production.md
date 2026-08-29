@@ -7,6 +7,8 @@ tags: ["performance", "studio-practice", "audience"]
 
 # Продукция и подкрепа
 
+<MediaFigure id="a-img-3341" />
+
 <span id="solo"></span>
 
 На сцената може да стои само един клоун. Създаването на работата е друг въпрос.

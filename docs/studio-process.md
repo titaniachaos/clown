@@ -10,6 +10,8 @@ tags: ["studio-practice", "exercise", "failure", "object-play"]
 
 # The Studio
 
+<MediaFigure id="a-img-8521" />
+
 The studio is where questions become physical tests.
 
 Material is generated before it is judged, tested with people before it is assembled, and allowed to fail before it becomes precious.

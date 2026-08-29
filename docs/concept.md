@@ -11,6 +11,8 @@ tags: ["solitude", "audience", "failure", "clowning", "question"]
 
 # The Work
 
+<MediaFigure id="a-img-4367" />
+
 ## What is already known {#concept}
 
 Solo Titania Chaos is being developed as a physical, wordless clown solo around **solitude / being alone**.

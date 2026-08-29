@@ -9,6 +9,8 @@ tags: ["performance", "studio-practice", "audience"]
 
 # Production and support
 
+<MediaFigure id="a-img-3341" />
+
 <span id="solo"></span>
 
 One clown may stand on stage alone. Making the work is another matter.

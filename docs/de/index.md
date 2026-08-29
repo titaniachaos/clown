@@ -35,6 +35,8 @@ tags: ["solitude", "audience", "clowning", "studio-practice"]
 
 ## Ein wortloses Solo darüber, gemeinsam allein zu sein
 
+<MediaFigure id="a-img-7300" />
+
 Das Projekt fragt, ob ein Clown ein Publikum das Alleinsein **erfahren** lassen kann, statt es nur dargestellt zu sehen. Der Widerspruch ist der Motor: Ein Clown ist auf den Kontakt zum Raum angewiesen und versucht zugleich zu beweisen, dass er allein ist – vor genau den Menschen, deren Anwesenheit das unmöglich macht.
 
 Der Arbeitsprozess verbindet physische Clown-Recherche, beobachtetes Alltagsverhalten, Objektspiel, Publikumstests und die strenge Praxis, nur zu behalten, was im Raum lebendig wird.

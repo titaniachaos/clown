@@ -7,6 +7,8 @@ tags: ["studio-practice", "exercise", "failure", "object-play"]
 
 # Das Studio
 
+<MediaFigure id="a-img-8521" />
+
 Im Studio werden Fragen zu körperlichen Versuchen.
 
 Material wird erzeugt, bevor es beurteilt wird, mit Menschen erprobt, bevor es zusammengesetzt wird, und darf scheitern, bevor es kostbar wird.
