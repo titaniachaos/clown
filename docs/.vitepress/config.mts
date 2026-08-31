@@ -41,6 +41,7 @@ const HOME = ['Project Home', 'Начало на проекта', 'Projekt-Start
  * thirty-six titles nobody should be maintaining by hand.
  */
 const BLOG = ['Blog', 'Блог', 'Blog'] as const
+const GALLERY = ['Gallery', 'Галерия', 'Galerie'] as const
 
 function blogItems(prefix: string, column: Column): DefaultTheme.SidebarItem[] {
   const dir = new URL(`..${prefix}/blog/`, import.meta.url)
@@ -146,6 +147,7 @@ function nav(prefix: string, column: Column, mainSiteLabel: string): DefaultThem
       activeMatch: `${prefix}/${section.slug}`
     })),
     { text: BLOG[column - 1], link: `${prefix}/blog/`, activeMatch: `${prefix}/blog` },
+    { text: GALLERY[column - 1], link: `${HOSTNAME}${prefix}/pictures`, ...SAME_SITE },
     // Same domain, different repository: keep the reader in their own language
     // and in the same tab.
     { text: mainSiteLabel, link: MAIN_SITE(prefix), ...SAME_SITE }
