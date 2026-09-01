@@ -24,7 +24,7 @@ import { fileURLToPath } from 'node:url'
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const DEST = join(ROOT, 'docs/.vitepress/media-index.json')
 const SIBLING = resolve(ROOT, '..', 'titaniachaos.github.io/docs/public/media.json')
-const LIVE = 'https://titaniachaos.github.io/media.json'
+const LIVE = 'https://titaniachaos.com/media.json'
 
 const from = process.argv.includes('--from') ? process.argv[process.argv.indexOf('--from') + 1] : null
 
