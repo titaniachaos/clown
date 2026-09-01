@@ -33,7 +33,11 @@ const ORIGIN = resolve(ROOT, '..', 'titaniachaos.github.io')
 const SHARED = [
   'docs/.vitepress/locale.ts',
   'docs/.vitepress/theme/useLang.ts',
-  'docs/.vitepress/theme/LocalePreference.vue'
+  'docs/.vitepress/theme/LocalePreference.vue',
+  // The Atom builder. It was written here for the citations feed and the main
+  // site now emits one too; two hand-rolled Atom writers is how two sites end
+  // up disagreeing about what a valid feed is.
+  'docs/.vitepress/feed.ts'
 ]
 
 const digest = async (path) => createHash('sha256').update(await readFile(path)).digest('hex')
