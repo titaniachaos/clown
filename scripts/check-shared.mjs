@@ -37,7 +37,12 @@ const SHARED = [
   // The Atom builder. It was written here for the citations feed and the main
   // site now emits one too; two hand-rolled Atom writers is how two sites end
   // up disagreeing about what a valid feed is.
-  'docs/.vitepress/feed.ts'
+  'docs/.vitepress/feed.ts',
+  // The link checker. The two copies had drifted to 237 lines against 138 --
+  // the older one could not see a dead link to the sibling site, which is
+  // exactly the link only the other repo can confirm. It reads its own base
+  // from the build, so one file serves both.
+  'scripts/check-build.mjs'
 ]
 
 const digest = async (path) => createHash('sha256').update(await readFile(path)).digest('hex')
