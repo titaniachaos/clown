@@ -1,6 +1,6 @@
 ---
 title: "Reading the Flop"
-description: "Failure is observed after it happens rather than manufactured according to a scale. Ask: - What did Titania want? - What failed? - Could the audience see what she wanted? - What."
+description: "A practical framework for reading failure in clown performance through intention, stakes, audience awareness, exposure and what happens next."
 outline: [2, 3]
 tags: ["audience","failure","question"]
 ---

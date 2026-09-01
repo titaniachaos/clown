@@ -1,6 +1,6 @@
 ---
 title: "Den Flop lesen"
-description: "Scheitern wird beobachtet, nachdem es geschieht, statt nach einer Skala hergestellt zu werden. Frage: Was wollte Titania? Was scheiterte? Konnte das Publikum ihr Ziel erkennen?."
+description: "Ein praktischer Rahmen, um Scheitern im Clownspiel anhand von Absicht, Einsatz, Publikumswahrnehmung, Bloßstellung und dem Danach zu lesen."
 outline: [2, 3]
 tags: ["audience","failure","question"]
 ---

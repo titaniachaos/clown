@@ -1,6 +1,6 @@
 ---
 title: "Henri Bergson — komische Unbewusstheit"
-description: "Status: Verifiziert Quellenbefund: Bergson verbindet komische Wirkung mit dem begrenzten Bewusstsein einer Figur für das, was andere sehen. Für dieses Projekt: Das lässt sich mit."
+description: "Wie Bergsons komische Unbewusstheit Clownpraxis, Scheitern, Publikumswahrnehmung und die Entwicklung von Solo Titania Chaos befragt."
 outline: [2, 3]
 tags: ["clowning","studio-practice","failure","sources","reading-note"]
 ---

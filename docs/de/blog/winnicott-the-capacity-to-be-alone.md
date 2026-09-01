@@ -1,6 +1,6 @@
 ---
 title: "D. W. Winnicott — die Fähigkeit zum Alleinsein"
-description: "Status: Verifiziert Quellenbefund: Winnicott beschreibt die Fähigkeit zum Alleinsein durch das Paradox, in Anwesenheit eines verlässlichen, nicht fordernden anderen allein zu."
+description: "Winnicotts Fähigkeit zum Alleinsein als Studiofrage über Einsamkeit, Anwesenheit, Publikum und die Entwicklung von Solo Titania Chaos."
 outline: [2, 3]
 tags: ["solitude","audience","studio-practice","sources","performance","reading-note"]
 ---

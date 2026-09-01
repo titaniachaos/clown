@@ -24,6 +24,24 @@ const esc = (t: string) =>
 
 const absolute = (path: string) => `${HOSTNAME}${BASE}${path.replace(/^\//, '')}`
 
+/**
+ * A real information hierarchy for sitemap consumers that still use these
+ * optional hints. Google ignores priority/changefreq; titles, links and
+ * content remain the signals that matter there.
+ */
+function sitemapMeta(slug: string): Pick<SitemapItem, 'changefreq' | 'priority'> {
+  if (slug === '/') return { changefreq: 'weekly', priority: 1.0 }
+  if (slug === '/concept') return { changefreq: 'monthly', priority: 0.9 }
+  if (slug === '/studio-process' || slug === '/production') {
+    return { changefreq: 'monthly', priority: 0.85 }
+  }
+  if (slug === '/sources') return { changefreq: 'monthly', priority: 0.8 }
+  if (slug === '/blog/') return { changefreq: 'weekly', priority: 0.75 }
+  if (slug.startsWith('/blog/')) return { changefreq: 'yearly', priority: 0.65 }
+  if (slug.startsWith('/topic/')) return { changefreq: 'monthly', priority: 0.6 }
+  return { changefreq: 'monthly', priority: 0.5 }
+}
+
 // ---------------------------------------------------------------------------
 
 export interface SitemapItem {
@@ -78,7 +96,7 @@ const hreflang: Integration = {
         // Search Console reads x-default from the sitemap as well as the head.
         const english = slug === '/' ? '/' : slug
         if (known.has(english)) links.push({ lang: 'x-default', url: absolute(english) })
-        return { ...item, links, changefreq: 'monthly', priority: slug === '/' ? 1.0 : 0.8 }
+        return { ...item, links, ...sitemapMeta(slug) }
       })
     }
   }

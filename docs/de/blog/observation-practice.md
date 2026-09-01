@@ -1,6 +1,6 @@
 ---
 title: "Beobachtungspraxis"
-description: "Beobachte alleiniges Verhalten, ohne Motive zuzuschreiben. Notiere nur Sicht- oder Hörbares: Handlungen, Wiederholungen, Pausen, kleine Rituale, Raumnutzung, Beziehungen zu."
+description: "Eine praktische Studioübung zur Beobachtung alleinigen Verhaltens durch sichtbare Handlungen, Wiederholungen, Pausen, Rituale, Objekte und Raum."
 outline: [2, 3]
 tags: ["failure","object-play","exercise"]
 ---

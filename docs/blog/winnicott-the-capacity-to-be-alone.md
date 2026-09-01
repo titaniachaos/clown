@@ -1,6 +1,6 @@
 ---
 title: "D. W. Winnicott — the capacity to be alone"
-description: "Status: Verified Source finding: Winnicott describes the capacity to be alone through the paradox of being alone in the presence of a reliable, non-demanding other. For this."
+description: "Winnicott's capacity to be alone as a studio question about solitude, presence, audience and the development of Solo Titania Chaos."
 outline: [2, 3]
 tags: ["solitude","audience","studio-practice","sources","performance","reading-note"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Henri Bergson — comic unconsciousness"
-description: "Status: Verified Source finding: Bergson connects comic effect with a character's limited awareness of what others can see. For this project: This can be compared with clown."
+description: "How Bergson's idea of comic unconsciousness informs clown practice, failure, audience awareness and the development of Solo Titania Chaos."
 outline: [2, 3]
 tags: ["clowning","studio-practice","failure","sources","reading-note"]
 ---

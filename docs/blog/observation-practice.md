@@ -1,6 +1,6 @@
 ---
 title: "Observation Practice"
-description: "Observe solitary behaviour without assigning motives. Record what can actually be seen or heard: actions, repetitions, pauses, small rituals, use of space, relationships with."
+description: "A practical studio exercise for observing solitary behaviour through visible actions, repetitions, pauses, rituals, objects and use of space."
 outline: [2, 3]
 tags: ["failure","object-play","exercise"]
 ---

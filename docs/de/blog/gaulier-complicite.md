@@ -1,6 +1,6 @@
 ---
 title: "Philippe Gaulier — Complicité"
-description: "Status: Gewählte Linie Quellenbefund: Gaulier verwendet complicité für ein spontanes, oft unausgesprochenes Verständnis zwischen Spielenden und mit einem Publikum. Für dieses."
+description: "Philippe Gauliers Complicité: spontanes Verstehen zwischen Spielenden und Publikum und seine Bedeutung für ein wortloses Solo über das Alleinsein."
 outline: [2, 3]
 tags: ["audience","sources","performance","reading-note"]
 ---
