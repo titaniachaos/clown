@@ -93,6 +93,17 @@ export const WORKS: Work[] = [
     read: 'not-read'
   },
   {
+    id: 'queneau-cent-mille',
+    type: 'book',
+    authors: ['Queneau, R.'],
+    year: '1961',
+    title: 'Cent mille milliards de poèmes',
+    publisher: 'Gallimard',
+    note: 'Ten sonnets cut into fourteen strips each, bound so any line may follow any other.',
+    records: ['hundred-thousand-billion'],
+    read: 'not-read'
+  },
+  {
     id: 'winnicott-capacity',
     type: 'article',
     authors: ['Winnicott, D. W.'],

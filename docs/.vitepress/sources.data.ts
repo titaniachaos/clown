@@ -311,6 +311,22 @@ const entries: SourceEntry[] = [
     }
   },
   {
+    id: 'hundred-thousand-billion',
+    status: 'verified',
+    locus: 'filing · 1',
+    work: 'Raymond Queneau, Cent mille milliards de poèmes (Gallimard, 1961)',
+    phrase: {
+      en: 'bound like Queneau’s sonnets',
+      bg: 'подвързан като сонетите на Кьоно',
+      de: 'gebunden wie Queneaus Sonette'
+    },
+    gloss: {
+      en: 'Ten sonnets cut into fourteen strips each and bound so that any line may follow any other: 10^14 poems. The filing page takes the structure, not the poetry — what makes the device work is that every line at a given position shares the rhyme and the metre of every other, so no substitution can produce nonsense, and the topic vocabulary plays that part here. Recorded as verified because the documentation names the work outright rather than echoing it; the book itself has not been read for this project, which the bibliography states.',
+      bg: 'Десет сонета, разрязани на по четиринайсет ленти и подвързани така, че всеки ред да може да следва всеки друг: 10^14 стихотворения. Страницата с подредбите заема структурата, не поезията — устройството работи, защото всеки ред на дадена позиция споделя римата и метриката на останалите, така че никаква замяна не поражда безсмислица, а тук тази роля играе речникът от теми. Записано като потвърдено, защото документацията назовава творбата пряко, а не ѝ подражава; самата книга не е четена за този проект, което библиографията отбелязва.',
+      de: 'Zehn Sonette, in je vierzehn Streifen geschnitten und so gebunden, dass jede Zeile auf jede andere folgen kann: 10^14 Gedichte. Die Ablage-Seite übernimmt die Struktur, nicht die Poesie — das Verfahren trägt, weil jede Zeile einer Position Reim und Metrum mit allen anderen teilt, sodass keine Vertauschung Unsinn ergibt; hier übernimmt der Themenwortschatz diese Rolle. Als verifiziert geführt, weil die Dokumentation das Werk ausdrücklich benennt statt es nachzuahmen; das Buch selbst wurde für dieses Projekt nicht gelesen, was die Bibliografie festhält.'
+    }
+  },
+  {
     id: 'final-exit',
     status: 'probable',
     locus: 'concept · 9',
