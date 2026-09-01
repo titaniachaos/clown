@@ -157,3 +157,23 @@
 @media (max-width: 640px) {
   .contact-button { width: 100%; text-align: center; }
 }
+
+/* The navigation needs more room than the theme gives it.
+
+   VitePress swaps the hamburger for the full menu at 768px, which fits its own
+   three-word nav and not seven destinations in three languages. Measured here:
+   395px of sideways scroll on /clown/de/ at 768, 334px at 820. The same is
+   true on the main site, and the same seam fixes both.
+
+   960px is the width at which VitePress's own layout stops being cramped and
+   at which all three languages measure clean. Below it the hamburger keeps
+   every link one tap away; the nav screen has to be freed with it, or the
+   hamburger opens onto a menu the theme has already hidden.
+
+   `!important` because the theme's own rules are scoped and carry a
+   `[data-v-...]` attribute selector, which outranks a plain class from here. */
+@media (min-width: 768px) and (max-width: 959.98px) {
+  .VPNavBarMenu.menu { display: none !important; }
+  .VPNavBarHamburger { display: flex !important; }
+  .VPNavScreen { display: block !important; }
+}
