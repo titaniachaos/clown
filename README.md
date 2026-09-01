@@ -171,6 +171,31 @@ What does **not** change:
 
 Pushing to `main` builds the site and deploys it to GitHub Pages.
 
+## Citable research releases
+
+Research milestones can be archived automatically by Zenodo. The GitHub
+repository owner must first connect their GitHub account in Zenodo, sync the
+repository list and enable `titaniachaos/clown`. That one-time authorization
+happens in Zenodo and is deliberately not stored in this repository.
+
+In GitHub, create an environment named `zenodo-release` and configure its
+deployment protection rules with the required reviewer or reviewers. This is
+the human approval gate: the workflow cannot publish a release until an
+authorised reviewer approves that environment deployment.
+
+After the repository is enabled, open **Actions → Archive research release →
+Run workflow** on the `main` branch and enter a milestone version such as
+`2026.1`. The workflow validates the complete research site and then pauses at
+**Approve and publish**. Once an authorised reviewer approves it, the workflow
+creates the tag and publishes the GitHub Release. Rejecting it creates neither.
+Zenodo then ingests an approved release and assigns the version DOI on its side.
+Use a new increasing version for every later milestone; published releases are
+immutable.
+
+`CITATION.cff` supplies the title, creator, abstract and research keywords.
+Before the first release, review that metadata in the repository and confirm
+that the creator name is exactly how it should appear in the permanent record.
+
 > **Do not set a custom domain on *this* repository.** The Clown site is a
 > project site served from the `/clown/` sub-path, and `base` in
 > `docs/.vitepress/config.mts` assumes it. A custom domain here would move it to

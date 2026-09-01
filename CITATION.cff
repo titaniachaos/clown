@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this research or its materials, please cite the archived release."
+title: "Solo Titania Chaos: artistic research, studio process and production dossier"
+type: software
+authors:
+  - family-names: Petkova
+    given-names: Tatiana
+abstract: >-
+  A multilingual, versioned research and production dossier for Solo Titania
+  Chaos, a physical, wordless clown solo investigating solitude, audience
+  presence, failure and connection. The repository contains the artistic
+  concept, studio methodology, research ledger, project journal, ethics and
+  consent materials, and production planning.
+repository-code: "https://github.com/titaniachaos/clown"
+url: "https://titaniachaos.com/clown/"
+keywords:
+  - artistic research
+  - clown
+  - performing arts
+  - physical theatre
+  - solitude
+  - audience relationship
+  - practice-based research
+
