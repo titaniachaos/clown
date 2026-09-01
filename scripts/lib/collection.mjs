@@ -31,8 +31,22 @@
 import { readFile, readdir } from 'node:fs/promises'
 import { join } from 'node:path'
 
-/** Below this a path is a page with one thing on it, which is not a page. */
-export const ENOUGH = 2
+/**
+ * How much a question needs before it gets a page of its own.
+ *
+ * One. It was two, on the reasoning that a page with a single thing on it is
+ * not a page -- and that reasoning was about which pages are worth
+ * pre-rendering, which is not the same question as which addresses are worth
+ * answering. The 55 questions below the line were answered by the 404 handler
+ * instead, and a 404 in this theme has no sidebar, no outline and a narrower
+ * container: `/audience/exercise` was a real collection wearing a different
+ * template, which is exactly what it looked like.
+ *
+ * So every answerable question is a page now, and the 404 is left for words
+ * this workspace does not use. 110 questions rather than 55, in three
+ * languages, all of them thin and none of them lying about what they are.
+ */
+export const ENOUGH = 1
 
 /** How deep a question may go. Three topics already answers with two things. */
 export const DEEPEST = 3
