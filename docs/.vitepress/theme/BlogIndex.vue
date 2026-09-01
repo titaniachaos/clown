@@ -64,15 +64,17 @@ const topics = computed(() => {
 
   <ul v-if="posts.length" class="posts">
     <li v-for="post in posts" :key="post.slug" class="posts__item">
-      <a class="posts__card" :href="post.href">
+      <a class="posts__thumb" :href="post.href" tabindex="-1" aria-hidden="true">
         <img :src="post.frame!.tile" :alt="post.frame!.alt[lang]" width="160" height="160" loading="lazy" decoding="async" />
-        <span class="posts__title">{{ post.title }}</span>
       </a>
-      <p v-if="post.summary" class="posts__summary">{{ post.summary }}</p>
-      <p v-if="post.chips.length" class="posts__chips">
-        <span v-for="chip in post.chips" :key="chip">{{ chip }}</span>
-      </p>
-      <a class="posts__read" :href="post.href">{{ t.read }}</a>
+      <div class="posts__words">
+        <a class="posts__title" :href="post.href">{{ post.title }}</a>
+        <p v-if="post.summary" class="posts__summary">{{ post.summary }}</p>
+        <p v-if="post.chips.length" class="posts__chips">
+          <span v-for="chip in post.chips" :key="chip">{{ chip }}</span>
+        </p>
+        <a class="posts__read" :href="post.href">{{ t.read }}</a>
+      </div>
     </li>
   </ul>
 </template>
@@ -101,17 +103,32 @@ const topics = computed(() => {
 .topics a:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
 .topics__count { color: var(--vp-c-text-3); font-variant-numeric: tabular-nums; }
 
+/* One post to a row, thumbnail beside the words.
+ *
+ * This was a four-column grid of 8.5rem thumbnails, which was right while a
+ * card was a picture and a title. It stopped being right the moment the cards
+ * carried the summaries as well: 144px is a column for a thumbnail and a
+ * channel for a sentence, and the German index had eight of them, one word
+ * per line. A reading list is rows.
+ */
 .posts {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
-  gap: 1.2rem 1rem;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.8rem;
   margin: 2rem 0 3rem;
   padding: 0;
   list-style: none;
 }
 .posts li { margin: 0; }
-.posts__card { display: block; text-decoration: none; }
-.posts__card img {
+.posts__item {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 1.2rem;
+  align-items: start;
+}
+.posts__words { min-width: 0; }
+.posts__thumb { display: block; text-decoration: none; }
+.posts__thumb img {
   width: 100%;
   height: auto;
   margin: 0 0 0.45rem;
@@ -121,16 +138,18 @@ const topics = computed(() => {
   background: var(--vp-c-bg-soft);
   transition: transform 0.3s ease;
 }
-.posts__card:hover img { transform: scale(1.04); }
+.posts__item:hover .posts__thumb img { transform: scale(1.04); }
 .posts__title {
   display: block;
   color: var(--vp-c-text-1);
-  font-size: 0.8125rem;
+  /* A row gives the title room the thumbnail column never did. */
+  font-size: 1.0625rem;
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.3;
+  text-decoration: none;
   text-wrap: pretty;
 }
-.posts__card:hover .posts__title { color: var(--vp-c-brand-1); }
+.posts__title:hover { color: var(--vp-c-brand-1); }
 .posts__summary {
   margin: 0.5rem 0 0;
   color: var(--vp-c-text-2);

@@ -177,3 +177,67 @@
   .VPNavBarHamburger { display: flex !important; }
   .VPNavScreen { display: block !important; }
 }
+
+/* Two figures in a row are a pair, so set them as one.
+
+   Every figure here floats right and is 19rem wide, so two of them in a row
+   sit side by side and take 550px of a 624px column. On /clown/blog/ that left
+   the introduction a 74px channel between them: one word per line, for eight
+   lines, which is not a paragraph and is not a design.
+
+   Side by side in one row, at half the measure each, with the prose above and
+   below. Nothing is beside them, so there is nothing to squeeze. The archive
+   next door reached the same rule from the other direction -- there the pair
+   left a gap rather than a channel -- and it is the same two lines of CSS.
+
+   `.figure + .figure.figure` doubles the class deliberately: MediaFigure's own
+   `width` is a scoped rule carrying a `[data-v-...]` attribute, which ties with
+   a two-class selector, and a tie goes to the component. */
+@media (min-width: 721px) {
+  .vp-doc .figure:has(+ .figure),
+  .vp-doc .figure + .figure.figure {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 0.6rem);
+    max-width: calc(50% - 0.6rem);
+    margin: 0.4rem 0 1.2rem;
+  }
+  /* A ceiling, so a portrait at half the measure does not stand 700px tall and
+     turn the page into a gallery. The image centres in the half it no longer
+     fills; with nothing flowing beside it that is a cell, not a gap. */
+  .vp-doc .figure:has(+ .figure) .figure__media,
+  .vp-doc .figure + .figure.figure .figure__media {
+    width: auto;
+    max-width: 100%;
+    max-height: 26rem;
+    margin-inline: auto;
+  }
+}
+
+/* A figure with nothing to flow beside it should stop pretending to float.
+
+   Same rule the archive carries, for the same reason: a float only works when
+   the section has enough prose to close around it, and where it does not the
+   picture towers over two lines and the next heading clears below the picture
+   rather than below the text. `:has()` states the condition -- at most two
+   blocks between the figure and the next heading is a figure nearly alone in
+   its section. */
+@media (min-width: 721px) {
+  .vp-doc .figure:has(+ :is(h2, h3)),
+  .vp-doc .figure:has(+ :is(p, ul, ol, blockquote) + :is(h2, h3)),
+  .vp-doc .figure:has(+ :is(p, ul, ol, blockquote) + :is(p, ul, ol, blockquote) + :is(h2, h3)) {
+    float: none;
+    width: auto;
+    max-width: 100%;
+    margin: 1.6rem 0;
+  }
+  .vp-doc .figure:has(+ :is(h2, h3)) .figure__media,
+  .vp-doc .figure:has(+ :is(p, ul, ol, blockquote) + :is(h2, h3)) .figure__media,
+  .vp-doc .figure:has(+ :is(p, ul, ol, blockquote) + :is(p, ul, ol, blockquote) + :is(h2, h3)) .figure__media {
+    width: auto;
+    max-width: 100%;
+    max-height: 26rem;
+    margin-inline: auto;
+  }
+}
