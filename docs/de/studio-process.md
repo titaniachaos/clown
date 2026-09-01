@@ -1,11 +1,11 @@
 ---
-title: Das Studio
-description: Der bestätigte Studioprozess und die praktischen Werkzeuge, mit denen Material für Solo Titania Chaos entdeckt wird.
+title: Die Bedingung erzeugen — die Studiomethode
+description: "Die Bedingung erzeugen: die Studiomethode hinter Solo Titania Chaos. Die Situation herstellen und beobachten, was ein Körper darin tut — in vier Phasen: sammeln, prüfen, fügen, verdichten."
 outline: [2, 2]
 tags: ["studio-practice", "exercise", "failure", "object-play"]
 ---
 
-# Das Studio
+# Die Bedingung erzeugen
 
 <MediaFigure id="a-img-8521" />
 <MediaFigure id="b-img-7960" />
@@ -16,10 +16,9 @@ Material wird erzeugt, bevor es beurteilt wird, mit Menschen erprobt, bevor es z
 
 Ziel ist nicht, eine vorgestellte Aufführung zu proben, sondern zu entdecken, was Titania unter konkreten Bedingungen tatsächlich tut.
 
-**Erzeuge die Bedingung, statt Titania aufzufordern, sie darzustellen.** Dieser
-Satz ist die Methode, und im Studio hat sie einen Namen: **Die Bedingung
-erzeugen**. Sie läuft in vier Phasen — sammeln, prüfen, fügen, verdichten — und
-der Rest dieser Seite sagt, was jede davon verlangt.
+**Erzeuge die Bedingung, statt Titania aufzufordern, sie darzustellen.** Dieser Satz
+ist die Methode und ihr Name. Sie läuft in vier Phasen — sammeln, prüfen, fügen,
+verdichten — und der Rest dieser Seite sagt, was jede davon verlangt.
 
 ## Der Prozess {#process}
 
