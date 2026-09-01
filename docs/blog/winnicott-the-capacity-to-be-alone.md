@@ -6,6 +6,7 @@ tags: ["solitude","audience","studio-practice","sources","performance","reading-
 ---
 
 # D. W. Winnicott — the capacity to be alone
+<MediaFigure id="a-img-5951" />
 
 **Status:** Verified
 

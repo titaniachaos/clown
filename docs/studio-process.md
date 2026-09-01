@@ -11,6 +11,7 @@ tags: ["studio-practice", "exercise", "failure", "object-play"]
 # The Studio
 
 <MediaFigure id="a-img-8521" />
+<MediaFigure id="b-img-7960" />
 
 The studio is where questions become physical tests.
 

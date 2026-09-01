@@ -8,6 +8,7 @@ tags: ["audience","failure","question"]
 # Reading the Flop
 
 <MediaFigure id="telephone" />
+<MediaFigure id="a-img-8040" />
 
 Failure is observed after it happens rather than manufactured according to a scale.
 

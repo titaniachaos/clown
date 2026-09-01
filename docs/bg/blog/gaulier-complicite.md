@@ -8,6 +8,7 @@ tags: ["audience","sources","performance","reading-note"]
 # Филип Голие — complicité
 
 <MediaFigure id="workshop-mini-art" />
+<MediaFigure id="a-img-2845" />
 
 **Статус:** Избрана линия
 

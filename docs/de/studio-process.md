@@ -8,6 +8,7 @@ tags: ["studio-practice", "exercise", "failure", "object-play"]
 # Das Studio
 
 <MediaFigure id="a-img-8521" />
+<MediaFigure id="b-img-7960" />
 
 Im Studio werden Fragen zu körperlichen Versuchen.
 

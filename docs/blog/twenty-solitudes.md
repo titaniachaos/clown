@@ -8,6 +8,7 @@ tags: ["solitude","audience","studio-practice","failure","object-play","exercise
 # Twenty Solitudes
 
 <MediaFigure id="traveller-kit" />
+<MediaFigure id="a-img-2173" />
 
 Generate **twenty short physical improvisations**, approximately one minute each.
 

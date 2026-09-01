@@ -8,6 +8,7 @@ tags: ["audience","sources","performance","reading-note"]
 # Philippe Gaulier — Complicité
 
 <MediaFigure id="workshop-mini-art" />
+<MediaFigure id="a-img-2845" />
 
 **Status:** Gewählte Linie
 

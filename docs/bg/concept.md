@@ -8,6 +8,7 @@ tags: ["solitude", "audience", "failure", "clowning", "question"]
 # Работата
 
 <MediaFigure id="a-img-4367" />
+<MediaFigure id="a-img-2906" />
 
 ## Какво вече знаем {#concept}
 

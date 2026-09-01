@@ -12,6 +12,7 @@ tags: ["solitude", "audience", "failure", "clowning", "question"]
 # The Work
 
 <MediaFigure id="a-img-4367" />
+<MediaFigure id="a-img-2906" />
 
 ## What is already known {#concept}
 

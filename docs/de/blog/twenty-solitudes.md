@@ -8,6 +8,7 @@ tags: ["solitude","audience","studio-practice","failure","object-play","exercise
 # Zwanzig Formen des Alleinseins
 
 <MediaFigure id="traveller-kit" />
+<MediaFigure id="a-img-2173" />
 
 Erzeuge **zwanzig kurze körperliche Improvisationen** von jeweils ungefähr einer Minute. Verwende in der ersten Runde keine Objekte.
 

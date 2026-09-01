@@ -6,6 +6,7 @@ tags: ["solitude","audience","studio-practice","sources","performance","reading-
 ---
 
 # Д. У. Уиникът — способността да бъдеш сам
+<MediaFigure id="a-img-5951" />
 
 **Статус:** Проверено
 

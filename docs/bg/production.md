@@ -8,6 +8,7 @@ tags: ["performance", "studio-practice", "audience"]
 # Продукция и подкрепа
 
 <MediaFigure id="a-img-3341" />
+<MediaFigure id="b-img-7614" />
 
 <span id="solo"></span>
 

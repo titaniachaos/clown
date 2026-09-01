@@ -8,6 +8,7 @@ tags: ["failure","object-play","exercise"]
 # Observation Practice
 
 <MediaFigure id="statue-embrace" />
+<MediaFigure id="a-cd563ea5-553b-422b-9723-bbc102345524" />
 
 Observe solitary behaviour without assigning motives.
 

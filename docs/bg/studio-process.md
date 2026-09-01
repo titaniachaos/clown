@@ -8,6 +8,7 @@ tags: ["studio-practice", "exercise", "failure", "object-play"]
 # Студиото
 
 <MediaFigure id="a-img-8521" />
+<MediaFigure id="b-img-7960" />
 
 Студиото е мястото, където въпросите се превръщат във физически изпитания.
 

@@ -36,6 +36,7 @@ tags: ["solitude", "audience", "clowning", "studio-practice"]
 ## A wordless solo about being alone together
 
 <MediaFigure id="a-img-7300" />
+<MediaFigure id="b-img-2046" />
 
 The project asks whether a clown can make an audience **experience solitude** instead of merely watching it depicted. The contradiction is the engine: a clown depends on contact with the room, yet tries to prove that they are alone in front of the people whose presence makes that impossible.
 

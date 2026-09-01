@@ -8,6 +8,7 @@ tags: ["solitude","audience","studio-practice","failure","object-play","exercise
 # Двадесет уединения
 
 <MediaFigure id="traveller-kit" />
+<MediaFigure id="a-img-2173" />
 
 Създай **двадесет кратки физически импровизации** от приблизително по една минута. В първия кръг не използвай предмети.
 

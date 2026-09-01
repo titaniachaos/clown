@@ -8,6 +8,7 @@ tags: ["audience","failure","question"]
 # Разчитане на флопа
 
 <MediaFigure id="telephone" />
+<MediaFigure id="a-img-8040" />
 
 Провалът се наблюдава, след като се случи, вместо да се произвежда по скала.
 

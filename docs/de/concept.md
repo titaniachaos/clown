@@ -8,6 +8,7 @@ tags: ["solitude", "audience", "failure", "clowning", "question"]
 # Die Arbeit
 
 <MediaFigure id="a-img-4367" />
+<MediaFigure id="a-img-2906" />
 
 ## Was bereits feststeht {#concept}
 

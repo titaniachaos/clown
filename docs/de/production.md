@@ -8,6 +8,7 @@ tags: ["performance", "studio-practice", "audience"]
 # Produktion und Unterstützung
 
 <MediaFigure id="a-img-3341" />
+<MediaFigure id="b-img-7614" />
 
 <span id="solo"></span>
 

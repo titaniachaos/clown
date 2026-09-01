@@ -8,6 +8,7 @@ tags: ["clowning","studio-practice","failure","sources","reading-note"]
 # Анри Бергсон — комичното несъзнаване
 
 <MediaFigure id="beanie-portrait" />
+<MediaFigure id="a-img-2709" />
 
 **Статус:** Проверено
 

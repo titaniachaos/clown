@@ -8,6 +8,7 @@ tags: ["audience","failure","question"]
 # Den Flop lesen
 
 <MediaFigure id="telephone" />
+<MediaFigure id="a-img-8040" />
 
 Scheitern wird beobachtet, nachdem es geschieht, statt nach einer Skala hergestellt zu werden.
 

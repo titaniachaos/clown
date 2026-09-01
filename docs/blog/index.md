@@ -5,6 +5,8 @@ outline: [2, 2]
 ---
 
 # Blog
+<MediaFigure id="b-img-2755" />
+<MediaFigure id="a-img-6371" />
 
 A multilingual blog drawn from Titania Chaos’ artistic practice, workshops and the development of the wordless clown solo.
 

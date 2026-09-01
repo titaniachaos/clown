@@ -8,6 +8,7 @@ tags: ["clowning","studio-practice","failure","sources","reading-note"]
 # Henri Bergson — comic unconsciousness
 
 <MediaFigure id="beanie-portrait" />
+<MediaFigure id="a-img-2709" />
 
 **Status:** Verified
 
