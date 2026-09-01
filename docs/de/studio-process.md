@@ -16,7 +16,10 @@ Material wird erzeugt, bevor es beurteilt wird, mit Menschen erprobt, bevor es z
 
 Ziel ist nicht, eine vorgestellte Aufführung zu proben, sondern zu entdecken, was Titania unter konkreten Bedingungen tatsächlich tut.
 
-**Erzeuge die Bedingung, statt Titania aufzufordern, sie darzustellen.**
+**Erzeuge die Bedingung, statt Titania aufzufordern, sie darzustellen.** Dieser
+Satz ist die Methode, und im Studio hat sie einen Namen: **Die Bedingung
+erzeugen**. Sie läuft in vier Phasen — sammeln, prüfen, fügen, verdichten — und
+der Rest dieser Seite sagt, was jede davon verlangt.
 
 ## Der Prozess {#process}
 

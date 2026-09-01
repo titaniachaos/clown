@@ -19,7 +19,10 @@ Material is generated before it is judged, tested with people before it is assem
 
 The aim is not to rehearse an imagined performance, but to discover what Titania actually does under concrete conditions.
 
-**Create the condition rather than ask Titania to represent it.**
+**Create the condition rather than ask Titania to represent it.** That sentence
+is the method, and the studio has a name for it: **Create the Condition**. It
+runs in four phases — gathering, testing, assembling, tightening — and the
+rest of this page is what each one asks for.
 
 ## The process {#process}
 
