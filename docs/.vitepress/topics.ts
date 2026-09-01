@@ -126,11 +126,63 @@ export const TOPIC_UI: Record<Lang, {
   }
 }
 
+/**
+ * What an address that answers nothing should say.
+ *
+ * A path here is a question, so a path with no answer is a question this
+ * workspace cannot answer yet -- which is worth saying in the reader's own
+ * language, with the questions it *can* answer offered beside it.
+ */
+export const MISSING: Record<Lang, {
+  /** `%1` is the question as it was asked. */
+  asked: string
+  /** Nothing carries all of those words together. */
+  empty: string
+  /** A word the workspace does not use. */
+  unknown: string
+  /** Before the questions that do have answers. */
+  instead: string
+  /** Not a topic address at all. */
+  plain: string
+}> = {
+  en: {
+    asked: 'Nothing here answers %1.',
+    empty: 'Those topics exist, but nothing carries all of them at once.',
+    unknown: 'This workspace does not use that word.',
+    instead: 'Questions with answers',
+    plain: 'That page does not exist.'
+  },
+  bg: {
+    asked: 'Тук нищо не отговаря на %1.',
+    empty: 'Тези теми съществуват, но нищо не носи всички наведнъж.',
+    unknown: 'Това работно пространство не използва тази дума.',
+    instead: 'Въпроси с отговори',
+    plain: 'Тази страница не съществува.'
+  },
+  de: {
+    asked: 'Hier beantwortet nichts %1.',
+    empty: 'Diese Themen gibt es, aber nichts trägt sie alle zugleich.',
+    unknown: 'Dieser Arbeitsraum verwendet dieses Wort nicht.',
+    instead: 'Fragen mit Antworten',
+    plain: 'Diese Seite existiert nicht.'
+  }
+}
+
 export const fill = (template: string, value: string | number) => template.replace('%1', String(value))
 
-/** A topic's page, per language. */
-export const topicPath = (lang: Lang, topic: string) =>
-  `${lang === 'en' ? '' : `/${lang}`}/topic/${topic}`
+/**
+ * A question's page, per language.
+ *
+ * One word or several, and no `/topic/` in front of them: the segment said
+ * nothing that the words after it did not already say. `/clown/audience` and
+ * `/clown/audience/solitude` are the same kind of address, which is the point
+ * -- the path is the question, so nothing else belongs in it.
+ *
+ * The words are sorted here rather than at each call site, because `/a/b` and
+ * `/b/a` are one question and only one of them is a page.
+ */
+export const topicPath = (lang: Lang, ...topics: string[]) =>
+  `${lang === 'en' ? '' : `/${lang}`}/${[...new Set(topics.flat())].sort().join('/')}`
 
 /**
  * A post's page, per language.
@@ -146,3 +198,14 @@ export const postPath = (lang: Lang, slug: string) =>
 
 /** The blog index, per language. */
 export const blogPath = (lang: Lang) => `${lang === 'en' ? '' : `/${lang}`}/blog/`
+
+/**
+ * A written page, per language. `index` is the home page, not `/index`.
+ *
+ * Rooted for the reason the others are, and this one has already been proved:
+ * the listing used `../${slug}`, which resolved from `/topic/solitude` and
+ * broke the moment the same component rendered at `/topic/audience/solitude`,
+ * one level deeper. 96 dead links from one relative path.
+ */
+export const pagePath = (lang: Lang, slug: string) =>
+  `${lang === 'en' ? '' : `/${lang}`}/${slug === 'index' ? '' : slug}`

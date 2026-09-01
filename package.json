@@ -10,7 +10,7 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "check:sources": "node scripts/check-shared.mjs && node scripts/check-locales.mjs && node scripts/check-topics.mjs && node scripts/check-ecosystem.mjs && node scripts/check-ledger.mjs && node scripts/check-claims.mjs && node scripts/check-bibliography.mjs",
-    "check:build": "node scripts/check-build.mjs docs/.vitepress/dist --sibling ../titaniachaos.github.io/docs/.vitepress/dist && node scripts/check-receipt.mjs && node scripts/check-images.mjs && node scripts/check-page-weight.mjs && node scripts/check-a11y.mjs && node scripts/check-supporters.mjs && node scripts/media-sync.mjs",
+    "check:build": "node scripts/check-build.mjs docs/.vitepress/dist --sibling ../titaniachaos.github.io/docs/.vitepress/dist && node scripts/check-collection.mjs && node scripts/check-receipt.mjs && node scripts/check-images.mjs && node scripts/check-page-weight.mjs && node scripts/check-a11y.mjs && node scripts/check-supporters.mjs && node scripts/media-sync.mjs",
     "check:images": "node scripts/check-images.mjs",
     "check:weight": "node scripts/check-page-weight.mjs",
     "media:sync": "node scripts/media-sync.mjs",

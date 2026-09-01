@@ -12,6 +12,7 @@ import BlogIndex from './BlogIndex.vue'
 import BlogTopic from './BlogTopic.vue'
 import PageTopics from './PageTopics.vue'
 import LocalePreference from './LocalePreference.vue'
+import NotFound from './NotFound.vue'
 import './custom.css'
 
 export default {
@@ -21,6 +22,13 @@ export default {
   // until a grant is signed.
   Layout: () => h(DefaultTheme.Layout, null, {
       'layout-top': () => h(LocalePreference, { base: '/clown' }),
+      // A path here is a question, so an address that answers nothing is a
+      // question rather than a wall: it redirects when the same question has a
+      // page under another order, and offers the answerable ones when it does
+      // not. This is the slot the default theme actually renders -- a
+      // top-level `NotFound` on the theme object is only the router's fallback
+      // for a missing page module, and never reaches the 404 screen.
+      'not-found': () => h(NotFound),
       'home-hero-image': () => h(HeroSlider),
       // The tags a page already carries, as links. Placed here rather than in
       // thirty-three Markdown files; renders nothing on a page with no tags.

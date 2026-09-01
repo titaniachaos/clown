@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { useData, withBase } from 'vitepress'
 import { data } from '../media.data'
-import { TOPIC_NAMES, TOPIC_UI, topicPath, postPath, blogPath } from '../topics.ts'
+import { TOPIC_NAMES, TOPIC_UI, topicPath, postPath, blogPath, pagePath } from '../topics.ts'
 import type { Topic } from '../topics.ts'
 import { useLang } from './useLang.ts'
 
@@ -21,34 +21,72 @@ import { useLang } from './useLang.ts'
  * the component that has the data.
  */
 
+/**
+ * The question can arrive two ways: from the route, on the 55 pages built for
+ * it, or as a prop, when an address nobody pre-generated turns out to be a
+ * question this workspace can answer anyway. Same component either way, so a
+ * computed collection is not a lesser page with a different look -- it is the
+ * page.
+ */
+const props = defineProps<{ topics?: string[]; name?: string }>()
+
 const { params } = useData()
 const { lang } = useLang()
 
-const topic = computed(() => (params.value?.topic ?? '') as Topic)
-const name = computed(() => (params.value?.name ?? '') as string)
+/**
+ * The question this page was asked.
+ *
+ * One topic or several: `/topic/solitude` and `/topic/audience/solitude` are
+ * the same kind of page, so they are the same component. `topics` is written
+ * by the route rather than re-derived from t1/t2/t3 here, so exactly one place
+ * decides what was asked.
+ */
+const asked = computed<Topic[]>(() => {
+  if (props.topics?.length) return props.topics as Topic[]
+  const many = String(params.value?.topics ?? '').split(' ').filter(Boolean)
+  if (many.length) return many as Topic[]
+  const one = params.value?.topic
+  return one ? [one as Topic] : []
+})
+const topic = computed(() => asked.value[0] ?? ('' as Topic))
+const name = computed(
+  () => props.name ?? ((params.value?.name ?? '') as string)
+)
+const carries = (topics: string[]) => asked.value.every((w) => topics.includes(w))
 const t = computed(() => TOPIC_UI[lang.value])
 const names = computed(() => TOPIC_NAMES[lang.value])
 
 const posts = computed(() =>
   data.posts[lang.value]
-    .filter((post) => post.topics.includes(topic.value))
+    .filter((post) => carries(post.topics))
     .map((post) => ({ ...post, frame: data.frames.find((f) => f.id === post.id) }))
 )
 
-const pages = computed(() =>
-  data.pages[lang.value].filter((page) => page.topics.includes(topic.value))
-)
+const pages = computed(() => data.pages[lang.value].filter((page) => carries(page.topics)))
 
-/** The other topics that actually have something in them. */
-const siblings = computed(() =>
-  Object.keys(names.value)
-    .filter(
-      (other) =>
-        other !== topic.value &&
-        [...data.posts[lang.value], ...data.pages[lang.value]].some((p) => p.topics.includes(other))
-    )
-    .map((other) => ({ topic: other, name: names.value[other as Topic], path: withBase(topicPath(lang.value, other)) }))
-)
+/**
+ * One more word, where that still finds something.
+ *
+ * From `/topic/solitude` these lead to `/topic/audience/solitude` rather than
+ * sideways to `/topic/audience`: a reader narrowing a question wants the
+ * question narrowed, not replaced. At three words it stops, which is where the
+ * collection stops having anything to say.
+ */
+const here = computed(() => [...posts.value, ...pages.value])
+
+const siblings = computed(() => {
+  if (asked.value.length >= 3) return []
+  return Object.keys(names.value)
+    .filter((other) => !asked.value.includes(other as Topic))
+    .map((other) => ({
+      topic: other,
+      name: names.value[other as Topic],
+      n: here.value.filter((p) => p.topics.includes(other)).length,
+      path: withBase(topicPath(lang.value, ...asked.value, other))
+    }))
+    .filter((s) => s.n >= 2)
+    .sort((a, b) => b.n - a.n || a.name.localeCompare(b.name))
+})
 
 </script>
 
@@ -93,7 +131,7 @@ const siblings = computed(() =>
     </h2>
     <ul v-if="pages.length" class="topic__list topic__list--pages">
       <li v-for="page in pages" :key="page.slug" class="topic__item">
-        <a class="topic__page" :href="`../${page.slug === 'index' ? '' : page.slug}`">
+        <a class="topic__page" :href="withBase(pagePath(lang, page.slug))">
           <span class="topic__name">{{ page.title }}</span>
           <span class="topic__summary">{{ page.summary }}</span>
         </a>
@@ -110,7 +148,9 @@ const siblings = computed(() =>
 
     <nav v-if="siblings.length" class="topic__siblings">
       <a :href="withBase(blogPath(lang))">{{ t.all }}</a>
-      <a v-for="other in siblings" :key="other.topic" :href="other.path">{{ other.name }}</a>
+      <a v-for="other in siblings" :key="other.topic" :href="other.path"
+        >{{ other.name }}<span class="topic__count">{{ other.n }}</span></a
+      >
     </nav>
   </section>
 </template>
