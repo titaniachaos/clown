@@ -68,6 +68,7 @@ export const WORKS: Work[] = [
     issue: '3',
     pages: '303–327',
     note: 'Added as the closing chapter of The Origins of Totalitarianism in the 1958 edition; it is not in the 1951 first edition.',
+    doi: '10.1017/S0034670500001510',
     records: ['three-terms', 'two-in-one'],
     read: 'full-text'
   },
@@ -135,6 +136,7 @@ export const WORKS: Work[] = [
     title: 'The moving body (Le corps poétique): Teaching creative theatre',
     publisher: 'Methuen',
     note: 'Pages 154, 159 and 160 are cited from the 2002 edition, by way of Amsden (2015).',
+    doi: '10.5040/9781350053496',
     records: ['lecoq', 'flop'],
     read: 'not-read'
   },
@@ -196,6 +198,7 @@ export const WORKS: Work[] = [
     title: 'L’écoute et la chute: Le sens du lieu commun dans le jeu clownesque et ses échos dans l’écriture poétique',
     container: 'Fabula, Lieu(x) commun(s)',
     url: 'https://www.fabula.org/colloques/document8603.php',
+    doi: '10.58282/colloques.8603',
     records: ['shared-floor'],
     read: 'full-text'
   },

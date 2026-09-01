@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto'
 import { defineLoader } from 'vitepress'
 import type { Lang, Localised } from './locale.ts'
+import { WORKS } from './bibliography.ts'
 
 /**
  * Build-time data loader for the source ledger.
@@ -29,8 +30,6 @@ export interface SourceEntry {
   locus: string
   /** Citation. Titles stay in their original language in every locale. */
   work: string
-  /** Persistent identifier, where one exists. */
-  ref?: string
   /** The phrase as it stands in the documentation. */
   phrase: Localised
   /** What it is drawing on. */
@@ -67,6 +66,13 @@ export interface OwnParadox {
 }
 
 /** One record, once every facet is folded in. */
+/** A way to reach the work, resolved from the bibliography. */
+export interface Locator {
+  kind: 'doi' | 'url'
+  href: string
+  label: string
+}
+
 export type Record_ = SourceEntry & Facets & {
   /** Content address: changes when any part of the record changes. */
   address: string
@@ -186,7 +192,6 @@ const entries: SourceEntry[] = [
     status: 'verified',
     locus: 'concept · audience · studio',
     work: 'Jacques Lecoq, Le Corps Poétique (1997) / The Moving Body, 160; Philippe Gaulier, Le Gégèneur / The Tormentor (2007), 280 and 286; Lucy Amsden, “Monsieur Marcel and Monsieur Flop”, Theatre, Dance and Performance Training 8:2 (2017), 129–142',
-    ref: '10.1080/19443927.2017.1316304',
     phrase: {
       en: 'The flop',
       bg: 'Флопът',
@@ -363,7 +368,6 @@ const entries: SourceEntry[] = [
     status: 'verified',
     locus: 'concept · audience · studio',
     work: 'Laura Purcell Gates, “Locating the self: narratives and practices of authenticity in French clown training”, Theatre, Dance and Performance Training 2:2 (2011), 231–242',
-    ref: '10.1080/19443927.2011.553239',
     phrase: {
       en: 'Failing in order to succeed',
       bg: 'Да се провалиш, за да успееш',
@@ -815,8 +819,23 @@ export default defineLoader({
     // microdata -- reads this and nothing else.
     const assembled: Record_[] = entries.map((entry) => {
       const record = { ...entry, ...(facets[entry.id] ?? {}) }
+      // Locators come from the bibliography, never from a second copy here.
+      // This entry used to carry its own `ref`, which held the same DOI as the
+      // work that cites it and rendered as bare text while the bibliography
+      // rendered a link: one identifier, two spellings, one of them not
+      // clickable. The bibliography's own header says references must derive
+      // from one source and cannot disagree; this is that rule applied.
+      const locators: Locator[] = WORKS.filter((work) => work.records.includes(entry.id)).flatMap(
+        (work) =>
+          work.doi
+            ? [{ kind: 'doi' as const, href: `https://doi.org/${work.doi}`, label: work.doi }]
+            : work.url
+              ? [{ kind: 'url' as const, href: work.url, label: new URL(work.url).hostname.replace(/^www\./, '') }]
+              : []
+      )
       return {
         ...record,
+        locators,
         address: address(record),
         out: edges.filter((e) => e.from === entry.id),
         in: edges.filter((e) => e.to === entry.id)

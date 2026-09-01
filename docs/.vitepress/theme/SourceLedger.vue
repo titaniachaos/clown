@@ -142,8 +142,19 @@ function parts(text: string) {
           </span>
         </p>
 
-        <p v-if="entry.ref" class="ref">
-          doi:<span itemprop="identifier">{{ entry.ref }}</span>
+        <!-- Resolved from the bibliography, and a link. It used to print the
+             ledger's own copy of the DOI as bare text while the bibliography
+             rendered the same identifier as a link. -->
+        <p v-if="entry.locators.length" class="ref">
+          <a
+            v-for="locator in entry.locators"
+            :key="locator.href"
+            :href="locator.href"
+            rel="noopener"
+            target="_blank"
+            ><span v-if="locator.kind === 'doi'">doi:</span
+            ><span itemprop="identifier">{{ locator.label }}</span></a
+          >
         </p>
         <p class="address"><span itemprop="identifier">{{ entry.address }}</span></p>
       </div>
@@ -380,6 +391,9 @@ function parts(text: string) {
 
 .edge.inbound { opacity: 0.75; }
 
+.ref a { color: var(--vp-c-text-3); text-decoration: none; }
+.ref a:hover { color: var(--vp-c-brand-1); text-decoration: underline; }
+.ref a + a { margin-left: 0.6rem; }
 .ref,
 .address,
 .receipt {
