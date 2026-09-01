@@ -42,7 +42,13 @@ const SHARED = [
   // the older one could not see a dead link to the sibling site, which is
   // exactly the link only the other repo can confirm. It reads its own base
   // from the build, so one file serves both.
-  'scripts/check-build.mjs'
+  'scripts/check-build.mjs',
+  // The ported primitives. A badge that means one thing here and another next
+  // door is the duplication this port removed, arriving again by the back
+  // door -- and these two sites are read one after the other on one domain.
+  'docs/.vitepress/theme/ui/UiBadge.vue',
+  'docs/.vitepress/theme/ui/UiButton.vue',
+  'docs/.vitepress/theme/ui/UiLabel.vue'
 ]
 
 const digest = async (path) => createHash('sha256').update(await readFile(path)).digest('hex')

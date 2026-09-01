@@ -135,7 +135,7 @@ const instead = computed(() => {
   </div>
 
   <div v-else-if="ready" class="missing">
-    <p class="missing__code">404</p>
+    <p class="ui-label missing__code">404</p>
 
     <template v-if="asked.length">
       <h1 class="missing__title">{{ fill(t.asked, spoken) }}</h1>
@@ -146,10 +146,8 @@ const instead = computed(() => {
     </template>
 
     <nav v-if="instead.length" class="missing__instead">
-      <span class="missing__lead-in">{{ t.instead }}</span>
-      <a v-for="one in instead" :key="one.path" :href="one.path"
-        >{{ one.name }}<span>{{ one.n }}</span></a
-      >
+      <span class="ui-label missing__lead-in">{{ t.instead }}</span>
+      <UiBadge v-for="one in instead" :key="one.path" :href="one.path" :count="one.n">{{ one.name }}</UiBadge>
     </nav>
 
     <p class="missing__home">
@@ -195,21 +193,6 @@ const instead = computed(() => {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-.missing__instead a {
-  display: inline-flex;
-  gap: 0.4rem;
-  align-items: baseline;
-  padding: 0.3rem 0.75rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 999px;
-  color: var(--vp-c-text-2);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-.missing__instead a span { color: var(--vp-c-text-3); font-variant-numeric: tabular-nums; }
-.missing__instead a:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
+/* Chips are `.ui-badge`. */
 .missing__home { margin: 2.5rem 0 0; }
 </style>

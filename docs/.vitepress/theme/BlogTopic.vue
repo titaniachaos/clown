@@ -148,9 +148,7 @@ const siblings = computed(() => {
 
     <nav v-if="siblings.length" class="topic__siblings">
       <a :href="withBase(blogPath(lang))">{{ t.all }}</a>
-      <a v-for="other in siblings" :key="other.topic" :href="other.path"
-        >{{ other.name }}<span class="topic__count">{{ other.n }}</span></a
-      >
+      <UiBadge v-for="other in siblings" :key="other.topic" :href="other.path" :count="other.n">{{ other.name }}</UiBadge>
     </nav>
   </section>
 </template>
@@ -230,18 +228,7 @@ const siblings = computed(() => {
   padding-top: 1.5rem;
   border-top: 1px solid var(--vp-c-divider);
 }
-.topic__siblings a {
-  padding: 0.3rem 0.75rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 999px;
-  color: var(--vp-c-text-2);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-.topic__siblings a:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
+/* Chips are `.ui-badge`. */
 
 @media (max-width: 560px) {
   .topic__link { grid-template-columns: 4rem minmax(0, 1fr); gap: 0.8rem; }

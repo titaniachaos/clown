@@ -57,9 +57,7 @@ const topics = computed(() => {
 
 <template>
   <nav v-if="topics.length" class="topics">
-    <a v-for="topic in topics" :key="topic.topic" :href="topic.path">
-      {{ topic.name }}<span class="topics__count">{{ topic.count }}</span>
-    </a>
+    <UiBadge v-for="topic in topics" :key="topic.topic" :href="topic.path" :count="topic.count">{{ topic.name }}</UiBadge>
   </nav>
 
   <ul v-if="posts.length" class="posts">
@@ -71,7 +69,7 @@ const topics = computed(() => {
         <a class="posts__title" :href="post.href">{{ post.title }}</a>
         <p v-if="post.summary" class="posts__summary">{{ post.summary }}</p>
         <p v-if="post.chips.length" class="posts__chips">
-          <span v-for="chip in post.chips" :key="chip">{{ chip }}</span>
+          <UiBadge v-for="chip in post.chips" :key="chip" variant="muted">{{ chip }}</UiBadge>
         </p>
         <a class="posts__read" :href="post.href">{{ t.read }}</a>
       </div>
@@ -86,22 +84,6 @@ const topics = computed(() => {
   gap: 0.5rem;
   margin: 1.5rem 0 0;
 }
-.topics a {
-  display: inline-flex;
-  gap: 0.4rem;
-  align-items: baseline;
-  padding: 0.3rem 0.75rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 999px;
-  color: var(--vp-c-text-2);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-.topics a:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
-.topics__count { color: var(--vp-c-text-3); font-variant-numeric: tabular-nums; }
 
 /* One post to a row, thumbnail beside the words.
  *
@@ -163,16 +145,7 @@ const topics = computed(() => {
   gap: 0.4rem;
   margin: 0.6rem 0 0;
 }
-.posts__chips span {
-  padding: 0.15rem 0.55rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 999px;
-  color: var(--vp-c-text-3);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-}
+/* Chips are `.ui-badge--muted`. */
 .posts__read {
   display: inline-block;
   margin-top: 0.6rem;

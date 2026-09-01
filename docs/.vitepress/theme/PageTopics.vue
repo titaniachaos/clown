@@ -37,42 +37,19 @@ const topics = computed(() => {
 </script>
 
 <template>
-  <nav v-if="topics.length" class="post-topics" :aria-label="TOPIC_UI[lang].about">
-    <span class="post-topics__lead">{{ TOPIC_UI[lang].about }}</span>
-    <a v-for="topic in topics" :key="topic" :href="withBase(topicPath(lang, topic))">
-      {{ TOPIC_NAMES[lang][topic as Topic] }}
-    </a>
+  <nav v-if="topics.length" class="post-topics ui-separator" :aria-label="TOPIC_UI[lang].about">
+    <span class="ui-label post-topics__lead">{{ TOPIC_UI[lang].about }}</span>
+    <UiBadge
+      v-for="topic in topics"
+      :key="topic"
+      :href="withBase(topicPath(lang, topic))"
+    >{{ TOPIC_NAMES[lang][topic as Topic] }}</UiBadge>
   </nav>
 </template>
 
 <style scoped>
-.post-topics {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: baseline;
-  margin: 2.5rem 0 0;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--vp-c-divider);
-}
-.post-topics__lead {
-  margin-right: 0.25rem;
-  color: var(--vp-c-text-3);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.post-topics a {
-  padding: 0.3rem 0.75rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 999px;
-  color: var(--vp-c-text-2);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-.post-topics a:hover { border-color: var(--vp-c-brand-1); color: var(--vp-c-brand-1); }
+/* Chips are `.ui-badge`, the lead is `.ui-label`, the rule and its air are
+   `.ui-separator`. What is left is how they sit together. */
+.post-topics { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: baseline; }
+.post-topics__lead { margin-right: 0.25rem; }
 </style>
