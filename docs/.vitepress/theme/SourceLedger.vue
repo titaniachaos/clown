@@ -125,6 +125,13 @@ function parts(text: string) {
           </template>
         </p>
 
+        <!-- What the studio is to try because of it. These lived only in the
+             prose copy of the ledger until they were moved into the data. -->
+        <p v-if="entry.question" class="facet question">
+          <span class="label">{{ ui.question }}</span>
+          {{ entry.question[lang] }}
+        </p>
+
         <p v-if="entry.paradox" class="facet paradox">
           <span class="label">{{ ui.paradox }}</span>
           {{ entry.paradox[lang] }}

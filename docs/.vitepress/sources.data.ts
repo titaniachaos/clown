@@ -57,6 +57,16 @@ export interface Facets {
   statement?: Record<Lang, string>
   /** The paradox that claim generates for this project. */
   paradox?: Record<Lang, string>
+  /**
+   * What the studio is to try because of it.
+   *
+   * These lived only in the prose copy of the ledger, in three files, under
+   * four different bold labels -- `Studio question` in English, and both
+   * `Въпрос за студиото` and `Въпрос към работата` in Bulgarian, both
+   * `Studiofrage` and `Frage an die Arbeit` in German. Moved here so the
+   * ledger has one form and the page has one source.
+   */
+  question?: Record<Lang, string>
 }
 
 /** A paradox the project owns: no source, and the page should say so. */
@@ -94,6 +104,7 @@ export interface Data {
     /** One form per grammatical number: the tally prints a bare integer. */
     counts: Record<Status, { one: string; many: string }>
     statement: string
+    question: string
     paradox: string
     relations: string
     order: string
@@ -462,7 +473,26 @@ const entries: SourceEntry[] = [
 ]
 
 const facets: Record<string, Facets> = {
+  'authenticity-effect': {
+    question: {
+      en: 'Does the distinction remain useful once material meets an audience?',
+      bg: 'Остава ли разликата полезна, когато материалът срещне публика?',
+      de: 'Bleibt die Unterscheidung nützlich, wenn Material auf ein Publikum trifft?'
+    }
+  },
+  'three-terms': {
+    question: {
+      en: 'What changes in Titania\'s behaviour under different conditions of being alone, connected or disconnected?',
+      bg: 'Как се променя поведението на Титания при различни условия на уединение, свързаност или откъснатост?',
+      de: 'Wie verändert sich Titanias Verhalten unter verschiedenen Bedingungen von Alleinsein, Verbundenheit oder Abgetrenntsein?'
+    }
+  },
   'unconscious': {
+    question: {
+      en: 'When does awareness strengthen a comic moment, and when does it end it?',
+      bg: 'Кога осъзнаването усилва комичния миг и кога го прекратява?',
+      de: 'Wann stärkt Bewusstsein einen komischen Moment und wann beendet es ihn?'
+    },
     statement: {
       en: 'A comic character is comic in proportion to his ignorance of himself — invisible to himself, visible to everyone else',
       bg: 'Комичният герой е комичен в степента, в която не познава себе си — невидим за себе си, видим за всички останали',
@@ -475,6 +505,11 @@ const facets: Record<string, Facets> = {
     }
   },
   'back-shop': {
+    question: {
+      en: 'What remains physically present when another person is absent?',
+      bg: 'Какво остава физически присъстващо, когато другият отсъства?',
+      de: 'Was bleibt körperlich anwesend, wenn ein anderer Mensch fehlt?'
+    },
     paradox: {
       en: 'The room kept wholly one’s own stays furnished with borrowed language and absent people',
       bg: 'Стаята, запазена изцяло за себе си, остава обзаведена със заета реч и отсъстващи хора',
@@ -482,6 +517,11 @@ const facets: Record<string, Facets> = {
     }
   },
   'capacity': {
+    question: {
+      en: 'How does Titania\'s playing change when somebody is there but asks nothing of her?',
+      bg: 'Как се променя играта на Титания, когато някой е там, но не иска нищо от нея?',
+      de: 'Wie verändert sich Titanias Spiel, wenn jemand da ist, aber nichts von ihr verlangt?'
+    },
     statement: {
       en: 'The capacity to be alone is *built* by a present, undemanding witness — and that witness may be a cot, a pram, or the atmosphere of the room',
       bg: 'Способността да си сам се **изгражда** от присъстващ, непретенциозен свидетел — а свидетелят може да бъде люлка, количка или атмосферата на стаята',
@@ -494,6 +534,11 @@ const facets: Record<string, Facets> = {
     }
   },
   'flop': {
+    question: {
+      en: 'What kind of failure occurred, what became exposed, and what followed?',
+      bg: 'Какъв провал настъпи, какво се разкри и какво последва?',
+      de: 'Welche Art von Scheitern trat ein, was wurde sichtbar und was folgte daraus?'
+    },
     statement: {
       en: 'A flop is not a property of the material: the same show was the funniest thing the company had seen one night and drove the audience out furious the next',
       bg: 'Флопът не е свойство на материала: същото представление е най-смешното, което трупата е виждала, в една вечер, и изгонва публиката вбесена в следващата',
@@ -501,6 +546,11 @@ const facets: Record<string, Facets> = {
     }
   },
   'insensibility': {
+    question: {
+      en: 'What happens to the comedy when a moment becomes vulnerable, and what happens to the vulnerability when the audience laughs?',
+      bg: 'Какво става с комедията, когато мигът стане уязвим, и с уязвимостта, когато публиката се смее?',
+      de: 'Was geschieht mit der Komik, wenn ein Moment verletzlich wird, und mit der Verletzlichkeit, wenn das Publikum lacht?'
+    },
     paradox: {
       en: 'To laugh, the spectator must set feeling aside — and this piece wants the feeling',
       bg: 'За да се смее, зрителят трябва да остави чувството настрана — а това представление иска чувството',
@@ -508,6 +558,11 @@ const facets: Record<string, Facets> = {
     }
   },
   'laughter-echo': {
+    question: {
+      en: 'What does that shared response change in Titania\'s playing?',
+      bg: 'Как този общ отклик променя играта на Титания?',
+      de: 'Wie verändert diese gemeinsame Reaktion Titanias Spiel?'
+    },
     paradox: {
       en: 'Laughter needs an echo, so a room laughing at solitude is a room disproving it',
       bg: 'Смехът се нуждае от ехо, тъй че зала, която се смее на уединението, е зала, която го опровергава',
@@ -515,6 +570,11 @@ const facets: Record<string, Facets> = {
     }
   },
   'lecoq': {
+    question: {
+      en: 'What does Titania actually make happen in the room?',
+      bg: 'Какво действително предизвиква Титания в залата?',
+      de: 'Was lässt Titania tatsächlich im Raum geschehen?'
+    },
     statement: {
       en: 'Be yourself as profoundly as you can, *and observe the effect you have on the audience* — the self is read through its effect',
       bg: 'Бъди себе си възможно най-дълбоко **и наблюдавай ефекта, който имаш върху публиката** — азът се чете през своя ефект',
@@ -536,6 +596,11 @@ const facets: Record<string, Facets> = {
     }
   },
   'training-paradox': {
+    question: {
+      en: 'What matters in the room: how the failure originated, or what Titania does with it?',
+      bg: 'Какво има значение в залата: откъде идва провалът или какво прави Титания с него?',
+      de: 'Was zählt im Raum: wie das Scheitern entstand oder was Titania damit tut?'
+    },
     paradox: {
       en: 'To make an audience laugh, the clown must repeatedly fail to make them laugh',
       bg: 'За да разсмее публиката, клоунът трябва многократно да не успее да я разсмее',
@@ -543,6 +608,11 @@ const facets: Record<string, Facets> = {
     }
   },
   'two-in-one': {
+    question: {
+      en: 'What happens physically when Titania has no immediate relation except to herself?',
+      bg: 'Какво се случва физически, когато Титания няма непосредствена връзка с никого освен със себе си?',
+      de: 'Was geschieht körperlich, wenn Titania keine unmittelbare Beziehung außer zu sich selbst hat?'
+    },
     statement: {
       en: 'Solitude splits the self in two; only other people make it one again, because identity is confirmed only from outside',
       bg: 'Самотата разделя аза на две; само другите го правят отново един, защото идентичността се потвърждава само отвън',
@@ -758,6 +828,7 @@ const reading: Seat[] = [
 const ui: Data['ui'] = {
   en: {
     statement: 'The statement it makes',
+    question: 'What the studio tries',
     paradox: 'The paradox that follows',
     relations: 'Stands to',
     order: 'Reading order',
@@ -776,6 +847,7 @@ const ui: Data['ui'] = {
   },
   bg: {
     statement: 'Твърдението, което прави',
+    question: 'Какво опитва студиото',
     paradox: 'Парадоксът, който следва',
     relations: 'Отнася се към',
     order: 'Ред на четене',
@@ -794,6 +866,7 @@ const ui: Data['ui'] = {
   },
   de: {
     statement: 'Die Aussage, die es macht',
+    question: 'Was das Studio erprobt',
     paradox: 'Die Paradoxie, die folgt',
     relations: 'Steht zu',
     order: 'Lesereihenfolge',
