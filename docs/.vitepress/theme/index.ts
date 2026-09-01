@@ -13,6 +13,7 @@ import BlogTopic from './BlogTopic.vue'
 import PageTopics from './PageTopics.vue'
 import LocalePreference from './LocalePreference.vue'
 import NotFound from './NotFound.vue'
+import Filing from './Filing.vue'
 import UiBadge from './ui/UiBadge.vue'
 import UiButton from './ui/UiButton.vue'
 import UiLabel from './ui/UiLabel.vue'
@@ -50,6 +51,7 @@ export default {
     app.component('BlogIndex', BlogIndex)
     app.component('BlogTopic', BlogTopic)
     app.component('PageTopics', PageTopics)
+    app.component('Filing', Filing)
     // The ported primitives, same three as the archive. Registered here
     // because `enhanceApp` is where vitepress.dev registers components, and
     // globally because half the call sites are Markdown.

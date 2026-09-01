@@ -137,6 +137,9 @@ function sidebar(prefix: string, groupText: string, column: Column): DefaultThem
   ]
 }
 
+/** What the filing machine is called in the navigation. */
+const FILING = ['Filings', 'Подредби', 'Ablagen'] as const
+
 function nav(prefix: string, column: Column, mainSiteLabel: string): DefaultTheme.NavItem[] {
   return [
     { text: HOME[column - 1], link: `${prefix}/` },
@@ -146,6 +149,9 @@ function nav(prefix: string, column: Column, mainSiteLabel: string): DefaultThem
       activeMatch: `${prefix}/${section.slug}`
     })),
     { text: BLOG[column - 1], link: `${prefix}/blog/`, activeMatch: `${prefix}/blog` },
+    // The filing machine. One link rather than 1482: the address is in the
+    // fragment, so this is one page to an index and 1482 to a reader.
+    { text: FILING[column - 1], link: `${prefix}/filing`, activeMatch: `${prefix}/filing` },
     // Same domain, different repository: keep the reader in their own language
     // and in the same tab.
     { text: mainSiteLabel, link: MAIN_SITE(prefix), ...SAME_SITE }

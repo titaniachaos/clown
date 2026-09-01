@@ -52,6 +52,19 @@ const add = (m) => problems.push(m)
 const byFile = new Map()
 
 /** lang -> whether its home page writes <PageTopics /> itself. */
+/**
+ * Pages that are an instrument rather than a piece of writing.
+ *
+ * `filing` arranges every tagged page and post in the workspace, one to each
+ * topic, using each exactly once. Tag it and it becomes a twelfth piece and
+ * files itself: the count went from 1482 filings to 8238, and "eleven pieces
+ * of writing" stopped being true on the page that says it.
+ *
+ * So it carries no tags on purpose, and the rule that every page carries some
+ * says so here rather than being quietly weakened for everything.
+ */
+const INSTRUMENTS = ['filing']
+
 const homes = {}
 
 for (const { kind, dir: dirOf, skip } of SOURCES) {
@@ -74,7 +87,11 @@ for (const { kind, dir: dirOf, skip } of SOURCES) {
 
       const line = /^tags: \[(.*)\]$/m.exec(source)
       if (!line) {
-        add(`${where}: no tags`)
+        if (!(kind === 'page' && INSTRUMENTS.includes(slug))) add(`${where}: no tags`)
+        continue
+      }
+      if (kind === 'page' && INSTRUMENTS.includes(slug)) {
+        add(`${where}: an instrument may not carry tags — it would file itself`)
         continue
       }
       const tags = [...line[1].matchAll(/"([^"]+)"/g)].map((m) => m[1])

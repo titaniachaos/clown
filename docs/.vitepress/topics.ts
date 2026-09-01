@@ -133,6 +133,47 @@ export const TOPIC_UI: Record<Lang, {
  * workspace cannot answer yet -- which is worth saying in the reader's own
  * language, with the questions it *can* answer offered beside it.
  */
+/** The words around the filing machine. */
+export const FILING_UI: Record<Lang, {
+  /** `%1` is how many filings there are. */
+  of: string
+  turn: string
+  back: string
+  address: string
+  /** Turning one line here can move others. Said, not hidden. */
+  bound: string
+  share: string
+  copied: string
+}> = {
+  en: {
+    of: 'One of %1 complete filings',
+    turn: 'File this question elsewhere',
+    back: 'File this question back',
+    address: 'Filing',
+    bound: 'Every piece is used exactly once, so giving one question a different piece takes that piece from wherever it was. Turning one line can move another.',
+    share: 'Copy this filing',
+    copied: 'Copied'
+  },
+  bg: {
+    of: 'Едно от %1 пълни подредби',
+    turn: 'Подреди този въпрос другаде',
+    back: 'Върни този въпрос',
+    address: 'Подредба',
+    bound: 'Всяка част се използва точно веднъж, така че да дадеш на един въпрос друга част означава да я вземеш оттам, където е била. Завъртането на един ред може да премести друг.',
+    share: 'Копирай подредбата',
+    copied: 'Копирано'
+  },
+  de: {
+    of: 'Eine von %1 vollständigen Ablagen',
+    turn: 'Diese Frage anders ablegen',
+    back: 'Diese Frage zurücklegen',
+    address: 'Ablage',
+    bound: 'Jedes Stück wird genau einmal verwendet: gibt man einer Frage ein anderes Stück, nimmt man es dort weg, wo es war. Eine Zeile zu drehen kann eine andere bewegen.',
+    share: 'Ablage kopieren',
+    copied: 'Kopiert'
+  }
+}
+
 export const MISSING: Record<Lang, {
   /** `%1` is the question as it was asked. */
   asked: string
