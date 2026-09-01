@@ -6,7 +6,7 @@ tags: ["solitude","audience","studio-practice","sources","performance","reading-
 ---
 
 # D. W. Winnicott — die Fähigkeit zum Alleinsein
-<MediaFigure id="a-img-5951" />
+<MediaFigure id="camera-portrait" />
 
 **Status:** Verifiziert
 
