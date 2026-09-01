@@ -94,6 +94,8 @@ export const TOPIC_UI: Record<Lang, {
   all: string
   /** Before the chips at the foot of a page. */
   about: string
+  /** The link into a post from a listing. */
+  read: string
 }> = {
   en: {
     title: '%1',
@@ -101,7 +103,8 @@ export const TOPIC_UI: Record<Lang, {
     posts: 'Posts',
     pages: 'Pages',
     all: 'All posts',
-    about: 'This page is about'
+    about: 'This page is about',
+    read: 'Read article →'
   },
   bg: {
     title: '%1',
@@ -109,7 +112,8 @@ export const TOPIC_UI: Record<Lang, {
     posts: 'Публикации',
     pages: 'Страници',
     all: 'Всички публикации',
-    about: 'Тази страница е за'
+    about: 'Тази страница е за',
+    read: 'Прочетете статията →'
   },
   de: {
     title: '%1',
@@ -117,7 +121,8 @@ export const TOPIC_UI: Record<Lang, {
     posts: 'Beiträge',
     pages: 'Seiten',
     all: 'Alle Beiträge',
-    about: 'Diese Seite handelt von'
+    about: 'Diese Seite handelt von',
+    read: 'Artikel lesen →'
   }
 }
 
@@ -126,3 +131,18 @@ export const fill = (template: string, value: string | number) => template.repla
 /** A topic's page, per language. */
 export const topicPath = (lang: Lang, topic: string) =>
   `${lang === 'en' ? '' : `/${lang}`}/topic/${topic}`
+
+/**
+ * A post's page, per language.
+ *
+ * Rooted, not relative. `./slug` and `../blog/slug` happen to resolve from the
+ * pages that used them and quietly stop resolving the moment a listing is
+ * rendered from anywhere else; every caller then has to know how deep it sits.
+ * Pair this with `withBase()`, which is the only thing that knows the site is
+ * served from /clown/.
+ */
+export const postPath = (lang: Lang, slug: string) =>
+  `${lang === 'en' ? '' : `/${lang}`}/blog/${slug}`
+
+/** The blog index, per language. */
+export const blogPath = (lang: Lang) => `${lang === 'en' ? '' : `/${lang}`}/blog/`

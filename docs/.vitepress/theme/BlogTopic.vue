@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { useData, withBase } from 'vitepress'
 import { data } from '../media.data'
-import { TOPIC_NAMES, TOPIC_UI, topicPath } from '../topics.ts'
+import { TOPIC_NAMES, TOPIC_UI, topicPath, postPath, blogPath } from '../topics.ts'
 import type { Topic } from '../topics.ts'
 import { useLang } from './useLang.ts'
 
@@ -61,7 +61,7 @@ const siblings = computed(() =>
     </h2>
     <ul v-if="posts.length" class="topic__list">
       <li v-for="post in posts" :key="post.slug" class="topic__item">
-        <a class="topic__link" :href="`../blog/${post.slug}`">
+        <a class="topic__link" :href="withBase(postPath(lang, post.slug))">
           <img
             v-if="post.frame"
             class="topic__tile"
@@ -109,7 +109,7 @@ const siblings = computed(() =>
     </ul>
 
     <nav v-if="siblings.length" class="topic__siblings">
-      <a :href="`../blog/`">{{ t.all }}</a>
+      <a :href="withBase(blogPath(lang))">{{ t.all }}</a>
       <a v-for="other in siblings" :key="other.topic" :href="other.path">{{ other.name }}</a>
     </nav>
   </section>
