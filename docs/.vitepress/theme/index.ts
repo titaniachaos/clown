@@ -11,6 +11,7 @@ import MediaFigure from './MediaFigure.vue'
 import BlogIndex from './BlogIndex.vue'
 import BlogTopic from './BlogTopic.vue'
 import PageTopics from './PageTopics.vue'
+import LocalePreference from './LocalePreference.vue'
 import './custom.css'
 
 export default {
@@ -19,6 +20,7 @@ export default {
   // communication activity, not a single credits page. It renders nothing
   // until a grant is signed.
   Layout: () => h(DefaultTheme.Layout, null, {
+      'layout-top': () => h(LocalePreference, { base: '/clown' }),
       'home-hero-image': () => h(HeroSlider),
       // The tags a page already carries, as links. Placed here rather than in
       // thirty-three Markdown files; renders nothing on a page with no tags.
