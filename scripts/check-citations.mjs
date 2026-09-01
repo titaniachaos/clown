@@ -64,11 +64,12 @@ for (const doi of proseDois) {
   }
 }
 
-// The reverse is a note rather than a fault: the prose does not have to print
-// every work, but a DOI it omits is one a reader cannot follow from the page.
-for (const doi of knownDois) {
-  if (!proseDois.has(doi)) notes.push(`${doi} is in the bibliography and not in the prose ledger`)
-}
+// There is no reverse check any more, and that is the point of the change that
+// removed it. The prose used to print its own references, so a DOI the
+// bibliography had and the prose lacked was a link a reader could not follow;
+// now the ledger renders from the data and every locator reaches the page by
+// construction. What remains worth checking is the direction above: a
+// reference written by hand in Markdown must still exist in the bibliography.
 
 // ---- what a type promises --------------------------------------------------
 
