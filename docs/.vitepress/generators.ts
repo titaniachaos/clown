@@ -1,5 +1,7 @@
+import { readFileSync, readdirSync } from 'node:fs'
 import { writeFile } from 'node:fs/promises'
-import { join } from 'node:path'
+import { dirname, join, relative, sep } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import type { SiteConfig } from 'vitepress'
 import { BASE, HOSTNAME, LOCALES, splitLocale } from './seo.ts'
 import { WORKS, apaText } from './bibliography.ts'
@@ -23,6 +25,43 @@ const esc = (t: string) =>
   t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
 const absolute = (path: string) => `${HOSTNAME}${BASE}${path.replace(/^\//, '')}`
+
+/**
+ * The `[t1]/...` pages are views of the filing system, not hundreds of
+ * independent documents. VitePress includes dynamic routes in its sitemap by
+ * default, so derive the SEO set from real, hand-written Markdown sources.
+ */
+const DOCS_ROOT = dirname(dirname(fileURLToPath(import.meta.url)))
+
+function sourceFiles(dir: string): string[] {
+  return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const full = join(dir, entry.name)
+    return entry.isDirectory() ? sourceFiles(full) : entry.name.endsWith('.md') ? [full] : []
+  })
+}
+
+const INDEXABLE_URLS = new Set(
+  sourceFiles(DOCS_ROOT).flatMap((file) => {
+    const source = relative(DOCS_ROOT, file).split(sep).join('/')
+    if (source === '404.md' || source.split('/').some((part) => part.startsWith('['))) return []
+    const frontmatter = /^---\r?\n([\s\S]*?)\r?\n---/.exec(readFileSync(file, 'utf8'))?.[1] ?? ''
+    if (/^robots:\s*.*noindex/im.test(frontmatter)) return []
+    const url = '/' + source.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')
+    return [url]
+  })
+)
+
+const indexablePages: Integration = {
+  name: 'indexable-pages',
+  hooks: {
+    'sitemap:transform': (items) =>
+      items.filter((item) => {
+        const raw = item.url.startsWith('http') ? new URL(item.url).pathname : `/${item.url.replace(/^\//, '')}`
+        const path = raw.startsWith(BASE) ? `/${raw.slice(BASE.length)}` : raw
+        return INDEXABLE_URLS.has(path)
+      })
+  }
+}
 
 /**
  * A real information hierarchy for sitemap consumers that still use these
@@ -262,7 +301,7 @@ const STYLESHEET = `<?xml version="1.0" encoding="utf-8"?>
 
 // ---------------------------------------------------------------------------
 
-export const INTEGRATIONS: Integration[] = [hreflang, robots, citations]
+export const INTEGRATIONS: Integration[] = [indexablePages, hreflang, robots, citations]
 
 /** Wire into `sitemap.transformItems`. Each integration refines in turn. */
 export function runSitemapHooks(items: SitemapItem[]): SitemapItem[] {
