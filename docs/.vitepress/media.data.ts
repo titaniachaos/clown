@@ -3,6 +3,7 @@ import { readFile, readdir } from 'node:fs/promises'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import type { Lang } from './locale.ts'
+import { HOSTNAME, WRITTEN_HOST } from './seo.ts'
 
 /**
  * The photographs, borrowed from the main site rather than copied.
@@ -152,6 +153,10 @@ const blog = () => read((lang) => (lang === 'en' ? 'blog' : `${lang}/blog`), ['i
  */
 const written = () => read((lang) => (lang === 'en' ? '.' : lang), [])
 
+/** Keep media borrowed from the main site on the configured domain too. */
+const followOrigin = (url: string | undefined) =>
+  url?.startsWith(WRITTEN_HOST) ? `${HOSTNAME}${url.slice(WRITTEN_HOST.length)}` : url
+
 export default defineLoader({
   watch: [
     './media-index.json',
@@ -170,6 +175,18 @@ export default defineLoader({
       // not own.
       return { origin: '', frames: [], posts, pages, ui }
     }
-    return { origin: index.origin ?? '', frames: index.media ?? [], posts, pages, ui }
+    return {
+      origin: followOrigin(index.origin) ?? '',
+      frames: (index.media ?? []).map((frame) => ({
+        ...frame,
+        url: followOrigin(frame.url) ?? frame.url,
+        tile: followOrigin(frame.tile) ?? frame.tile,
+        film: followOrigin(frame.film),
+        source: followOrigin(frame.source)
+      })),
+      posts,
+      pages,
+      ui
+    }
   }
 })
