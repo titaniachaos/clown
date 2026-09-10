@@ -88,6 +88,18 @@ export function buildHead(ctx: TransformContext, siteConfig: SiteConfig): HeadCo
   }
 
   const { locale, slug } = splitLocale(urlPath)
+  const params = ctx.pageData.params as { t1?: string } | undefined
+
+  // Topic combinations remain navigable filing views. They should consolidate
+  // on the real filing page rather than compete as thin, self-canonical pages.
+  if (params?.t1) {
+    const filingPath = `${locale.prefix}/filing`
+    return [
+      ['meta', { name: 'robots', content: 'noindex, follow' }],
+      ['link', { rel: 'canonical', href: absolute(filingPath) }]
+    ]
+  }
+
   const canonical = absolute(urlPath)
   const alternates = existingAlternates(slug, siteConfig.pages)
   const title = ctx.pageData.title || ctx.title
