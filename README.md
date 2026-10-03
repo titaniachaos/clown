@@ -206,3 +206,13 @@ that the creator name is exactly how it should appear in the permanent record.
 > the repository name appended, so `example.at/clown/` would keep working. See
 > [About custom domains and GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages).
 > What does need changing is listed under Moving to a custom domain below.
+
+## Navigation between project sites
+
+The main site, `/clown/` and `/aequator/` are independent builds on one host.
+The theme's `site-navigation.mjs` guards VitePress route changes: crossing a
+site root loads the destination document in the same tab; routes within a site
+keep VitePress navigation. Queries, language paths and anchors are preserved.
+Keep this module identical in all three repositories and add any future site
+root to `SITE_ROOTS` in each copy. `npm run check:navigation` verifies the rule
+and runs as part of the existing checks.

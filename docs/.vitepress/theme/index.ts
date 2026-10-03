@@ -18,6 +18,7 @@ import UiBadge from './ui/UiBadge.vue'
 import UiButton from './ui/UiButton.vue'
 import UiLabel from './ui/UiLabel.vue'
 import './custom.css'
+import { installSiteNavigation } from './site-navigation.mjs'
 
 export default {
   extends: DefaultTheme,
@@ -40,7 +41,10 @@ export default {
       'doc-after': () => h(PageTopics),
       'layout-bottom': () => h(Supporters)
     }),
-  enhanceApp({ app }) {
+  enhanceApp({ app, router, siteData }) {
+    if (typeof window !== 'undefined') {
+      installSiteNavigation(router, siteData.value.base, window.location)
+    }
     app.component('SourceLedger', SourceLedger)
     app.component('PageRelations', PageRelations)
     app.component('FairPay', FairPay)
