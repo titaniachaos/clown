@@ -35,6 +35,6 @@
     "check:navigation": "node --test scripts/lib/site-navigation.test.mjs"
   },
   "devDependencies": {
-    "vitepress": "2.0.0-alpha.19"
+    "vitepress": "2.0.0-alpha.20"
   }
 }
