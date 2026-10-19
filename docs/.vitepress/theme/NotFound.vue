@@ -2,7 +2,7 @@
 import { computed, onMounted, ref } from 'vue'
 import { withBase } from 'vitepress'
 import { data } from '../media.data'
-import { MISSING, TOPIC_NAMES, TOPIC_UI, topicPath, blogPath, fill } from '../topics.ts'
+import { MISSING, TOPIC_NAMES, TOPIC_UI, topicPath, fill } from '../topics.ts'
 import type { Topic } from '../topics.ts'
 import { useLang } from './useLang.ts'
 import BlogTopic from './BlogTopic.vue'
@@ -151,7 +151,7 @@ const instead = computed(() => {
     </nav>
 
     <p class="missing__home">
-      <a :href="withBase(blogPath(lang))">{{ ui.all }}</a>
+      <a :href="withBase(lang === 'en' ? '/' : `/${lang}/`)">{{ lang === 'bg' ? 'Начало на проекта' : lang === 'de' ? 'Projekt-Startseite' : 'Project Home' }}</a>
     </p>
   </div>
 </template>
