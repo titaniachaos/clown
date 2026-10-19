@@ -51,4 +51,4 @@ onMounted(() => {
 onUnmounted(() => document.removeEventListener('click', rememberLanguage, true))
 </script>
 
-<template></template>
+<template><span hidden></span></template>
